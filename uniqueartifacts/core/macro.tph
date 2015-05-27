@@ -1,0 +1,404 @@
+//variables initialize:
+//for removing flags:
+//f_rem=
+OUTER_SET f_rem_nodr = 0b11110111 // remove undroppable
+OUTER_SET f_rem_nost = 0b11111101 // remove unstealable
+OUTER_SET f_rem_nostdr = 0b11110101 // remove unstealable, undroppable
+
+//for adding flags:
+//f_add=
+OUTER_SET f_add_nodr = 0b11111000 //add undroppable
+OUTER_SET f_add_nost = 0b11110010 //add unstealable
+OUTER_SET f_add_nostdr = 0b11111010 //add unstealable and undroppable
+
+//optional vars for area macro:
+OUTER_SET charges1 = (0 - 1)
+OUTER_SET charges2 = (0 - 1)
+OUTER_SET charges3 = (0 - 1)
+
+
+
+
+
+//replaces ~old_item with ~new_item~ at a creature (all)
+DEFINE_PATCH_MACRO ~DELETE_CRE_ITM_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN
+    READ_LONG 0x2bc itm_off
+    READ_LONG 0x2c0 itm_num
+    READ_LONG 0x2b8 islot_off
+    SET delta = 0
+    FOR (cur_itm = 0; cur_itm < itm_num; cur_itm = (cur_itm + 1)) BEGIN
+    READ_ASCII (itm_off + (cur_itm * 0x14)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2delete%\)$~ = 0) THEN BEGIN
+        DELETE_BYTES (itm_off + (cur_itm * 0x14)) 0x14
+        itm_num = itm_num - 1
+        SET delta = delta + 1
+        //correct islot_offset if need
+        PATCH_IF (islot_off > itm_off) BEGIN
+          WRITE_LONG 0x2b8 (current_off - 0x14)
+        END
+        FOR (cur_slot = 0; cur_slot < 37; cur_slot = cur_slot + 1) BEGIN
+          READ_LONG 0x2b8 islot_off
+          READ_SHORT  (islot_off + cur_slot * 2) itm_index
+          PATCH_IF (itm_index = cur_itm) BEGIN //if slot with deleted item
+            WRITE_SHORT  (islot_off + cur_slot * 2) 0xffff //nullify reference
+          END
+          PATCH_IF ((itm_index > cur_itm) AND NOT (itm_index = 0xffff))BEGIN //if next slot and not empty
+            WRITE_SHORT  (islot_off + cur_slot * 2) (itm_index - 1) //shift items back
+          END
+        END
+        SET cur_itm = cur_itm - 1 //step back to not miss an item
+      END
+    END
+    WRITE_LONG  0x02c0 itm_num   //correcting number
+    //correcting offsets
+    PATCH_FOR_EACH offset IN 0x2a0 0x2a8 0x2b0 0x2c4 BEGIN //0x2b8 already fixed
+      READ_LONG offset current_off
+      PATCH_IF (current_off > itm_off) BEGIN
+        WRITE_LONG offset (current_off - delta * 0x14)
+      END
+    END
+  END
+END
+
+//replaces ~old_item with ~new_item~ at creature (once)
+DEFINE_PATCH_MACRO ~REPLACE_CRE_ITM_ONCE~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    READ_LONG  0x2bc itm_off
+    READ_LONG  0x2c0 itm_num
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (0x14 * itm_num)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%old_item%\)$~ = 0) BEGIN
+        WRITE_ASCII_TERMINATE (itm_off + (0x14 * itm_num)) ~%new_item%~ //replace
+        SET itm_num = 0 //terminate loop
+      END
+    END
+  END
+END
+
+//adds an item in an area. ~container2add2~ (starting from 1), ~item2add~
+//optional: charges1 charges2 charges3 flags
+DEFINE_PATCH_MACRO ~ADD_AREA_ITM~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    //reading necessary offsets
+    READ_LONG 0x70 cont_off
+    READ_SHORT 0x74 cont_num
+    READ_LONG 0x78 itm_off
+    READ_SHORT 0x76 itm_num
+
+    READ_LONG (cont_off + (container2add2 - 1) * 0xc0 + 0x40) 1item_index //first item index
+    INSERT_BYTES (itm_off + (1item_index * 0x14)) 0x14 //adding the item at top
+    WRITE_EVALUATED_ASCII (itm_off + (1item_index * 0x14)) ~%item2add%~
+    //charges:
+    PATCH_IF (charges1 = (0 - 1)) THEN BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) 0
+    END
+    ELSE BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) charges1
+    END
+
+    PATCH_IF (charges2 = (0 - 1)) THEN BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) 0
+    END
+    ELSE BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) charges2
+    END
+
+    PATCH_IF (charges3 = (0 - 1)) THEN BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) 0
+    END
+    ELSE BEGIN
+      WRITE_SHORT (itm_off + (1item_index * 0x14 + 0xa)) charges3
+    END
+    
+    //flags
+    WRITE_LONG (itm_off + (1item_index * 0x14 + 0x10)) 0
+    //correcting number ot items in container
+    READ_LONG (cont_off + (container2add2 - 1) * 0xc0 + 0x44) cont_items_num
+    WRITE_LONG (cont_off + (container2add2 - 1) * 0xc0 + 0x44) (cont_items_num + 1) //increase number of items by 1
+    //adjusting items indexes in other containers
+    SET index = container2add2 //starting from next(!) to specified
+    WHILE (index < cont_num) BEGIN //searching through containers
+      READ_LONG (cont_off + index * 0xc0 + 0x40) 1item_index //first item index
+      WRITE_LONG (cont_off + index * 0xc0 + 0x40) (1item_index + 1) //increase first item index by 1
+      SET index = (index + 1)
+    END
+    //correcting offsets
+    PATCH_FOR_EACH offset IN 0x54 0x5c 0x60 0x68 0x70 0x78 0x7c 0x84 0x88 0xa0 0xa8 0xb0 0xb8 0xbc 0xc0 0xc4 BEGIN
+      READ_LONG offset current_off
+      PATCH_IF (current_off > itm_off) BEGIN
+        WRITE_LONG offset (current_off + 0x14)
+      END
+    END
+    WRITE_SHORT 0x76 (itm_num + 1)
+  END
+  //setting optional vars back to default
+  SET charges1 = (0 - 1)
+  SET charges2 = (0 - 1)
+  SET charges3 = (0 - 1)
+END
+
+
+//deletes ALL instances of an item in a store. ~item2delete~
+DEFINE_PATCH_MACRO ~DELETE_STORE_ITM_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+    READ_LONG 0x34 4sale_off
+    READ_LONG 0x38 4sale_num
+    READ_LONG 0x2c items_purchased_off
+    READ_LONG 0x70 cures_off
+    SET index = 0
+    SET delta = 0
+    WHILE (index < 4sale_num) BEGIN //searching through items
+      READ_ASCII (4sale_off + (index * 0x1c)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2delete%\)$~ = 0) BEGIN
+        DELETE_BYTES (4sale_off + (index * 0x1c)) 0x1c
+        SET delta = (delta + 1)
+        SET index = (index - 1) //step back
+        SET 4sale_num = (4sale_num - 1)
+      END
+      SET index = (index + 1)
+    END
+
+    WRITE_LONG 0x38 4sale_num
+
+    //correcting offsets
+    PATCH_FOR_EACH offset IN 0x2c 0x70 BEGIN
+      READ_LONG offset current_off
+      PATCH_IF (current_off > 4sale_off) BEGIN
+        WRITE_LONG offset (current_off - delta * 0x1c)
+      END
+    END
+
+  END
+END
+
+
+//deletes ALL instances of an item in an area. ~item2delete~
+DEFINE_PATCH_MACRO ~DELETE_AREA_ITM_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    //reading necessary offsets
+    READ_LONG 0x70 cont_off
+    READ_SHORT 0x74 cont_num
+    READ_LONG 0x78 itm_off
+    READ_SHORT 0x76 itm_num
+    SET delta = 0
+    FOR (index = 0; index < itm_num; index = (index + 1)) BEGIN //serching through items
+      READ_ASCII (itm_off + (index * 0x14)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2delete%\)$~ = 0) BEGIN
+        DELETE_BYTES (itm_off + (index * 0x14)) 0x14
+        SET itm_num = (itm_num - 1)
+        SET delta = (delta + 1)
+        SET index2 = 0
+
+        //correct cont_off on the fly if need
+        PATCH_IF (cont_off > itm_off) BEGIN
+          WRITE_LONG 0x70 (cont_off - 0x14)
+        END
+
+        WHILE (index2 < cont_num) BEGIN //searching through containers
+          READ_LONG (cont_off + index2 * 0xc0 + 0x40) 1item_index //first item index
+          READ_LONG (cont_off + index2 * 0xc0 + 0x44) cont_items_num  //number ot items in container
+          PATCH_IF (index >= 1item_index) AND (index < (1item_index + cont_items_num))  BEGIN  //if container with deleted item
+            WRITE_LONG (cont_off + index2 * 0xc0 + 0x44) (cont_items_num - 1) //decrease number of items by 1
+          END
+          PATCH_IF (index < 1item_index) BEGIN //if one of next containers 
+            WRITE_LONG (cont_off + index2 * 0xc0 + 0x40) (1item_index - 1) //decrease first item index by 1
+          END
+          SET index2 = (index2 + 1)
+        END
+
+        SET index = (index - 1) //step back to not miss items
+      END
+    END
+    
+    //correcting offsets (0x70 already fixed)
+    PATCH_FOR_EACH offset IN 0x54 0x5c 0x60 0x68 0x78 0x7c 0x84 0x88 0xa0 0xa8 0xb0 0xb8 0xbc 0xc0 0xc4 BEGIN
+      READ_LONG offset current_off
+      PATCH_IF (current_off > itm_off) BEGIN
+        WRITE_LONG offset (current_off - delta * 0x14)
+      END
+    END
+
+    //correcting number
+    WRITE_SHORT 0x76 itm_num
+
+  END
+END
+
+//replace ONE instances of the specified item in .sto. variables ~old_item~ ~new_item~ required.
+DEFINE_PATCH_MACRO ~REPLACE_STORE_ITM_ONCE~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+    READ_LONG 0x34 4sale_off
+    READ_LONG 0x38 4sale_num
+    WHILE (4sale_num > 0) BEGIN
+      SET 4sale_num = (4sale_num - 1)
+      READ_ASCII (4sale_off + (4sale_num * 0x1c)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%old_item%\)$~ = 0) BEGIN
+        READ_BYTE (4sale_off + 0x10 + (0x1c * 4sale_num)) 4sale_flags
+        WRITE_ASCII_TERMINATE (4sale_off + (4sale_num * 0x1c)) ~%new_item%~ // replace item
+        WRITE_BYTE (4sale_off + 0x14 + (0x1c * 4sale_num)) 1 // Set number in stock to 1
+        WRITE_BYTE (4sale_off + 0x18 + (0x1c * 4sale_num)) 0 // Set infinite flag to zero
+        WRITE_BYTE (4sale_off + 0xa  + (0x1c * 4sale_num)) 0 // Set quantity/charges of item
+        WRITE_BYTE (4sale_off + 0x10 + (0x1c * 4sale_num)) (4sale_flags BOR 0b00000001) //adds identified flag
+        SET 4sale_num = 0
+      END
+    END
+  END
+END
+
+//replace ALL instances of the specified item in .sto. variables ~old_item~ ~new_item~ required. See the flags set below
+DEFINE_PATCH_MACRO ~REPLACE_STORE_ITM_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+    READ_LONG 0x34 4sale_off
+    READ_LONG 0x38 4sale_num
+    WHILE (4sale_num > 0) BEGIN
+      SET 4sale_num = (4sale_num - 1)
+      READ_ASCII (4sale_off + (4sale_num * 0x1c)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%old_item%\)$~ = 0) BEGIN
+        READ_BYTE (4sale_off + 0x10 + (0x1c * 4sale_num)) 4sale_flags
+        WRITE_ASCII_TERMINATE (4sale_off + (4sale_num * 0x1c)) ~%new_item%~ // restore item
+        WRITE_BYTE (4sale_off + 0x14 + (0x1c * 4sale_num)) 1 // Set number in stock to 1
+        WRITE_BYTE (4sale_off + 0x18 + (0x1c * 4sale_num)) 0 // Set infinite flag to zero
+        WRITE_BYTE (4sale_off + 0xA  + (0x1c * 4sale_num)) 0 // Set quantity/charges of item to 0
+        WRITE_BYTE (4sale_off + 0x10 + (0x1c * 4sale_num)) (4sale_flags BOR 0b00000001) // Set item flags to identified
+      END
+    END
+  END
+END
+
+//replaces ONE instance of an item in an area with another item. Variables ~old_item~, ~new_item~ required
+DEFINE_PATCH_MACRO ~REPLACE_AREA_ITM_ONCE~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    READ_SHORT 0x76 itm_num
+    READ_LONG  0x78 itm_off
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (itm_num * 0x14)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%old_item%\)$~ = 0) BEGIN
+        WRITE_ASCII_TERMINATE (itm_off + (itm_num * 0x14)) ~%new_item%~
+        SET itm_num = 0 //terminate loop
+      END
+    END
+  END
+END
+
+//replaces ALL instances of an item in an area with another item. Variables ~old_item~, ~new_item~ required
+DEFINE_PATCH_MACRO ~REPLACE_AREA_ITM_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x11b) BEGIN
+    READ_SHORT 0x76 itm_num
+    READ_LONG  0x78 itm_off
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (itm_num * 0x14)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%old_item%\)$~ = 0) BEGIN
+        WRITE_ASCII_TERMINATE (itm_off + (itm_num * 0x14)) ~%new_item%~
+      END
+    END
+  END
+END
+
+
+//remove actions which give an item from DECOMPILED dialogs and scripts. Hardly anybody will nees it. variables ~old_item~, ~new_item~ required
+DEFINE_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~ BEGIN
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~GiveItem("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~GiveItem("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~GiveItemCreate("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~GiveItemCreate("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItem("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItem("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItemGlobal("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItemGlobal("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItemNumGlobal("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItemNumGlobal("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~TakeItemReplace("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~TakeItemReplace("%new_item%"%MATCH2%)~
+END
+
+
+//changes (adds) flags to ALL instances of an item possessed by a specified creature. variables ~item2change~, ~f_add~ required
+DEFINE_PATCH_MACRO ~ADD_CRE_ITM_FLAGS_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    READ_LONG  0x2bc itm_off
+    READ_LONG  0x2c0 itm_num
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (0x14 * itm_num)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2change%\)$~ = 0) BEGIN
+        READ_BYTE   (itm_off + 0x10 + (0x14 * itm_num)) flags
+        WRITE_BYTE  (itm_off + 0x10 + (0x14 * itm_num)) (flags BOR f_add) // adds specified flags
+      END
+    END
+  END
+END
+
+
+//changes (adds) flags to ONE instance of an item possessed by a specified creature. variables ~item2change~, ~f_add~ required
+DEFINE_PATCH_MACRO ~ADD_CRE_ITM_FLAGS_ONCE~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    READ_LONG  0x2bc itm_off
+    READ_LONG  0x2c0 itm_num
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (0x14 * itm_num)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2change%\)$~ = 0) BEGIN
+        READ_BYTE   (itm_off + 0x10 + (0x14 * itm_num)) flags
+        WRITE_BYTE  (itm_off + 0x10 + (0x14 * itm_num)) (flags BOR f_add) // adds specified flags
+        SET itm_num = 0
+      END
+    END
+  END
+END
+
+
+
+//changes (removes) flags to ALL instances of an item possessed by a specified creature. variables ~item2change~, ~f_rem~ required
+DEFINE_PATCH_MACRO ~REM_CRE_ITEM_FLAGS_ALL~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    READ_LONG  0x2bc itm_off
+    READ_LONG  0x2c0 itm_num
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (0x14 * itm_num)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2change%\)$~ = 0) BEGIN
+        READ_BYTE   (itm_off + 0x10 + (0x14 * itm_num)) flags
+        WRITE_BYTE  (itm_off + 0x10 + (0x14 * itm_num)) (flags BAND f_rem) // removes specified flags
+      END
+    END
+  END
+END
+
+
+//changes (adds) flags to ONE instance of an item possessed by a specified creature. variables ~item2change~, ~f_rem~ required
+DEFINE_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~ BEGIN
+  PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+    READ_LONG  0x2bc itm_off
+    READ_LONG  0x2c0 itm_num
+    WHILE (itm_num > 0) BEGIN
+      SET itm_num = (itm_num - 1)
+      READ_ASCII (itm_off + (0x14 * itm_num)) ~item~
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~^\(%item2change%\)$~ = 0) BEGIN
+        READ_BYTE   (itm_off + 0x10 + (0x14 * itm_num)) flags
+        WRITE_BYTE  (itm_off + 0x10 + (0x14 * itm_num)) (flags BAND f_rem) // removes specified flags
+        SET itm_num = 0
+      END
+    END
+  END
+END

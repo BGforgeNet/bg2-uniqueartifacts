@@ -1,0 +1,11 @@
+PRINT ~Processing creatures...~
+//hiding items on creatures
+COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
+
+//all stuff
+SPRINT ~item2change~ ~%all_items%~
+
+//hide them
+SET f_add = ~%f_add_nostdr%~ //adds unst and undr flags
+LAUNCH_PATCH_MACRO ~ADD_CRE_ITM_FLAGS_ALL~
+BUT_ONLY_IF_IT_CHANGES

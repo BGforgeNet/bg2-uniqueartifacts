@@ -1,0 +1,18 @@
+//defining items to replace
+
+OUTER_SPRINT ~amulets~ ~amul01\|amul14\|amul16\|amul20\|amul21\|amul22\|amul23\|amul24\|amul26\|amul27\|amul28\|wa2amu\|regisamu~
+OUTER_SPRINT ~bracers~ ~brac03\|brac04\|brac06\|brac07\|brac08\|brac09\|brac10\|brac13\|brac14\|brac15\|brac16\|brac18\|brac19\|brac20\|brac21\|brac22\|brac23\|brac25\|brac26~
+OUTER_SPRINT ~cloaks~ ~clck02\|clck03\|clck04\|clck06\|clck07\|clck08\|clck24\|clck25\|clck26\|clck27\|clck30\|clck31\|clck32~
+OUTER_SPRINT ~boots~ ~boot01\|boot02\|boot03\|boot04\|boot05\|boot08\|boot11\|boot12~
+OUTER_SPRINT ~belts~ ~belt02\|belt03\|belt04\|belt06\|belt07\|belt08\|belt09\|belt10\|belt11~
+OUTER_SPRINT ~rings~ ~ring02\|ring03\|ring04\|ring05\|ring07\|ring08\|ring09\|ring20\|ring21\|ring22\|ring23\|ring26\|ring27\|ring28\|ring30\|ring31\|ring33\|ring34\|ring35\|ring36\|ring39\|ring40\|ring41\|ring42\|ring46\|misc72\|wa2ring~
+
+//duplicated (and those by mods too)
+OUTER_SPRINT ~other_items~ ~shld19\|sw1h10\|wa2robe\|dagg03\|sw1h06\|halb03\|cdsw2h07\|sw2h07\|cattibow\|staf05\|clck15\|clck16\|clck17\|staf13\|shld30~
+
+//those that might be duplicated during import from bg to bg2
+//i'm tired looking how and why players gains them
+OUTER_SPRINT ~import~ ~leath03~
+
+//combine them in one regexp
+OUTER_SPRINT ~all_items~ ~%amulets%\|%bracers%\|%cloaks%\|%boots%\|%belts%\|%rings%\|%other_items%\|%import%~

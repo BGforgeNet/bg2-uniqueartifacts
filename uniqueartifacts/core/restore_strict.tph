@@ -1,0 +1,650 @@
+PRINT ~Removing completed.
+
+Restoring BG2 artifacts...~
+
+//wa2robe Robe of Vecna
+COPY_EXISTING ~wmart2.sto~ ~override/wmart2.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "wa2robe" LAST #0 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//RINGS//
+/////////
+
+//Ring of Free Action ring09 book in spellhold PPBOOK.BCS
+//Ring of Wizardry ring08 mage stronghold: AR0411.BCS (if all apprentices die) MGAPPR02.DLG (if morul lives)
+//Ring of Regeneration ring31 //statue in spellhold (PPSTAT01.DLG)
+
+//Ring of Clumsiness ring04 Ust Natha, lich tower AR2210.are
+COPY_EXISTING ~ar2210.are~ ~override/ar2210.are~
+SET ~container2add2~ = 1
+SPRINT ~item2add~ ~ring04~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Danger Sense ring36 Planar Sphere AR0413.are container1
+COPY_EXISTING ~ar0413.are~ ~override/ar0413.are~
+SET ~container2add2~ = 1
+SPRINT ~item2add~ ~ring36~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Energy ring20 ribald.sto
+COPY_EXISTING ~ribald.sto~ ~override/ribald.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "ring20" LAST #50 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Fire Resistance ring02 rakshasa in red dragon lair FIRRAK01.CRE; lazarus - can't do anything for new tob start game
+COPY_EXISTING ~firrak01.cre~ ~override/firrak01.cre~
+SPRINT ~item2change~ ~ring02~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Folly ring23 Underdark AR2100.are
+COPY_EXISTING ~ar2100.are~ ~override/ar2100.are~
+SET ~container2add2~ = 6
+SPRINT ~item2add~ ~ring23~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Gaxx ring39 kangaxx HLDEMI.cre
+COPY_EXISTING ~hldemi.cre~ ~override/hldemi.cre~
+SPRINT ~item2change~ ~ring39~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Human Influence ring30 Kalah kalah2.cre
+COPY_EXISTING ~kalah2.cre~ ~override/kalah2.cre~
+SPRINT ~item2change~ ~ring30~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Invisibility ring05 Brennan Risling SEVPAT05.CRE (2nd floor in tavern in Promenade) - deprecated as it not always possible to get it. Leaving at lich GRVLCH01 at City Gates instead
+COPY_EXISTING ~grvlch01.cre~ ~override/grvlch01.cre~
+SPRINT ~item2change~ ~ring05~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Improved Invisibility ring42 Fll'Yissetat Abazigal's dragon-guard BAZDRA03.cre
+COPY_EXISTING ~bazdra03.cre~ ~override/bazdra03.cre~
+SPRINT ~item2change~ ~ring42~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Lock Picks ring35 ARNMAN09.CRE - if we're with Aran; ARNWAR07.CRE - if with Bodhi
+COPY_EXISTING ~arnman09.cre~ ~override/arnman09.cre~
+			~arnman07.cre~ ~override/arnman07.cre~
+SPRINT ~item2change~ ~ring35~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Protection +2 ring07 //aran linvail ARAN02 (side with Bodhi); ARAN.DLG - when siding with thieves he create it in dialog
+COPY_EXISTING ~aran02.cre~ ~override/aran02.cre~
+SPRINT ~item2change~ ~ring07~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Protection +3 ring41 Deck of Many Things SPIN621.SPL
+
+//Ring of Spell Turning ring34 matron mother Ardulace UDARDUL.CRE
+COPY_EXISTING ~udardul.cre~ ~override/udardul.cre~
+SPRINT ~item2change~ ~ring34~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//beltS//
+/////////
+
+//Golden Girdle belt02 - Solamnic Knights, Khollynnus Paac MGKHOL01.DLG
+
+//Girdle of Bluntness belt03 Jon's dungeon lvl 2 (AR0603.ARE), Container 1
+COPY_EXISTING ~ar0603.are~ ~override/ar0603.are~
+SET ~container2add2~ = 1
+SPRINT ~item2add~ ~belt03~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Girdle of Fortitude belt09 Gaal GAAL01.CRE
+COPY_EXISTING ~gaal01.cre~ ~override/gaal01.cre~
+SPRINT ~item2change~ ~belt09~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Girdle of Piercing belt04 kalah, kalah2.cre
+COPY_EXISTING ~kalah2.cre~ ~override/kalah2.cre~
+SPRINT ~item2change~ ~belt04~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Girdle of Stone Giant Strength belt07 Suldanessellar Adsaan (SUADSAAN.CRE)
+COPY_EXISTING ~suadsaan.cre~ ~override/suadsaan.cre~
+SPRINT ~item2change~ ~belt07~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//BOOTS//
+/////////
+
+//Boots of the North boot03 machine in spellhold (TOKCRE01.DLG)
+//Boots of Speed boot01 machine in spellhold TOKCRE01.DLG; 1 pair in tob start - via 2da 
+//Boots of Grounding boot05 machine in spellhold TOKCRE01.DLG
+
+//Boots of Avoidance boot04 Reti (RETI.CRE)
+COPY_EXISTING ~reti.cre~ ~override/reti.cre~
+SPRINT ~item2change~ ~boot04~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Boots of Etherealness boot11 sahuagin sity, Chest6 (AR2300.ARE)
+COPY_EXISTING ~ar2300.are~ ~override/ar2300.are~
+SET ~container2add2~ = 6
+SPRINT ~item2add~ ~boot11~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gargoyle Boots boot12 Carras (AMSMUG02.STO)
+COPY_EXISTING ~amsmug02.sto~ ~override/amsmug02.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "boot12" LAST #2 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//////////
+//CLOAKS//
+//////////
+
+//Cloak of Non-Detection clck06 Sorcerous Amon (SEVPAT02.CRE)
+COPY_EXISTING ~sevpat02.cre~ ~override/sevpat02.cre~
+SPRINT ~item2change~ ~clck06~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Cloak of Protection +2 clck02 sahuagin sity, Chest6 (AR2300.ARE)
+COPY_EXISTING ~ar2300.are~ ~override/ar2300.are~
+SET ~container2add2~ = 6
+SPRINT ~item2add~ ~clck02~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Cloak of Reflection clck24 spellhold, Container 1 (AR1511.ARE)
+COPY_EXISTING ~ar1511.are~ ~override/ar1511.are~
+SET ~container2add2~ = 1
+SPRINT ~item2add~ ~clck24~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Cloak of the Sewers clck27 Rakshasa in Sewers(SEWRAK01.CRE)
+COPY_EXISTING ~sewrak01.cre~ ~override/sewrak01.cre~
+SPRINT ~item2change~ ~clck27~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Cloak of the Wolf clck04 SHABOD01.CRE - Wallag's body (have no idea who is this)
+COPY_EXISTING ~shabod01.cre~ ~override/shabod01.cre~
+SPRINT ~item2change~ ~clck27~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+///////////
+//BRACERS//
+///////////
+
+//Bracers of Defense AC 4 brac14 Innkeeper (UDSVIR05.DLG) - reward for son rescue
+
+//Gauntlets of Crushing brac19 sahuagin sity, King Ixilthetocal (SAHKNG01.DLG)
+
+//Bracers of Blinding Strike brac16 Underdark, Kuo-Toa Prince (UDPRINCE.CRE)
+COPY_EXISTING ~udprince.cre~ ~override/udprince.cre~
+SPRINT ~item2change~ ~brac16~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Bracers of Defense AC 3 brac15 ribald ribald.sto
+COPY_EXISTING ~ribald.sto~ ~override/ribald.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM ~brac15~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//Bracers of Defense AC 6 brac03 Xzar LYROS.cre
+COPY_EXISTING ~lyros.cre~ ~override/lyros.cre~
+SPRINT ~item2change~ ~brac03~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gauntlets of Extraordinary Specialization brac21 last stage Watcher's Keep, Y'tossi (GORWOM03.CRE)
+COPY_EXISTING ~gorwom03.cre~ ~override/gorwom03.cre~
+SPRINT ~item2change~ ~brac21~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gauntlets of Ogre Power brac06 - Lavok's sphere, Entu (OBSHAL01.CRE)
+COPY_EXISTING ~obshal01.cre~ ~override/obshal01.cre~
+SPRINT ~item2change~ ~brac06~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gauntlets of Weapon Skill brac09 - Planar Prison, Female Thrall (PTHRAL05.CRE)
+COPY_EXISTING ~pthral05.cre~ ~override/pthral05.cre~
+SPRINT ~item2change~ ~brac09~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gloves of Missile Snaring brac18 Itona TRTHF01.CRE - somewhere in Trademeet I think
+COPY_EXISTING ~trthf01.cre~ ~override/trthf01.cre~
+SPRINT ~item2change~ ~brac18~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Tzu-Zan's Bracers brac26  Draconis (BAZDRA02.CRE)
+COPY_EXISTING ~bazdra02.cre~ ~override/bazdra02.cre~
+SPRINT ~item2change~ ~brac26~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+///////////
+//AMULETS//
+///////////
+
+//Amulet of Power amul21 aran linvail ARAN02.cre (side with Bodhi); ARAN.DLG (side with Aran)
+COPY_EXISTING ~aran02.cre~ ~override/aran02.cre~
+SPRINT ~item2change~ ~amul21~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Amulet of Protection +1 amul14 near lake and mists in Firkraag's dungeon AR1201 container 2
+COPY_EXISTING ~ar1201.are~ ~override/ar1201.are~
+SET ~container2add2~ = 2
+SPRINT ~item2add~ ~amul14~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Amulet of Seldarine amul27 -  tob start 2da table 
+
+//Kaligun's Amulet of Magic Resistance amul20 UDDROW24.STO - Ust Natha
+COPY_EXISTING ~uddrow24.sto~ ~override/uddrow24.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "amul20" LAST #0 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//Metaspell Influence Amulet amul16 container in Jon's dungeon AR0602.are container 11
+COPY_EXISTING ~ar0602.are~ ~override/ar0602.are~
+SET ~container2add2~ = 11
+SPRINT ~item2add~ ~amul16~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Necklace of Form Stability amul24 Merkath and captive Haer'Dalis AR0705.are container 8
+COPY_EXISTING ~ar0705.are~ ~override/ar0705.are~
+SET ~container2add2~ = 8
+SPRINT ~item2add~ ~amul24~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Necklace of Missiles amul01 merchant in trademeet TRCAR04.STO
+COPY_EXISTING ~trcar04.sto~ ~override/trcar04.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "amul01" LAST #25 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//Ruby Pendant REGISAMU regis C6REGIS.CRE, C6REGIS2.CRE
+COPY_EXISTING ~c6regis.cre~ ~override/c6regis.cre~
+			~c6regis2.cre~ ~override/c6regis2.cre~
+SPRINT ~item2change~ ~regisamu~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+///////////////
+//OTHER STUFF//
+///////////////
+
+//HELM04 Helm Of Defence - Maferan HLMAFER; E36 Jaheira??; AR0412 - planar sphere elemental rooms
+COPY_EXISTING ~hlmafer.cre~ ~override/hlmafer.cre~
+SPRINT ~item2change~ ~helm04~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Dagger +2: 'Heart of the Golem' DAGG03 C6ARKAN.cre C6ARKAN3.cre - 2 Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly); Valyssa (dryads, acorns), Hentol.cre - Hentold in BG1, give dagger to zombie
+COPY_EXISTING ~c6arkan.cre~ ~override/c6arkan.cre~
+			~c6arkan3.cre~ ~override/c6arkan3.cre~
+SPRINT ~item2change~ ~dagg03~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Large Shield +2 SHLD19 CHAK.cre Chak - don't remember who is it
+COPY_EXISTING ~chak.cre~ ~override/chak.cre~
+SPRINT ~item2change~ ~shld19~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Short Sword of Backstabbing +3 SW1H10 Renal Bloodscalp renal.cre, renal.DLG
+COPY_EXISTING ~renal.cre~ ~override/renal.cre~
+SPRINT ~item2change~ ~sw1h10~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//halb03 Suryris's Blade bazliz04.cre lizard man captain (sphere?) zhalim.cre - bg1 (last stage of iron throne)
+//fixpackers deleted all but at ribald's store
+//we are not seeking easy ways
+//restoring at lizard man captain
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //if fixpack isn't installed
+COPY_EXISTING ~bazliz04.cre~ ~override/bazliz04.cre~
+SPRINT ~item2change~ ~halb03~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //if it is
+COPY_EXISTING ~bazliz04.cre~ ~override/bazliz04.cre~
+SPRINT ~old_item~ ~halb07~
+SPRINT ~new_item~ ~halb03~
+LAUNCH_PATCH_MACRO ~REPLACE_CRE_ITM_ONCE~
+SPRINT ~item2change~ ~halb03~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+END
+
+//Long Sword +2: 'Varscona' sw1h06 - many times duplicated in bg2
+//greywo - Greywolf from bg1
+//fixpackers altered them all but ribald's, which is unstealeble and undroppable
+//don't you think player should have a chance to get it?
+//let's get it in a fair fight againt Drizzt (although it hardly will be useful):
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //if fixpack isn't installed
+COPY_EXISTING ~c6catti.cre~ ~override/c6catti.cre~ //catti brie
+			~c6catti2.cre~ ~override/c6catti2.cre~
+SPRINT ~item2change~ ~sw1h06~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN //if it is
+COPY_EXISTING ~c6catti.cre~ ~override/c6catti.cre~ //catti brie
+			~c6catti2.cre~ ~override/c6catti2.cre~
+SPRINT ~old_item~ ~sw1h41~
+SPRINT ~new_item~ ~sw1h06~
+LAUNCH_PATCH_MACRO ~REPLACE_CRE_ITM_ONCE~
+SPRINT ~item2change~ ~sw1h06~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+END
+
+/////////////////////
+//BGT COMPATIBILITY//
+/////////////////////
+ACTION_IF FILE_EXISTS ~data/BG1ARE.BIF~ THEN BEGIN
+
+PRINT ~Restoring BG1 artifacts...~
+
+/////////
+//RINGS//
+/////////
+
+//Ring of Free Action ring09 DUSHAI (old gnomish woman in Ulgoth's Beard, who is talking about Balduran), ALAI (some asasssin?)
+COPY_EXISTING ~alai.cre~ ~override/alai.cre~
+SPRINT ~item2change~ ~ring09~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+
+//Ring of Protection +2 ring07 Ramazith RAMAZI.cre (steal and drop only)
+COPY_EXISTING ~ramazi.cre~ ~override/ramazi.cre~
+SPRINT ~item2change~ ~ring07~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Invisibility ring05 ULGOTH.sto - store in Ulgoth's Beard
+COPY_EXISTING ~ulgoth.sto~ ~override/ulgoth.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "ring05" LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Energy ring20 DENAK.cre - Taivian red wizard
+COPY_EXISTING ~denak.cre~ ~override/denak.cre~
+SPRINT ~item2change~ ~ring20~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Ring of Folly ring23 AR9200 container 1 - shipwreck on the coast
+COPY_EXISTING ~ar9200.are~ ~override/ar9200.are~
+SET ~container2add2~ = 1
+SPRINT ~item2add~ ~ring23~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//The Claw of Kazgaroth MISC72 HIGHHEDG.sto (mage in tower at High Hedge); when importing from BG1, may be found in IMPORT03.2DA
+COPY_EXISTING ~highhedg.sto~ ~override/highhedg.sto~
+PATCH_IF (SOURCE_SIZE > 0x9a) BEGIN
+ADD_STORE_ITEM "misc72" LAST #15 #0 #0 ~IDENTIFIED~ #1
+END
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//beltS//
+/////////
+
+//Golden Girdle belt02 KIRIAN.CRE Kirian - adv.band
+COPY_EXISTING ~kirian.cre~ ~override/kirian.cre~
+SPRINT ~item2change~ ~belt02~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+
+//Girdle of Bluntness belt03 KRUMM.cre Krumm - a guy who cut a nymph's tree; XR0603 - Ir. dung?
+COPY_EXISTING ~krumm.cre~ ~override/krumm.cre~
+SPRINT ~item2change~ ~belt03~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+
+//Girdle of Piercing belt04 OGREUNSH.cre - ogre fetishist
+COPY_EXISTING ~ogreunsh.cre~ ~override/ogreunsh.cre~
+SPRINT ~item2change~ ~belt04~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+///////////
+//BRACERS//
+///////////
+
+//Gauntlets of Ogre Power brac06 DESRET.cre - Desreta, assasin in tavern-ship
+COPY_EXISTING ~desret.cre~ ~override/desret.cre~
+SPRINT ~item2change~ ~brac06~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gauntlets of Weapon Skill brac09 AR8100 (container 19) - BG docks, chest near Umberlee temple (quest to find them)
+COPY_EXISTING ~ar8100.are~ ~override/ar8100.are~
+SET ~container2add2~ = 19
+SPRINT ~item2add~ ~brac09~
+LAUNCH_PATCH_MACRO ~ADD_AREA_ITM~
+BUT_ONLY_IF_IT_CHANGES
+
+//Bracers of Defense AC 6 brac03 DAVAEO.cre Davaeorn - Cloakwood mines head
+COPY_EXISTING ~davaeo.cre~ ~override/davaeo.cre~
+SPRINT ~item2change~ ~brac03~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Gauntlets of Fumbling brac08 BASSIL.cre Bassilus
+COPY_EXISTING ~bassil.cre~ ~override/bassil.cre~
+SPRINT ~item2change~ ~brac08~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//bootS//
+/////////
+
+//Boots of Avoidance boot04 NIMBUL.cre - Nimbul, asassin in Nashkel
+COPY_EXISTING ~nimbul.cre~ ~override/nimbul.cre~
+SPRINT ~item2change~ ~boot04~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Boots of the North boot03 Jared.cre - scared merchant 
+COPY_EXISTING ~jared.cre~ ~override/jared.cre~
+SPRINT ~item2change~ ~boot03~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Boots of Speed boot01 PBHUNT05.cre - bounty hunter?; LOTHAN.CRE - Lothander (partner of the assassin Marek), DRASUS.cre - Drasus (last stage of Iron Throne?)
+COPY_EXISTING ~drasus.cre~ ~override/drasus.cre~
+SPRINT ~item2change~ ~boot01~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Boots of Grounding boot05 Mulahey MULAHE.cre
+COPY_EXISTING ~mulahe.cre~ ~override/mulahe.cre~
+SPRINT ~item2change~ ~boot05~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+/////////////
+//NECKLACES//
+/////////////
+
+//Metaspell Influence Amulet amul16 RAMAZI.cre Ramazith
+COPY_EXISTING ~ramazi.cre~ ~override/ramazi.cre~
+SPRINT ~item2change~ ~amul16~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Necklace of Missiles amul01 DELORN.cre - Nadine NADINE.cre nadin.dlg (give the Amulet of protection to her son Eric), Delorna (mage's daughter, halruaan ship quest), ARD014 - Durlag's Tower. Leving at Nadine!
+//Amulet of Protection +1 amul14 NADINE.cre, nadin.dlg - Nadine (give the Amulet of protection to her son Eric), Ragefa.cre - Ragefast
+COPY_EXISTING ~nadine.cre~ ~override/nadine.cre~
+SPRINT ~item2change~ ~amul01\|amul14~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//////////
+//CLOAKS//
+//////////
+
+
+//Algernon's Cloak clck08 ALGERN.CRE (Algernon)
+COPY_EXISTING ~algern.cre~ ~override/algern.cre~
+SPRINT ~item2change~ ~clck08~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Cloak of Balduran clck05 QUENAS.CRE quenas.dlg Quenash
+COPY_EXISTING ~quenas.cre~ ~override/quenas.cre~
+SPRINT ~item2change~ ~clck05~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+/////////
+//STUFF//
+/////////
+
+//Short Sword of Backstabbing +3 SW1H10 SLYTHE.cre Slythe - last asassination attempt in underground tavern
+COPY_EXISTING ~slythe.cre~ ~override/slythe.cre~
+SPRINT ~item2change~ ~sw1h10~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Helm Of Defence HELM04 DROTH.cre - Droth the ogre-mage who tortured sirene (or nymph?)
+COPY_EXISTING ~droth.cre~ ~override/droth.cre~
+SPRINT ~item2change~ ~helm04~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//halb03 Suryris's Blade ribald.sto, bazliz04.cre lizard man captain, gorsta02.cre wk statue, gorsta09.cre wk statue, jarevia.cre reviane (a harper after jaheira), zhalim.cre - bg1 (last stage of iron throne)
+COPY_EXISTING ~zhalim.cre~ ~override/zhalim.cre~
+SPRINT ~item2change~ ~halb03~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Long Sword +2: 'Varscona' sw1h06 - left at Kachiko c6kach2.cre (a thief to help with bodhi) GREYWO - creywolf from bg1
+COPY_EXISTING ~greywo.cre~ ~override/greywo.cre~
+SPRINT ~item2change~ ~sw1h06~
+SET f_rem = ~%f_rem_nodr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//Dagger +2: 'Heart of the Golem' DAGG03 C6ARKAN.cre C6ARKAN3.cre - 2 Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly); Valyssa (dryads, acorns); Hentol.cre - Hentold in BG1 (give dagger to zombie)
+COPY_EXISTING ~hentol.cre~ ~override/hentol.cre~
+SPRINT ~item2change~ ~dagg03~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+//////////
+//IMPORT//
+/////////
+
+//protector of the second, leather armor at one of the bg1 asassins
+COPY_EXISTING ~maneir.cre~ ~override/maneir.cre~
+SPRINT ~item2change~ ~leath03~
+SET f_rem = ~%f_rem_nostdr%~
+LAUNCH_PATCH_MACRO ~REM_CRE_ITM_FLAGS_ONCE~
+BUT_ONLY_IF_IT_CHANGES
+
+END //end of BG1 items restoring
+
+///////////
+//NOWHERE//
+///////////
+//Boots of Lightning Speed boot10 - UA add it ot Smauel Thunderburp  instead of boots of stealth
+//Boots of the West MISC8J - used by Unfinished Business in BG2, unfortunately. UA add them to 1 BG1 quest instead of boots of stealth (not Zhurlong's)

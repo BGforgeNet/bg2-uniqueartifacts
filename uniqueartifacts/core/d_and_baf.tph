@@ -1,0 +1,105 @@
+PRINT ~Processing dialogs...~
+//replacing items in .dlg and .bcs
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x30)
+  AND NOT ((~%SOURCE_RES%~ STRING_COMPARE_CASE ~mgappr02~ = 0) //mage stronghold apprentice: ring08 Ring of Wizardry
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ppstat01~ = 0) //statue in spellhold: ring31 Ring of Regeneration
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~aran~ = 0) //aran linvail: ring07 Ring of Protection +2; amul21 Amulet of Power
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~mgkhol01~ = 0) //Khollynnus Paac (Solamnic Knights): belt02 Golden Girdle
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~tokcre01~ = 0) //token machine in spellhold:
+//boot03 Boots of the North
+//boot01 Boots of Speed
+//boot05 Boots of Grounding
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~udsvir05~ = 0) //svirf innkeeper (reward for the son rescue): brac14 Bracers of Defense AC 4
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~sahkng01~ = 0) //King Ixilthetocal: brac19 Gauntlets of Crushing
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~renal~ = 0) //Renal Bloodscalp: sw1h10 Short Sword of Backstabbing +3
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~tolger~ = 0) //Tolgerias: ring33 Ring of the Ram
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~hellfear~ = 0) //Fear (hell trials): clck30 Cloak of Bravery
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~kyle2~ = 0) //Sir Ryan Trawl quest reward: brac20 Gloves of Healing
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~elelev01~ = 0) //another machine in Spellhold: brac13 Bracers of Defense AC 5
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~scsain~ = 0) //cleric of Lathander (stronghold illitium): amul23 Periapt of Life Protection
+
+
+
+//BG1 stuff:
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~jared~ = 0) //Jared the scared merchant: boot03 Boots of the North
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~nadin~ = 0) //Nadine the amulet quester: amul01 Necklace of Missiles; amul14 Amulet of Protection +1
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~quenas~ = 0) //Quenash: clck05 Cloak of Balduran
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~hentol~ = 0)) //Hentold the scared thief (give the dagger to zombie): dagg03 'Heart of the Golem'
+  THEN BEGIN
+    DECOMPILE_DLG_TO_D
+
+      SPRINT ~old_item~ ~%amulets%~
+      SPRINT ~new_item~ ~amul10~ //gold necklace
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%bracers%~
+      SPRINT ~new_item~ ~brac01~ //simple bracers
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%cloaks%~
+      SPRINT ~new_item~ ~clck01~ //cloak of protection +1
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%boots%~
+      SPRINT ~new_item~ ~boot06~ //worn out boots
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%belts%~
+      SPRINT ~new_item~ ~belt01~ //simple girdle
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%rings%~
+      SPRINT ~new_item~ ~ring10~ //gold ring
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+    COMPILE_D_TO_DLG
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+PRINT ~Processing scripts...~
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
+  PATCH_IF (SOURCE_SIZE > 0x5)
+  AND NOT ((~%SOURCE_RES%~ STRING_COMPARE_CASE ~botsmith~ = 0)
+//cespy uprades:
+//ring44
+//brac23
+//brac25
+//clck31
+//clck32
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ppbook~ = 0) //book in spellhold: ring09 Ring of Free Action
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ar0511~ = 0) //mage stronghold: ring08 Ring of Wizardry
+  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~alphonse~ = 0)) //Priest reward for illithium quest: ring22 Ring of Holiness
+
+  THEN BEGIN
+    DECOMPILE_BCS_TO_BAF
+
+      SPRINT ~old_item~ ~%amulets%~
+      SPRINT ~new_item~ ~amul10~ //gold necklace
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%bracers%~
+      SPRINT ~new_item~ ~brac01~ //simple bracers
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%cloaks%~
+      SPRINT ~new_item~ ~clck01~ //cloak of protection +1
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%boots%~
+      SPRINT ~new_item~ ~boot06~ //worn out boots
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%belts%~
+      SPRINT ~new_item~ ~belt01~ //simple girdle
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+      SPRINT ~old_item~ ~%rings%~
+      SPRINT ~new_item~ ~ring10~ //gold ring
+      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
+
+    COMPILE_BAF_TO_BCS
+  END
+BUT_ONLY_IF_IT_CHANGES

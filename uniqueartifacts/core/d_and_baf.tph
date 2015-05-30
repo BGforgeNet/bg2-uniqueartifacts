@@ -68,8 +68,6 @@ PRINT ~Processing scripts...~
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x5)
   AND NOT (VARIABLE_IS_SET $scripts_skip(~%SOURCE_RES%~)) BEGIN
-
-  THEN BEGIN
     DECOMPILE_BCS_TO_BAF
 
       SPRINT ~old_item~ ~%amulets%~

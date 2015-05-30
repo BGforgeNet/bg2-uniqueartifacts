@@ -41,24 +41,21 @@ How to skip an item, so it won't be affected by the mod?
 Open "uniqueartifacts/affected_items" directory, open the file of the appropriate component, find necessary filename. Then go to "unique artifacts/core", open items2replace_expanded.tph or items2replace_strict.tph - whichever you wish to install, find reference to this filename and delete it (don't forget to delete 1 nearby "\|", also). Then open restore_expanded.tph or restore_strict.tph, find and delete block of code with the filename above. That's all.
 
 ### Version history:
-1.12. Major code revision and optimization. Fixed bug with not restoring Paladin's bracers and Bracers of Blinding Strike. Fixed wrong charges issues in several items. Improved compatibility with other mods. Fixed possible issue with erroneous temple and tavern stores patching. Weidu 200
-1.11. A crucial bug from 1.1 fixed.
-1.1. 2 options to install now. Code optimization, several bugfixes. Weidu 199.
-1.0. Added BGT compatibility, fixed some typos, added few items
-1.0beta. beta release
-
-X. SPOILERS:
-
-quests in BG1 I meant:
-
-Unshey's belt (Golden Girdle)
-Zhurlong's boots (Boots of Stealth)
-Lucky Amulet (Baldur's Gate city, Nadine and her son Eric - Amulet of protection +1 and Necklace of Missiles)
-Gauntlets of Weapon Skill (some mercenary girl in Baldur's Gate city asks to find them for her)
-If you give these items to them, you'll not see them again till BG2.
-
-
-new ToB game issues:
-strict: Lazarus' store is ring of fire resistance, boots of speed
-
-expanded: Lazarus' store is missing robes of archmagi, ring of fire resistance, boots of speed
+- Version 1.12
+  - Major code revision and optimization
+  - Fixed bug with not restoring Paladin's bracers and Bracers of Blinding Strike
+  - Fixed wrong charges issues in several items
+  - Improved compatibility with other mods
+  - Fixed possible issue with erroneous temple and tavern stores patching
+  - Weidu 200
+- Version 1.11
+  - A crucial bug from 1.1 fixed
+- Version 1.1
+  - 2 subcomponents to choose from
+  - Code optimization, several bugfixes
+  - Weidu 199
+- Version 1.0
+  - Added BGT compatibility
+  - Fixed some typos
+  - Added a few items
+- Version 1.0beta. beta release

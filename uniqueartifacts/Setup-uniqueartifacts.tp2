@@ -1,25 +1,11 @@
 BACKUP ~uniqueartifacts/backup~
-AUTHOR ~gort@spellholdstudios.net~
+AUTHOR ~burner1024 @ github~
 
 //Component detection: dummy file for "strict" is g_uastr.itm. For expanded it's g_uaexp.itm
 
-
-
-BEGIN ~Pre-install check...~
-NO_LOG_RECORD
-INSTALL_BY_DEFAULT
-ACTION_IF NOT FILE_EXISTS_IN_GAME ~cdbehbla.pro~ THEN BEGIN
-  PRINT ~BG2fixpack is not found. It is recommended (but not necessary) that you install it before. You can found it at http://www.gibberlings3.net/downloads/#bg2fixpack~
-END
-
-ACTION_IF NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~) OR (FILE_EXISTS_IN_GAME ~g_uaexp.itm~) THEN BEGIN
-  PRINT ~Make sure you read the readme before the installation.~
-END
-
-
 BEGIN ~Strict~
 
-SUBCOMPONENT ~Unique Artifacts v1.12~
+SUBCOMPONENT ~Unique Artifacts~
 
 //detection
 COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uastr.itm~
@@ -64,7 +50,7 @@ INCLUDE ~uniqueartifacts/core/compatibility.tph~
 
 BEGIN ~Expanded~
 
-SUBCOMPONENT ~Unique Artifacts v1.12~
+SUBCOMPONENT ~Unique Artifacts~
 
 //detection
 COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uaexp.itm~

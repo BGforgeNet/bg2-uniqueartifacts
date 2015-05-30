@@ -1,33 +1,38 @@
 PRINT ~Processing dialogs...~
 //replacing items in .dlg and .bcs
 
+ACTION_DEFINE_ASSOCIATIVE_ARRAY dialogs_skip BEGIN
+  //BG1
+  jared => ~Jared the scared merchant: boot03 Boots of the North~
+  nadin => ~Nadine the amulet quester: amul01 Necklace of Missiles; amul14 Amulet of Protection +1~
+  quenas => ~Quenash: clck05 Cloak of Balduran~
+  hentol => ~Hentold the scared thief (give the dagger to zombie): dagg03 'Heart of the Golem'~
+  //BG2
+  mgappr02 => ~mage stronghold apprentice: ring08 Ring of Wizardry~
+  ppstat01 => ~statue in spellhold: ring31 Ring of Regeneration~
+  aran => ~Aran Linvail: ring07 Ring of Protection +2; amul21 Amulet of Power~
+  mgkhol01 => ~Khollynnus Paac (Solamnic Knights): belt02 Golden Girdle~
+  tokcre01 => ~token machine in spellhold: boot03 Boots of the North, boot01 Boots of Speed, boot05 Boots of Grounding~
+  udsvir05 => ~svirf innkeeper (reward for rescuing his sone): brac14 Bracers of Defense AC 4~
+  sahkng01 => ~King Ixilthetocal: brac19 Gauntlets of Crushing~
+  renal => ~Renal Bloodscalp: sw1h10 Short Sword of Backstabbing +3~
+  tolger => ~Tolgerias: ring33 Ring of the Ram~
+  hellfear => ~Fear (hell trials): clck30 Cloak of Bravery~
+  kyle2 => ~Sir Ryan Trawl quest reward: brac20 Gloves of Healing~
+  elelev01 => ~another machine in Spellhold: brac13 Bracers of Defense AC 5~
+  scsain => ~cleric of Lathander (stronghold illitium): amul23 Periapt of Life Protection~
+END
+
+ACTION_DEFINE_ASSOCIATIVE_ARRAY scripts_skip BEGIN
+  botsmith => ~Cespenar upgrades: ring44, brac23, brac25, clck31, clck32~
+  ppbook => ~book in spellhold: ring09 Ring of Free Action~
+  ar0511 => ~mage stronghold: ring08 Ring of Wizardry~
+  alphonse => ~priest reward for illithium quest: ring22 Ring of Holiness~
+END
+
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x30)
-  AND NOT ((~%SOURCE_RES%~ STRING_COMPARE_CASE ~mgappr02~ = 0) //mage stronghold apprentice: ring08 Ring of Wizardry
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ppstat01~ = 0) //statue in spellhold: ring31 Ring of Regeneration
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~aran~ = 0) //aran linvail: ring07 Ring of Protection +2; amul21 Amulet of Power
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~mgkhol01~ = 0) //Khollynnus Paac (Solamnic Knights): belt02 Golden Girdle
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~tokcre01~ = 0) //token machine in spellhold:
-//boot03 Boots of the North
-//boot01 Boots of Speed
-//boot05 Boots of Grounding
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~udsvir05~ = 0) //svirf innkeeper (reward for the son rescue): brac14 Bracers of Defense AC 4
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~sahkng01~ = 0) //King Ixilthetocal: brac19 Gauntlets of Crushing
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~renal~ = 0) //Renal Bloodscalp: sw1h10 Short Sword of Backstabbing +3
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~tolger~ = 0) //Tolgerias: ring33 Ring of the Ram
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~hellfear~ = 0) //Fear (hell trials): clck30 Cloak of Bravery
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~kyle2~ = 0) //Sir Ryan Trawl quest reward: brac20 Gloves of Healing
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~elelev01~ = 0) //another machine in Spellhold: brac13 Bracers of Defense AC 5
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~scsain~ = 0) //cleric of Lathander (stronghold illitium): amul23 Periapt of Life Protection
-
-
-
-//BG1 stuff:
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~jared~ = 0) //Jared the scared merchant: boot03 Boots of the North
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~nadin~ = 0) //Nadine the amulet quester: amul01 Necklace of Missiles; amul14 Amulet of Protection +1
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~quenas~ = 0) //Quenash: clck05 Cloak of Balduran
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~hentol~ = 0)) //Hentold the scared thief (give the dagger to zombie): dagg03 'Heart of the Golem'
-  THEN BEGIN
+  AND NOT (VARIABLE_IS_SET $dialogs_skip(~%SOURCE_RES%~)) BEGIN
     DECOMPILE_DLG_TO_D
 
       SPRINT ~old_item~ ~%amulets%~
@@ -56,22 +61,13 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
 
     COMPILE_D_TO_DLG
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY
 
 PRINT ~Processing scripts...~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x5)
-  AND NOT ((~%SOURCE_RES%~ STRING_COMPARE_CASE ~botsmith~ = 0)
-//cespy uprades:
-//ring44
-//brac23
-//brac25
-//clck31
-//clck32
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ppbook~ = 0) //book in spellhold: ring09 Ring of Free Action
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~ar0511~ = 0) //mage stronghold: ring08 Ring of Wizardry
-  OR (~%SOURCE_RES%~ STRING_COMPARE_CASE ~alphonse~ = 0)) //Priest reward for illithium quest: ring22 Ring of Holiness
+  AND NOT (VARIABLE_IS_SET $scripts_skip(~%SOURCE_RES%~)) BEGIN
 
   THEN BEGIN
     DECOMPILE_BCS_TO_BAF

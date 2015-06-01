@@ -6,13 +6,13 @@ AUTO_EVAL_STRINGS
 BEGIN ~Strict~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
-INCLUDE ~uniqueartifacts/core/items2replace_strict.tph~ //items to remove
+INCLUDE ~uniqueartifacts/core/strict/items.tph~ //items to remove
 INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
-INCLUDE ~uniqueartifacts/core/restore_strict.tph~ //restore
+INCLUDE ~uniqueartifacts/core/strict/restore.tph~ //restore
 
 BEGIN ~Expanded~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
-INCLUDE ~uniqueartifacts/core/items2replace_expanded.tph~ //items to remove
+INCLUDE ~uniqueartifacts/core/expanded/items.tph~ //items to remove
 INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
-INCLUDE ~uniqueartifacts/core/restore_expanded.tph~ //restore
+INCLUDE ~uniqueartifacts/core/expanded/restore.tph~ //restore

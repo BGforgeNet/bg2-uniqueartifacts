@@ -2,7 +2,8 @@ PRINT ~Processing creatures...~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
   LPF ADD_CRE_ITEM_FLAGS
-    STR_VAR item_to_change = ~%all_items%~
-    STR_VAR flags = ~UNSTEALABLE&UNDROPPABLE~
+    STR_VAR
+      item_to_change = ~%all_items%~
+      flags = ~UNSTEALABLE&UNDROPPABLE~
   END
 BUT_ONLY

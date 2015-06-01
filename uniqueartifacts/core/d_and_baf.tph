@@ -33,7 +33,7 @@ END
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x30)
   AND NOT (VARIABLE_IS_SET $dialogs_skip(~%SOURCE_RES%~)) BEGIN
-    DECOMPILE_DLG_TO_D
+    DECOMPILE_AND_PATCH BEGIN
 
       SPRINT ~old_item~ ~%amulets%~
       SPRINT ~new_item~ ~amul10~ //gold necklace
@@ -59,7 +59,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
       SPRINT ~new_item~ ~ring10~ //gold ring
       LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
 
-    COMPILE_D_TO_DLG
+    END
   END
 BUT_ONLY
 
@@ -68,7 +68,7 @@ PRINT ~Processing scripts...~
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x5)
   AND NOT (VARIABLE_IS_SET $scripts_skip(~%SOURCE_RES%~)) BEGIN
-    DECOMPILE_BCS_TO_BAF
+    DECOMPILE_AND_PATCH BEGIN
 
       SPRINT ~old_item~ ~%amulets%~
       SPRINT ~new_item~ ~amul10~ //gold necklace
@@ -94,6 +94,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
       SPRINT ~new_item~ ~ring10~ //gold ring
       LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
 
-    COMPILE_BAF_TO_BCS
+    END
   END
-BUT_ONLY_IF_IT_CHANGES
+BUT_ONLY

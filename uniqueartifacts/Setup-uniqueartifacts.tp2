@@ -5,14 +5,14 @@ AUTO_EVAL_STRINGS
 
 BEGIN ~Strict~
 SUBCOMPONENT ~Unique Artifacts~
-COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
-INCLUDE ~uniqueartifacts/core/strict/items.tph~ //items to remove
-INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
-INCLUDE ~uniqueartifacts/core/strict/restore.tph~ //restore
+COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
+INCLUDE ~%MOD_FOLDER%/core/strict/items.tph~ //items to remove
+INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/strict/restore.tph~ //restore
 
 BEGIN ~Expanded~
 SUBCOMPONENT ~Unique Artifacts~
-COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
-INCLUDE ~uniqueartifacts/core/expanded/items.tph~ //items to remove
-INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
-INCLUDE ~uniqueartifacts/core/expanded/restore.tph~ //restore
+COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
+INCLUDE ~%MOD_FOLDER%/core/expanded/items.tph~ //items to remove
+INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/expanded/restore.tph~ //restore

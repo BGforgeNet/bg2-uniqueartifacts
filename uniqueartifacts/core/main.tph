@@ -7,19 +7,19 @@ END
 PRINT ~Removing items:~
 
 //macro
-INCLUDE ~uniqueartifacts/core/macro.tph~
+INCLUDE ~%MOD_FOLDER%/core/macro.tph~
 
 //removing from dialogs and scripts
-INCLUDE ~uniqueartifacts/core/d_and_baf.tph~
+INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tph~
 
 //removing from areas
-INCLUDE ~uniqueartifacts/core/areas.tph~
+INCLUDE ~%MOD_FOLDER%/core/areas.tph~
 
 //removing from creatures
-INCLUDE ~uniqueartifacts/core/creatures.tph~
+INCLUDE ~%MOD_FOLDER%/core/creatures.tph~
 
 //removing from stores
-INCLUDE ~uniqueartifacts/core/stores.tph~
+INCLUDE ~%MOD_FOLDER%/core/stores.tph~
 
 //compatibility
-INCLUDE ~uniqueartifacts/core/compatibility/main.tph~
+INCLUDE ~%MOD_FOLDER%/core/compatibility/main.tph~

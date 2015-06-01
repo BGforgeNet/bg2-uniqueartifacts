@@ -1,91 +1,18 @@
 BACKUP ~uniqueartifacts/backup~
 AUTHOR ~burner1024 @ github~
-
-//Component detection: dummy file for "strict" is g_uastr.itm. For expanded it's g_uaexp.itm
+NO_IF_EVAL_BUG
+AUTO_EVAL_STRINGS
 
 BEGIN ~Strict~
-
 SUBCOMPONENT ~Unique Artifacts~
-
-//detection
-COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uastr.itm~
-
-PRINT ~Be patient, the entire game content will be revised now. It will take a while.~
-
-ACTION_IF FILE_EXISTS ~data/BG1ARE.BIF~ THEN BEGIN
-  PRINT ~BGT detected.~
-END
-ELSE BEGIN
-  PRINT ~BGT is not detected.~
-END
-
-PRINT ~Removing items:~
-
-//macro
-INCLUDE ~uniqueartifacts/core/macro.tph~
-
-//all items to remove
-INCLUDE ~uniqueartifacts/core/items2replace_strict.tph~
-
-//removing from dialogs and scripts
-INCLUDE ~uniqueartifacts/core/d_and_baf.tph~
-
-//removing from areas
-INCLUDE ~uniqueartifacts/core/areas.tph~
-
-//removing from creatures
-INCLUDE ~uniqueartifacts/core/creatures.tph~
-
-//removing from stores
-INCLUDE ~uniqueartifacts/core/stores.tph~
- 
-//restoring
-INCLUDE ~uniqueartifacts/core/restore_strict.tph~
-
-//compatibility
-INCLUDE ~uniqueartifacts/core/compatibility.tph~
-
-
-
+COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
+INCLUDE ~uniqueartifacts/core/items2replace_strict.tph~ //items to remove
+INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
+INCLUDE ~uniqueartifacts/core/restore_strict.tph~ //restore
 
 BEGIN ~Expanded~
-
 SUBCOMPONENT ~Unique Artifacts~
-
-//detection
-COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uaexp.itm~
-
-PRINT ~Be patient, the entire game content will be revised now. It will take a while.~
-
-ACTION_IF FILE_EXISTS ~data/BG1ARE.BIF~ THEN BEGIN
-  PRINT ~BGT detected.~
-END
-ELSE BEGIN
-  PRINT ~BGT is not detected.~
-END
-
-PRINT ~Removing items:~
-
-//macro
-INCLUDE ~uniqueartifacts/core/macro.tph~
-
-//all items to remove
-INCLUDE ~uniqueartifacts/core/items2replace_expanded.tph~
-
-//removing from dialogs and scripts
-INCLUDE ~uniqueartifacts/core/d_and_baf.tph~
-
-//removing from areas
-INCLUDE ~uniqueartifacts/core/areas.tph~
-
-//removing from creatures
-INCLUDE ~uniqueartifacts/core/creatures.tph~
-
-//removing from stores
-INCLUDE ~uniqueartifacts/core/stores.tph~
-
-//restoring
-INCLUDE ~uniqueartifacts/core/restore_expanded.tph~
-
-//compatibility
-INCLUDE ~uniqueartifacts/core/compatibility.tph~
+COPY ~uniqueartifacts/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
+INCLUDE ~uniqueartifacts/core/items2replace_expanded.tph~ //items to remove
+INCLUDE ~uniqueartifacts/core/main.tph~ //process games files
+INCLUDE ~uniqueartifacts/core/restore_expanded.tph~ //restore

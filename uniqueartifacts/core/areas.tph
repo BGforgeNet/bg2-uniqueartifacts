@@ -1,10 +1,13 @@
 PRINT ~Processing areas...~
 
 //bad reference to progtest.bif
-COPY_EXISTING ~ar0087.are~ ~override/xr2400.are~
-			~ar0087.are~ ~override/xr2600.are~
+COPY_EXISTING
+  ~ar0087.are~ ~override/xr2400.are~
+  ~ar0087.are~ ~override/xr2600.are~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
-  SPRINT ~item2delete~ ~%all_items%~
-LAUNCH_PATCH_MACRO ~DELETE_AREA_ITM_ALL~
-BUT_ONLY_IF_IT_CHANGES
+  LPF DELETE_AREA_ITEM
+    STR_VAR
+      item_to_delete = ~%all_items%~
+  END
+BUT_ONLY

@@ -3,9 +3,6 @@ PRINT ~Please be patient, the installation takes a few minutes.~
 ACTION_IF FILE_EXISTS ~data/BG1ARE.BIF~ THEN BEGIN
   PRINT ~BGT detected.~
 END
-ELSE BEGIN
-  PRINT ~BGT is not detected.~
-END
 
 PRINT ~Removing items:~
 
@@ -25,4 +22,4 @@ INCLUDE ~uniqueartifacts/core/creatures.tph~
 INCLUDE ~uniqueartifacts/core/stores.tph~
 
 //compatibility
-INCLUDE ~uniqueartifacts/core/compatibility.tph~
+INCLUDE ~uniqueartifacts/core/compatibility/main.tph~

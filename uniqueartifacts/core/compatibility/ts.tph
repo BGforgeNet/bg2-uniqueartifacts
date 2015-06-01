@@ -1,0 +1,12 @@
+//Tortured Souls
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~kachi01.wav~) BEGIN
+PRINT ~Tortured Souls~
+
+  COPY_EXISTING ~wmart1.sto~ ~override/wmart1.sto~ //Kachiko' wakisashi - removing from Joluv
+    LPF DELETE_STORE_ITEM
+      STR_VAR item_to_delete ~wawak~
+    END
+  BUT_ONLY
+
+END

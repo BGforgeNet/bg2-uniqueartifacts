@@ -1,0 +1,12 @@
+//Sword Coast Stratagems
+
+ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
+PRINT ~Sword Coast Stratagems~
+
+  COPY_EXISTING ~gorlic01.cre~ ~override~  //Moved Robe of Vecna
+    LPF REMOVE_CRE_ITEM_FLAGS
+      STR_VAR item_to_change ~wa2robe~
+    END
+  BUT_ONLY
+
+END

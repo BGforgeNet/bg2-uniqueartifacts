@@ -1,0 +1,5 @@
+PRINT ~Check and resolve compatibility issues...~
+
+INCLUDE ~%MOD_FOLDER%/core/compatibility/rr.tph~
+INCLUDE ~%MOD_FOLDER%/core/compatibility/scs.tph~
+INCLUDE ~%MOD_FOLDER%/core/compatibility/ts.tph~

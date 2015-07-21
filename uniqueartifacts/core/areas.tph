@@ -1,4 +1,4 @@
-PRINT ~Processing areas...~
+PRINT ~Processing areas:~
 
 //bad reference to progtest.bif
 COPY_EXISTING
@@ -6,8 +6,22 @@ COPY_EXISTING
   ~ar0087.are~ ~override/xr2600.are~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
-  LPF DELETE_AREA_ITEM
-    STR_VAR
-      item_to_delete = ~%all_items%~
+  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+    LPF DELETE_AREA_ITEM
+      STR_VAR
+        item_to_delete = ~%all_items%~
+    END
+  END ELSE BEGIN
+    LPF define_items
+      STR_VAR
+        exclude_source = ~%SOURCE_FILE%~
+      RET
+        all_items = items
+    END
+    LPF DELETE_AREA_ITEM
+      STR_VAR
+        item_to_delete = ~%all_items%~
+    END
+    SPRINT all_items ~%really_all_items%~
   END
 BUT_ONLY

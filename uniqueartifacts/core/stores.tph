@@ -1,11 +1,25 @@
-PRINT ~Processing stores...~
+PRINT ~Processing stores:~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
   READ_STRREF 0xc "store_name"
   PATCH_IF NOT ("%store_name%" STRING_COMPARE_CASE "^bag of holding$" = 0) BEGIN //excluding starting ToB Bags
-    LPF DELETE_STORE_ITEM
-      STR_VAR
-        item_to_delete ~%all_items%~
+    PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+      LPF DELETE_STORE_ITEM
+        STR_VAR
+          item_to_delete = ~%all_items%~
+      END
+    END ELSE BEGIN
+      LPF define_items
+        STR_VAR
+          exclude_source = ~%SOURCE_FILE%~
+        RET
+          all_items = items
+      END
+      LPF DELETE_STORE_ITEM
+        STR_VAR
+          item_to_delete = ~%all_items%~
+      END
+      SPRINT all_items ~%really_all_items%~
     END
   END
 BUT_ONLY

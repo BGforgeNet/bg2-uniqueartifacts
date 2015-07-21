@@ -1,0 +1,15 @@
+INCLUDE ~%MOD_FOLDER%/items/strict.txt~
+ACTION_PHP_EACH source_item_strict AS index => value BEGIN
+  OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
+END
+
+ACTION_IF (expanded = 1) BEGIN
+  INCLUDE ~%MOD_FOLDER%/items/expanded.txt~
+  ACTION_PHP_EACH source_item_expanded AS index => value BEGIN
+    OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
+  END
+END
+
+ACTION_PHP_EACH source_item_compat AS index => value BEGIN
+  OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
+END

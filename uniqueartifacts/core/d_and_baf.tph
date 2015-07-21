@@ -1,99 +1,29 @@
-PRINT ~Processing dialogs...~
-//replacing items in .dlg and .bcs
-
-ACTION_DEFINE_ASSOCIATIVE_ARRAY dialogs_skip BEGIN
-  //BG1
-  jared => ~Jared the scared merchant: boot03 Boots of the North~
-  nadin => ~Nadine the amulet quester: amul01 Necklace of Missiles; amul14 Amulet of Protection +1~
-  quenas => ~Quenash: clck05 Cloak of Balduran~
-  hentol => ~Hentold the scared thief (give the dagger to zombie): dagg03 'Heart of the Golem'~
-  //BG2
-  mgappr02 => ~mage stronghold apprentice: ring08 Ring of Wizardry~
-  ppstat01 => ~statue in spellhold: ring31 Ring of Regeneration~
-  aran => ~Aran Linvail: ring07 Ring of Protection +2; amul21 Amulet of Power~
-  mgkhol01 => ~Khollynnus Paac (Solamnic Knights): belt02 Golden Girdle~
-  tokcre01 => ~token machine in spellhold: boot03 Boots of the North, boot01 Boots of Speed, boot05 Boots of Grounding~
-  udsvir05 => ~svirf innkeeper (reward for rescuing his sone): brac14 Bracers of Defense AC 4~
-  sahkng01 => ~King Ixilthetocal: brac19 Gauntlets of Crushing~
-  renal => ~Renal Bloodscalp: sw1h10 Short Sword of Backstabbing +3~
-  tolger => ~Tolgerias: ring33 Ring of the Ram~
-  hellfear => ~Fear (hell trials): clck30 Cloak of Bravery~
-  kyle2 => ~Sir Ryan Trawl quest reward: brac20 Gloves of Healing~
-  elelev01 => ~another machine in Spellhold: brac13 Bracers of Defense AC 5~
-  scsain => ~cleric of Lathander (stronghold illitium): amul23 Periapt of Life Protection~
-END
-
-ACTION_DEFINE_ASSOCIATIVE_ARRAY scripts_skip BEGIN
-  botsmith => ~Cespenar upgrades: ring44, brac23, brac25, clck31, clck32~
-  ppbook => ~book in spellhold: ring09 Ring of Free Action~
-  ar0511 => ~mage stronghold: ring08 Ring of Wizardry~
-  alphonse => ~priest reward for illithium quest: ring22 Ring of Holiness~
-END
+PRINT ~Processing dialogs:~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x30)
-  AND NOT (VARIABLE_IS_SET $dialogs_skip(~%SOURCE_RES%~)) BEGIN
+  AND NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
     DECOMPILE_AND_PATCH BEGIN
-
-      SPRINT ~old_item~ ~%amulets%~
-      SPRINT ~new_item~ ~amul10~ //gold necklace
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%bracers%~
-      SPRINT ~new_item~ ~brac01~ //simple bracers
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%cloaks%~
-      SPRINT ~new_item~ ~clck01~ //cloak of protection +1
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%boots%~
-      SPRINT ~new_item~ ~boot06~ //worn out boots
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%belts%~
-      SPRINT ~new_item~ ~belt01~ //simple girdle
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%rings%~
-      SPRINT ~new_item~ ~ring10~ //gold ring
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
+      LPF REPLACE_D_AND_BAF_ITEM
+        STR_VAR
+         old_item = ~%all_items%~
+         new_item = ~amul10~ //gold necklace
+      END
     END
   END
 BUT_ONLY
 
-PRINT ~Processing scripts...~
 
+PRINT ~Processing scripts:~
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
   PATCH_IF (SOURCE_SIZE > 0x5)
-  AND NOT (VARIABLE_IS_SET $scripts_skip(~%SOURCE_RES%~)) BEGIN
+  AND NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
     DECOMPILE_AND_PATCH BEGIN
-
-      SPRINT ~old_item~ ~%amulets%~
-      SPRINT ~new_item~ ~amul10~ //gold necklace
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%bracers%~
-      SPRINT ~new_item~ ~brac01~ //simple bracers
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%cloaks%~
-      SPRINT ~new_item~ ~clck01~ //cloak of protection +1
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%boots%~
-      SPRINT ~new_item~ ~boot06~ //worn out boots
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%belts%~
-      SPRINT ~new_item~ ~belt01~ //simple girdle
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
-      SPRINT ~old_item~ ~%rings%~
-      SPRINT ~new_item~ ~ring10~ //gold ring
-      LAUNCH_PATCH_MACRO ~REPLACE_D_AND_BAF_ITM~
-
+      LPF REPLACE_D_AND_BAF_ITEM
+        STR_VAR
+          old_item = ~%all_items%~
+          new_item = ~amul10~ //gold necklace
+      END
     END
   END
 BUT_ONLY

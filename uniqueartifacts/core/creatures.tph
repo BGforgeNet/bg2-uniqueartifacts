@@ -1,9 +1,24 @@
-PRINT ~Processing creatures...~
+PRINT ~Processing creatures:~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
-  LPF ADD_CRE_ITEM_FLAGS
-    STR_VAR
-      item_to_change = ~%all_items%~
-      flags = ~UNSTEALABLE&UNDROPPABLE~
+  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+    LPF ADD_CRE_ITEM_FLAGS
+      STR_VAR
+        item_to_change = ~%all_items%~
+        flags = ~UNSTEALABLE&UNDROPPABLE~
+    END
+  END ELSE BEGIN
+    LPF define_items
+      STR_VAR
+        exclude_source = ~%SOURCE_FILE%~
+      RET
+        all_items = items
+    END
+    LPF ADD_CRE_ITEM_FLAGS
+      STR_VAR
+        item_to_change = ~%all_items%~
+        flags = ~UNSTEALABLE&UNDROPPABLE~
+    END
+    SPRINT all_items ~%really_all_items%~
   END
 BUT_ONLY

@@ -1,0 +1,10 @@
+//small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West
+ACTION_IF ( BGT = 1) BEGIN //BGT only
+  COPY_EXISTING ~nadari.cre~ ~override/nadari.cre~
+    ADD_CRE_ITEM ~misc8j~ #0 #0 #0 ~NONE~ ~INV10~
+  BUT_ONLY
+  COMPILE ~%MOD_FOLDER%/core/custom1.d~
+END
+
+//small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed
+COMPILE ~%MOD_FOLDER%/core/custom2.d~

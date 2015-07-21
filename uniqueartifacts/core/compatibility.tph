@@ -1,0 +1,47 @@
+PRINT ~Compatibility:~
+
+//Randomiser - should be installed after (Girdle of Piercing, ogre fetishist)
+
+//Rogue Rebalancing 3.8+
+ACTION_IF (FILE_EXISTS_IN_GAME ~override/rr#aran2.cre~) THEN BEGIN
+  PRINT ~Rogue Rebalancing:~
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+    RR#ARAN2.CRE => SW1H10  // short sword of backstabbing  |  Aran
+    RENAL.CRE => G_DUMMY // Renal no longer has SSoB
+    RENAL.DLG => G_DUMMY // Renal no longer has SSoB
+  END
+END
+
+//Sword Coast Stratagems
+ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
+  PRINT ~Sword Coast Stratagems:~
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+    GORLIC01.CRE => WA2ROBE  // Robe of Vecna  |  Amekthran lich
+  END
+END
+
+//Tortured Souls
+ACTION_IF (FILE_EXISTS_IN_GAME ~kachi01.wav~) BEGIN
+  PRINT ~Tortured Souls:~
+  COPY_EXISTING ~wmart1.sto~ ~override/wmart1.sto~ //Kachiko' wakisashi - remove from Joluv
+    LPF DELETE_STORE_ITEM
+      STR_VAR item_to_delete ~wawak~
+    END
+  BUT_ONLY
+END
+
+
+//BG2 Fixpack
+ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ BEGIN
+  PRINT ~BG2 Fixpack:~
+
+  //Suryris's Blade - Fixpack deletes all but Ribald's copy. Removing Ribald's and restoring Lizard man captain's (Sphere)
+  COPY_EXISTING ~bazliz04.cre~ ~override~
+    LPF DELETE_CRE_ITEM
+      STR_VAR item_to_delete ~halb03~
+    END
+    REPLACE_CRE_ITEM ~halb07~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
+  BUT_ONLY
+
+  //Long Sword +2: 'Varscona' - Fixpack deletes all but Ribald's copy. Leaving at Ribald, because all other copies are in chapter 6
+END

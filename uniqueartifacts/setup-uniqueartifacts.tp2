@@ -2,17 +2,16 @@ BACKUP ~uniqueartifacts/backup~
 AUTHOR ~burner1024 @ github~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
+//MODDER
 
 BEGIN ~Strict~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
-INCLUDE ~%MOD_FOLDER%/core/strict/items.tph~ //items to remove
+OUTER_SET expanded = 0
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
-INCLUDE ~%MOD_FOLDER%/core/strict/restore.tph~ //restore
 
 BEGIN ~Expanded~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
-INCLUDE ~%MOD_FOLDER%/core/expanded/items.tph~ //items to remove
+OUTER_SET expanded = 1
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
-INCLUDE ~%MOD_FOLDER%/core/expanded/restore.tph~ //restore

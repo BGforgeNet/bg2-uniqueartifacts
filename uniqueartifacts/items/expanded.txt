@@ -1,0 +1,61 @@
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_expanded BEGIN
+
+
+BOTSMITH.BCS	=>	~RING44\|BRAC23\|BRAC25\|CLCK31\|CLCK32~		// Cespenar upgrades: Heartwood Ring, Blessed Bracers, Wondrous Gloves, Improved Cloak of Protection +2, Montolio's Cloak
+RIBALD.STO	=>	~RING28\|BELT06~	// Ring of Air Control, Girdle of Hill Giant Strength		|  Ribald
+TRMER02.STO	=>	~BELT10\|CLCK03~	// Belt of Inertial Barrier, Cloak of Displacement		|  Merchant in Trademeet
+WMART2.STO	=>	~WA2RING\|WA2AMU~	// Mercykiller Ring, Sensate Amulet				|  Deidre
+
+25SPELL.STO	=>	CLCK15		// Robe of the Good Archmagi		|  Lazarus store in Saradush
+TRMER04		=>	CLCK15		// Robe of the Good Archmagi		|  Merchant in Trademeet
+RIBALD2.STO	=>	CLCK16		// Robe of the Neutral Archmagi		|  Ribald's enhanced shop
+UDDROW.STO	=>	CLCK17		// Robe of the Evil Archmagi		|  Ust Natha's shop
+
+ALPHONSE.BCS	=>	RING22		// Ring of Holiness			| Reward for illithium quest
+AR1302.ARE	=>	RING29		// Ring of Earth Control		|  De'Arnise Hold 1st floor container1
+LAVOK01.CRE	=>	RING40		// Ring of Acuity			|  Lavok
+LAVOK02.CRE	=>	RING40		// Ring of Acuity			|  Lavok
+GOVWAU01.STO	=>	RING03		// Ring of Animal Friendship		|  Waukeen temple in government district
+AMLICH01.CRE	=>	RING46		// Ring of Anti-Venom			|  Vongoethe (lich in ToB)
+AR0329.ARE	=>	RING26		// Ring of Djinni Summoning		|  Aran's guild (cont8), only aavilable when siding with Bodhi
+UDDWARF.CRE	=>	RING27		// Ring of Fire Control			|  Mad dwarf in illithid lair in Underdark
+
+AR5201.ARE	=>	BELT11		// Girdle of Fire Giant Strength	|  1st part Yaga-Shura's hold container 3
+UDDEATH2.CRE	=>	BELT08		// Girdle of Frost Giant Strength	|  Underdark, Demon Knight
+
+AR0303.ARE	=>	BOOT02		// Boots of Stealth			|  Maevar's Guild (container5)
+
+HELLFEAR.DLG	=>	CLCK30		// Cloak of Bravery			|  hell trials, Fear
+SAHRAMB3.CRE	=>	CLCK26		// Cloak of Mirroring			|  sahuagin priestess
+UHRANG01.CRE	=>	CLCK25		// Cloak of the Stars			|  Merella
+GORCH.STO	=>	CLCK07		// Nymph Cloak				|  merchant Gorch in Maevar's guild
+
+KAYL2.DLG	=>	BRAC20		// Gloves of Healing			|  Sir Ryan Trawl quest reward
+ELELEV01.DLG	=>	BRAC13		// Bracers of Defense AC 5		|  machine in Spellhold
+AR1904.ARE	=>	BRAC04		// Bracers of Archery			|  troll mound near druid grove, container 2
+AR0206.ARE	=>	BRAC07		// Gauntlets of Dexterity		|  Undead town, cont 1 (eyeless quest)
+AR0808.ARE	=>	BRAC10		// Gauntlets of Weapon Expertise	|  6th chapter, container 6
+AR3001.ARE	=>	BRAC22		// Paladin's Bracers			|  Watcher's Keep 1st level, chest1
+
+SCSAIN.DLG	=>	AMUL23		// Periapt of Life Protection		|  Cleric of Lathander quest reward (stronghold illitium) 
+SENKEN01.CRE	=>	AMUL26		// Amulet of Cheetah Speed		|  drow in Sendai enclave
+ELEMIMIX.CRE	=>	AMUL28		// Amulet of the Master Harper		|  Imix - Yaga-Shura Castle
+TRRAK01.CRE	=>	AMUL22		// Periapt of Proof against Poison	|  Adratha/Ithafeer
+
+HLMAFER.CRE	=>	SHLD30		// Large Shield +2			|  Maferan (Guarded compound)
+
+
+//BG1
+HIGHHEDG.STO	=>	~CLCK15\|CLCK16~	// Robe of the Good Archmagi	|  High Hedge mage shop
+DAVAEO.CRE	=>	CLCK17		// Robe of the Evil Archmagi		|  Davaeorn (BG1 mage who rules mines)
+MULAHE.CRE	=>	RING22		// Ring of Holiness			|  Mulahey
+NIMBUL.CRE	=>	RING21		// Ring of Infravision			|  Nimbul (asassin in Nashkel)
+HAIRTO.CRE	=>	BRAC07		// Gauntlets of Dexterity		|  Hairtooth, ogrillon near the gnoll stronghold
+MEILUM.CRE	=>	BRAC10		// Gauntlets of Weapon Expertise	|  Meilum, the Sword Coast's most skilled swordsman
+ZAL.CRE		=>	BRAC04		// Bracers of Archery			|  Zal, the fastest dart thower
+HOBGZHUR.CRE	=>	BOOT02		// Boots of Stealth			|  hobgoblin from Zhurlong quest
+ULGOTH.STO	=>	CLCK03		// Cloak of Displacement		|  store in Ulgoth's Beard
+DRSHCH01.CRE	=>	BOOT08		// Boots of Phasing			|  (some druid stuff? never seen it)
+
+
+END

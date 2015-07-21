@@ -1,0 +1,106 @@
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_strict BEGIN
+
+
+WMART2.STO	=>	WA2ROBE			// Robe of Vecna	| Deidre
+RIBALD.STO	=>	~RING20\|BRAC15~	// Ring of Energy, Bracers of Defense AC 3		| Ribald
+KALAH2.CRE	=>	~RING30\|BELT04~	// Ring of Human Influence, Girdle of Piercing		| Kalah - Circus
+TOKCRE01.DLG	=>	~BOOT03\|BOOT01\|BOOT05~	// Boots of the North, Boots of Speed, Boots of Grounding	| Token machine in Spellhold
+ARAN02.CRE	=>	~RING07\|AMUL21~	// Ring of Protection +2, Amulet of Power		| Aran Linvail (side with Bodhi)
+ARAN.DLG	=>	~RING07\|AMUL21~	// Ring of Protection +2, Amulet of Power		| Aran Linvail (side with thieves)
+HIGHHEDG.STO	=>	MISC72			// The Claw of Kazgaroth (mage shop at High Hedge)	| when importing from BG1, may be found in IMPORT03.2DA
+
+FIRRAK01.CRE	=>	RING02		// Ring of Fire Resistance	| rakshasa in Firkraag lair
+AR2210.ARE	=>	RING04		// Ring of Clumsiness		| Ust Natha, lich tower
+GRVLCH01.CRE	=>	RING05		// Ring of Invisibility		| lich at City Gates
+AR0411.BCS	=>	RING08		// Ring of Wizardry		| mage stronghold (if all apprentices die)
+MGAPPR02.DLG	=>	RING08		// Ring of Wizardry		| mage stronghold (if Morul lives)
+PPBOOK.BCS	=>	RING09		// Ring of Free Action		| book in spellhold
+AR2100.ARE	=>	RING23		// Ring of Folly		| Underdark svirf villaga (container 6)
+PPSTAT01.DLG	=>	RING31		// Ring of Regeneration		| statue in spellhold
+UDARDUL.CRE	=>	RING34		// Ring of Spell Turning	| Underdark, matron mother Ardulace
+ARNMAN09.CRE	=>	RING35		// Ring of Lock Picks		| Shadow thieves, we're with Aran
+ARNWAR07.CRE	=>	RING35		// Ring of Lock Picks		| Shadow thieves, we're with Bodhi
+AR0413.ARE	=>	RING36		// Ring of Danger Sense		| Planar Sphere container1
+HLDEMI.CRE	=>	RING39		// Ring of Gaxx			| Kangaxx
+BAZDRA03.CRE	=>	RING42		// Ring of Improved Invisibility	| Fll'Yissetat Abazigal's dragon-guard
+//SPIN621.SPL	=>	RING43		// Ring of Protection +3 	| Deck of Many Things
+
+MGKHOL01.DLG	=>	BELT02		// Golden Girdle		| Sphere, Solamnic Knights, Khollynnus Paac 
+AR0603.ARE	=>	BELT03		// Girdle of Bluntness		| Jon's dungeon lvl 2 (container 1)
+GAAL01.CRE	=>	BELT09		// Girdle of Fortitude		| Cult of Eyeless, Gaal
+SUADSAAN.CRE	=>	BELT07		// Girdle of Stone Giant Strength	| Suldanessellar Adsaan
+RETI.CRE	=>	BOOT04		// Boots of Avoidance		| Reti (Buried alive quest)
+AR2300.ARE	=>	BOOT11		// Boots of Etherealness	| Sahuagin city (chest6)
+AMSMUG02.STO	=>	BOOT12		// Gargoyle Boots		| Carras, Amekthran smuggler
+
+
+AR2300.ARE	=>	CLCK02		// Cloak of Protection +2	| Sahuagin city (chest 6)
+SEVPAT02.CRE	=>	CLCK06		// Cloak of Non-Detection	| Sorcerous Amon (Seven Vales party)
+AR1511.ARE	=>	CLCK24		// Cloak of Reflection		| Spellhold (container 1)
+SEWRAK01.CRE	=>	CLCK27		// Cloak of the Sewers		| Rakshasa in sewers
+SHABOD01.CRE	=>	CLCK04		// Cloak of the Wolf		| Wallag's body (no idea who is this)
+
+UDSVIR05.DLG	=>	BRAC14		// Bracers of Defense AC 4	| Underdark, svirf innkeeper (reward for rescuing his son)
+SAHKNG01.DLG	=>	BRAC19		// Gauntlets of Crushing	| Sahuagin city, King Ixilthetocal
+UDPRINCE.CRE	=>	BRAC16		// Bracers of Blinding Strike	| Underdark, Kuo-Toa Prince
+LYROS.CRE	=>	BRAC03		// Bracers of Defense AC 6	| Xzar (Harpers quest)
+GORWOM03.CRE	=>	BRAC21		// Gauntlets of Extraordinary Specialization	| Watcher's Keep last level, Y'tossi
+OBSHAL01.CRE	=>	BRAC06		// Gauntlets of Ogre Power	| Lavok's sphere, Entu
+PTHRAL05.CRE	=>	BRAC09		// Gauntlets of Weapon Skill	| Planar Prison, Female Thrall (Haerdalis quest)
+TRTHF01.CRE	=>	BRAC18		// Gloves of Missile Snaring	| Itona the Shadow Thief in Trademeet
+BAZDRA02.CRE	=>	BRAC26		// Tzu-Zan's Bracers		| Draconis
+AR1201.ARE	=>	AMUL14		// Amulet of Protection +1	| near lake and mists in Firkraag's dungeon (container 2)
+UDDROW24.STO	=>	AMUL20		// Kaligun's Amulet of Magic Resistance	| Ust Natha store
+AR0602.ARE	=>	AMUL16		// Metaspell Influence Amulet	| Jon's dungeon (container 11)
+AR0705.ARE	=>	AMUL24		// Necklace of Form Stability	| Merkath's lab (container 8)
+TRCAR04.STO	=>	AMUL01		// Necklace of Missiles		| merchant in Trademeet
+C6REGIS.CRE	=>	REGISAMU		// Ruby Pendant		| Regis (Drizzt's party)
+C6REGIS2.CRE	=>	REGISAMU		// Ruby Pendant		| Regis (Drizzt's party)
+
+HLMAFER.CRE	=>	HELM04		// Helm Of Defence			| Maferan (Guarded compound)
+C6ARKAN.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)
+C6ARKAN3.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)
+CHAK.CRE	=>	SHLD19		// Large Shield +2			| Chak (Firkraag's dungeon, Samia's party)
+RENAL.CRE	=>	SW1H10		// Short Sword of Backstabbing +3	| Renal Bloodscalp
+RENAL.DLG	=>	SW1H10		// Short Sword of Backstabbing +3	| Renal Bloodscalp
+BAZLIZ04.CRE	=>	HALB03		// Suryris's Blade			| Lizard man captain, Sphere
+
+
+ALAI.CRE	=>	RING09		// Ring of Free Action		| Alai, party at the top of the Iron Throne
+RAMAZI.CRE	=>	 RING07		// Ring of Protection +2	| Ramazith
+ULGOTH.STO	=>	RING05		// Ring of Invisibility		| store in Ulgoth's Beard
+DENAK.CRE	=>	RING20		// Ring of Energy		| Taivian red wizard
+AR9200.ARE	=>	RING23		// Ring of Folly		| shipwreck on the coast (container 1)
+
+KIRIAN.CRE	=>	BELT02		// Golden Girdle		| Kirian - band at Mutamin's garden
+KRUMM.CRE	=>	BELT03		// Girdle of Bluntness		| guy who cuts nymph's tree
+OGREUNSH.CRE	=>	BELT04		// Girdle of Piercing		| ogre fetishist
+
+DESRET.CRE	=>	BRAC06		// Gauntlets of Ogre Power	| Desreta, assasin in tavern-ship
+AR8100.ARE	=>	BRAC09		// Gauntlets of Weapon Skill	| BG docks, chest near Umberlee temple (with a quest to find them)
+DAVAEO.CRE	=>	BRAC03		// Bracers of Defense AC 6	| Davaeorn - Cloakwood mines boss
+BASSIL.CRE	=>	BRAC08		// Gauntlets of Fumbling	| Bassilus
+
+NIMBUL.CRE	=>	BOOT04		// Boots of Avoidance		| Nimbul, asassin in Nashkel
+JARED.CRE	=>	BOOT03		// Boots of the North		| Jared the scared merchant (a bear and a bridge)
+DRASUS.CRE	=>	BOOT01		// Boots of Speed		| Drasus (Cloakwood mines assassin)
+MULAHE.CRE	=>	BOOT05		// Boots of Grounding		| Mulahey
+
+RAMAZI.CRE	=>	AMUL16		// Metaspell Influence Amulet	| Ramazith
+
+NADIN.CRE	=>	AMUL01		// Necklace of Missiles		| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
+NADIN.DLG	=>	AMUL01		// Necklace of Missiles		| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
+
+ALGERN.CRE	=>	CLCK08		// Algernon's Cloak		| Algernon - Beregost
+QUENAS.CRE	=>	CLCK05		// Cloak of Balduran		| Quenash
+QUENAS.DLG	=>	CLCK05		// Cloak of Balduran		| Quenash
+
+SLYTHE.CRE	=>	SW1H10		// Short Sword of Backstabbing +3	| Slythe - last asassination attempt in underground tavern
+DROTH.CRE	=>	HELM04		// Helm Of Defence			| Droth the ogre-mage who tortured a sirene (or a nymph?)
+ZHALIM.CRE	=>	HALB03		// Suryris's Blade			| party on the last level of Iron throne
+GREYWO.CRE	=>	SW1H06		// Long Sword +2: 'Varscona'		| Greywolf (bounty hunter attacking Prism)
+HENTOL.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in (give dagger to zombie)
+MANEIR.CRE	=>	LEATH03		// Protector of the second leather armor	| Maneira, assassin party
+
+
+END

@@ -1,0 +1,59 @@
+DEFINE_PATCH_FUNCTION define_items
+  STR_VAR
+    exclude_source = ~~
+    items = ~~
+  RET items
+BEGIN
+  PHP_EACH source_item AS source => item BEGIN
+    PATCH_IF NOT ( ~%source%~ STR_EQ ~%exclude_source%~) BEGIN
+      PATCH_IF NOT ( STRING_LENGTH ~%items%~ == 0 ) BEGIN
+        SPRINT items ~%items%\|%item%~
+      END ELSE BEGIN
+        SPRINT items ~%item%~  // first item in string
+      END
+    END
+  END
+END
+
+//Define items once
+OUTER_PATCH 1 BEGIN
+  LPF define_items RET all_items = items END
+END
+OUTER_SPRINT really_all_items ~%all_items%~
+
+//Replace all actions which give the party "old_item" with a corresponding action and "new_item". "old_item" may be a regexp.
+DEFINE_PATCH_FUNCTION REPLACE_D_AND_BAF_ITEM
+  STR_VAR
+    old_item = ~~
+    new_item = ~~
+BEGIN
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~GiveItem("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~GiveItem("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~GiveItemCreate("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~GiveItemCreate("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItem("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItem("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItemGlobal("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItemGlobal("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~CreateItemNumGlobal("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~CreateItemNumGlobal("%new_item%"%MATCH2%)~
+
+  REPLACE_EVALUATE CASE_INSENSITIVE
+    ~TakeItemReplace("\(%old_item%\)"\(.*\))~
+    BEGIN END
+    ~TakeItemReplace("%new_item%"%MATCH2%)~
+END

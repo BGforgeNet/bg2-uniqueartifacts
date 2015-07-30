@@ -1,11 +1,11 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 
-- [Description](#description)
- - [Short](#short)
- - [Long](#long)
-- [Components](#components)
- - [Strict](#strict)
- - [Expanded](#expanded)
+This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
+
+It will work with BG2:ToB or BGT. Starting a new game is required.
+
+- [Detailed Description](#detailed-description)
+- [Options](#options)
 - [Installation](#Installation)
 - [FAQ](#FAQ)
  - [Compatibility](#Compatibility)
@@ -14,17 +14,13 @@
  - [Which items are affected?](#Which-items-are-affected)
  - [How to "un-duplicate" an item?](#How-to-un-duplicate-an-item)
 - [Known issues](#Known-issues)
-- [Version history](#Version-history)
+- [Changelog](#changelog)
 - [Used sotftware](#used-sotftware)
 - [Author](#author)
 - [License](#license)
 
 ## Description
 
-### Short
-This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. Items such as Ring of Fire resistance, Boots of Speed, etc.
-
-### Long
 Ever felt that BG2 is overloaded with magical items? Then this it a mod for you. It will **reduce** the amount of magical gear in the game.
 
 In BG1/2, many magical items are implied to unique. However, the party gets multiple copies of them. That includes Boots of Speed, Kondar sword, Ring of Protection +2, etc.
@@ -41,9 +37,8 @@ To summarize,
 
 When choosing which copy exactly is "canon" and available to the party, UA generally picks a less accessible one. For example, in the original game, the party is able to obtain two Rings of Wizardry: one from Mage stronghold, and another one from the final fight in Jaheira romance. Only the stronghold one is left in game.
 
-Starting a new game is required.
 
-## Components
+## Options
 ### Strict
 This option un-duplicates items that are explicitly described as unique. Examples: Boots of Speed, Necklace of Missiles, Robe of Vecna.
 ### Expanded
@@ -71,7 +66,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 ## Known issues
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
 
-## Version history
+## Changelog
 - Version 2
   - Complete code rewrite to be more consistent and less intrusive
   - Weidu 238

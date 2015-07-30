@@ -1,11 +1,30 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 
-### Description
+- [Description](description)
+ - [Short](short)
+ - [Long](long)
+- [Components]
+ - [Strict](strict)
+ - [Expanded](expanded)
+- [Installation](Installation)
+- [FAQ](FAQ)
+ - [Compatibility](Compatibility)
+ - [What about BGT?](What-about-BGT)
+ - [Installation order](Installation-order)
+ - [Which items are affected?](Which-items-are-affected)
+ - [How to "un-duplicate" an item?](How-to-un-duplicate-an-item)
+- [Known issues](Known-issues)
+- [Version history](Version-history)
+- [Used sotftware](#used-sotftware)
+- [Author](#author)
+- [License](#license)
 
-#### Short
+## Description
+
+### Short
 This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. Items such as Ring of Fire resistance, Boots of Speed, etc.
 
-#### Long
+### Long
 Ever felt that BG2 is overloaded with magical items? Then this it a mod for you. It will **reduce** the amount of magical gear in the game.
 
 In BG1/2, many magical items are implied to unique. However, the party gets multiple copies of them. That includes Boots of Speed, Kondar sword, Ring of Protection +2, etc.
@@ -24,40 +43,39 @@ When choosing which copy exactly is "canon" and available to the party, UA gener
 
 Starting a new game is required.
 
-### Components
-#### Strict
+## Components
+### Strict
 This option un-duplicates items that are explicitly described as unique. Examples: Boots of Speed, Necklace of Missiles, Robe of Vecna.
-#### Expanded
+### Expanded
 This option in addition to the above processes a number of magical items that are not likely to be possessed by a single party of adventurers in multiple copies. Examples: Boots of Stealth, Ring of Fire control.
 
-### Affected items
-Mostly it's jewelry (rings/amulets), and clothes (belts, cloaks, boots). Certain other items, too.
 
-### Installation
+## Installation
 - Download "Source code (zip)" archive from [latest release page](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
 - Unzip it
 - Move "uniqueartifacts" and "setup-uniqueartifacts.exe" into the game directory
 - Launch setup-uniqueartifacts.exe
 
-### FAQ
-#### What about BGT?
+## FAQ
+### What about BGT?
 In BGT, each part of the game is treated separately. Meaning you'll be able to get Boots of Speed once in BG1, once in BG2, and once in ToB.
-#### Compatibility
+### Compatibility
 UA is designed be compatible with all other mods.
-#### Installation order
+### Installation order
 Install UA after any mods that add new content (areas, creatues, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
-#### Which items are affected?
-See uniqueartifacts/items/strict.txt (and expanded.txt).
-#### How to "un-duplicate" an item?
+### Which items are affected?
+For the full list, see uniqueartifacts/items/strict.txt (and expanded.txt).
+### How to "un-duplicate" an item?
 Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete the whole line. (There might be several lines with that item, then delete all of them.)
 
-### Known issues
+## Known issues
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
 
-### Version history:
+## Version history
 - Version 2
   - Complete code rewrite to be more consistent and less intrusive
   - Weidu 238
+  - Tactics compatibility
 - Version 1.12
   - Major code revision and optimization
   - Fixed bug with not restoring Paladin's bracers and Bracers of Blinding Strike
@@ -76,3 +94,15 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
   - Fixed some typos
   - Added a few items
 - Version 1.0beta. beta release
+
+## Used software
+
+* [DLTCEP](http://sourceforge.net/projects/gemrb/files/Utilities/)
+* [WeiDU](http://weidu.org/main.html#weidu)
+* [G3 Debugging Suite](http://www.gibberlings3.net/debug/)
+
+## License
+It's provided as is, without any guarantee. Feel free to use it in any way that you see fit.
+
+## Author
+burner1024 @ Github

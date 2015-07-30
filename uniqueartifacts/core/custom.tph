@@ -7,7 +7,7 @@ ACTION_IF ( BGT = 1) BEGIN //BGT only
 
   //Kondar: make droppable from Aldeth
   COPY_EXISTING ~aldeth.cre~ ~override~
-    LPF DELETE_CRE_ITEM_FLAGS
+    LPF REMOVE_CRE_ITEM_FLAGS
       STR_VAR
         item_to_change = ~sw1h03~
         flags = ~UNDROPPABLE~

@@ -19,7 +19,7 @@ It will work with BG2:ToB or BGT. Starting a new game is required.
 - [Author](#author)
 - [License](#license)
 
-## Description
+## Detailed description
 
 Ever felt that BG2 is overloaded with magical items? Then this it a mod for you. It will **reduce** the amount of magical gear in the game.
 

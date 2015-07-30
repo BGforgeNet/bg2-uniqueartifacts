@@ -4,7 +4,7 @@ This mod removes duplicated magical items from the game, ensuring that the party
 
 It will work with BG2:ToB or BGT. Starting a new game is required.
 
-- [Detailed Description](#detailed-description)
+- [Detailed description](#detailed-description)
 - [Options](#options)
 - [Installation](#installation)
 - [FAQ](#faq)
@@ -59,7 +59,7 @@ UA is designed be compatible with all other mods.
 ### Installation order
 Install UA after any mods that add new content (areas, creatues, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
 ### Which items are affected?
-For the full list, see uniqueartifacts/items/strict.txt (and expanded.txt).
+In original game, all items. In the mods, it's mostly magical jewelry and clothes. For the full list, see uniqueartifacts/items/strict.txt (and expanded.txt).
 ### How to "un-duplicate" an item?
 Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete the whole line. (There might be several lines with that item, then delete all of them.)
 

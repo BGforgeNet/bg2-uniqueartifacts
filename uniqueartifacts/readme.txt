@@ -1,25 +1,37 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 
+### Description
+
+#### Short
+This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. Items such as Ring of Fire resistance, Boots of Speed, etc.
+
+#### Long
 Ever felt that BG2 is overloaded with magical items? Then this it a mod for you. It will **reduce** the amount of magical gear in the game.
 
-With each and every mod adding more items, why would someone want to do the reverse? There are 2 reasons:
-- Immersion. There are 2 angles to look at that:
-  - An attentive player might notice that many items in BG2 are supposed to be unique, according to their descriptions. Such as Boots of Speed, or Ring of Protection +2, etc. Yet the party gets to loot multiple copies of these. How's that?
-  - Throughout the game, the party is basically showered with magical items. This just doesn't happen in D&D. It would take a whole epic level campain just to obtain something like Robe of Vecna or Staff of Magi.
-- Game balance. Of course, it's affected by all the extra items.
+In BG1/2, many magical items are implied to unique. However, the party gets multiple copies of them. That includes Boots of Speed, Kondar sword, Ring of Protection +2, etc.
+It kind of breaks immersion (and affects balance, too). What's worse, it's further aggravated by mods, both large and small, which add more and more items.
 
-While to a certain degree these issues are present in the orginal game, they might get truly aggravating when large mods are installed.
-If this argumentation makes sense to you, feel free to try out this mod.
+Unique Artifacts aims to resolve this issue by removing all duplicates from the game. The party will still be able to get every item, but only in a single instance.
 
-What **does** it do:
-For a limited set of items from original game, ensure that the party gets no more than a single copy of each item. Including copies introduced by other mods.
+To summarize,
+- What **does** it do: for a limited set of items from original game, ensure that the party gets no more than a single copy of each item.
 
-What it **doesn't** do:
-- Remove items from the game completely. Each item will still be available, but in a single instance.
-- Remove new items that are introduced by other mods. Only the items from the original game are affected.
+- What it **does not** do:
+ - It doesn't remove items from the game completely. Each item will still be available, but in a single instance.
+ - It doesn't remove new (original) items introduced by other mods. Only the items from the original game are affected.
+
+When choosing which copy exactly is "canon" and available to the party, UA generally picks a less accessible one. For example, in the original game, the party is able to obtain two Rings of Wizardry: one from Mage stronghold, and another one from the final fight in Jaheira romance. Only the stronghold one is left in game.
+
+Starting a new game is required.
+
+### Components
+#### Strict
+This option un-duplicates items that are explicitly described as unique. Examples: Boots of Speed, Necklace of Missiles, Robe of Vecna.
+#### Expanded
+This option in addition to the above processes a number of magical items that are not likely to be possessed by a single party of adventurers in multiple copies. Examples: Boots of Stealth, Ring of Fire control.
 
 ### Affected items
-Mostly it's jewelry (rings/amulets), and clothes (belts, cloaks, boots).
+Mostly it's jewelry (rings/amulets), and clothes (belts, cloaks, boots). Certain other items, too.
 
 ### Installation
 - Download "Source code (zip)" archive from [latest release page](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
@@ -27,20 +39,25 @@ Mostly it's jewelry (rings/amulets), and clothes (belts, cloaks, boots).
 - Move "uniqueartifacts" and "setup-uniqueartifacts.exe" into the game directory
 - Launch setup-uniqueartifacts.exe
 
-### Compatibility
-It should be compatible with most other mods. Install it after any mods that add new content (areas, creatues, quests, etc).
-
-One specific case is Item Randomiser. It should be installed after Unique Artifacts.
+### FAQ
+#### What about BGT?
+In BGT, each part of the game is treated separately. Meaning you'll be able to get Boots of Speed once in BG1, once in BG2, and once in ToB.
+#### Compatibility
+UA is designed be compatible with all other mods.
+#### Installation order
+Install UA after any mods that add new content (areas, creatues, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
+#### Which items are affected?
+See uniqueartifacts/items/strict.txt (and expanded.txt).
+#### How to "un-duplicate" an item?
+Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete the whole line. (There might be several lines with that item, then delete all of them.)
 
 ### Known issues
-* Removing all copies is not guaranteed (it simply cannot be guaranteed), however the majority definitely will be removed. Artifacts might be moved slightly from their original locations, but they still will be in the same area/store/etc.
-* Players starting a **NEW ToB** game might be missing a few items.
-
-### How to
-How to skip an item, so it won't be affected by the mod?
-Open "uniqueartifacts/affected_items" directory, open the file of the appropriate component, find necessary filename. Then go to "unique artifacts/core", open items2replace_expanded.tph or items2replace_strict.tph - whichever you wish to install, find reference to this filename and delete it (don't forget to delete 1 nearby "\|", also). Then open restore_expanded.tph or restore_strict.tph, find and delete block of code with the filename above. That's all.
+- Players starting a **new** ToB game might miss a Ring of Invisibility.
 
 ### Version history:
+- Version 2
+  - Complete code rewrite to be more consistent and less intrusive
+  - Weidu 238
 - Version 1.12
   - Major code revision and optimization
   - Fixed bug with not restoring Paladin's bracers and Bracers of Blinding Strike

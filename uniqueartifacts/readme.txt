@@ -4,6 +4,8 @@ This mod removes duplicated magical items from the game, ensuring that the party
 
 It will work with BG2:ToB or BGT. Starting a new game is required.
 
+[Download](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
+
 - [Detailed description](#detailed-description)
 - [Options](#options)
 - [Installation](#installation)

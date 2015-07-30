@@ -2,7 +2,7 @@
 
 This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 
-It will work with BG2:ToB or BGT. Starting a new game is required. [Download](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
+It will work with BG2:ToB or BGT. Starting a new game is required. [Download](#installation)
 
 - [Detailed description](#detailed-description)
 - [Options](#options)

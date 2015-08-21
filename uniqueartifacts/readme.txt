@@ -67,6 +67,8 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
 
 ## Changelog
+- Version 3
+  - Fixed a bug when items present in both BG1 and BG2 may be rendered unavailable
 - Version 2
   - Complete code rewrite to be more consistent and less intrusive
   - Weidu 238

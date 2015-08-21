@@ -46,7 +46,7 @@ This option in addition to the above processes a number of magical items that ar
 
 
 ## Installation
-- Download "Source code (zip)" archive from [latest release page](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
+- Download uniqueartifacts.zip from the [latest release page](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
 - Unzip it
 - Move "uniqueartifacts" and "setup-uniqueartifacts.exe" into the game directory
 - Launch setup-uniqueartifacts.exe

@@ -12,7 +12,7 @@ It will work with BG2:ToB or BGT. Starting a new game is required. [Download](#i
  - [What about BGT?](#what-about-bgt)
  - [Installation order](#installation-order)
  - [Which items are affected?](#which-items-are-affected)
- - [How to "un-duplicate" an item?](#how-to-un-duplicate-an-item)
+ - [How to skip an item?](#how-to-skip-an-item)
 - [Known issues](#known-issues)
 - [Changelog](#changelog)
 - [Used sotftware](#used-sotftware)
@@ -60,7 +60,7 @@ UA is designed be compatible with all other mods.
 Install UA after any mods that add new content (areas, creatues, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
 ### Which items are affected?
 In original game, all items. In the mods, it's mostly magical jewelry and clothes. For the full list, see uniqueartifacts/items/strict.txt (and expanded.txt).
-### How to "un-duplicate" an item?
+### How to skip an item?
 Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete the whole line. (There might be several lines with that item, then delete all of them.)
 
 ## Known issues

@@ -4,12 +4,20 @@ DEFINE_PATCH_FUNCTION define_items
     items = ~~
   RET items
 BEGIN
+  TO_UPPER %exclude_source%
+  SPRINT exclude_items $source_item(~%exclude_source%~)  //get items from primary source
   PHP_EACH source_item AS source => item BEGIN
-    PATCH_IF NOT ( ~%source%~ STR_EQ ~%exclude_source%~) BEGIN
-      PATCH_IF NOT ( STRING_LENGTH ~%items%~ == 0 ) BEGIN
-        SPRINT items ~%items%\|%item%~
-      END ELSE BEGIN
-        SPRINT items ~%item%~  // first item in string
+    PATCH_IF NOT ( ~%source%~ STR_EQ ~%exclude_source%~) BEGIN  //always skip primary source
+      PATCH_IF ( ~%item%~ STRING_MATCHES_REGEXP ~%exclude_items%~ AND     //always skip items from primary source (may appear in secondary sources)
+                 ~%exclude_items%~ STRING_MATCHES_REGEXP ~%item%~) BEGIN  //this is a reverse condition. S_M_R returns 0 on match
+               //There's still an uncovered possiblity when item and exclude_items are different regexp.
+               //In that case, items may go missing
+               //This doesn't happen with the current item selection, though
+        PATCH_IF NOT ( STRING_LENGTH ~%items%~ == 0 ) BEGIN
+          SPRINT items ~%items%\|%item%~ //add second and consecutive items
+        END ELSE BEGIN
+          SPRINT items ~%item%~  // add first item to the string
+        END
       END
     END
   END

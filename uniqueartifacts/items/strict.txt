@@ -101,7 +101,8 @@ SLYTHE.CRE	=>	SW1H10		// Short Sword of Backstabbing +3	| Slythe - last asassina
 DROTH.CRE	=>	HELM04		// Helm Of Defence			| Droth the ogre-mage who tortured a sirene (or a nymph?)
 ZHALIM.CRE	=>	HALB03		// Suryris's Blade			| party on the last level of Iron throne
 GREYWO.CRE	=>	SW1H06		// Long Sword +2: 'Varscona'		| Greywolf (bounty hunter attacking Prism)
-HENTOL.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in (give dagger to zombie)
+HENTOL.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in Valley of Tombs (give dagger to zombie)
+HENTOL.DLG	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in Valley of Tombs (give dagger to zombie)
 MANEIR.CRE	=>	LEATH03		// Protector of the second leather armor	| Maneira, assassin party
 ALDETH.DLG	=>	SW1H03		// Kondar +1, +3 vs Shapeshifters	| Aldeth Sashenstar (Cloakwood or BG)
 

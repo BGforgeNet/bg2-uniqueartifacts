@@ -57,7 +57,7 @@ In BGT, each part of the game is treated separately. Meaning you'll be able to g
 ### Compatibility
 UA is designed be compatible with all other mods.
 ### Installation order
-Install UA after any mods that add new content (areas, creatues, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
+Install UA after any mods that add new content (areas, creatures, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
 ### Which items are affected?
 In original game, all items. In the mods, it's mostly magical jewelry and clothes. For the full list, see uniqueartifacts/items/strict.txt (and expanded.txt).
 ### How to skip an item?

@@ -1,9 +1,15 @@
 ACTION_IF ( BGT = 1) BEGIN //BGT only
+
   //small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West
   COPY_EXISTING ~nadari.cre~ ~override~
     ADD_CRE_ITEM ~misc8j~ #0 #0 #0 ~NONE~ ~INV10~
   BUT_ONLY
-  COMPILE ~%MOD_FOLDER%/core/custom1.d~
+<<<<<<<< .../uniqueartifacts-inlined/nadari.d
+REPLACE_ACTION_TEXT ~nadari~
+  ~GiveItem("boot02",LastTalkedToBy)~
+  ~GiveItem("misc8j",LastTalkedToBy)~
+>>>>>>>>
+  COMPILE ~.../uniqueartifacts-inlined/nadari.d~
 
   //Kondar: make droppable from Aldeth
   COPY_EXISTING ~aldeth.cre~ ~override~
@@ -15,5 +21,13 @@ ACTION_IF ( BGT = 1) BEGIN //BGT only
   BUT_ONLY
 END
 
-//small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed
-COMPILE ~%MOD_FOLDER%/core/custom2.d~
+//small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed or Boots of Elvenkind
+<<<<<<<< .../uniqueartifacts-inlined/ffbart.d
+REPLACE_ACTION_TEXT ~ffbart~
+  ~GiveItemCreate("boot06",Player1,0,0,0)~
+  ~GiveItemCreate("%ffbart_boot%",Player1,0,0,0)~
+>>>>>>>>
+ACTION_IF NOT (VARIABLE_IS_SET ffbart_boot) BEGIN // Boots of Elvenkind, set in compatibility - Almateria restored items
+  OUTER_SPRINT ffbart_boot ~boot10~ // default to Boots of Ligtning speed
+END
+COMPILE ~.../uniqueartifacts-inlined/ffbart.d~

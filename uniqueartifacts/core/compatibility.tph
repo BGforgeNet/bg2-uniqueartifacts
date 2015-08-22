@@ -1,6 +1,7 @@
 PRINT ~Compatibility:~
 
-//Randomiser - should be installed after (Girdle of Piercing, ogre fetishist)
+//Randomiser - should be installed after
+
 
 //Rogue Rebalancing 3.8+
 ACTION_IF (FILE_EXISTS_IN_GAME ~override/rr#aran2.cre~) THEN BEGIN
@@ -12,6 +13,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~override/rr#aran2.cre~) THEN BEGIN
   END
 END
 
+
 //Sword Coast Stratagems
 ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
   PRINT ~Sword Coast Stratagems:~
@@ -19,6 +21,7 @@ ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
     GORLIC01.CRE => WA2ROBE  // Robe of Vecna  |  Amekthran lich
   END
 END
+
 
 //Tortured Souls
 ACTION_IF (FILE_EXISTS_IN_GAME ~kachi01.wav~) BEGIN
@@ -46,6 +49,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ BEGIN
   //Long Sword +2: 'Varscona' - Fixpack deletes all but Ribald's copy. Leaving at Ribald, because all other copies are in chapter 6
 END
 
+
 //Tactics
 ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN
   PRINT ~Tactics:~
@@ -53,6 +57,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN
     GBLICH01.CRE => CLCK05  // Cloak of Balduran  | Lich in the Docs
   END
 END
+
 
 //Thalantyr item upgrade - forbid Ring +1 upgrade
 ACTION_IF (FILE_EXISTS_IN_GAME ~thsw2h01.itm~) BEGIN
@@ -65,8 +70,9 @@ REPLACE_TRANS_TRIGGER thalan BEGIN %offending_state% END BEGIN END
   ~False()~
 >>>>>>>>
 
-  COMPILE EVAL ~.../uniqueartifacts-inlined/thalan.d~ //Make ring +1 branch always false
+  COMPILE ~.../uniqueartifacts-inlined/thalan.d~ //Make ring +1 branch always false
 END
+
 
 //Daulmakan item pack: More work for Cromwell - forbid Ring +1 upgrade
 ACTION_IF (FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) BEGIN
@@ -79,5 +85,33 @@ REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
   ~False()~
 >>>>>>>>
 
-  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith01.d~ //Make ring +1 branch always false
+  COMPILE ~.../uniqueartifacts-inlined/wsmith01.d~ //Make ring +1 branch always false
+END
+
+
+//Ruad item upgrade - forbid Ring +1 upgrade
+ACTION_IF (FILE_EXISTS_IN_GAME ~m#ruad.dlg~) BEGIN
+  PRINT ~Ruad Ro'fhessa:~
+  OUTER_SET offending_state = STATE_WHICH_SAYS ~Just tell me what you have, and I'll tell you if it can be made better.~ FROM ~m#ruad.dlg~
+
+<<<<<<<< .../uniqueartifacts-inlined/ruad.d
+REPLACE_TRANS_TRIGGER m#ruad BEGIN %offending_state% END BEGIN END
+  ~PartyHasItem("ring06")~
+  ~False()~
+>>>>>>>>
+
+  COMPILE ~.../uniqueartifacts-inlined/ruad.d~ //Make ring +1 branch always false
+END
+
+
+//Almateria's restoration pack
+ACTION_IF (MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~) BEGIN  //Restored items
+  PRINT ~Almateria's restoration pack:~
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+    VIEKANG.CRE => BOOT08  // Boots of Phasing  |  Viekang SoA
+    SARVIE01.CRE => BOOT08  // Boots of Phasing  |  Viekang ToB
+    HABIB.CRE => BOOT10 // Boots of Lightning speed  |  Habib
+    HABIB2.CRE => BOOT10 // Boots of Lightning speed  |  Habib
+  END
+  OUTER_SPRINT ffbart_boot ~boot07~ // for custom.tph, Thunderburp's boots for Mazzy
 END

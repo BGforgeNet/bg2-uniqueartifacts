@@ -7,11 +7,11 @@ END ELSE BEGIN
   OUTER_SET BGT = 0
 END
 
+//compatibility
+INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
+
 //custom adjustments
 INCLUDE ~%MOD_FOLDER%/core/custom.tph~
-
-//compatbility
-INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
 
 //list items
 INCLUDE ~%MOD_FOLDER%/core/items.tph~

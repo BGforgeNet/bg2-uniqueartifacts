@@ -23,8 +23,8 @@ It will work with BG2:ToB or BGT. Starting a new game is required. [Download](#i
 
 Ever felt that BG2 is overloaded with magical items? Then this it a mod for you. It will **reduce** the amount of magical gear in the game.
 
-In BG1/2, many magical items are implied to unique. However, the party gets multiple copies of them. That includes Boots of Speed, Kondar sword, Ring of Protection +2, etc.
-It kind of breaks immersion (and affects balance, too). What's worse, it's further aggravated by mods, both large and small, which add more and more items.
+In BG1/2, many magical items are implied to be unique (according to description). However, the party gets multiple copies of them. That includes Boots of Speed, Kondar sword, Ring of Protection +2, etc.
+It kind of breaks immersion, and affects balance, too. The issue is further aggravated by mods, both large and small, which add more and more items.
 
 Unique Artifacts aims to resolve this issue by removing all duplicates from the game. The party will still be able to get every item, but only in a single instance.
 

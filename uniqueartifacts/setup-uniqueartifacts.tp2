@@ -3,6 +3,7 @@ AUTHOR ~burner1024 @ github~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
+VERSION ~3~
 
 BEGIN ~Strict~
 SUBCOMPONENT ~Unique Artifacts~

@@ -90,8 +90,8 @@ MULAHE.CRE	=>	BOOT05		// Boots of Grounding		| Mulahey
 
 RAMAZI.CRE	=>	AMUL16		// Metaspell Influence Amulet	| Ramazith
 
-NADIN.CRE	=>	AMUL01		// Necklace of Missiles		| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
-NADIN.DLG	=>	AMUL01		// Necklace of Missiles		| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
+NADINE.CRE	=>	~AMUL01\|AMUL14~	// Necklace of Missiles, Amulet of Protection +1	| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
+NADIN.DLG	=>	~AMUL01\|AMUL14~	// Necklace of Missiles, Amulet of Protection +1	| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
 
 ALGERN.CRE	=>	CLCK08		// Algernon's Cloak		| Algernon - Beregost
 QUENAS.CRE	=>	CLCK05		// Cloak of Balduran		| Quenash

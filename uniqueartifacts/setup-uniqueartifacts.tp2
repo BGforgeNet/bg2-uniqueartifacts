@@ -8,11 +8,11 @@ VERSION ~3~
 BEGIN ~Strict~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
-OUTER_SET expanded = 0
+OUTER_SET mode = 1
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
 
 BEGIN ~Expanded~
 SUBCOMPONENT ~Unique Artifacts~
 COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
-OUTER_SET expanded = 1
+OUTER_SET  mode = 2
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files

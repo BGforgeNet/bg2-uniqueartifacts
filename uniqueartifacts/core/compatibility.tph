@@ -108,3 +108,22 @@ ACTION_IF (MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~) BEGIN  //Restored ite
   END
   OUTER_SPRINT ffbart_boot ~boot07~ // for custom.tph, Thunderburp's boots for Mazzy
 END
+
+
+//Cursed Items revision
+ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - moved a few items
+  PRINT ~Salk's cursed items revisions:~
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+    COKSMTH.CRE => BELT05  //Girdle of gender change
+    VAYYA.CRE => BELT05  //Girdle of gender change
+
+    KRUMM.CRE => BRAC08  //Gauntlets of Fumbling
+
+    AR9200.ARE => RING04 //Ring of Clumsiness
+
+    MELICA.DLG => RING23 //Ring of Folly 
+    MELICA.CRE => RING23 //Ring of Folly 
+
+    THIEF7.CRE => BOOT08 //Boots of Phasing
+  END
+END

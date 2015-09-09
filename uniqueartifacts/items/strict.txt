@@ -94,9 +94,10 @@ RAMAZI.CRE	=>	AMUL16		// Metaspell Influence Amulet	| Ramazith
 NADINE.CRE	=>	~AMUL01\|AMUL14~	// Necklace of Missiles, Amulet of Protection +1	| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
 NADIN.DLG	=>	~AMUL01\|AMUL14~	// Necklace of Missiles, Amulet of Protection +1	| Nadine (quest reward for giving the Amulet of protection +1 to her son Eric)
 
-ALGERN.CRE	=>	CLCK08		// Algernon's Cloak		| Algernon - Beregost
 QUENAS.CRE	=>	CLCK05		// Cloak of Balduran		| Quenash
 QUENAS.DLG	=>	CLCK05		// Cloak of Balduran		| Quenash
+TASLGURK.CRE	=>	CLCK06		// Cloak of Non-Detection	| Tasloi, Cloakwood
+ALGERN.CRE	=>	CLCK08		// Algernon's Cloak		| Algernon - Beregost
 
 SLYTHE.CRE	=>	SW1H10		// Short Sword of Backstabbing +3	| Slythe - last asassination attempt in underground tavern
 DROTH.CRE	=>	HELM04		// Helm Of Defence			| Droth the ogre-mage who tortured a sirene (or a nymph?)

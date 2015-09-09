@@ -85,6 +85,7 @@ BASSIL.CRE	=>	BRAC08		// Gauntlets of Fumbling	| Bassilus
 
 NIMBUL.CRE	=>	BOOT04		// Boots of Avoidance		| Nimbul, asassin in Nashkel
 JARED.CRE	=>	BOOT03		// Boots of the North		| Jared the scared merchant (a bear and a bridge)
+JARED.DLG	=>	BOOT03		// Boots of the North		| Jared the scared merchant (a bear and a bridge)
 DRASUS.CRE	=>	BOOT01		// Boots of Speed		| Drasus (Cloakwood mines assassin)
 MULAHE.CRE	=>	BOOT05		// Boots of Grounding		| Mulahey
 

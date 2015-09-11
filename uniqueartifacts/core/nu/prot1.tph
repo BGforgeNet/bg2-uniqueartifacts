@@ -1,6 +1,6 @@
 COPY_EXISTING ~sw1h01.itm~ ~override/g_ua_pr1.itm~ //for detection
 
-COPY_EXISTING ~amul14.itm~ ~overrride~
+COPY_EXISTING ~amul14.itm~ ~override~
   SAY DESC ~Amulet of Protection +1 : 'The Protector'
 
 Originally, the royal guard of King Pyronan, ruler of Impiltur, were given 'The Protector' as an honorary show of status.  Unfortunately, members of the guard had trouble coming to a consensus amongst themselves as to whom the amulet should go to.  After years of internal hostility, the item was lost and the guards were replaced by less greedy individuals. Since then, many copies emerged, and this is one of them.

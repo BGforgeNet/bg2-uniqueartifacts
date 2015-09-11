@@ -5,7 +5,13 @@ This mod removes duplicated magical items from the game, ensuring that the party
 It will work with BG2:ToB or BGT. Starting a new game is required. [Download](#installation)
 
 - [Detailed description](#detailed-description)
-- [Options](#options)
+- [Components](#components)
+ - [Allow non-unique Amulet of Protection +1](#allow-non-unique-amulet-of-protection-1)
+ - [Allow non-unique Ring of Protection +2 and Cloak of Protection +2](#allow-non-unique-ring-of-protection-2-and-cloak-of-protection-2)
+ - [Allow non-unique Boots of Speed](#allow-non-unique-boots-of-speed)
+ - [Core](#core)
+  - [Strict](#strict)
+  - [Expanded](#expanded)
 - [Installation](#installation)
 - [FAQ](#faq)
  - [Compatibility](#compatibility)
@@ -38,12 +44,18 @@ To summarize,
 When choosing which copy exactly is "canon" and available to the party, UA generally picks a less accessible one. For example, in the original game, the party is able to obtain two Rings of Wizardry: one from Mage stronghold, and another one from the final fight in Jaheira romance. Only the stronghold one is left in game.
 
 
-## Options
-### Strict
+## Components
+### Allow non-unique Amulet of Protection +1
+Excludes AoP +1 from core overhaul and fixes its description.
+### Allow non-unique Ring of Protection +2 and Cloak of Protection +2
+Excludes RoP +2 and CoP +2 from core overhaul and fixes their descriptions.
+### Allow non-unique Boots of Speed
+Excludes Boots of Speed from core overhaul and fixes their description.
+### Core
+#### Strict
 This option un-duplicates items that are explicitly described as unique. Examples: Boots of Speed, Necklace of Missiles, Robe of Vecna.
-### Expanded
+#### Expanded
 This option in addition to the above processes a number of magical items that are not likely to be possessed by a single party of adventurers in multiple copies. Examples: Boots of Stealth, Ring of Fire control.
-
 
 ## Installation
 - Download uniqueartifacts.zip from the [latest release page](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)

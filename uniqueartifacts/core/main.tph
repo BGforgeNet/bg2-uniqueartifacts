@@ -10,6 +10,8 @@ END
 //compatibility
 INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
 
+PRINT ~Start main process~
+
 //custom adjustments
 INCLUDE ~%MOD_FOLDER%/core/custom.tph~
 

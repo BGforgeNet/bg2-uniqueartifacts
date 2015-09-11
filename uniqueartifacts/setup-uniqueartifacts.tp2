@@ -3,16 +3,25 @@ AUTHOR ~burner1024 @ github~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~3~
+VERSION ~4~
+
+BEGIN ~Allow non-unique Amulet of Protection +1~
+INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tph~
+
+BEGIN ~Allow non-unique Ring of Protection +2 and Cloak of Protection +2~
+INCLUDE ~%MOD_FOLDER%/core/nu/prot2.tph~
+
+BEGIN ~Allow non-unique Boots of Speed~
+INCLUDE ~%MOD_FOLDER%/core/nu/boots.tph~
 
 BEGIN ~Strict~
-SUBCOMPONENT ~Unique Artifacts~
-COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uastr.itm~ //component detection
+SUBCOMPONENT ~Unique Artifacts - core~
+COPY_EXISTING ~sw1h01.itm~ ~override/g_uastr.itm~ //component detection
 OUTER_SET mode = 1
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
 
 BEGIN ~Expanded~
-SUBCOMPONENT ~Unique Artifacts~
-COPY ~%MOD_FOLDER%/core/dummy.itm~ ~override/g_uaexp.itm~ //component detection
+SUBCOMPONENT ~Unique Artifacts - core~
+COPY_EXISTING ~sw1h01.itm~ ~override/g_uaexp.itm~ //component detection
 OUTER_SET  mode = 2
 INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files

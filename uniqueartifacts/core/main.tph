@@ -1,12 +1,5 @@
 PRINT ~Please be patient, the installation takes a few minutes.~
 
-ACTION_IF FILE_EXISTS ~data/BG1ARE.BIF~ THEN BEGIN
-  PRINT ~BGT detected.~
-  OUTER_SET BGT = 1
-END ELSE BEGIN
-  OUTER_SET BGT = 0
-END
-
 //compatibility
 INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
 

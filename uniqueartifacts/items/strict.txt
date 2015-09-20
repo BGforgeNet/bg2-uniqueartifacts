@@ -109,6 +109,7 @@ HENTOL.CRE	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in Valley of 
 HENTOL.DLG	=>	DAGG03		// Dagger +2: 'Heart of the Golem'	| Hentold in Valley of Tombs (give dagger to zombie)
 MANEIR.CRE	=>	LEATH03		// Protector of the second leather armor	| Maneira, assassin party
 ALDETH.DLG	=>	SW1H03		// Kondar +1, +3 vs Shapeshifters	| Aldeth Sashenstar (Cloakwood or BG)
+ALDETH.CRE	=>	SW1H03		// Kondar +1, +3 vs Shapeshifters	| Aldeth Sashenstar (Cloakwood or BG) - should be droppable but not stealable, handled in custom.tph
 
 
 END

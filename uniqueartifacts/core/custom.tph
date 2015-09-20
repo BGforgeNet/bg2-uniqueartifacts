@@ -1,4 +1,4 @@
-ACTION_IF ( BGT = 1) BEGIN //BGT only
+ACTION_IF GAME_INCLUDES ~bg1~ BEGIN //BGT or BGEE
 
   //small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West
   COPY_EXISTING ~nadari.cre~ ~override~
@@ -11,12 +11,12 @@ REPLACE_ACTION_TEXT ~nadari~
 >>>>>>>>
   COMPILE ~.../uniqueartifacts-inlined/nadari.d~
 
-  //Kondar: make droppable from Aldeth
+  //Kondar: make unstealable from Aldeth
   COPY_EXISTING ~aldeth.cre~ ~override~
-    LPF REMOVE_CRE_ITEM_FLAGS
+    LPF ADD_CRE_ITEM_FLAGS
       STR_VAR
         item_to_change = ~sw1h03~
-        flags = ~UNDROPPABLE~
+        flags = ~UNSTEALABLE~
     END
   BUT_ONLY
 END

@@ -46,7 +46,7 @@ HLMAFER.CRE	=>	SHLD30		// Large Shield +2			|  Maferan (Guarded compound)
 
 
 //BG1
-HIGHHEDG.STO	=>	~CLCK15\|CLCK16~	// Robe of the Good Archmagi	|  High Hedge mage shop
+HIGHHEDG.STO	=>	~CLCK15\|CLCK16~	// Robe of the Good/Neutral Archmagi	|  High Hedge mage shop
 DAVAEO.CRE	=>	CLCK17		// Robe of the Evil Archmagi		|  Davaeorn (BG1 mage who rules mines)
 MULAHE.CRE	=>	RING22		// Ring of Holiness			|  Mulahey
 NIMBUL.CRE	=>	RING21		// Ring of Infravision			|  Nimbul (asassin in Nashkel)
@@ -56,6 +56,8 @@ ZAL.CRE		=>	BRAC04		// Bracers of Archery			|  Zal, the fastest dart thower
 HOBGZHUR.CRE	=>	BOOT02		// Boots of Stealth			|  hobgoblin from Zhurlong quest
 ULGOTH.STO	=>	CLCK03		// Cloak of Displacement		|  store in Ulgoth's Beard
 DRSHCH01.CRE	=>	BOOT08		// Boots of Phasing			|  (some druid stuff? never seen it)
+HALBAZ.DLG	=>	CLCK07		// Nymph Cloak			|  Halbazzer Drin, Sorcerous Sundries
+HALBAZ.CRE	=>	CLCK07		// Nymph Cloak			|  Halbazzer Drin, Sorcerous Sundries
 
 
 END

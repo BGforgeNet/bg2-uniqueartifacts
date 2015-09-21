@@ -19,6 +19,13 @@ REPLACE_ACTION_TEXT ~nadari~
         flags = ~UNSTEALABLE~
     END
   BUT_ONLY
+
+  //Ordulinian reward for blood deeds switched from Cloak of non-detection to Cloak of protection
+<<<<<<<< .../uniqueartifacts-inlined/orduli.d
+REPLACE_ACTION_TEXT ~orduli~ ~clck06~ ~clck01~
+>>>>>>>>
+  COMPILE ~.../uniqueartifacts-inlined/orduli.d~
+
 END
 
 //small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed or Boots of Elvenkind

@@ -3,7 +3,7 @@ COPY_EXISTING ~sw1h01.itm~ ~override/g_ua_pr2.itm~ //for detection
 
 COPY_EXISTING ~clck02.itm~ ~override~
   SAY DESC ~Cloak of Protection +2:  'The Spirit's Shield' 
-Cloak of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.
+Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.
 
 STATISTICS:
 

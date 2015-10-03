@@ -53,7 +53,7 @@ Excludes RoP +2 and CoP +2 from core overhaul and fixes their descriptions.
 Excludes Boots of Speed from core overhaul and fixes their description.
 ### Core
 #### Strict
-This option un-duplicates items that are explicitly described as unique. Examples: Boots of Speed, Necklace of Missiles, Robe of Vecna.
+This option un-duplicates items that are explicitly described as unique. Examples:  Necklace of Missiles, Robe of Vecna, Boots of Speed (if the component excluding them isn't installed previously).
 #### Expanded
 This option in addition to the above processes a number of magical items that are not likely to be possessed by a single party of adventurers in multiple copies. Examples: Boots of Stealth, Ring of Fire control.
 
@@ -79,6 +79,10 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
 
 ## Changelog
+- Version 4
+  - Add components to allow non-unique boots of speed and items "of protection" +1/+2
+  - Fix several missing items in BG1
+  - Make compatible with Cursed Items Revisions and Dungeon-Be-Gone
 - Version 3
   - Fixed a bug when items present in both BG1 and BG2 may be rendered unavailable
 - Version 2
@@ -109,6 +113,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 * [DLTCEP](http://sourceforge.net/projects/gemrb/files/Utilities/)
 * [WeiDU](http://weidu.org/main.html#weidu)
 * [G3 Debugging Suite](http://www.gibberlings3.net/debug/)
+* NearInfinity
 
 ## License
 It's provided as is, without any guarantee. Feel free to use it in any way that you see fit.

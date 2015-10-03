@@ -154,4 +154,13 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - mov
   END
 END
 
+//Dungeon-be-gone
+ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
+  PRINT ~Dungeon-Be-Gone~
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+    FWJASSY.DLG => BELT03  //Girdle of Bluntness
+  END
+END
+
+
 PRINT ~Resolved compatibility issues~

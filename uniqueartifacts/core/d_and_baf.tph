@@ -1,8 +1,10 @@
-PRINT ~Processing dialogs:~
-
+PRINT @26
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
+  WSMITH01.DLG => DUMMY //never touch Cromwell
+  BOTSMITH.DLG => DUMMY //and Cespenar
+END
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x30)
-  AND NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
         STR_VAR
@@ -14,15 +16,18 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
 BUT_ONLY
 
 
-PRINT ~Processing scripts:~
+PRINT @27
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
+  AR0334.BCS => DUMMY //never touch Cromwell
+  BOTSMITH.BCS => DUMMY //and Cespenar
+END
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
-  PATCH_IF (SOURCE_SIZE > 0x5)
-  AND NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
         STR_VAR
           old_item = ~%all_items%~
-          new_item = ~amul10~ //gold necklace
+          new_item = ~ring06~ //ring of prot +1
       END
     END
   END

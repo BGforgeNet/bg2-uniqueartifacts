@@ -1,4 +1,4 @@
-PRINT ~Processing areas:~
+PRINT @7
 
 //bad reference to progtest.bif
 COPY_EXISTING

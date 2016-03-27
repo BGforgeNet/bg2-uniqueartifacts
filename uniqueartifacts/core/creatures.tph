@@ -1,4 +1,4 @@
-PRINT ~Processing creatures:~
+PRINT @25
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
   PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN

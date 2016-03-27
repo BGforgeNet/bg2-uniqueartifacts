@@ -1,9 +1,7 @@
-PRINT ~Please be patient, the installation takes a few minutes.~
-
 //compatibility
 INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
 
-PRINT ~Start main process~
+PRINT @28
 
 //custom adjustments
 INCLUDE ~%MOD_FOLDER%/core/custom.tph~

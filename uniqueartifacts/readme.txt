@@ -77,6 +77,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 
 ## Known issues
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
+- When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
 - Version 4

@@ -1,4 +1,4 @@
-PRINT ~Processing stores:~
+PRINT @29
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
   READ_STRREF 0xc "store_name"
@@ -28,6 +28,6 @@ BUT_ONLY
 COPY_EXISTING ~bag28.sto~ ~override/bag28.sto~
   LPF DELETE_STORE_ITEM
     STR_VAR
-      item_to_delete ~ring05~
+      item_to_delete = ~ring05~
   END
 BUT_ONLY

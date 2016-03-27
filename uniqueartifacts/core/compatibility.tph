@@ -87,22 +87,32 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
 END
 
 
-//Daulmakan item pack: More work for Cromwell - forbid Ring +1 upgrade and Periart of Proof agains Poison forging
-ACTION_IF ((FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
+//Daulmakan item pack: More work for Cromwell - Periart of Proof against Poison
+ACTION_IF (FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) BEGIN
   PRINT @17
   OUTER_SET offending_state = 13  //Hmmmn... I couldn't rightly say.  Let me have a look into yer goods, then.  A minute of rummagin' and I'll know fer sure, aye?
 <<<<<<<< .../uniqueartifacts-inlined/wsmith01.d
 REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
-  ~PartyHasItem("ring06")~
-  ~False()~
-REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("amul14")~
   ~False()~
 >>>>>>>>
-  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith01.d~ //make these branches always false
+  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith01.d~ //make this branch always false
+END
+//Daulmakan item pack: More work for Cromwell - forbid Ring +1 > +2,  Cloak of protection +1 > +2
+ACTION_IF ((FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when +2 are uniques
+  OUTER_SET offending_state = 13  //Hmmmn... I couldn't rightly say.  Let me have a look into yer goods, then.  A minute of rummagin' and I'll know fer sure, aye?
+<<<<<<<< .../uniqueartifacts-inlined/wsmith02.d
+REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
+  ~PartyHasItem("ring06")~
+  ~False()~
+REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
+  ~PartyHasItem("clck01")~
+  ~False()~
+>>>>>>>>
+  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith02.d~
 END
 
-//Tactics and Daulmakan
+//Tactics vs Daulmakan - Cloak of Balduran
 ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN  // lich in the docs
   PRINT @18
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN

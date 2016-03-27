@@ -1,25 +1,25 @@
-PRINT ~Compatibility:~
+PRINT @8
 
 //Previously installed components
 ACTION_IF (FILE_EXISTS_IN_GAME ~g_ua_pr1.itm~) THEN BEGIN
-  PRINT ~Non-unique Amulet of Protection +1~
+  PRINT @9
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    AR1201.ARE => G_DUMMY // was AMUL14
+    AR1201.ARE => DUMMY // was AMUL14
     NADINE.CRE => AMUL01  // was AMUL01\|AMUL14
     NADIN.DLG  => AMUL01  // Awas MUL01\|AMUL14
   END
 END
 ACTION_IF (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~) THEN BEGIN
-  PRINT ~Non-unique Ring of Protection +2 and Cloak of Protection +2~
+  PRINT @10
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    AR2300.ARE => G_DUMMY // was CLCK02
+    AR2300.ARE => DUMMY // was CLCK02
     ARAN02.CRE => AMUL21 // was RING07\|AMUL21
     ARAN.DLG   => AMUL21 // was RING07\|AMUL21
-    RAMAZI.CRE  => G_DUMMY // was RING07
+    RAMAZI.CRE  => DUMMY // was RING07
   END
 END
 ACTION_IF (FILE_EXISTS_IN_GAME ~g_ua_boots.itm~) THEN BEGIN
-  PRINT ~Non-unique Boots of Speed~
+  PRINT @11
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     DRASUS.CRE => G_DUMMY // was BOOT01
     TOKCRE01.DLG => ~BOOT03\|BOOT05~ // was BOOT03\|BOOT01\|BOOT05
@@ -29,7 +29,7 @@ END
 
 //Rogue Rebalancing 3.8+
 ACTION_IF (FILE_EXISTS_IN_GAME ~rr#aran2.cre~) THEN BEGIN
-  PRINT ~Rogue Rebalancing~
+  PRINT @12
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     RR#ARAN2.CRE => SW1H10  // short sword of backstabbing  |  Aran
     RENAL.CRE => G_DUMMY // Renal no longer has SSoB
@@ -40,7 +40,7 @@ END
 
 //Sword Coast Stratagems
 ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
-  PRINT ~Sword Coast Stratagems~
+  PRINT @13
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     GORLIC01.CRE => WA2ROBE  // Robe of Vecna  |  Amekthran lich
   END
@@ -49,10 +49,10 @@ END
 
 //Tortured Souls
 ACTION_IF (FILE_EXISTS_IN_GAME ~kachi01.wav~) BEGIN
-  PRINT ~Tortured Souls~
+  PRINT @14
   COPY_EXISTING ~wmart1.sto~ ~override/wmart1.sto~ //Kachiko' wakisashi - remove from Joluv
     LPF DELETE_STORE_ITEM
-      STR_VAR item_to_delete ~wawak~
+      STR_VAR item_to_delete = ~wawak~
     END
   BUT_ONLY
 END
@@ -60,7 +60,7 @@ END
 
 //BG2 Fixpack
 ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ BEGIN
-  PRINT ~BG2 Fixpack~
+  PRINT @15
   //Suryris's Blade - Fixpack deletes all but Ribald's copy. Removing Ribald's and restoring Lizard man captain's (Sphere)
   COPY_EXISTING ~bazliz04.cre~ ~override~
     LPF DELETE_CRE_ITEM
@@ -73,7 +73,7 @@ END
 
 //Thalantyr item upgrade - forbid Ring +1 upgrade
 ACTION_IF ((FILE_EXISTS_IN_GAME ~thsw2h01.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
-  PRINT ~Thalantyr item upgrade~
+  PRINT @16
   OUTER_SET offending_state = STATE_WHICH_SAYS ~Show me what you have, and I'll tell you if it can be altered.~ FROM ~thalan.dlg~
 <<<<<<<< .../uniqueartifacts-inlined/thalan.d
 REPLACE_TRANS_TRIGGER thalan BEGIN %offending_state% END BEGIN END
@@ -82,28 +82,34 @@ REPLACE_TRANS_TRIGGER thalan BEGIN %offending_state% END BEGIN END
 >>>>>>>>
   COMPILE EVAL ~.../uniqueartifacts-inlined/thalan.d~ //Make ring +1 branch always false
 END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+  THALAN.DLG => DUMMY //don't touch Thalantyr otherwise
+END
 
 
-//Daulmakan item pack: More work for Cromwell - forbid Ring +1 upgrade
+//Daulmakan item pack: More work for Cromwell - forbid Ring +1 upgrade and Periart of Proof agains Poison forging
 ACTION_IF ((FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
-  PRINT ~Daulmakan item pack~
+  PRINT @17
   OUTER_SET offending_state = 13  //Hmmmn... I couldn't rightly say.  Let me have a look into yer goods, then.  A minute of rummagin' and I'll know fer sure, aye?
 <<<<<<<< .../uniqueartifacts-inlined/wsmith01.d
 REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("ring06")~
   ~False()~
+REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
+  ~PartyHasItem("amul14")~
+  ~False()~
 >>>>>>>>
-  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith01.d~ //Make ring +1 branch always false
+  COMPILE EVAL ~.../uniqueartifacts-inlined/wsmith01.d~ //make these branches always false
 END
 
 //Tactics and Daulmakan
 ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN  // lich in the docs
-  PRINT ~Tactics~
+  PRINT @18
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     GBLICH01.CRE => CLCK05  // Cloak of Balduran - lich in the Docs
   END
 END ELSE ACTION_IF (FILE_EXISTS_IN_GAME ~d1potcas.itm~) BEGIN // Daulmakan - extra items
-  PRINT ~Daulmakan extra items:~
+  PRINT @19
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     AR0602.BCS => CLCK05  // Cloak of Balduran - Chateau Irenicus
   END
@@ -112,7 +118,7 @@ END
 
 //Ruad item upgrade - forbid Ring +1 upgrade
 ACTION_IF ((FILE_EXISTS_IN_GAME ~m#ruad.dlg~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
-  PRINT ~Ruad Ro'fhessa~
+  PRINT @20
   OUTER_SET offending_state = STATE_WHICH_SAYS ~Just tell me what you have, and I'll tell you if it can be made better.~ FROM ~m#ruad.dlg~
 <<<<<<<< .../uniqueartifacts-inlined/ruad.d
 REPLACE_TRANS_TRIGGER m#ruad BEGIN %offending_state% END BEGIN END
@@ -121,11 +127,14 @@ REPLACE_TRANS_TRIGGER m#ruad BEGIN %offending_state% END BEGIN END
 >>>>>>>>
   COMPILE EVAL ~.../uniqueartifacts-inlined/ruad.d~ //Make ring +1 branch always false
 END
+ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
+  M#RUAD.DLG => DUMMY  //don't touch Ruad otherwise
+END
 
 
 //Almateria's restoration pack
 ACTION_IF (MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~) BEGIN  //Restored items
-  PRINT ~Almateria's restoration pack~
+  PRINT @21
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     VIEKANG.CRE => BOOT08  // Boots of Phasing  |  Viekang SoA
     SARVIE01.CRE => BOOT08  // Boots of Phasing  |  Viekang ToB
@@ -138,7 +147,7 @@ END
 
 //Cursed Items revision
 ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - moved a few items
-  PRINT ~Salk's cursed items revisions~
+  PRINT @22
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     COKSMTH.CRE => BELT05  //Girdle of gender change
     VAYYA.CRE => BELT05  //Girdle of gender change
@@ -156,11 +165,11 @@ END
 
 //Dungeon-be-gone
 ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
-  PRINT ~Dungeon-Be-Gone~
+  PRINT @23
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     FWJASSY.DLG => BELT03  //Girdle of Bluntness
   END
 END
 
 
-PRINT ~Resolved compatibility issues~
+PRINT @24

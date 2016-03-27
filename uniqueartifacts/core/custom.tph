@@ -37,4 +37,4 @@ REPLACE_ACTION_TEXT ~ffbart~
 ACTION_IF NOT (VARIABLE_IS_SET ffbart_boot) BEGIN // Boots of Elvenkind, set in compatibility - Almateria restored items
   OUTER_SPRINT ffbart_boot ~boot10~ // default to Boots of Ligtning speed
 END
-COMPILE ~.../uniqueartifacts-inlined/ffbart.d~
+COMPILE EVAL ~.../uniqueartifacts-inlined/ffbart.d~

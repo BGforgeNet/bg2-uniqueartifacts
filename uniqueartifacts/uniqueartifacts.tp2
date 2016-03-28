@@ -5,7 +5,7 @@ AUTO_EVAL_STRINGS
 //MODDER
 VERSION ~v5~
 
-LANGUAGE ~English~ ~ENGLISH~ ~%MOD_FOLDER%/tra/english/game.tra~
+LANGUAGE ~English~ ~ENGLISH~ ~uniqueartifacts/tra/english/game.tra~
 
 BEGIN @1 //+1
 INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tph~

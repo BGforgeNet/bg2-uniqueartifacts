@@ -67,7 +67,8 @@ This option in addition to the above processes a number of magical items that ar
 ### What about BGT?
 In BGT, each part of the game is treated separately. Meaning you'll be able to get Boots of Speed once in BG1, once in BG2, and once in ToB.
 ### Compatibility
-UA is designed be compatible with all other mods.
+Known incompatibilies (conceptual):
+- Item revisions
 ### Installation order
 Install UA after any mods that add new content (areas, creatures, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
 ### Which items are affected?

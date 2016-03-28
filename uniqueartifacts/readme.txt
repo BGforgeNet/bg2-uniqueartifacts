@@ -81,8 +81,10 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 
 ## Changelog
 - Version 5
+  - Fix bug when some Strict items would not be available on Expanded setting
   - Better compatibility with Weimer and Daulmakan item upgrades
   - Add Burning Earth longsword to expanded list
+  - Weidu 239
 - Version 4
   - Add components to allow non-unique boots of speed and items "of protection" +1/+2
   - Fix several missing items in BG1
@@ -115,9 +117,9 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 ## Used software
 
 * [DLTCEP](http://sourceforge.net/projects/gemrb/files/Utilities/)
-* [WeiDU](http://weidu.org/main.html#weidu)
+* [WeiDU](http://www.weidu.org/~thebigg/README-WeiDU.html)
 * [G3 Debugging Suite](http://www.gibberlings3.net/debug/)
-* NearInfinity
+* [NearInfinity](https://github.com/Argent77/NearInfinity)
 
 ## License
 It's provided as is, without any guarantee. Feel free to use it in any way that you see fit.

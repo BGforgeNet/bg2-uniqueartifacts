@@ -1,7 +1,7 @@
 ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_expanded BEGIN
 
 
-RIBALD.STO	=>	~RING28\|BELT06~	// Ring of Air Control, Girdle of Hill Giant Strength		|  Ribald
+RIBALD.STO	=>	~RING28\|BELT06\|SW1H53~	// Ring of Air Control, Girdle of Hill Giant Strength, Sword of Flame +1	|  Ribald
 TRMER02.STO	=>	~BELT10\|CLCK03~	// Belt of Inertial Barrier, Cloak of Displacement		|  Merchant in Trademeet
 WMART2.STO	=>	~WA2RING\|WA2AMU~	// Mercykiller Ring, Sensate Amulet				|  Deidre
 

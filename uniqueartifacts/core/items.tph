@@ -6,7 +6,13 @@ END
 ACTION_IF (mode = 2) BEGIN
   INCLUDE ~%MOD_FOLDER%/items/expanded.txt~
   ACTION_PHP_EACH source_item_expanded AS index => value BEGIN
-    OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
+    ACTION_IF VARIABLE_IS_SET $source_item_expanded(~%index%~) AND NOT VARIABLE_IS_SET $source_item_strict(~%index%~) BEGIN //expanded only
+      OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
+    END ELSE BEGIN //strict+expanded
+      OUTER_TEXT_SPRINT regex_strict $source_item_strict(~%index%~)
+      OUTER_TEXT_SPRINT regex_expanded $source_item_expanded(~%index%~)
+      OUTER_TEXT_SPRINT $source_item(~%index%~) ~%regex_strict%\|%regex_expanded%~
+    END
   END
 END
 

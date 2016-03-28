@@ -80,6 +80,9 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
+- Version 5
+  - Better compatibility with Weimer and Daulmakan item upgrades
+  - Add Burning Earth longsword to expanded list
 - Version 4
   - Add components to allow non-unique boots of speed and items "of protection" +1/+2
   - Fix several missing items in BG1

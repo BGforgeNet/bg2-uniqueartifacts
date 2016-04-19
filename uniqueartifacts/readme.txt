@@ -2,7 +2,7 @@
 
 This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 
-It will work with BG2:ToB or BGT. Starting a new game is required. [Download](#installation)
+It will work with BG2:ToB, BGT, or BG2:EE. Starting a new game is required. [Download](#installation)
 
 - [Detailed description](#detailed-description)
 - [Components](#components)
@@ -81,6 +81,8 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
+- Version 6
+  - Clarify EE compatibility
 - Version 5
   - Fix bug when some Strict items would not be available on Expanded setting
   - Better compatibility with Weimer and Daulmakan item upgrades

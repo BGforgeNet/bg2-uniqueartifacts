@@ -59,7 +59,7 @@ END
 
 
 //BG2 Fixpack
-ACTION_IF FILE_EXISTS_IN_GAME ~cdbehbla.pro~ BEGIN
+ACTION_IF MOD_IS_INSTALLED "setup-bg2fixpack.tp2" "0" BEGIN
   PRINT @15
   //Suryris's Blade - Fixpack deletes all but Ribald's copy. Removing Ribald's and restoring Lizard man captain's (Sphere)
   COPY_EXISTING ~bazliz04.cre~ ~override~
@@ -179,6 +179,18 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     FWJASSY.DLG => BELT03  //Girdle of Bluntness
   END
+END
+
+
+ACTION_IF GAME_IS ~bg1 totsc~ BEGIN //missing triggers, scripts won't recompile without them
+  APPEND ~trigger.ids~ ~0x4076 OpenState(O:Object*,I:Open*BOOLEAN)~ UNLESS ~0x4076 OpenState(O:Object\*,I:Open\*BOOLEAN)~
+  APPEND ~trigger.ids~ ~0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4077 NumItems(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x4078 NumItemsGT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4078 NumItemsGT(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x4079 NumItemsLT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4079 NumItemsLT(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407A NumItemsParty(S:ResRef*,I:Num*)~ UNLESS ~0x407A NumItemsParty(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407B NumItemsPartyGT(S:ResRef*,I:Num*)~ UNLESS ~0x407B NumItemsPartyGT(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407C NumItemsPartyLT(S:ResRef*,I:Num*)~ UNLESS ~0x407C NumItemsPartyLT(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407D IsOverMe(O:Object*)~ UNLESS ~0x407D IsOverMe(O:Object\*)~
 END
 
 

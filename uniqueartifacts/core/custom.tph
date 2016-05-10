@@ -28,6 +28,10 @@ REPLACE_ACTION_TEXT ~orduli~ ~clck06~ ~clck01~
 
 END
 
+
+
+ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
+
 //small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed or Boots of Elvenkind
 <<<<<<<< .../uniqueartifacts-inlined/ffbart.d
 REPLACE_ACTION_TEXT ~ffbart~
@@ -38,3 +42,5 @@ ACTION_IF NOT (VARIABLE_IS_SET ffbart_boot) BEGIN // Boots of Elvenkind, set in 
   OUTER_SPRINT ffbart_boot ~boot10~ // default to Boots of Ligtning speed
 END
 COMPILE EVAL ~.../uniqueartifacts-inlined/ffbart.d~
+
+END

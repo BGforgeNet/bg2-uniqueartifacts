@@ -1,9 +1,7 @@
 PRINT @7
 
 //bad reference to progtest.bif
-COPY_EXISTING
-  ~ar0087.are~ ~override/xr2400.are~
-  ~ar0087.are~ ~override/xr2600.are~
+DISABLE_FROM_KEY xr2400.are xr2600.are
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
   PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN

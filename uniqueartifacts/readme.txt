@@ -1,6 +1,8 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 
-This mod removes duplicated magical items from the game, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
+This mod will **reduce** the number of magical items in game.
+
+Specifically, it removes duplicated items, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 
 It will work with BG2:ToB, BGT, or BG2:EE. Starting a new game is required. [Download](#installation)
 
@@ -23,7 +25,7 @@ It will work with BG2:ToB, BGT, or BG2:EE. Starting a new game is required. [Dow
 - [Changelog](#changelog)
 - [Used sotftware](#used-sotftware)
 - [Author](#author)
-- [License](#license)
+- [Licence](#licence)
 
 ## Detailed description
 
@@ -81,17 +83,15 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
-- Version 6
-  - Clarify EE compatibility
 - Version 5
-  - Fix bug when some Strict items would not be available on Expanded setting
+  - Fixed bug when some Strict items would not be available on Expanded setting
   - Better compatibility with Weimer and Daulmakan item upgrades
-  - Add Burning Earth longsword to expanded list
+  - Added Burning Earth longsword to expanded list
   - Weidu 239
 - Version 4
-  - Add components to allow non-unique boots of speed and items "of protection" +1/+2
-  - Fix several missing items in BG1
-  - Make compatible with Cursed Items Revisions and Dungeon-Be-Gone
+  - Added components to allow non-unique boots of speed and items "of protection" +1/+2
+  - Fixed several missing items in BG1
+  - Compatibility with Cursed Items Revisions and Dungeon-Be-Gone
 - Version 3
   - Fixed a bug when items present in both BG1 and BG2 may be rendered unavailable
 - Version 2
@@ -124,8 +124,9 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 * [G3 Debugging Suite](http://www.gibberlings3.net/debug/)
 * [NearInfinity](https://github.com/Argent77/NearInfinity)
 
-## License
-It's provided as is, without any guarantee. Feel free to use it in any way that you see fit.
+## Licence
+- The mod itself is [CC0 v1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- Used software have their own licences, refer to the corresponding resources for those.
 
 ## Author
 burner1024 @ Github

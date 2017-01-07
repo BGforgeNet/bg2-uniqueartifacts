@@ -83,6 +83,9 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
+- Version 6
+  - EE, BG1 compatible
+  - Delete items from creatures instead of replacing
 - Version 5
   - Fixed bug when some Strict items would not be available on Expanded setting
   - Better compatibility with Weimer and Daulmakan item upgrades

@@ -74,7 +74,7 @@ END
 //Thalantyr item upgrade - forbid Ring +1 upgrade
 ACTION_IF ((FILE_EXISTS_IN_GAME ~thsw2h01.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
   PRINT @16
-  OUTER_SET offending_state = STATE_WHICH_SAYS ~Show me what you have, and I'll tell you if it can be altered.~ FROM ~thalan.dlg~
+  OUTER_SET offending_state = STATE_WHICH_SAYS @101 FROM ~thalan.dlg~ //Show me what you have, and I'll tell you if it can be altered.
 <<<<<<<< .../uniqueartifacts-inlined/thalan.d
 REPLACE_TRANS_TRIGGER thalan BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("ring06")~
@@ -129,7 +129,7 @@ END
 //Ruad item upgrade - forbid Ring +1 upgrade
 ACTION_IF ((FILE_EXISTS_IN_GAME ~m#ruad.dlg~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
   PRINT @20
-  OUTER_SET offending_state = STATE_WHICH_SAYS ~Just tell me what you have, and I'll tell you if it can be made better.~ FROM ~m#ruad.dlg~
+  OUTER_SET offending_state = STATE_WHICH_SAYS @102 FROM ~m#ruad.dlg~ //Just tell me what you have, and I'll tell you if it can be made better.
 <<<<<<<< .../uniqueartifacts-inlined/ruad.d
 REPLACE_TRANS_TRIGGER m#ruad BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("ring06")~

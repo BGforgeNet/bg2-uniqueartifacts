@@ -2,11 +2,5 @@ COPY_EXISTING ~sw1h01.itm~ ~override/g_ua_boots.itm~ //for detection
 
 
 COPY_EXISTING ~boot01.itm~ ~override~
-  SAY DESC ~Boots of Speed: "The Paws of the Cheetah"
-Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: "you can hide, but you cannot run!". Since then, many copies emerged, and this is one of them.
-
-STATISTICS
-
-Equipped Ability: Movement rate doubled
-Weight: 4~
+  SAY DESC @103
 BUT_ONLY

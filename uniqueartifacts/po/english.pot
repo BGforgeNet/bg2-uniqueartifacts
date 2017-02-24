@@ -1,0 +1,246 @@
+#. #-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#
+#. extracted from uniqueartifacts/tra/english/game.tra
+#. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#
+#. extracted from uniqueartifacts/tra/english/game.tra
+#. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
+#. #-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#
+#. extracted from uniqueartifacts/tra/english/game.tra
+#. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
+#. extracted from tra/english/game.tra
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-2-24 19:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tra2po v.1.0.0\n"
+"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-2-24 19:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tra2po v.1.0.0\n"
+"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-2-24 19:5+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tra2po v.1.0.0\n"
+"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-2-24 18:53+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: tra2po v.1.0.0\n"
+
+#: uniqueartifacts/tra/english/game.tra:1 tra/english/game.tra:1
+msgid "Allow non-unique Amulet of Protection +1"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:2 tra/english/game.tra:2
+msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:3 tra/english/game.tra:3
+msgid "Allow non-unique Boots of Speed"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:4 tra/english/game.tra:4
+msgid "Unique Artifacts - core"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:5 tra/english/game.tra:5
+msgid "Strict"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:6 tra/english/game.tra:6
+msgid "Expanded"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:7 tra/english/game.tra:7
+msgid "Processing areas:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:8 tra/english/game.tra:8
+msgid "Compatibility:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:9 tra/english/game.tra:9
+msgid "Non-unique Amulet of Protection +1"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:10 tra/english/game.tra:10
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:11 tra/english/game.tra:11
+msgid "Non-unique Boots of Speed"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:12 tra/english/game.tra:12
+msgid "Rogue Rebalancing"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:13 tra/english/game.tra:13
+msgid "Sword Coast Stratagems"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:14 tra/english/game.tra:14
+msgid "Tortured Souls"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:15 tra/english/game.tra:15
+msgid "BG2 Fixpack"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:16 tra/english/game.tra:16
+msgid "Thalantyr item upgrade"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:17 tra/english/game.tra:17
+msgid "Daulmakan item pack"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:18 tra/english/game.tra:18
+msgid "Tactics"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:19 tra/english/game.tra:19
+msgid "Daulmakan extra items"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:20 tra/english/game.tra:20
+msgid "Ruad Ro'fhessa"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:21 tra/english/game.tra:21
+msgid "Almateria's restoration pack"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:22 tra/english/game.tra:22
+msgid "Salk's cursed items revisions"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:23 tra/english/game.tra:23
+msgid "Dungeon-Be-Gone"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:24 tra/english/game.tra:24
+msgid "Resolved compatibility issues."
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:25 tra/english/game.tra:25
+msgid "Processing creatures:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:26 tra/english/game.tra:26
+msgid "Processing dialogs:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:27 tra/english/game.tra:27
+msgid "Processing scripts (this will take a few minutes):"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:28 tra/english/game.tra:28
+msgid "Start main process"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:29 tra/english/game.tra:29
+msgid "Processing stores:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:30 tra/english/game.tra:30
+msgid "Only BG saga is supported"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:31 tra/english/game.tra:31
+msgid "TuTu not supported"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:32 tra/english/game.tra:32
+msgid "This component must be installed before Core"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:101 tra/english/game.tra:101
+msgid "Show me what you have, and I'll tell you if it can be altered."
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:102 tra/english/game.tra:102
+msgid "Just tell me what you have, and I'll tell you if it can be made better."
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:103 tra/english/game.tra:103
+msgid ""
+"Boots of Speed: \"The Paws of the Cheetah\"\n"
+"Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: \"you can hide, but you cannot run!\". Since then, many copies emerged, and this is one of them.\n"
+"\n"
+"STATISTICS\n"
+"\n"
+"Equipped Ability: Movement rate doubled\n"
+"Weight: 4"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:104 tra/english/game.tra:104
+msgid ""
+"Amulet of Protection +1 : 'The Protector'\n"
+"\n"
+"Originally, the royal guard of King Pyronan, ruler of Impiltur, were given 'The Protector' as an honorary show of status.  Unfortunately, members of the guard had trouble coming to a consensus amongst themselves as to whom the amulet should go to.  After years of internal hostility, the item was lost and the guards were replaced by less greedy individuals. Since then, many copies emerged, and this is one of them.\n"
+"\n"
+"STATISTICS:\n"
+"\n"
+"Armor Class Bonus:  1\n"
+"Saving Throw Bonus:  1"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:105 tra/english/game.tra:105
+msgid ""
+"Cloak of Protection +2:  'The Spirit's Shield'\n"
+"Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.\n"
+"\n"
+"STATISTICS:\n"
+"\n"
+"Armor Class:  +2 bonus\n"
+"Saving Throw:  +2 bonus\n"
+"Weight:  3\n"
+"Not usable by:"
+msgstr ""
+
+#: uniqueartifacts/tra/english/game.tra:106 tra/english/game.tra:106
+msgid ""
+"Ring of Protection +2:  'The Guard's Ring'\n"
+"The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.\n"
+"\n"
+"STATISTICS:\n"
+"\n"
+"Armor Class:  +2 bonus\n"
+"Saving Throws:  +2 bonus"
+msgstr ""

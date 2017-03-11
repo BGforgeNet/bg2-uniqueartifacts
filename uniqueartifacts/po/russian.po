@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: 2017-03-11 12:23+0000\n"
+"PO-Revision-Date: 2017-03-11 19:44+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -77,91 +77,94 @@ msgstr "Ребалансирование Разбойников"
 
 #: uniqueartifacts/tra/english/game.tra:13 tra/english/game.tra:13
 msgid "Sword Coast Stratagems"
-msgstr ""
+msgstr "Sword Coast Stratagems"
 
 #: uniqueartifacts/tra/english/game.tra:14 tra/english/game.tra:14
 msgid "Tortured Souls"
-msgstr ""
+msgstr "Tortured Souls"
 
 #: uniqueartifacts/tra/english/game.tra:15 tra/english/game.tra:15
 msgid "BG2 Fixpack"
-msgstr ""
+msgstr "BG2 Fixpack"
 
 #: uniqueartifacts/tra/english/game.tra:16 tra/english/game.tra:16
 msgid "Thalantyr item upgrade"
-msgstr ""
+msgstr "Thalantyr item upgrade"
 
 #: uniqueartifacts/tra/english/game.tra:17 tra/english/game.tra:17
 msgid "Daulmakan item pack"
-msgstr ""
+msgstr "Daulmakan item pack"
 
 #: uniqueartifacts/tra/english/game.tra:18 tra/english/game.tra:18
 msgid "Tactics"
-msgstr ""
+msgstr "Tactics"
 
 #: uniqueartifacts/tra/english/game.tra:19 tra/english/game.tra:19
 msgid "Daulmakan extra items"
-msgstr ""
+msgstr "Daulmakan extra items"
 
 #: uniqueartifacts/tra/english/game.tra:20 tra/english/game.tra:20
 msgid "Ruad Ro'fhessa"
-msgstr ""
+msgstr "Ruad Ro'fhessa"
 
 #: uniqueartifacts/tra/english/game.tra:21 tra/english/game.tra:21
 msgid "Almateria's restoration pack"
-msgstr ""
+msgstr "Almateria's restoration pack"
 
 #: uniqueartifacts/tra/english/game.tra:22 tra/english/game.tra:22
 msgid "Salk's cursed items revisions"
-msgstr ""
+msgstr "Salk's cursed items revisions"
 
 #: uniqueartifacts/tra/english/game.tra:23 tra/english/game.tra:23
 msgid "Dungeon-Be-Gone"
-msgstr ""
+msgstr "Dungeon-Be-Gone"
 
 #: uniqueartifacts/tra/english/game.tra:24 tra/english/game.tra:24
 msgid "Resolved compatibility issues."
-msgstr ""
+msgstr "Проблемы совместимости разрешены."
 
 #: uniqueartifacts/tra/english/game.tra:25 tra/english/game.tra:25
 msgid "Processing creatures:"
-msgstr ""
+msgstr "Обрабатываем существ:"
 
 #: uniqueartifacts/tra/english/game.tra:26 tra/english/game.tra:26
 msgid "Processing dialogs:"
-msgstr ""
+msgstr "Обрабатываем диалоги:"
 
 #: uniqueartifacts/tra/english/game.tra:27 tra/english/game.tra:27
 msgid "Processing scripts (this will take a few minutes):"
-msgstr ""
+msgstr "Обрабатываем скрипты (может занять несколько минут):"
 
 #: uniqueartifacts/tra/english/game.tra:28 tra/english/game.tra:28
 msgid "Start main process"
-msgstr ""
+msgstr "Начинаем основной процесс"
 
 #: uniqueartifacts/tra/english/game.tra:29 tra/english/game.tra:29
 msgid "Processing stores:"
-msgstr ""
+msgstr "Обрабатываем магазины:"
 
 #: uniqueartifacts/tra/english/game.tra:30 tra/english/game.tra:30
 msgid "Only BG saga is supported"
-msgstr ""
+msgstr "Поддерживается только серия игр BG"
 
 #: uniqueartifacts/tra/english/game.tra:31 tra/english/game.tra:31
 msgid "TuTu not supported"
-msgstr ""
+msgstr "ТуТу не поддерживается"
 
 #: uniqueartifacts/tra/english/game.tra:32 tra/english/game.tra:32
 msgid "This component must be installed before Core"
-msgstr ""
+msgstr "Этот компонент должен быть установлен перед основным"
 
 #: uniqueartifacts/tra/english/game.tra:101 tra/english/game.tra:101
 msgid "Show me what you have, and I'll tell you if it can be altered."
 msgstr ""
+"Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
 
 #: uniqueartifacts/tra/english/game.tra:102 tra/english/game.tra:102
 msgid "Just tell me what you have, and I'll tell you if it can be made better."
 msgstr ""
+"Просто скажите мне, что у Вас есть, и я отвечу, можно ли это "
+"усовершенствовать."
 
 #: uniqueartifacts/tra/english/game.tra:103 tra/english/game.tra:103
 msgid ""

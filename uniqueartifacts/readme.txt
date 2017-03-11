@@ -1,4 +1,7 @@
 ## Unique Artifacts mod for Baldur's Gate 2
+<a href="https://tra.bgforge.net/engage/baldurs-gate-unique-artifacts/?utm_source=widget">
+<img src="https://tra.bgforge.net/widgets/baldurs-gate-unique-artifacts/-/svg-badge.svg" alt="Translation status" />
+</a>
 
 This mod will **reduce** the number of magical items in game.
 

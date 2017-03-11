@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: 2017-03-11 12:05+0000\n"
+"PO-Revision-Date: 2017-03-11 12:08+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -37,7 +37,7 @@ msgstr "Разрешить неуникальные Кольцо Защиты +2
 
 #: uniqueartifacts/tra/english/game.tra:3 tra/english/game.tra:3
 msgid "Allow non-unique Boots of Speed"
-msgstr ""
+msgstr "Разрешить неуникальные Сапоги Скорости"
 
 #: uniqueartifacts/tra/english/game.tra:4 tra/english/game.tra:4
 msgid "Unique Artifacts - core"

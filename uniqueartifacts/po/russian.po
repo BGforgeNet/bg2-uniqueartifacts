@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: 2017-03-11 12:08+0000\n"
+"PO-Revision-Date: 2017-03-11 12:13+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -41,15 +41,15 @@ msgstr "Разрешить неуникальные Сапоги Скорост�
 
 #: uniqueartifacts/tra/english/game.tra:4 tra/english/game.tra:4
 msgid "Unique Artifacts - core"
-msgstr ""
+msgstr "Уникальные Артефакты - главный компонент"
 
 #: uniqueartifacts/tra/english/game.tra:5 tra/english/game.tra:5
 msgid "Strict"
-msgstr ""
+msgstr "Строгий"
 
 #: uniqueartifacts/tra/english/game.tra:6 tra/english/game.tra:6
 msgid "Expanded"
-msgstr ""
+msgstr "Расширенный"
 
 #: uniqueartifacts/tra/english/game.tra:7 tra/english/game.tra:7
 msgid "Processing areas:"

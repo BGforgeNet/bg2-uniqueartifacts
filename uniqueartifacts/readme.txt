@@ -69,15 +69,20 @@ This option in addition to the above processes a number of magical items that ar
 - Launch setup-uniqueartifacts.exe
 
 ## FAQ
+
 ### What about BGT?
 In BGT, each part of the game is treated separately. Meaning you'll be able to get Boots of Speed once in BG1, once in BG2, and once in ToB.
+
 ### Compatibility
 Known incompatibilies (conceptual):
 - Item revisions
+
 ### Installation order
 Install UA after any mods that add new content (areas, creatures, quests, etc). If you also use Item Randomiser, **install UA first, then IR**.
+
 ### Which items are affected?
 In original game, all items. In the mods, it's mostly magical jewelry and clothes. For the full list, see [strict.txt](/uniqueartifacts/items/strict.txt) or [expanded.txt](/uniqueartifacts/items/expanded.txt).
+
 ### How to skip an item?
 Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete the whole line. (There might be several lines with that item, then delete all of them.)
 
@@ -131,7 +136,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 * [NearInfinity](https://github.com/Argent77/NearInfinity)
 
 ## Licence
-- The mod itself is [CC0 v1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- The mod itself is [CC BY-NC-SA v4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 - Used software have their own licences, refer to the corresponding resources for those.
 
 ## Author

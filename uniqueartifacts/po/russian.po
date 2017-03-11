@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: 2017-03-11 12:23+0000\n"
+"PO-Revision-Date: 2017-03-11 20:27+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -77,91 +77,94 @@ msgstr "Ребалансирование Разбойников"
 
 #: uniqueartifacts/tra/english/game.tra:13 tra/english/game.tra:13
 msgid "Sword Coast Stratagems"
-msgstr ""
+msgstr "Sword Coast Stratagems"
 
 #: uniqueartifacts/tra/english/game.tra:14 tra/english/game.tra:14
 msgid "Tortured Souls"
-msgstr ""
+msgstr "Tortured Souls"
 
 #: uniqueartifacts/tra/english/game.tra:15 tra/english/game.tra:15
 msgid "BG2 Fixpack"
-msgstr ""
+msgstr "BG2 Fixpack"
 
 #: uniqueartifacts/tra/english/game.tra:16 tra/english/game.tra:16
 msgid "Thalantyr item upgrade"
-msgstr ""
+msgstr "Thalantyr item upgrade"
 
 #: uniqueartifacts/tra/english/game.tra:17 tra/english/game.tra:17
 msgid "Daulmakan item pack"
-msgstr ""
+msgstr "Daulmakan item pack"
 
 #: uniqueartifacts/tra/english/game.tra:18 tra/english/game.tra:18
 msgid "Tactics"
-msgstr ""
+msgstr "Tactics"
 
 #: uniqueartifacts/tra/english/game.tra:19 tra/english/game.tra:19
 msgid "Daulmakan extra items"
-msgstr ""
+msgstr "Daulmakan extra items"
 
 #: uniqueartifacts/tra/english/game.tra:20 tra/english/game.tra:20
 msgid "Ruad Ro'fhessa"
-msgstr ""
+msgstr "Ruad Ro'fhessa"
 
 #: uniqueartifacts/tra/english/game.tra:21 tra/english/game.tra:21
 msgid "Almateria's restoration pack"
-msgstr ""
+msgstr "Almateria's restoration pack"
 
 #: uniqueartifacts/tra/english/game.tra:22 tra/english/game.tra:22
 msgid "Salk's cursed items revisions"
-msgstr ""
+msgstr "Salk's cursed items revisions"
 
 #: uniqueartifacts/tra/english/game.tra:23 tra/english/game.tra:23
 msgid "Dungeon-Be-Gone"
-msgstr ""
+msgstr "Dungeon-Be-Gone"
 
 #: uniqueartifacts/tra/english/game.tra:24 tra/english/game.tra:24
 msgid "Resolved compatibility issues."
-msgstr ""
+msgstr "Проблемы совместимости разрешены."
 
 #: uniqueartifacts/tra/english/game.tra:25 tra/english/game.tra:25
 msgid "Processing creatures:"
-msgstr ""
+msgstr "Обрабатываем существ:"
 
 #: uniqueartifacts/tra/english/game.tra:26 tra/english/game.tra:26
 msgid "Processing dialogs:"
-msgstr ""
+msgstr "Обрабатываем диалоги:"
 
 #: uniqueartifacts/tra/english/game.tra:27 tra/english/game.tra:27
 msgid "Processing scripts (this will take a few minutes):"
-msgstr ""
+msgstr "Обрабатываем скрипты (может занять несколько минут):"
 
 #: uniqueartifacts/tra/english/game.tra:28 tra/english/game.tra:28
 msgid "Start main process"
-msgstr ""
+msgstr "Начинаем основной процесс"
 
 #: uniqueartifacts/tra/english/game.tra:29 tra/english/game.tra:29
 msgid "Processing stores:"
-msgstr ""
+msgstr "Обрабатываем магазины:"
 
 #: uniqueartifacts/tra/english/game.tra:30 tra/english/game.tra:30
 msgid "Only BG saga is supported"
-msgstr ""
+msgstr "Поддерживается только серия игр BG"
 
 #: uniqueartifacts/tra/english/game.tra:31 tra/english/game.tra:31
 msgid "TuTu not supported"
-msgstr ""
+msgstr "ТуТу не поддерживается"
 
 #: uniqueartifacts/tra/english/game.tra:32 tra/english/game.tra:32
 msgid "This component must be installed before Core"
-msgstr ""
+msgstr "Этот компонент должен быть установлен перед основным"
 
 #: uniqueartifacts/tra/english/game.tra:101 tra/english/game.tra:101
 msgid "Show me what you have, and I'll tell you if it can be altered."
 msgstr ""
+"Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
 
 #: uniqueartifacts/tra/english/game.tra:102 tra/english/game.tra:102
 msgid "Just tell me what you have, and I'll tell you if it can be made better."
 msgstr ""
+"Просто скажите мне, что у Вас есть, и я отвечу, можно ли это "
+"усовершенствовать."
 
 #: uniqueartifacts/tra/english/game.tra:103 tra/english/game.tra:103
 msgid ""
@@ -173,6 +176,19 @@ msgid ""
 "Equipped Ability: Movement rate doubled\n"
 "Weight: 4"
 msgstr ""
+"Сапоги-скороходы: 'Лапы гепарда'\n"
+"Такие зачарованные сапоги когда-то были собственностью опасного Ассасина, "
+"любившего догонять свои жертвы. Он двигался с такой скоростью, что объекты "
+"охоты не успевали среагировать, даже если находились верхом на лошади. Со "
+"временем слава убийцы распространилась и, хотя его имя так никогда и не "
+"узнали, последние слова, услышанные жертвами, боязливо передавались из уст в "
+"уста: 'От смерти не убежишь!'. С тех пор появилось много копий, и это одна "
+"из них.\n"
+"\n"
+"ПАРАМЕТРЫ:\n"
+"\n"
+"Свойства при ношении: удвоенная скорость передвижения.\n"
+"Вес: 4"
 
 #: uniqueartifacts/tra/english/game.tra:104 tra/english/game.tra:104
 msgid ""
@@ -185,6 +201,20 @@ msgid ""
 "Armor Class Bonus:  1\n"
 "Saving Throw Bonus:  1"
 msgstr ""
+"Амулет защиты +1: 'Защитник' \n"
+"Личная стража короля Пиронана, правителя Импильтура, получила 'Защитника' в "
+"качестве почетного знака. К сожалению, стражники не смогли договориться "
+"между собой, кто будет носить амулет. После нескольких лет непрекращающейся "
+"вражды предмет был потерян, а стражники заменены на менее жадных. С тех пор, "
+"появилось много копий, и это одна из них.\n"
+"\n"
+"ПАРАМЕТРЫ:\n"
+"\n"
+"Класс Защиты: +1\n"
+"Спасбросок (универсальный): +1\n"
+"Из-за магической природы амулета, его нельзя одеть, если на персонажа уже "
+"одет какой-то из магических вещей увеличивающий класс защиты, например: "
+"волшебное кольцо, волшебный плащ, или волшебная броня."
 
 #: uniqueartifacts/tra/english/game.tra:105 tra/english/game.tra:105
 msgid ""
@@ -198,6 +228,17 @@ msgid ""
 "Weight:  3\n"
 "Not usable by:"
 msgstr ""
+"Плащ защиты +2: 'Духовный щит'\n"
+"\n"
+"Этот плащ, как говорят, преобразует силу духа владельца в защитную энергию. "
+"Постоянно ходят слухи о вампире, заточенном в этом магическом предмете, но "
+"их невозможно доказать, не уничтожив плащ. \n"
+"\n"
+"ПАРАМЕТРЫ:\n"
+"\n"
+"Класс Защиты: +2\n"
+"Спасбросок (универсальный): +2\n"
+"Вес: 3"
 
 #: uniqueartifacts/tra/english/game.tra:106 tra/english/game.tra:106
 msgid ""
@@ -209,3 +250,16 @@ msgid ""
 "Armor Class:  +2 bonus\n"
 "Saving Throws:  +2 bonus"
 msgstr ""
+"Кольцо защиты +2: 'Кольцо Стража'\n"
+"\n"
+"Страж был бессмертный часовой, призванный защищать гробницу, в которой "
+"покоилось тело принцессы Аканала. Через тысячелетие уважение к могиле "
+"исчезло вместе с памятью о королевской семье, и искатели приключений начали "
+"испытывать свою удачу со Стражем. Было очевидно, что он в конце концов будет "
+"повержен, и когда это случилось, его кольцо стало еще одним из сокровищ, "
+"найденных в гробнице. С тех пор, появилось много копий, и это одна из них.\n"
+"\n"
+"ПАРАМЕТРЫ:\n"
+"\n"
+"Класс Защиты: +2\n"
+"Спасбросок (универсальный) +2"

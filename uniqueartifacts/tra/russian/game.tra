@@ -1,0 +1,65 @@
+@1=~Разрешить неуникальный Амулет Защиты +1~
+@2=~Разрешить неуникальные Кольцо Защиты +2 и Плащ защиты +2~
+@3=~Разрешить неуникальные Сапоги Скорости~
+@4=~Уникальные Артефакты - главный компонент~
+@5=~Строгий~
+@6=~Расширенный~
+@7=~Processing areas:~
+@8=~Compatibility:~
+@9=~Non-unique Amulet of Protection +1~
+@10=~Non-unique Ring of Protection +2 and Cloak of Protection +2~
+@11=~Non-unique Boots of Speed~
+@12=~Rogue Rebalancing~
+@13=~Sword Coast Stratagems~
+@14=~Tortured Souls~
+@15=~BG2 Fixpack~
+@16=~Thalantyr item upgrade~
+@17=~Daulmakan item pack~
+@18=~Tactics~
+@19=~Daulmakan extra items~
+@20=~Ruad Ro'fhessa~
+@21=~Almateria's restoration pack~
+@22=~Salk's cursed items revisions~
+@23=~Dungeon-Be-Gone~
+@24=~Resolved compatibility issues.~
+@25=~Processing creatures:~
+@26=~Processing dialogs:~
+@27=~Processing scripts (this will take a few minutes):~
+@28=~Start main process~
+@29=~Processing stores:~
+@30=~Only BG saga is supported~
+@31=~TuTu not supported~
+@32=~This component must be installed before Core~
+@101=~Show me what you have, and I'll tell you if it can be altered.~
+@102=~Just tell me what you have, and I'll tell you if it can be made better.~
+@103=~Boots of Speed: "The Paws of the Cheetah"
+Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: "you can hide, but you cannot run!". Since then, many copies emerged, and this is one of them.
+
+STATISTICS
+
+Equipped Ability: Movement rate doubled
+Weight: 4~
+@104=~Amulet of Protection +1 : 'The Protector'
+
+Originally, the royal guard of King Pyronan, ruler of Impiltur, were given 'The Protector' as an honorary show of status.  Unfortunately, members of the guard had trouble coming to a consensus amongst themselves as to whom the amulet should go to.  After years of internal hostility, the item was lost and the guards were replaced by less greedy individuals. Since then, many copies emerged, and this is one of them.
+
+STATISTICS:
+
+Armor Class Bonus:  1
+Saving Throw Bonus:  1~
+@105=~Cloak of Protection +2:  'The Spirit's Shield'
+Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.
+
+STATISTICS:
+
+Armor Class:  +2 bonus
+Saving Throw:  +2 bonus
+Weight:  3
+Not usable by:~
+@106=~Ring of Protection +2:  'The Guard's Ring'
+The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.
+
+STATISTICS:
+
+Armor Class:  +2 bonus
+Saving Throws:  +2 bonus~

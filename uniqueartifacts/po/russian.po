@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: 2017-03-11 12:13+0000\n"
+"PO-Revision-Date: 2017-03-11 12:23+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -53,27 +53,27 @@ msgstr "Расширенный"
 
 #: uniqueartifacts/tra/english/game.tra:7 tra/english/game.tra:7
 msgid "Processing areas:"
-msgstr ""
+msgstr "Обрабатываем локации:"
 
 #: uniqueartifacts/tra/english/game.tra:8 tra/english/game.tra:8
 msgid "Compatibility:"
-msgstr ""
+msgstr "Совместимость:"
 
 #: uniqueartifacts/tra/english/game.tra:9 tra/english/game.tra:9
 msgid "Non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Неуникальный Амулет Защиты +1"
 
 #: uniqueartifacts/tra/english/game.tra:10 tra/english/game.tra:10
 msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
 
 #: uniqueartifacts/tra/english/game.tra:11 tra/english/game.tra:11
 msgid "Non-unique Boots of Speed"
-msgstr ""
+msgstr "Неуникальные Сапоги Скорости"
 
 #: uniqueartifacts/tra/english/game.tra:12 tra/english/game.tra:12
 msgid "Rogue Rebalancing"
-msgstr ""
+msgstr "Ребалансирование Разбойников"
 
 #: uniqueartifacts/tra/english/game.tra:13 tra/english/game.tra:13
 msgid "Sword Coast Stratagems"

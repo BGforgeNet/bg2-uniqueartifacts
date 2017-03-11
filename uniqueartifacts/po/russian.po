@@ -11,37 +11,29 @@
 #. extracted from uniqueartifacts/tra/english/game.tra
 #. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
 #. extracted from tra/english/game.tra
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-2-25 4:16+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-03-11 12:05+0000\n"
+"Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"X-Generator: tra2po v.1.0.0\n"
-"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"X-Generator: tra2po v.1.0.0\n"
-"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"#-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"X-Generator: tra2po v.1.0.0\n"
-"#-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#\n"
-"X-Generator: tra2po v.1.0.0\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.11\n"
 
 #: uniqueartifacts/tra/english/game.tra:1 tra/english/game.tra:1
 msgid "Allow non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Разрешить неуникальный Амулет Защиты +1"
 
 #: uniqueartifacts/tra/english/game.tra:2 tra/english/game.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "Разрешить неуникальные Кольцо Защиты +2 и Плащ защиты +2"
 
 #: uniqueartifacts/tra/english/game.tra:3 tra/english/game.tra:3
 msgid "Allow non-unique Boots of Speed"

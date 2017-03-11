@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-3-11 20:35+0000\n"
-"PO-Revision-Date: 2017-03-11 20:36+0000\n"
+"PO-Revision-Date: 2017-03-11 20:59+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -41,7 +41,7 @@ msgstr "Расширенный"
 
 #: uniqueartifacts/tra/english/game.tra:7
 msgid "Processing areas:"
-msgstr "Обрабатываем локации:"
+msgstr "Обработка локаций:"
 
 #: uniqueartifacts/tra/english/game.tra:8
 msgid "Compatibility:"
@@ -61,7 +61,7 @@ msgstr "Неуникальные Сапоги Скорости"
 
 #: uniqueartifacts/tra/english/game.tra:12
 msgid "Rogue Rebalancing"
-msgstr "Ребалансирование Разбойников"
+msgstr "Rogue Rebalancing"
 
 #: uniqueartifacts/tra/english/game.tra:13
 msgid "Sword Coast Stratagems"

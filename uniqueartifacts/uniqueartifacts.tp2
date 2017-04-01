@@ -3,9 +3,10 @@ AUTHOR ~burner1024 @ github~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~v6~
+VERSION ~v7~
 
-LANGUAGE ~English~ ~ENGLISH~ ~uniqueartifacts/tra/english/game.tra~
+LANGUAGE ~English~ ~ENGLISH~ ~uniqueartifacts/tra/english/game.tra~ ~uniqueartifacts/tra/english/setup.tra~
+LANGUAGE ~Russian~ ~Russian~ ~uniqueartifacts/tra/russian/game.tra~ ~uniqueartifacts/tra/russian/setup.tra~
 
 BEGIN @1 //+1
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30

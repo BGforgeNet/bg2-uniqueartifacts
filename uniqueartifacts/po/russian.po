@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-4-2 1:55+0000\n"
-"PO-Revision-Date: 2017-04-02 02:05+0000\n"
+"PO-Revision-Date: 2017-04-03 23:05+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: russian\n"
@@ -24,7 +24,7 @@ msgstr "Разрешить неуникальный Амулет Защиты +1
 
 #: uniqueartifacts/tra/english/setup.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Разрешить неуникальные Кольцо Защиты +2 и Плащ защиты +2"
+msgstr "Разрешить неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
 
 #: uniqueartifacts/tra/english/setup.tra:3
 msgid "Allow non-unique Boots of Speed"

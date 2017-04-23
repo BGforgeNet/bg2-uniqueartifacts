@@ -44,10 +44,9 @@ Unique Artifacts aims to resolve this issue by removing all duplicates from the 
 
 To summarize,
 - What **does** it do: for a limited set of items from original game, ensure that the party gets no more than a single copy of each item.
-
 - What it **does not** do:
- - It doesn't remove items from the game completely. Each item will still be available, but in a single instance.
- - It doesn't remove new (original) items introduced by other mods. Only the items from the original game are affected.
+  - It doesn't remove items from the game completely. Each item will still be available, but in a single instance.
+  - It doesn't remove new (original) items introduced by other mods. Only the items from the original game are affected.
 
 When choosing which copy exactly is "canon" and available to the party, UA generally picks a less accessible one. For example, in the original game, the party is able to obtain two Rings of Wizardry: one from Mage stronghold, and another one from the final fight in Jaheira romance. Only the stronghold one is left in game.
 
@@ -140,7 +139,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 
 ## License
 - The mod itself is [CC BY-NC-SA v4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-- Used software have their own licences, refer to the corresponding resources for those.
+- Used software have their own licenses, refer to the corresponding resources for those.
 
 ## Author
 burner1024 @ Github

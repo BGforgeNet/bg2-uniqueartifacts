@@ -6,7 +6,9 @@
 <img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg" alt="License" />
 </a>
 
-This mod will **reduce** the number of magical items in game.
+[__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest) | [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues) | [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
+
+This mod will **reduce** the number of magical items in the game.
 
 Specifically, it removes duplicated items, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 
@@ -14,24 +16,24 @@ It will work with BG2:ToB, BGT, or BG2:EE. Starting a new game is required. [Dow
 
 - [Detailed description](#detailed-description)
 - [Components](#components)
- - [Allow non-unique Amulet of Protection +1](#allow-non-unique-amulet-of-protection-1)
- - [Allow non-unique Ring of Protection +2 and Cloak of Protection +2](#allow-non-unique-ring-of-protection-2-and-cloak-of-protection-2)
- - [Allow non-unique Boots of Speed](#allow-non-unique-boots-of-speed)
- - [Core](#core)
+  - [Allow non-unique Amulet of Protection +1](#allow-non-unique-amulet-of-protection-1)
+  - [Allow non-unique Ring of Protection +2 and Cloak of Protection +2](#allow-non-unique-ring-of-protection-2-and-cloak-of-protection-2)
+  - [Allow non-unique Boots of Speed](#allow-non-unique-boots-of-speed)
+  - [Core](#core)
     - [Strict](#strict)
     - [Expanded](#expanded)
 - [Installation](#installation)
 - [FAQ](#faq)
- - [Compatibility](#compatibility)
- - [What about BGT?](#what-about-bgt)
- - [Installation order](#installation-order)
- - [Which items are affected?](#which-items-are-affected)
- - [How to skip an item?](#how-to-skip-an-item)
+  - [Compatibility](#compatibility)
+  - [What about BGT?](#what-about-bgt)
+  - [Installation order](#installation-order)
+  - [Which items are affected?](#which-items-are-affected)
+  - [How to skip an item?](#how-to-skip-an-item)
 - [Known issues](#known-issues)
 - [Changelog](#changelog)
 - [Used sotftware](#used-sotftware)
 - [Author](#author)
-- [Licence](#licence)
+- [License](#license)
 
 ## Detailed description
 
@@ -138,7 +140,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 * [G3 Debugging Suite](http://www.gibberlings3.net/debug/)
 * [NearInfinity](https://github.com/Argent77/NearInfinity)
 
-## Licence
+## License
 - The mod itself is [CC BY-NC-SA v4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 - Used software have their own licences, refer to the corresponding resources for those.
 

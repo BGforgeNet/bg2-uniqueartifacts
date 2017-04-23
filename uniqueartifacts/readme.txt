@@ -8,11 +8,9 @@
 
 [__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest) | [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues) | [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
 
-This mod will **reduce** the number of magical items in the game.
+Unique Artifacts is a mod for BG1/BG2, designed to **reduce** the number of magical items by **removing duplicates** of those that are supposed to be unique **according to the lore** (their descriptions). That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 
-Specifically, it removes duplicated items, ensuring that the party gets only a single copy of each. That includes items such as Ring of Fire resistance, Boots of Speed, etc.
-
-It will work with BG2:ToB, BGT, or BG2:EE. Starting a new game is required. [Download](#installation)
+It will work with BG2:ToB, BGT, or EE games. Starting a new game is required.
 
 - [Detailed description](#detailed-description)
 - [Components](#components)

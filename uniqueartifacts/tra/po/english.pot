@@ -1,8 +1,4 @@
-#. #-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#
-#. extracted from uniqueartifacts/tra/english/setup.tra
-#. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
-#. extracted from uniqueartifacts/tra/english/game.tra
-#, fuzzy
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,137 +11,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: tra2po v.1.0.2\n"
+"X-Generator: bgforge_po v.1.0.0\n"
 
-#: uniqueartifacts/tra/english/setup.tra:2
-msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
+#: game.tra:102
+msgid ""
+"Just tell me what you have, and I'll tell you if it can be made better."
 msgstr ""
 
-#: uniqueartifacts/tra/english/setup.tra:3
-msgid "Allow non-unique Boots of Speed"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:4
-msgid "Unique Artifacts - core"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:5
-msgid "Strict"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:6
-msgid "Expanded"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:7
-msgid "Processing areas:"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:8
-msgid "Compatibility:"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:9
-msgid "Non-unique Amulet of Protection +1"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:10
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:11
-msgid "Non-unique Boots of Speed"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:12
-msgid "Rogue Rebalancing"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:13
-msgid "Sword Coast Stratagems"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:14
-msgid "Tortured Souls"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:15
-msgid "BG2 Fixpack"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:16
-msgid "Thalantyr item upgrade"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:17
-msgid "Daulmakan item pack"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:18
-msgid "Tactics"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:19
-msgid "Daulmakan extra items"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:20
-msgid "Ruad Ro'fhessa"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:21
-msgid "Almateria's restoration pack"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:22
-msgid "Salk's cursed items revisions"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:23
-msgid "Dungeon-Be-Gone"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:24
-msgid "Resolved compatibility issues."
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:25
-msgid "Processing creatures:"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:26
-msgid "Processing dialogs:"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:27
-msgid "Processing scripts (this will take a few minutes):"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:28
-msgid "Start main process"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:29
-msgid "Processing stores:"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:30
-msgid "Only BG saga is supported"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:31
-msgid "TuTu not supported"
-msgstr ""
-
-#: uniqueartifacts/tra/english/setup.tra:32
-msgid "This component must be installed before Core"
-msgstr ""
-
-#: uniqueartifacts/tra/english/game.tra:102
-msgid "Just tell me what you have, and I'll tell you if it can be made better."
-msgstr ""
-
-#: uniqueartifacts/tra/english/game.tra:103
+#: game.tra:103
 msgid ""
 "Boots of Speed: \"The Paws of the Cheetah\"\n"
 "Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: \"you can hide, but you cannot run!\". Since then, many copies emerged, and this is one of them.\n"
@@ -156,7 +29,7 @@ msgid ""
 "Weight: 4"
 msgstr ""
 
-#: uniqueartifacts/tra/english/game.tra:104
+#: game.tra:104
 msgid ""
 "Amulet of Protection +1 : 'The Protector'\n"
 "\n"
@@ -168,7 +41,7 @@ msgid ""
 "Saving Throw Bonus:  1"
 msgstr ""
 
-#: uniqueartifacts/tra/english/game.tra:105
+#: game.tra:105
 msgid ""
 "Cloak of Protection +2:  'The Spirit's Shield'\n"
 "Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.\n"
@@ -181,7 +54,7 @@ msgid ""
 "Not usable by:"
 msgstr ""
 
-#: uniqueartifacts/tra/english/game.tra:106
+#: game.tra:106
 msgid ""
 "Ring of Protection +2:  'The Guard's Ring'\n"
 "The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.\n"
@@ -190,4 +63,128 @@ msgid ""
 "\n"
 "Armor Class:  +2 bonus\n"
 "Saving Throws:  +2 bonus"
+msgstr ""
+
+#: setup.tra:2
+msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: setup.tra:3
+msgid "Allow non-unique Boots of Speed"
+msgstr ""
+
+#: setup.tra:4
+msgid "Unique Artifacts - core"
+msgstr ""
+
+#: setup.tra:5
+msgid "Strict"
+msgstr ""
+
+#: setup.tra:6
+msgid "Expanded"
+msgstr ""
+
+#: setup.tra:7
+msgid "Processing areas:"
+msgstr ""
+
+#: setup.tra:8
+msgid "Compatibility:"
+msgstr ""
+
+#: setup.tra:9
+msgid "Non-unique Amulet of Protection +1"
+msgstr ""
+
+#: setup.tra:10
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: setup.tra:11
+msgid "Non-unique Boots of Speed"
+msgstr ""
+
+#: setup.tra:12
+msgid "Rogue Rebalancing"
+msgstr ""
+
+#: setup.tra:13
+msgid "Sword Coast Stratagems"
+msgstr ""
+
+#: setup.tra:14
+msgid "Tortured Souls"
+msgstr ""
+
+#: setup.tra:15
+msgid "BG2 Fixpack"
+msgstr ""
+
+#: setup.tra:16
+msgid "Thalantyr item upgrade"
+msgstr ""
+
+#: setup.tra:17
+msgid "Daulmakan item pack"
+msgstr ""
+
+#: setup.tra:18
+msgid "Tactics"
+msgstr ""
+
+#: setup.tra:19
+msgid "Daulmakan extra items"
+msgstr ""
+
+#: setup.tra:20
+msgid "Ruad Ro'fhessa"
+msgstr ""
+
+#: setup.tra:21
+msgid "Almateria's restoration pack"
+msgstr ""
+
+#: setup.tra:22
+msgid "Salk's cursed items revisions"
+msgstr ""
+
+#: setup.tra:23
+msgid "Dungeon-Be-Gone"
+msgstr ""
+
+#: setup.tra:24
+msgid "Resolved compatibility issues."
+msgstr ""
+
+#: setup.tra:25
+msgid "Processing creatures:"
+msgstr ""
+
+#: setup.tra:26
+msgid "Processing dialogs:"
+msgstr ""
+
+#: setup.tra:27
+msgid "Processing scripts (this will take a few minutes):"
+msgstr ""
+
+#: setup.tra:28
+msgid "Start main process"
+msgstr ""
+
+#: setup.tra:29
+msgid "Processing stores:"
+msgstr ""
+
+#: setup.tra:30
+msgid "Only BG saga is supported"
+msgstr ""
+
+#: setup.tra:31
+msgid "TuTu not supported"
+msgstr ""
+
+#: setup.tra:32
+msgid "This component must be installed before Core"
 msgstr ""

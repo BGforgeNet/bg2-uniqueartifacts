@@ -1,12 +1,9 @@
-#. #-#-#-#-#  tmp.pot (PACKAGE VERSION)  #-#-#-#-#
-#. extracted from uniqueartifacts/tra/english/setup.tra
-#. #-#-#-#-#  english.pot (PACKAGE VERSION)  #-#-#-#-#
-#. extracted from uniqueartifacts/tra/english/game.tra
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-4-18 16:13+0000\n"
+"POT-Creation-Date: 1970-1-01 00:00+0000\n"
 "PO-Revision-Date: 2017-04-03 23:05+0000\n"
 "Last-Translator: The Magus <weblate@bgforge.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,135 +14,14 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.11\n"
 
-#: uniqueartifacts/tra/english/setup.tra:2
-msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Разрешить неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+#: game.tra:102
+msgid ""
+"Just tell me what you have, and I'll tell you if it can be made better."
+msgstr ""
+"Просто скажите мне, что у Вас есть, и я отвечу, можно ли это "
+"усовершенствовать."
 
-#: uniqueartifacts/tra/english/setup.tra:3
-msgid "Allow non-unique Boots of Speed"
-msgstr "Разрешить неуникальные Сапоги Скорости"
-
-#: uniqueartifacts/tra/english/setup.tra:4
-msgid "Unique Artifacts - core"
-msgstr "Уникальные Артефакты - главный компонент"
-
-#: uniqueartifacts/tra/english/setup.tra:5
-msgid "Strict"
-msgstr "Строгий"
-
-#: uniqueartifacts/tra/english/setup.tra:6
-msgid "Expanded"
-msgstr "Расширенный"
-
-#: uniqueartifacts/tra/english/setup.tra:7
-msgid "Processing areas:"
-msgstr "Обработка локаций:"
-
-#: uniqueartifacts/tra/english/setup.tra:8
-msgid "Compatibility:"
-msgstr "Совместимость:"
-
-#: uniqueartifacts/tra/english/setup.tra:9
-msgid "Non-unique Amulet of Protection +1"
-msgstr "Неуникальный Амулет Защиты +1"
-
-#: uniqueartifacts/tra/english/setup.tra:10
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
-
-#: uniqueartifacts/tra/english/setup.tra:11
-msgid "Non-unique Boots of Speed"
-msgstr "Неуникальные Сапоги Скорости"
-
-#: uniqueartifacts/tra/english/setup.tra:12
-msgid "Rogue Rebalancing"
-msgstr "Rogue Rebalancing"
-
-#: uniqueartifacts/tra/english/setup.tra:13
-msgid "Sword Coast Stratagems"
-msgstr "Sword Coast Stratagems"
-
-#: uniqueartifacts/tra/english/setup.tra:14
-msgid "Tortured Souls"
-msgstr "Tortured Souls"
-
-#: uniqueartifacts/tra/english/setup.tra:15
-msgid "BG2 Fixpack"
-msgstr "БГ2 Фикспак"
-
-#: uniqueartifacts/tra/english/setup.tra:16
-msgid "Thalantyr item upgrade"
-msgstr "Thalantyr item upgrade"
-
-#: uniqueartifacts/tra/english/setup.tra:17
-msgid "Daulmakan item pack"
-msgstr "Daulmakan item pack"
-
-#: uniqueartifacts/tra/english/setup.tra:18
-msgid "Tactics"
-msgstr "Tactics"
-
-#: uniqueartifacts/tra/english/setup.tra:19
-msgid "Daulmakan extra items"
-msgstr "Daulmakan extra items"
-
-#: uniqueartifacts/tra/english/setup.tra:20
-msgid "Ruad Ro'fhessa"
-msgstr "Ruad Ro'fhessa"
-
-#: uniqueartifacts/tra/english/setup.tra:21
-msgid "Almateria's restoration pack"
-msgstr "Almateria's restoration pack"
-
-#: uniqueartifacts/tra/english/setup.tra:22
-msgid "Salk's cursed items revisions"
-msgstr "Salk's cursed items revisions"
-
-#: uniqueartifacts/tra/english/setup.tra:23
-msgid "Dungeon-Be-Gone"
-msgstr "Dungeon-Be-Gone"
-
-#: uniqueartifacts/tra/english/setup.tra:24
-msgid "Resolved compatibility issues."
-msgstr "Проблемы совместимости разрешены."
-
-#: uniqueartifacts/tra/english/setup.tra:25
-msgid "Processing creatures:"
-msgstr "Обрабатываем существ:"
-
-#: uniqueartifacts/tra/english/setup.tra:26
-msgid "Processing dialogs:"
-msgstr "Обрабатываем диалоги:"
-
-#: uniqueartifacts/tra/english/setup.tra:27
-msgid "Processing scripts (this will take a few minutes):"
-msgstr "Обрабатываем скрипты (может занять несколько минут):"
-
-#: uniqueartifacts/tra/english/setup.tra:28
-msgid "Start main process"
-msgstr "Начинаем основной процесс"
-
-#: uniqueartifacts/tra/english/setup.tra:29
-msgid "Processing stores:"
-msgstr "Обрабатываем магазины:"
-
-#: uniqueartifacts/tra/english/setup.tra:30
-msgid "Only BG saga is supported"
-msgstr "Поддерживается только серия игр BG"
-
-#: uniqueartifacts/tra/english/setup.tra:31
-msgid "TuTu not supported"
-msgstr "ТуТу не поддерживается"
-
-#: uniqueartifacts/tra/english/setup.tra:32
-msgid "This component must be installed before Core"
-msgstr "Этот компонент должен быть установлен перед основным"
-
-#: uniqueartifacts/tra/english/game.tra:102
-msgid "Just tell me what you have, and I'll tell you if it can be made better."
-msgstr "Просто скажите мне, что у Вас есть, и я отвечу, можно ли это усовершенствовать."
-
-#: uniqueartifacts/tra/english/game.tra:103
+#: game.tra:103
 msgid ""
 "Boots of Speed: \"The Paws of the Cheetah\"\n"
 "Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: \"you can hide, but you cannot run!\". Since then, many copies emerged, and this is one of them.\n"
@@ -163,7 +39,7 @@ msgstr ""
 "Свойства при ношении: удвоенная скорость передвижения.\n"
 "Вес: 4"
 
-#: uniqueartifacts/tra/english/game.tra:104
+#: game.tra:104
 msgid ""
 "Amulet of Protection +1 : 'The Protector'\n"
 "\n"
@@ -183,7 +59,7 @@ msgstr ""
 "Спасбросок (универсальный): +1\n"
 "Из-за магической природы амулета, его нельзя одеть, если на персонажа уже одет какой-то из магических вещей увеличивающий класс защиты, например: волшебное кольцо, волшебный плащ, или волшебная броня."
 
-#: uniqueartifacts/tra/english/game.tra:105
+#: game.tra:105
 msgid ""
 "Cloak of Protection +2:  'The Spirit's Shield'\n"
 "Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.\n"
@@ -205,7 +81,7 @@ msgstr ""
 "Спасбросок (универсальный): +2\n"
 "Вес: 3"
 
-#: uniqueartifacts/tra/english/game.tra:106
+#: game.tra:106
 msgid ""
 "Ring of Protection +2:  'The Guard's Ring'\n"
 "The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.\n"
@@ -224,8 +100,133 @@ msgstr ""
 "Класс Защиты: +2\n"
 "Спасбросок (универсальный) +2"
 
+#: setup.tra:2
+msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr "Разрешить неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#: setup.tra:3
+msgid "Allow non-unique Boots of Speed"
+msgstr "Разрешить неуникальные Сапоги Скорости"
+
+#: setup.tra:4
+msgid "Unique Artifacts - core"
+msgstr "Уникальные Артефакты - главный компонент"
+
+#: setup.tra:5
+msgid "Strict"
+msgstr "Строгий"
+
+#: setup.tra:6
+msgid "Expanded"
+msgstr "Расширенный"
+
+#: setup.tra:7
+msgid "Processing areas:"
+msgstr "Обработка локаций:"
+
+#: setup.tra:8
+msgid "Compatibility:"
+msgstr "Совместимость:"
+
+#: setup.tra:9
+msgid "Non-unique Amulet of Protection +1"
+msgstr "Неуникальный Амулет Защиты +1"
+
+#: setup.tra:10
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#: setup.tra:11
+msgid "Non-unique Boots of Speed"
+msgstr "Неуникальные Сапоги Скорости"
+
+#: setup.tra:12
+msgid "Rogue Rebalancing"
+msgstr "Rogue Rebalancing"
+
+#: setup.tra:13
+msgid "Sword Coast Stratagems"
+msgstr "Sword Coast Stratagems"
+
+#: setup.tra:14
+msgid "Tortured Souls"
+msgstr "Tortured Souls"
+
+#: setup.tra:15
+msgid "BG2 Fixpack"
+msgstr "БГ2 Фикспак"
+
+#: setup.tra:16
+msgid "Thalantyr item upgrade"
+msgstr "Thalantyr item upgrade"
+
+#: setup.tra:17
+msgid "Daulmakan item pack"
+msgstr "Daulmakan item pack"
+
+#: setup.tra:18
+msgid "Tactics"
+msgstr "Tactics"
+
+#: setup.tra:19
+msgid "Daulmakan extra items"
+msgstr "Daulmakan extra items"
+
+#: setup.tra:20
+msgid "Ruad Ro'fhessa"
+msgstr "Ruad Ro'fhessa"
+
+#: setup.tra:21
+msgid "Almateria's restoration pack"
+msgstr "Almateria's restoration pack"
+
+#: setup.tra:22
+msgid "Salk's cursed items revisions"
+msgstr "Salk's cursed items revisions"
+
+#: setup.tra:23
+msgid "Dungeon-Be-Gone"
+msgstr "Dungeon-Be-Gone"
+
+#: setup.tra:24
+msgid "Resolved compatibility issues."
+msgstr "Проблемы совместимости разрешены."
+
+#: setup.tra:25
+msgid "Processing creatures:"
+msgstr "Обрабатываем существ:"
+
+#: setup.tra:26
+msgid "Processing dialogs:"
+msgstr "Обрабатываем диалоги:"
+
+#: setup.tra:27
+msgid "Processing scripts (this will take a few minutes):"
+msgstr "Обрабатываем скрипты (может занять несколько минут):"
+
+#: setup.tra:28
+msgid "Start main process"
+msgstr "Начинаем основной процесс"
+
+#: setup.tra:29
+msgid "Processing stores:"
+msgstr "Обрабатываем магазины:"
+
+#: setup.tra:30
+msgid "Only BG saga is supported"
+msgstr "Поддерживается только серия игр BG"
+
+#: setup.tra:31
+msgid "TuTu not supported"
+msgstr "ТуТу не поддерживается"
+
+#: setup.tra:32
+msgid "This component must be installed before Core"
+msgstr "Этот компонент должен быть установлен перед основным"
+
 #~ msgid "Allow non-unique Amulet of Protection +1"
 #~ msgstr "Разрешить неуникальный Амулет Защиты +1"
 
 #~ msgid "Show me what you have, and I'll tell you if it can be altered."
-#~ msgstr "Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
+#~ msgstr ""
+#~ "Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."

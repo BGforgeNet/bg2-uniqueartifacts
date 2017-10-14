@@ -1,6 +1,6 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 <a href="https://tra.bgforge.net/projects/baldurs-gate-unique-artifacts/main/">
-<img src="https://tra.bgforge.net/widgets/baldurs-gate-unique-artifacts/-/svg-badge.svg" alt="Translation status" />
+<img src="https://tra.bgforge.net/widgets/baldurs-gate/-/unique-artifacts/svg-badge.svg" alt="Translation status" />
 </a>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 <img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg" alt="License" />

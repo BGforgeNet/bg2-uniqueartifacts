@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.11\n"
 
+#: game.tra:101
+msgid "Show me what you have, and I'll tell you if it can be altered."
+msgstr ""
+"Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
+
 #: game.tra:102
 msgid ""
 "Just tell me what you have, and I'll tell you if it can be made better."
@@ -99,6 +104,10 @@ msgstr ""
 "\n"
 "Класс Защиты: +2\n"
 "Спасбросок (универсальный) +2"
+
+#: setup.tra:1
+msgid "Allow non-unique Amulet of Protection +1"
+msgstr "Разрешить неуникальный Амулет Защиты +1"
 
 #: setup.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
@@ -223,10 +232,3 @@ msgstr "ТуТу не поддерживается"
 #: setup.tra:32
 msgid "This component must be installed before Core"
 msgstr "Этот компонент должен быть установлен перед основным"
-
-#~ msgid "Allow non-unique Amulet of Protection +1"
-#~ msgstr "Разрешить неуникальный Амулет Защиты +1"
-
-#~ msgid "Show me what you have, and I'll tell you if it can be altered."
-#~ msgstr ""
-#~ "Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."

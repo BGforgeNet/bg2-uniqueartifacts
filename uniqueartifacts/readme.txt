@@ -1,12 +1,15 @@
 ## Unique Artifacts mod for Baldur's Gate 2
-<a href="https://tra.bgforge.net/projects/baldurs-gate-unique-artifacts/main/">
+<a href="https://tra.bgforge.net/projects/baldurs-gate/unique-artifacts/">
 <img src="https://tra.bgforge.net/widgets/baldurs-gate/-/unique-artifacts/svg-badge.svg" alt="Translation status" />
 </a>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
 <img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg" alt="License" />
 </a>
 
-[__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest) | [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues) | [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
+[__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
+ | [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues)
+ | [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
+ | [__Help translating__](https://tra.bgforge.net/projects/baldurs-gate/unique-artifacts/)
 
 Unique Artifacts is a mod for BG1/BG2, designed to **reduce** the number of magical items by **removing duplicates** of those that are supposed to be unique **according to the lore** (their descriptions). That includes items such as Ring of Fire resistance, Boots of Speed, etc.
 

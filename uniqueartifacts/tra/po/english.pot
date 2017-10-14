@@ -13,6 +13,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: bgforge_po v.1.0.0\n"
 
+#: game.tra:101
+msgid "Show me what you have, and I'll tell you if it can be altered."
+msgstr ""
+
 #: game.tra:102
 msgid ""
 "Just tell me what you have, and I'll tell you if it can be made better."
@@ -63,6 +67,10 @@ msgid ""
 "\n"
 "Armor Class:  +2 bonus\n"
 "Saving Throws:  +2 bonus"
+msgstr ""
+
+#: setup.tra:1
+msgid "Allow non-unique Amulet of Protection +1"
 msgstr ""
 
 #: setup.tra:2

@@ -146,3 +146,4 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 
 ## Author
 burner1024 @ Github
+

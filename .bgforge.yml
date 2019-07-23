@@ -1,2 +1,8 @@
 translation:
   tra_dir: ua/tra
+
+golem:
+  mod_dir: uniqueartifacts
+  platforms:
+    - tob_fixpack
+    - bgee

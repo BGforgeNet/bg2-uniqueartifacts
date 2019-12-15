@@ -4,5 +4,5 @@ translation:
 golem:
   mod_dir: uniqueartifacts
   platforms:
-    - tob_fixpack
+    - tob
     - bgee

@@ -4,12 +4,12 @@ ACTION_IF GAME_INCLUDES ~bg1~ BEGIN //BGT or BGEE
   COPY_EXISTING ~nadari.cre~ ~override~
     ADD_CRE_ITEM ~misc8j~ #0 #0 #0 ~NONE~ ~INV10~
   BUT_ONLY
-<<<<<<<< .../uniqueartifacts-inlined/nadari.d
+<<<<<<<< .../ua-inlined/nadari.d
 REPLACE_ACTION_TEXT ~nadari~
   ~GiveItem("boot02",LastTalkedToBy)~
   ~GiveItem("misc8j",LastTalkedToBy)~
 >>>>>>>>
-  COMPILE ~.../uniqueartifacts-inlined/nadari.d~
+  COMPILE ~.../ua-inlined/nadari.d~
 
   //Kondar: make unstealable from Aldeth
   COPY_EXISTING ~aldeth.cre~ ~override~
@@ -21,10 +21,10 @@ REPLACE_ACTION_TEXT ~nadari~
   BUT_ONLY
 
   //Ordulinian reward for blood deeds switched from Cloak of non-detection to Cloak of protection
-<<<<<<<< .../uniqueartifacts-inlined/orduli.d
+<<<<<<<< .../ua-inlined/orduli.d
 REPLACE_ACTION_TEXT ~orduli~ ~clck06~ ~clck01~
 >>>>>>>>
-  COMPILE ~.../uniqueartifacts-inlined/orduli.d~
+  COMPILE ~.../ua-inlined/orduli.d~
 
 END
 
@@ -33,7 +33,7 @@ END
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
 
 //small bonus 2: Boots of Stealth from Samuel Thunderburp (for Mazzy) replaced with Boots of Lightning Speed or Boots of Elvenkind
-<<<<<<<< .../uniqueartifacts-inlined/ffbart.d
+<<<<<<<< .../ua-inlined/ffbart.d
 REPLACE_ACTION_TEXT ~ffbart~
   ~GiveItemCreate("boot06",Player1,0,0,0)~
   ~GiveItemCreate("%ffbart_boot%",Player1,0,0,0)~
@@ -41,6 +41,6 @@ REPLACE_ACTION_TEXT ~ffbart~
 ACTION_IF NOT (VARIABLE_IS_SET ffbart_boot) BEGIN // Boots of Elvenkind, set in compatibility - Almateria restored items
   OUTER_SPRINT ffbart_boot ~boot10~ // default to Boots of Ligtning speed
 END
-COMPILE EVAL ~.../uniqueartifacts-inlined/ffbart.d~
+COMPILE EVAL ~.../ua-inlined/ffbart.d~
 
 END

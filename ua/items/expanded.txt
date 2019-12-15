@@ -1,5 +1,8 @@
 ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_expanded BEGIN
 
+xbow06 bernard2.sto light crossbow of speed
+sw1h53 bernadr2.sto Sword of Flame +1
+bgring08  sunin.cre   | Evermemory                | Sunin
 
 RIBALD.STO	=>	~RING28\|BELT06\|SW1H53~	// Ring of Air Control, Girdle of Hill Giant Strength, Sword of Flame +1	|  Ribald
 TRMER02.STO	=>	~BELT10\|CLCK03~	// Belt of Inertial Barrier, Cloak of Displacement		|  Merchant in Trademeet

@@ -65,3 +65,57 @@ BEGIN
     BEGIN END
     ~TakeItemReplace("%new_item%"%MATCH2%)~
 END
+
+DEFINE_ACTION_FUNCTION IS_ITEM_IN_RESOURCE
+  STR_VAR
+    item = ~~
+    resource = ~~
+  RET present
+BEGIN
+  OUTER_SET present = 1
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.are$" = 0) BEGIN
+    LAF IS_ITEM_IN_AREA
+      STR_VAR item = ~%item%~ resource = ~%resource%~
+      RET present = present
+    END
+  END
+  // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.cre$" = 0) BEGIN
+  //   LAF IS_ITEM_ON_CREATURE
+  //     STR_VAR item = ~%item%~ resource = ~%resource%~
+  //     RET present = present
+  //   END
+  // END
+  // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
+  //   LAF IS_ITEM_IN_STORE
+  //     STR_VAR item = ~%item%~ resource = ~%resource%~
+  //     RET present = present
+  //   END
+  // END
+  // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
+  //   LAF IS_ITEM_IN_DIALOG_OR_SCRIPT
+  //     STR_VAR item = ~%item%~ resource = ~%resource%~
+  //     RET present = present
+  //   END
+  // END
+END
+
+DEFINE_ACTION_FUNCTION IS_ITEM_IN_AREA
+  STR_VAR
+    item = ~~
+    resource = ~~
+  RET present
+BEGIN
+  COPY_EXISTING ~%resource%~ ~override~
+    present = 0
+    READ_LONG 0x78 item_off
+    READ_SHORT 0x76 item_num
+    item_size = 0x14
+    FOR (i=0;i<item_num;i+=1) BEGIN
+      READ_ASCII (item_off + i*item_size) item_name
+      PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN
+        present = 1
+        i = item_num
+      END
+    END
+  BUT_ONLY
+END

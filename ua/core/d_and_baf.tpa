@@ -22,12 +22,14 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
   BOTSMITH.BCS => DUMMY //and Cespenar
 END
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
-  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
+    AND (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*")) //skip long ass SCS scripts
+  BEGIN
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
         STR_VAR
           old_item = ~%all_items%~
-          new_item = ~ring06~ //ring of prot +1
+          new_item = ~ring10~ //gold ring
       END
     END
   END

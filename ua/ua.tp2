@@ -1,30 +1,30 @@
-BACKUP ~uniqueartifacts/backup~
+BACKUP ~ua/backup~
 AUTHOR ~burner1024 @ github~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
 VERSION ~v7~
 
-LANGUAGE ~English~ ~ENGLISH~ ~uniqueartifacts/tra/english/game.tra~ ~uniqueartifacts/tra/english/setup.tra~
-LANGUAGE ~Russian~ ~Russian~ ~uniqueartifacts/tra/russian/game.tra~ ~uniqueartifacts/tra/russian/setup.tra~
+LANGUAGE ~English~ ~ENGLISH~ ~%MOD_FOLDER%/tra/english/game.tra~ ~%MOD_FOLDER%/tra/english/setup.tra~
+LANGUAGE ~Russian~ ~Russian~ ~%MOD_FOLDER%/tra/russian/game.tra~ ~%MOD_FOLDER%/tra/russian/setup.tra~
 
 BEGIN @1 //+1
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31
 REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tph~
+INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tpa~
 
 BEGIN @2 //+2
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31
 REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/prot2.tph~
+INCLUDE ~%MOD_FOLDER%/core/nu/prot2.tpa~
 
 BEGIN @3 //Speed
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31
 REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/boots.tph~
+INCLUDE ~%MOD_FOLDER%/core/nu/boots.tpa~
 
 BEGIN @5 //Strict
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
@@ -32,7 +32,7 @@ REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31
 SUBCOMPONENT @4
 COPY_EXISTING ~sw1h01.itm~ ~override/g_uastr.itm~ //component detection
 OUTER_SET mode = 1
-INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/main.tpa~ //process games files
 
 BEGIN @6 //Expanded
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
@@ -40,4 +40,4 @@ REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31
 SUBCOMPONENT @4
 COPY_EXISTING ~sw1h01.itm~ ~override/g_uaexp.itm~ //component detection
 OUTER_SET mode = 2
-INCLUDE ~%MOD_FOLDER%/core/main.tph~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/main.tpa~ //process games files

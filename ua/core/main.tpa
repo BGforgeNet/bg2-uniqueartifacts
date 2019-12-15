@@ -1,25 +1,25 @@
+//initialize functions
+INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
+
 //compatibility
-INCLUDE ~%MOD_FOLDER%/core/compatibility.tph~
+INCLUDE ~%MOD_FOLDER%/core/compatibility.tpa~
 
 PRINT @28
 
 //custom adjustments
-INCLUDE ~%MOD_FOLDER%/core/custom.tph~
+INCLUDE ~%MOD_FOLDER%/core/custom.tpa~
 
 //list items
-INCLUDE ~%MOD_FOLDER%/core/items.tph~
+INCLUDE ~%MOD_FOLDER%/core/items.tpa~
 
-//initialize functions
-INCLUDE ~%MOD_FOLDER%/core/functions.tph~
+ //remove from areas
+// INCLUDE ~%MOD_FOLDER%/core/areas.tpa~
 
-//remove from areas
-INCLUDE ~%MOD_FOLDER%/core/areas.tph~
+// //remove from dialogs and scripts
+// INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tpa~
 
-//remove from dialogs and scripts
-INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tph~
+// //remove from stores
+// INCLUDE ~%MOD_FOLDER%/core/stores.tpa~
 
-//remove from stores
-INCLUDE ~%MOD_FOLDER%/core/stores.tph~
-
-//remove from creatures
-INCLUDE ~%MOD_FOLDER%/core/creatures.tph~
+// //remove from creatures
+// INCLUDE ~%MOD_FOLDER%/core/creatures.tpa~

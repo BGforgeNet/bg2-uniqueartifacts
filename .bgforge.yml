@@ -2,7 +2,7 @@ translation:
   tra_dir: ua/tra
 
 golem:
-  mod_dir: uniqueartifacts
+  mod_dir: ua
   platforms:
     - tob
     - bgee

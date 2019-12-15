@@ -1,2 +1,2 @@
-setup-uniqueartifacts.exe
-uniqueartifacts/backup
+*.exe
+ua/backup

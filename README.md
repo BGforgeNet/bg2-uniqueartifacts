@@ -1,10 +1,8 @@
 ## Unique Artifacts mod for Baldur's Gate 2
-<a href="https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/">
-<img src="https://tra.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg" alt="Translation status" />
-</a>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-<img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg" alt="License" />
-</a>
+
+[![Translation status](https://tra.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg)](https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/)
+[![Build Status](https://golem.bgforge.net/mods/unique-artifacts/status.svg)](https://golem.bgforge.net/mods/unique-artifacts)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 [__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
  | [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues)

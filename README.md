@@ -47,7 +47,7 @@ To summarize,
 - What **does** it do: for a limited set of items from original game, ensure that the party gets no more than a single copy of each item.
 - What it **does not** do:
   - It doesn't remove items from the game completely. Each item will still be available, but in a single instance.
-  - It doesn't remove new (original) items introduced by other mods. Only the items from the original game are affected.
+  - It doesn't remove new (original) items introduced by other mods. Only items from the original game are affected.
 
 When choosing which copy exactly is "canon" and available to the party, UA generally picks a less accessible one. For example, in the original game, the party is able to obtain two Rings of Wizardry: one from Mage stronghold, and another one from the final fight in Jaheira romance. Only the stronghold one is left in game.
 
@@ -91,7 +91,7 @@ Open uniqueartifacts/items/strict.txt (or expanded.txt), find your item, delete 
 
 ## Known issues
 - Players starting a **new** ToB game might miss a Ring of Invisibility.
-- When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't be offer to create Ring of Perseverance +1 (+2 is still fine).
+- When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Changelog
 - Version 6

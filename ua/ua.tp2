@@ -8,6 +8,11 @@ VERSION ~v7~
 LANGUAGE ~English~ ~ENGLISH~ ~%MOD_FOLDER%/tra/english/game.tra~ ~%MOD_FOLDER%/tra/english/setup.tra~
 LANGUAGE ~Russian~ ~Russian~ ~%MOD_FOLDER%/tra/russian/game.tra~ ~%MOD_FOLDER%/tra/russian/setup.tra~
 
+ALWAYS
+  OUTER_SPRINT BGFORGE_LIB_DIR "%MOD_FOLDER%/lib/bgforge"
+  INCLUDE ~%BGFORGE_LIB_DIR%/main.tpa~
+END
+
 BEGIN @1 //+1
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT GAME_IS ~tutu tutu_totsc~ @31

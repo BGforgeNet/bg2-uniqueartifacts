@@ -114,11 +114,13 @@ BEGIN
   COPY_EXISTING ~%area%.are~ ~override~
     present = 0
     GET_OFFSET_ARRAY cont_offs ARE_V10_CONTAINERS
-    GET_OFFSET_ARRAY2 item_offs cont_offs ARE_V10_ITEMS
-    PATCH_FOR_EACH i_off IN item_offs BEGIN
-      READ_ASCII i_off item_name
-      PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN
-        present = 1
+    PHP_EACH cont_offs AS int => c_off BEGIN
+      GET_OFFSET_ARRAY2 item_offs c_off ARE_V10_ITEMS
+      PATCH_FOR_EACH i_off IN item_offs BEGIN
+        READ_ASCII i_off item_name
+        PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN
+          present = 1
+        END
       END
     END
   BUT_ONLY

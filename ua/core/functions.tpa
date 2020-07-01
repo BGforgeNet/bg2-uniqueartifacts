@@ -116,7 +116,7 @@ BEGIN
     GET_OFFSET_ARRAY cont_offs ARE_V10_CONTAINERS
     PHP_EACH cont_offs AS int => c_off BEGIN
       GET_OFFSET_ARRAY2 item_offs c_off ARE_V10_ITEMS
-      PATCH_FOR_EACH i_off IN item_offs BEGIN
+      PHP_EACH item_offs AS int => i_off BEGIN
         READ_ASCII i_off item_name
         PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN
           present = 1

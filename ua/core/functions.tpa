@@ -81,7 +81,7 @@ BEGIN
       STR_VAR item = ~%item%~ area = ~%file_res%~
       RET present = present
     END
-    PATCH_IF present == 1 BEGIN
+    ACTION_IF present == 1 BEGIN
       PATCH_PRINT ~item found: %item% in %SOURCE_FILE%~
     END
   END

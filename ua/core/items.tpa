@@ -17,12 +17,17 @@ DEFINE_PATCH_MACRO read_item_sources BEGIN
     END
   END
 END
-COPY - ~%MOD_FOLDER%/items/strict_bg1.bsv~ ~%MOD_FOLDER%-inlined/strict_bg1.bsv~
-  LPM read_item_sources
-BUT_ONLY
-COPY - ~%MOD_FOLDER%/items/strict_bg2.bsv~ ~%MOD_FOLDER%-inlined/strict_bg2.bsv~
-  LPM read_item_sources
-BUT_ONLY
+
+ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+  COPY - ~%MOD_FOLDER%/items/strict_bg1.bsv~ ~%MOD_FOLDER%-inlined/strict_bg1.bsv~
+    LPM read_item_sources
+  BUT_ONLY
+END
+ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
+  COPY - ~%MOD_FOLDER%/items/strict_bg2.bsv~ ~%MOD_FOLDER%-inlined/strict_bg2.bsv~
+    LPM read_item_sources
+  BUT_ONLY
+END
 
 OUTER_SPRINT regex ~~
 ACTION_PHP_EACH source_item AS source => item BEGIN

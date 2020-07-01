@@ -82,7 +82,7 @@ BEGIN
       RET present = present
     END
     ACTION_IF present == 1 BEGIN
-      PRINT ~item found: %item% in %SOURCE_FILE%~
+      PRINT ~item found: %item% in %resource%~
     END
   END
   // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.cre$" = 0) BEGIN

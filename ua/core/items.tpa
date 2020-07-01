@@ -1,25 +1,26 @@
-ACTION_DEFINE_ARRAY games BEGIN ~bg1~ ~bg2~ END
-
-ACTION_FOR_EACH game IN games BEGIN
-  ACTION_IF GAME_INCLUDES EVAL ~%game%~ BEGIN
-    COPY - ~%MOD_FOLDER%/items/strict_%game%.bsv~ ~%MOD_FOLDER%-inlined/strict_%game%.bsv~
-      READ_2DA_ENTRIES_NOW strict 2
-      FOR (i=1;i<strict;++i) BEGIN
-        READ_2DA_ENTRY_FORMER strict i 0 item
-        READ_2DA_ENTRY_FORMER strict i 1 source
-        // auto formatting workaround
-        INNER_PATCH_SAVE fixed_source ~%source%~ BEGIN
-          REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
-        END
-        // skip comments
-        PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) BEGIN
-          SPRINT $source_item("%fixed_source%") ~%item%~
-          SPRINT $item_source("%item%") ~%fixed_source%~
-        END
-      END
-    BUT_ONLY
+// GAME_IS doesn't support variables
+DEFINE_PATCH_MACRO read_item_sources BEGIN
+  READ_2DA_ENTRIES_NOW strict 2
+  FOR (i=1;i<strict;++i) BEGIN
+    READ_2DA_ENTRY_FORMER strict i 0 item
+    READ_2DA_ENTRY_FORMER strict i 1 source
+    // auto formatting workaround
+    INNER_PATCH_SAVE fixed_source ~%source%~ BEGIN
+      REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
+    END
+    // skip comments
+    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) BEGIN
+      SPRINT $source_item("%fixed_source%") ~%item%~
+      SPRINT $item_source("%item%") ~%fixed_source%~
+    END
   END
 END
+COPY - ~%MOD_FOLDER%/items/strict_bg1.bsv~ ~%MOD_FOLDER%-inlined/strict_bg1.bsv~
+  LPM read_item_sources
+BUT_ONLY
+COPY - ~%MOD_FOLDER%/items/strict_bg2.bsv~ ~%MOD_FOLDER%-inlined/strict_bg2.bsv~
+  LPM read_item_sources
+BUT_ONLY
 
 OUTER_SPRINT regex ~~
 ACTION_PHP_EACH source_item AS source => item BEGIN

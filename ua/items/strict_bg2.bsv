@@ -40,7 +40,7 @@ clck04  shabod01.cre                   | Cloak of the Wolf              | Wallag
                                        |                                | 
 ring02  firrak01.cre                   | Ring of Fire Resistance        | rakshasa in Firkraag's lair
 ring04  ar2210.are                     | Ring of Clumsiness             | Ust Natha, lich tower
-ring05  grlvch01.cre                   | Ring of Invisibility           | lich at City Gates
+ring05  grvlch01.cre                   | Ring of Invisibility           | lich at City Gates
 ring07  aran02.cre                     | Ring of Protection +2          | Aran Linvail (side with Bodhi)
 ring07  aran.dlg                       | Ring of Protection +2          | Aran Linvail (side with thieves)
 ring08  ar0411.bcs                     | Ring of Wizardry               | mage stronghold (if all apprentices die)

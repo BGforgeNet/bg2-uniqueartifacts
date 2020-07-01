@@ -9,7 +9,9 @@ DEFINE_PATCH_MACRO read_item_sources BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
     END
     // skip comments
-    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) BEGIN
+    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0)
+      AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
+    BEGIN
       SPRINT $source_item("%fixed_source%") ~%item%~
       SPRINT $item_source("%item%") ~%fixed_source%~
     END

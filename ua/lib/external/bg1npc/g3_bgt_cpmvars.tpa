@@ -83,7 +83,7 @@ ACTION_IF GAME_IS ~bgt~ THEN BEGIN
 	OUTER_SET firebeadstate2 = 2
 	OUTER_SET hentolstate1 = 1
 	OUTER_SET housg3state0 = 0
-	OUTER_SET housg3state5 = 5
+    OUTER_SET housg3state5 = 5
 	OUTER_SET xanpstate3 = 3
 	OUTER_SET xanpstate4 = 4
 
@@ -1240,39 +1240,4 @@ ACTION_IF GAME_IS ~bgt~ THEN BEGIN
 	OUTER_SPRINT "IceIsland_BCS" "ARU008"
 	OUTER_SPRINT "IceIslandMaze_L1_BCS" "ARU009"
 	OUTER_SPRINT "IceIslandMaze_L2_BCS" "ARU010"
-
-	/* AREA_SCRIPTS (different var names used by BG1 NPC Project) */
-	OUTER_SPRINT "BelchingDragonTavern_BCS" "AR3709"
-	OUTER_SPRINT "BGDocks_BCS" "AR8100"
-	OUTER_SPRINT "CK_LibL5_BCS" "AR6512"
-	OUTER_SPRINT "CloakwoodDr_PetersCave_BCS" "AR8403"
-	//OUTER_SPRINT "CloakwoodNest_BCS" "AR8800"
-	//OUTER_SPRINT "CloakwoodWyverns_BCS" "AR8500"
-	//OUTER_SPRINT "CoastWay_BCS" "AR6900"
-	OUTER_SPRINT "EarthChamber_BCS" "ARD010"
-	OUTER_SPRINT "ElfsongTavern_L1_BCS" "AR7705"
-	//OUTER_SPRINT "FirewineBridge_BCS" "AR3400"
-	//OUTER_SPRINT "FirewineRuins_BCS" "AR3401"
-	//OUTER_SPRINT "FishingVillage_BCS" "AR8300"
-	//OUTER_SPRINT "FriendlyArmInn_L1_BCS" "AR6801"
-	OUTER_SPRINT "FV_AnkhegPit_BCS" "AR8301"
-	OUTER_SPRINT "HallofWonders_BCS" "AR7230"
-	OUTER_SPRINT "Lighthouse_BAsCave_BCS" "AR9501"
-	//OUTER_SPRINT "LionsWay_BCS" "AR6600"
-	//OUTER_SPRINT "MutaminsGarden_BCS" "AR9400"
-	OUTER_SPRINT "NEBG_SSL1_BCS" "AR7203"
-	OUTER_SPRINT "NNashkelRoad_BCS" "AR3200"
-	//OUTER_SPRINT "Peldvale_BCS" "AR8900"
-	OUTER_SPRINT "SEBGBStarsL2_BCS" "AR7206"
-	//OUTER_SPRINT "ShipwrecksCoast_BCS" "AR9200"
-	OUTER_SPRINT "SilvershieldEstate_L2_BCS" "AR7202"
-	OUTER_SPRINT "SorcerousSundries_L2_BCS" "AR7704"
-	//OUTER_SPRINT "SpiderWood_BCS" "AR9100"
-	//OUTER_SPRINT "Temple_BCS" "AR9300"
-	OUTER_SPRINT "UC_TofB_BCS" "AR7225"
-	//OUTER_SPRINT "Undercellars_BCS" "AR7212"
-	OUTER_SPRINT "ValleyoftheTombsTomb_BCS" "AR3901"
-	OUTER_SPRINT "WyrmsCross_BCS" "AR7900"
-	OUTER_SPRINT "XvartVillageCave_BCS" "AR3497"
-	//OUTER_SPRINT "Undercity_BCS" "AR7223"
 END

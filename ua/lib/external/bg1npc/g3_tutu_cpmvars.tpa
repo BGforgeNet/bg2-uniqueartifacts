@@ -1,5 +1,5 @@
 /* Declaration of Tutu Platform Variables */
-ACTION_IF GAME_IS ~tutu~ THEN BEGIN
+ACTION_IF GAME_IS ~tutu tutu_totsc~ THEN BEGIN
 	/* tp2, d, and baf parsing variables */
 	OUTER_SPRINT "tutorbgt" "tutu"
 	OUTER_SPRINT "tutubgtbgee" "tutu"
@@ -11,7 +11,7 @@ ACTION_IF GAME_IS ~tutu~ THEN BEGIN
 	OUTER_SPRINT "bgdream5" "6"
 	OUTER_SPRINT "bgdream6" "7"
 	OUTER_SPRINT "tutu_var" "_"
-	OUTER_SPRINT "tutu_scriptbg" ""//BGT 'BG' prefix
+	OUTER_SPRINT "tutu_scriptbg" "_"//BGT 'BG' prefix
 	OUTER_SPRINT "tutu_scripta" "_"
 	OUTER_SPRINT "tutu_scriptb" "_"
 	OUTER_SPRINT "tutu_scriptc" "_"
@@ -83,7 +83,7 @@ ACTION_IF GAME_IS ~tutu~ THEN BEGIN
 	OUTER_SET firebeadstate2 = 2
 	OUTER_SET hentolstate1 = 1
 	OUTER_SET housg3state0 = 0
-	OUTER_SET housg3state5 = 5
+    OUTER_SET housg3state5 = 5
 	OUTER_SET xanpstate3 = 3
 	OUTER_SET xanpstate4 = 4
 
@@ -1236,39 +1236,4 @@ ACTION_IF GAME_IS ~tutu~ THEN BEGIN
 	OUTER_SPRINT "IceIsland_BCS" "_AR1008"
 	OUTER_SPRINT "IceIslandMaze_L1_BCS" "_AR1009"
 	OUTER_SPRINT "IceIslandMaze_L2_BCS" "_AR1010"
-
-	/* AREA_SCRIPTS (different var names used by BG1 NPC Project) */
-	OUTER_SPRINT "BelchingDragonTavern_BCS" "_AR4809"
-	OUTER_SPRINT "BGDocks_BCS" "_AR1200"
-	OUTER_SPRINT "CK_LibL5_BCS" "_AR2612"
-	OUTER_SPRINT "CloakwoodDr_PetersCave_BCS" "_AR1603"
-	//OUTER_SPRINT "CloakwoodNest_BCS" "_AR2100"
-	//OUTER_SPRINT "CloakwoodWyverns_BCS" "_AR1700"
-	//OUTER_SPRINT "CoastWay_BCS" "_AR2800"
-	OUTER_SPRINT "EarthChamber_BCS" "_AR0507"
-	OUTER_SPRINT "ElfsongTavern_L1_BCS" "_AR0705"
-	//OUTER_SPRINT "FirewineBridge_BCS" "_AR4500"
-	//OUTER_SPRINT "FirewineRuins_BCS" "_AR5201"
-	//OUTER_SPRINT "FishingVillage_BCS" "_AR1400"
-	//OUTER_SPRINT "FriendlyArmInn_L1_BCS" "_AR2301"
-	OUTER_SPRINT "FV_AnkhegPit_BCS" "_AR1401"
-	OUTER_SPRINT "HallofWonders_BCS" "_AR0130"
-	OUTER_SPRINT "Lighthouse_BAsCave_BCS" "_AR3601"
-	//OUTER_SPRINT "LionsWay_BCS" "_AR2700"
-	//OUTER_SPRINT "MutaminsGarden_BCS" "_AR3500"
-	OUTER_SPRINT "NEBG_SSL1_BCS" "_AR0103"
-	OUTER_SPRINT "NNashkelRoad_BCS" "_AR4300"
-	//OUTER_SPRINT "Peldvale_BCS" "_AR2400"
-	OUTER_SPRINT "SEBGBStarsL2_BCS" "_AR0106"
-	//OUTER_SPRINT "ShipwrecksCoast_BCS" "_AR3100"
-	OUTER_SPRINT "SilvershieldEstate_L2_BCS" "_AR0102"
-	OUTER_SPRINT "SorcerousSundries_L2_BCS" "_AR0704"
-	//OUTER_SPRINT "SpiderWood_BCS" "_AR3000"
-	//OUTER_SPRINT "Temple_BCS" "_AR3400"
-	OUTER_SPRINT "UC_TofB_BCS" "_AR0125"
-	//OUTER_SPRINT "Undercellars_BCS" "_AR0112"
-	OUTER_SPRINT "ValleyoftheTombsTomb_BCS" "_AR5001"
-	OUTER_SPRINT "WyrmsCross_BCS" "_AR0900"
-	OUTER_SPRINT "XvartVillageCave_BCS" "_AR4701"
-	//OUTER_SPRINT "Undercity_BCS" "_AR0123"
 END

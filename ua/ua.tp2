@@ -6,8 +6,9 @@ AUTO_EVAL_STRINGS
 VERSION ~v7~
 
 ALWAYS
-  OUTER_SPRINT BGFORGE_LIB_DIR "%MOD_FOLDER%/lib/bgforge"
-  INCLUDE ~%BGFORGE_LIB_DIR%/main.tpa~
+  CLEAR_EVERYTHING
+  OUTER_SPRINT lib_dir ~%MOD_FOLDER%/lib~
+  INCLUDE ~%lib_dir%/init.tpa~
 END
 
 LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra/english/game.tra~ ~%MOD_FOLDER%/tra/english/setup.tra~

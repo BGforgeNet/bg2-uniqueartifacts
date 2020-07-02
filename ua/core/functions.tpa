@@ -88,12 +88,12 @@ BEGIN
       RET present
     END
   END
-  // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
-  //   LAF IS_ITEM_IN_STORE
-  //     STR_VAR item = ~%item%~ resource = ~%resource%~
-  //     RET present = present
-  //   END
-  // END
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
+    LAF IS_ITEM_IN_STORE
+      STR_VAR item = ~%item%~ store = ~%file_res%~
+      RET present = present
+    END
+  END
   // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
   //   LAF IS_ITEM_IN_DIALOG_OR_SCRIPT
   //     STR_VAR item = ~%item%~ resource = ~%resource%~
@@ -135,6 +135,24 @@ BEGIN
   COPY_EXISTING ~%cre%.cre~ ~override~
     present = 0
     GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
+    PHP_EACH item_offs AS int => i_off BEGIN
+      READ_ASCII i_off item_name
+      PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN
+        present = 1
+      END
+    END
+  BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION IS_ITEM_IN_STORE
+  STR_VAR
+    item = ~~
+    store = ~~
+  RET present
+BEGIN
+  COPY_EXISTING ~%store%.sto~ ~override~
+    present = 0
+    GET_OFFSET_ARRAY item_offs STO_V10_ITEMS_SOLD
     PHP_EACH item_offs AS int => i_off BEGIN
       READ_ASCII i_off item_name
       PATCH_IF ~%item%~ STR_EQ ~%item_name%~ BEGIN

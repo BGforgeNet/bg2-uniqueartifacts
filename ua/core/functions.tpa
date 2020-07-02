@@ -73,9 +73,11 @@ DEFINE_ACTION_FUNCTION IS_ITEM_IN_RESOURCE
   RET present
 BEGIN
   OUTER_SET present = 0
+  
   OUTER_PATCH_SAVE file_res ~%resource%~ BEGIN
     REPLACE_TEXTUALLY CASE_INSENSITIVE ~\.are$\|\.bcs$\|\.dlg$\|\.cre$\|\.sto$~ ~~
   END
+  PRINT ~resource = %resource%, file_res = %file_res%~
   ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.are$" = 0) BEGIN
     LAF IS_ITEM_IN_AREA
       STR_VAR item = ~%item%~ area = ~%file_res%~

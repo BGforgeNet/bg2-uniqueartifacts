@@ -1,5 +1,3 @@
-COPY_EXISTING ~sw1h01.itm~ ~override/g_ua_pr1.itm~ //for detection
-
 COPY_EXISTING ~amul14.itm~ ~override~
   SAY DESC @104
 BUT_ONLY

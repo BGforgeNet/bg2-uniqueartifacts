@@ -16,30 +16,42 @@ LANGUAGE ~Russian~ ~russian~ ~%MOD_FOLDER%/tra/russian/game.tra~ ~%MOD_FOLDER%/t
 
 
 BEGIN @1 //+1
+LABEL ~g_ua_allow+1~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
-REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
+REQUIRE_PREDICATE NOT
+  ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
+    OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
+  ) @32
 INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tpa~
 
 BEGIN @2 //+2
+LABEL ~g_ua_allow+2~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
-REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
+REQUIRE_PREDICATE NOT
+  ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
+    OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
+  ) @32
 INCLUDE ~%MOD_FOLDER%/core/nu/prot2.tpa~
 
 BEGIN @3 //Speed
+LABEL ~g_ua_allow_speed~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
-REQUIRE_PREDICATE NOT (FILE_EXISTS_IN_GAME ~g_uastr.itm~ OR FILE_EXISTS_IN_GAME ~g_uaexo.itm~) @32
+REQUIRE_PREDICATE NOT
+  ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
+    OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
+  ) @32
 INCLUDE ~%MOD_FOLDER%/core/nu/boots.tpa~
 
 BEGIN @5 //Strict
+LABEL ~g_ua_core_strict~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
-COPY_EXISTING ~sw1h01.itm~ ~override/g_uastr.itm~ //component detection
 OUTER_SET mode = 1
-INCLUDE ~%MOD_FOLDER%/core/main.tpa~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/main.tpa~
 
 BEGIN @6 //Expanded
+LABEL ~g_ua_core_expanded~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
-COPY_EXISTING ~sw1h01.itm~ ~override/g_uaexp.itm~ //component detection
 OUTER_SET mode = 2
-INCLUDE ~%MOD_FOLDER%/core/main.tpa~ //process games files
+INCLUDE ~%MOD_FOLDER%/core/main.tpa~

@@ -23,7 +23,7 @@ clck07  gorch.sto   | Nymph Cloak                      | merchant Gorch in Maeva
 clck15  25spell.sto | Robe of the Good Archmagi        | Lazarus store in Saradush - ToB
 clck15  trmer04     | Robe of the Good Archmagi        | Merchant in Trademeet
 clck16  ribald2.sto | Robe of the Neutral Archmagi     | Ribald's enhanced shop
-clck17  uddrow.sto  | Robe of the Evil Archmagi        | Ust Natha's shop
+clck17  uddrow23.sto| Robe of the Evil Archmagi        | Ust Natha's shop
 clck25  uhrang01.cre| Cloak of the Stars               | Merella
 clck26  sahramb3.cre| Cloak of Mirroring               | sahuagin priestess
 clck30  hellfear.dlg| Cloak of Bravery                 | hell trials, Fear

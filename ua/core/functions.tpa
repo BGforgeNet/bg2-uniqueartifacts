@@ -94,12 +94,18 @@ BEGIN
       RET present = present
     END
   END
-  // ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.sto$" = 0) BEGIN
-  //   LAF IS_ITEM_IN_DIALOG_OR_SCRIPT
-  //     STR_VAR item = ~%item%~ resource = ~%resource%~
-  //     RET present = present
-  //   END
-  // END
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.bcs$" = 0) OR BEGIN
+    LAF IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
+      STR_VAR item = ~%item%~ resource = ~%file_res%~
+      RET present = present
+    END
+  END
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.dlg$" = 0) OR BEGIN
+    LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
+      STR_VAR item = ~%item%~ resource = ~%file_res%~
+      RET present = present
+    END
+  END
   ACTION_IF present == 1 BEGIN
     PRINT ~item found: %item% in %resource%~
   END
@@ -160,4 +166,42 @@ BEGIN
       END
     END
   BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT
+  STR_VAR
+    item = ~~
+    filename = ~~
+  RET present
+BEGIN
+  COPY_EXISTING ~%filename%~ ~override~
+    present = 0
+    DECOMPILE_AND_PATCH BEGIN
+      PATCH_IF
+        INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~GiveItem("%item%"~) != "-1"
+        OR INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~GiveItemCreate("%item%"~) != "-1"
+        OR INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~CreateItem("%item%"~) != "-1"
+        OR INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~CreateItemGlobal("%item%"~) != "-1"
+        OR INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~CreateItemNumGlobal("%item%"~) != "-1"
+        OR INDEX_BUFFER (CASE_INSENSITIVE EXACT_MATCH ~TakeItemReplace("%item%"~) != "-1"
+      BEGIN present = 1 END
+    END
+  BUT_ONLY
+END
+
+DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
+  STR_VAR
+    item = ~~
+    dlg = ~~
+  RET present
+BEGIN
+  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%dlg%.dlg~ RET present END
+END
+DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
+  STR_VAR
+    item = ~~
+    bcs = ~~
+  RET present
+BEGIN
+  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%bcs%.bcs~ RET present END
 END

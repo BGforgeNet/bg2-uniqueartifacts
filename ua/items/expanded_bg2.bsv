@@ -21,7 +21,7 @@ brac22  ar3001.are  | Paladin's Bracers                | Watcher's Keep 1st leve
 clck03  trmer02.sto | Cloak of Displacement            | Merchant in Trademeet
 clck07  gorch.sto   | Nymph Cloak                      | merchant Gorch in Maevar's guild
 clck15  25spell.sto | Robe of the Good Archmagi        | Lazarus store in Saradush - ToB
-clck15  trmer04     | Robe of the Good Archmagi        | Merchant in Trademeet
+clck15  trmer04.sto | Robe of the Good Archmagi        | Merchant in Trademeet
 clck16  ribald2.sto | Robe of the Neutral Archmagi     | Ribald's enhanced shop
 clck17  uddrow23.sto| Robe of the Evil Archmagi        | Ust Natha's shop
 clck25  uhrang01.cre| Cloak of the Stars               | Merella

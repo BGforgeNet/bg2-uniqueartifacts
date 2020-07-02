@@ -94,13 +94,13 @@ BEGIN
       RET present = present
     END
   END
-  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.bcs$" = 0) OR BEGIN
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.bcs$" = 0) BEGIN
     LAF IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
       STR_VAR item = ~%item%~ resource = ~%file_res%~
       RET present = present
     END
   END
-  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.dlg$" = 0) OR BEGIN
+  ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.dlg$" = 0) BEGIN
     LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
       STR_VAR item = ~%item%~ resource = ~%file_res%~
       RET present = present

@@ -73,7 +73,6 @@ DEFINE_ACTION_FUNCTION IS_ITEM_IN_RESOURCE
   RET present
 BEGIN
   OUTER_SET present = 0
-  
   OUTER_PATCH_SAVE file_res ~%resource%~ BEGIN
     REPLACE_TEXTUALLY CASE_INSENSITIVE ~\.are$\|\.bcs$\|\.dlg$\|\.cre$\|\.sto$~ ~~
   END
@@ -98,13 +97,13 @@ BEGIN
   END
   ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.bcs$" = 0) BEGIN
     LAF IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
-      STR_VAR item = ~%item%~ resource = ~%file_res%~
+      STR_VAR item = ~%item%~ script = ~%file_res%~
       RET present = present
     END
   END
   ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.dlg$" = 0) BEGIN
     LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
-      STR_VAR item = ~%item%~ resource = ~%file_res%~
+      STR_VAR item = ~%item%~ dialog = ~%file_res%~
       RET present = present
     END
   END
@@ -194,16 +193,16 @@ END
 DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG
   STR_VAR
     item = ~~
-    dlg = ~~
+    dialog = ~~
   RET present
 BEGIN
-  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%dlg%.dlg~ RET present END
+  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%dialog%.dlg~ RET present END
 END
 DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
   STR_VAR
     item = ~~
-    bcs = ~~
+    script = ~~
   RET present
 BEGIN
-  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%bcs%.bcs~ RET present END
+  LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%script%.bcs~ RET present END
 END

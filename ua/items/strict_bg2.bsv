@@ -65,6 +65,6 @@ dagg03  c6arkan3.cre                   | Dagger +2: 'Heart of the Golem'| Arcani
 shld19  chak.cre                       | Large Shield +2                | Chak (Firkraag's dungeon, Samia's party)
 sw1h10  renal.cre                      | Short Sword of Backstabbing +3 | Renal Bloodscalp
 sw1h10  renal.dlg                      | Short Sword of Backstabbing +3 | Renal Bloodscalp
-halb03  bazliz04.cre                   | Suryris's Blade                | Lizard man captain, Sphere
+halb03  bazliz04.cre                   | Suryris's Blade                | Lizard man captain, Sphere. Fixpack leaves one copy
 sw1h03  lehtin.dlg                     | Kondar +1, +3 vs Shapeshifters | Lehtinan (Copper coronet)
 sw1h03  hendak.dlg                     | Kondar +1, +3 vs Shapeshifters | Hendak (Copper coronet)

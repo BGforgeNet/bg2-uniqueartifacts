@@ -29,11 +29,11 @@ DEFINE_ACTION_MACRO read_item_sources BEGIN
 END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
-  OUTER_SPRINT game = ~bg1~
+  OUTER_SPRINT game ~bg1~
   LAM read_item_sources
 END
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
-  OUTER_SPRINT game = ~bg2~
+  OUTER_SPRINT game ~bg2~
   LAM read_item_sources
 END
 

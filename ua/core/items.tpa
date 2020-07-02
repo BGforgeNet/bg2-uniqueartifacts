@@ -1,5 +1,5 @@
 // GAME_IS doesn't support variables
-DEFINE_PATCH_MACRO read_item_sources BEGIN
+DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
   READ_2DA_ENTRIES_NOW strict 2
   FOR (i=1;i<strict;++i) BEGIN
     READ_2DA_ENTRY_FORMER strict i 0 item
@@ -17,16 +17,24 @@ DEFINE_PATCH_MACRO read_item_sources BEGIN
     END
   END
 END
+DEFINE_ACTION_MACRO read_item_sources BEGIN
+  COPY - ~%MOD_FOLDER%/items/strict_%game%.bsv~ ~%MOD_FOLDER%-inlined/strict_%game%.bsv~
+    LPM read_item_sources_2da
+  BUT_ONLY
+  ACTION_IF expanded == 1 BEGIN
+    COPY - ~%MOD_FOLDER%/items/expanded_%game%.bsv~ ~%MOD_FOLDER%-inlined/expanded_%game%.bsv~
+      LPM read_item_sources_2da
+    BUT_ONLY
+  END
+END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
-  COPY - ~%MOD_FOLDER%/items/strict_bg1.bsv~ ~%MOD_FOLDER%-inlined/strict_bg1.bsv~
-    LPM read_item_sources
-  BUT_ONLY
+  OUTER_SPRINT game = ~bg1~
+  LAM read_item_sources
 END
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
-  COPY - ~%MOD_FOLDER%/items/strict_bg2.bsv~ ~%MOD_FOLDER%-inlined/strict_bg2.bsv~
-    LPM read_item_sources
-  BUT_ONLY
+  OUTER_SPRINT game = ~bg2~
+  LAM read_item_sources
 END
 
 OUTER_SPRINT regex ~~
@@ -47,20 +55,3 @@ ACTION_PHP_EACH source_item AS source => item BEGIN
   END
 END
 PRINT ~%regex%~
-
-// ACTION_IF (mode = 2) BEGIN
-//   INCLUDE ~%MOD_FOLDER%/items/expanded.txt~
-//   ACTION_PHP_EACH source_item_expanded AS index => value BEGIN
-//     ACTION_IF VARIABLE_IS_SET $source_item_expanded(~%index%~) AND NOT VARIABLE_IS_SET $source_item_strict(~%index%~) BEGIN //expanded only
-//       OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
-//     END ELSE BEGIN //strict+expanded
-//       OUTER_TEXT_SPRINT regex_strict $source_item_strict(~%index%~)
-//       OUTER_TEXT_SPRINT regex_expanded $source_item_expanded(~%index%~)
-//       OUTER_TEXT_SPRINT $source_item(~%index%~) ~%regex_strict%\|%regex_expanded%~
-//     END
-//   END
-// END
-
-// ACTION_PHP_EACH source_item_compat AS index => value BEGIN
-//   OUTER_TEXT_SPRINT $source_item(~%index%~) ~%value%~
-// END

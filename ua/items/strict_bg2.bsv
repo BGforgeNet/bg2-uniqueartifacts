@@ -18,7 +18,7 @@ boot01  tokcre01.dlg                   | Boots of Speed                 | Token 
 boot03  tokcre01.dlg                   | Boots of the North             | Token machine in Spellhold
 boot05  tokcre01.dlg                   | Boots of Grounding             | Token machine in Spellhold
 boot04  reti.cre                       | Boots of Avoidance             | Reti (Buried alive quest)
-boot11  ar2300.are                     | Boots of Etherealness          | Sahuagin city (chest6)
+boot11  ar2300.are                     | Boots of Etherealness          | Sahuagin city (chest 6)
 boot12  amsmug02.sto                   | Gargoyle Boots                 | Carras, Amekthran smuggler
                                        |                                | 
 brac03  lyros.cre                      | Bracers of Defense AC 6        | Xzar (Harpers quest)
@@ -43,8 +43,8 @@ ring04  ar2210.are                     | Ring of Clumsiness             | Ust Na
 ring05  grvlch01.cre                   | Ring of Invisibility           | lich at City Gates
 ring07  aran02.cre                     | Ring of Protection +2          | Aran Linvail (side with Bodhi)
 ring07  aran.dlg                       | Ring of Protection +2          | Aran Linvail (side with thieves)
-ring08  ar0411.bcs                     | Ring of Wizardry               | mage stronghold (if all apprentices die)
-ring08  mgappr02.dlg                   | Ring of Wizardry               | mage stronghold (if Morul lives)
+ring08  ar0411.bcs                     | Ring of Wizardry, BG2 version  | mage stronghold (if all apprentices die)
+ring08  mgappr02.dlg                   | Ring of Wizardry, BG2 version  | mage stronghold (if Morul lives)
 ring09  ppbook.bcs                     | Ring of Free Action            | book on the stand in spellhold
 ring20  ribald.sto                     | Ring of Energy                 | Ribald
 ring23  ar2100.are                     | Ring of Folly                  | Underdark svirf village (container 6)

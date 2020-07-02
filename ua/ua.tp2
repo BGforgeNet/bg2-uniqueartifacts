@@ -42,16 +42,16 @@ REQUIRE_PREDICATE NOT
   ) @32
 INCLUDE ~%MOD_FOLDER%/core/nu/boots.tpa~
 
-BEGIN @5 //Strict
-LABEL ~g_ua_core_strict~
-REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
-SUBCOMPONENT @4
-OUTER_SET expanded = 0
-INCLUDE ~%MOD_FOLDER%/core/main.tpa~
-
 BEGIN @6 //Expanded
 LABEL ~g_ua_core_expanded~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
 OUTER_SET expanded = 1
+INCLUDE ~%MOD_FOLDER%/core/main.tpa~
+
+BEGIN @5 //Strict
+LABEL ~g_ua_core_strict~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
+SUBCOMPONENT @4
+OUTER_SET expanded = 0
 INCLUDE ~%MOD_FOLDER%/core/main.tpa~

@@ -47,7 +47,7 @@ ring08  ar0411.bcs                     | Ring of Wizardry               | mage s
 ring08  mgappr02.dlg                   | Ring of Wizardry               | mage stronghold (if Morul lives)
 ring09  ppbook.bcs                     | Ring of Free Action            | book on the stand in spellhold
 ring20  ribald.sto                     | Ring of Energy                 | Ribald
-ring21  ar2100.are                     | Ring of Folly                  | Underdark svirf village (container 6)
+ring23  ar2100.are                     | Ring of Folly                  | Underdark svirf village (container 6)
 ring30  kalah2.cre                     | Ring of Human Influence        | Kalah - circus
 ring31  ppstat01.dlg                   | Ring of Regeneration           | statue in Spellhold
 ring34  udardul.cre                    | Ring of Spell Turning          | Underdark, matron mother Ardulace

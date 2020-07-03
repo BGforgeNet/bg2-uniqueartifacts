@@ -56,7 +56,7 @@ END
 OUTER_SPRINT regex_all_items ~~
 ACTION_PHP_EACH items_in_source AS item_counter => source BEGIN
   OUTER_SPRINT item $item_counter(0)
-  ACTION_IF $item_present$(~%item%~) == 1 BEGIN
+  ACTION_IF $item_present(~%item%~) == 1 BEGIN
 
     // common regex
     ACTION_IF ~%regex_all_items%~ STR_EQ ~~ BEGIN //empty, initialize

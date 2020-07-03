@@ -8,7 +8,7 @@ PRINT @28
 //custom adjustments
 INCLUDE ~%MOD_FOLDER%/core/custom.tpa~
 
-//list items
+// //list items
 INCLUDE ~%MOD_FOLDER%/core/items.tpa~
 
 // remove from areas

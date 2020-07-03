@@ -1,8 +1,9 @@
 PRINT @25
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
-  PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
-    SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+  SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
+  PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
+    SPRINT regex $custom_regex(~%res%~)
   END ELSE BEGIN
     SPRINT regex ~%common_regex%~
   END

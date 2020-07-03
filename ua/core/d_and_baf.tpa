@@ -1,16 +1,12 @@
 PRINT @26
-ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
-  WSMITH01.DLG => DUMMY //never touch Cromwell
-  BOTSMITH.DLG => DUMMY //and Cespenar
-END
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
-  PATCH_IF NOT VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
-    AND NOT (~%SOURCE_FILE%~ STR_EQ "wsmith01.dlg") // never touch Cromwell
+  PATCH_IF NOT (~%SOURCE_FILE%~ STR_EQ "wsmith01.dlg") // never touch Cromwell
     AND NOT (~%SOURCE_FILE%~ STR_EQ "botsmith.dlg") // and Cespenar
   BEGIN
-    PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
-      SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+    SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
+    PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
+      SPRINT regex $custom_regex(~%res%~)
     END ELSE BEGIN
       SPRINT regex ~%common_regex%~
     END
@@ -27,13 +23,13 @@ BUT_ONLY
 
 PRINT @27
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
-  PATCH_IF NOT VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
-    AND NOT (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*" == 0) //skip long ass SCS scripts
+  PATCH_IF NOT (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*" == 0) //skip long ass SCS scripts
     AND NOT (~%SOURCE_FILE%~ STR_EQ "ar0334.bcs") // never touch Cromwell
     AND NOT (~%SOURCE_FILE%~ STR_EQ "botsmith.bcs") // and Cespenar
   BEGIN
-    PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
-      SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+    SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
+    PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
+      SPRINT regex $custom_regex(~%res%~)
     END ELSE BEGIN
       SPRINT regex ~%common_regex%~
     END

@@ -2,8 +2,9 @@ PRINT @29
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
   PATCH_IF NOT ("%SOURCE_RES%" STRING_MATCHES_REGEXP "^BAG" = 0) BEGIN //excluding starting ToB Bags
-    PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
-      SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+  SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
+  PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
+    SPRINT regex $custom_regex(~%res%~)
     END ELSE BEGIN
       SPRINT regex ~%common_regex%~
     END

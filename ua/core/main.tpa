@@ -2,7 +2,7 @@
 INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
 
 //compatibility
-counter = 0 // used in items
+OUTER_SET counter = 0 // used in items
 INCLUDE ~%MOD_FOLDER%/core/compatibility.tpa~
 
 PRINT @28

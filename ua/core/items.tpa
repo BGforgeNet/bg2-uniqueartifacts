@@ -39,7 +39,7 @@ END
 
 // check if item is present in all sources
 ACTION_PHP_EACH items_in_source AS item_counter => source BEGIN
-  OUTER_SET item = $item_counter(0)
+  OUTER_SPRINT item $item_counter(0)
   OUTER_SET present = 0
   LAF IS_ITEM_IN_RESOURCE
     STR_VAR item = ~%item%~ resource = ~%source%~
@@ -54,7 +54,8 @@ END
 
 // build a regex of all items, skip those that are not found in canon sources
 OUTER_SPRINT regex_all_items ~~
-ACTION_PHP_EACH items_in_source AS item counter => source BEGIN
+ACTION_PHP_EACH items_in_source AS item_counter => source BEGIN
+  OUTER_SPRINT item $item_counter(0)
   ACTION_IF $item_present$(~%item%~) == 1 BEGIN
 
     // common regex

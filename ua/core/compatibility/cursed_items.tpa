@@ -1,0 +1,13 @@
+//Cursed Items revision
+ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - moved a few items
+  PRINT @22
+  ACTION_DEFINE_ASSOCIATIVE_ARRAY item_source BEGIN
+    belt05 => coksmth.cre  // Girdle of gender change
+    belt05 => vayya.cre    // Girdle of gender change
+    brac08 => krumm.cre    // Gauntlets of Fumbling
+    ring04 => ar9200.are   // Ring of Clumsiness
+    ring23 => melica.dlg   // Ring of Folly 
+    ring23 => melica.cre   // Ring of Folly 
+    boot08 => thief7.cre   // Boots of Phasing
+  END
+END

@@ -1,0 +1,5 @@
+//Dungeon-Be-Gone
+ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
+  PRINT @23
+  SPRINT $source_item("fwjassy.dlg") ~belt03~  // Girdle of Bluntness
+END

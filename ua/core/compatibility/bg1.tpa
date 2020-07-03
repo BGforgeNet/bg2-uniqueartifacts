@@ -1,0 +1,10 @@
+ACTION_IF GAME_IS ~bg1 totsc~ BEGIN //missing triggers, scripts won't recompile without them
+  APPEND ~trigger.ids~ ~0x4076 OpenState(O:Object*,I:Open*BOOLEAN)~ UNLESS ~0x4076 OpenState(O:Object\*,I:Open\*BOOLEAN)~
+  APPEND ~trigger.ids~ ~0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4077 NumItems(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x4078 NumItemsGT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4078 NumItemsGT(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x4079 NumItemsLT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4079 NumItemsLT(S:ResRef\*,O:Object\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407A NumItemsParty(S:ResRef*,I:Num*)~ UNLESS ~0x407A NumItemsParty(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407B NumItemsPartyGT(S:ResRef*,I:Num*)~ UNLESS ~0x407B NumItemsPartyGT(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407C NumItemsPartyLT(S:ResRef*,I:Num*)~ UNLESS ~0x407C NumItemsPartyLT(S:ResRef\*,I:Num\*)~
+  APPEND ~trigger.ids~ ~0x407D IsOverMe(O:Object*)~ UNLESS ~0x407D IsOverMe(O:Object\*)~
+END

@@ -8,12 +8,12 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     INNER_PATCH_SAVE fixed_source ~%source%~ BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
     END
-    // skip comments
-    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0)
+    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      SPRINT $source_item("%fixed_source%") ~%item%~
-      SPRINT $item_source("%item%") ~%fixed_source%~
+      SPRINT $sources(counter) ~%item%~
+      SPRINT $item_present(~%item%~) 0
+      counter+=1 // initialized in main.tpa
     END
   END
 END
@@ -37,21 +37,47 @@ ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
   LAM read_item_sources
 END
 
-OUTER_SPRINT regex ~~
-ACTION_PHP_EACH source_item AS source => item BEGIN
+// check if item is present in all sources
+ACTION_PHP_EACH items_in_source AS item counter => source BEGIN
   OUTER_SET present = 0
   LAF IS_ITEM_IN_RESOURCE
     STR_VAR item = ~%item%~ resource = ~%source%~
     RET present = present
   END
   ACTION_IF present == 1 BEGIN
-    ACTION_IF ~%regex%~ STR_EQ ~~ BEGIN //empty, initialize
-      OUTER_TEXT_SPRINT regex ~%item%~
-    END ELSE BEGIN
-      OUTER_TEXT_SPRINT regex ~%regex%\|%item%~ //append
-    END
+    SPRINT $item_present(~%item%~) present
   END ELSE BEGIN
     WARN ~UA WARNING: %item% is missing from %source%, skipping!~
   END
 END
-PRINT ~%regex%~
+
+// build a regex of all items, skip those that are not found in canon sources
+OUTER_SPRINT regex_all_items ~~
+ACTION_PHP_EACH items_in_source AS item counter => source BEGIN
+  ACTION_IF $item_present$(~%item%~) == 1 BEGIN
+
+    // common regex
+    ACTION_IF ~%regex_all_items%~ STR_EQ ~~ BEGIN //empty, initialize
+      OUTER_SPRINT regex_all_items ~%item%~
+    END ELSE BEGIN
+      OUTER_SPRINT regex_all_items ~%regex_all_items%\|%item%~ //append
+    END
+
+    // custom regex for each source
+    ACTION_PHP_EACH sources AS int => isource BEGIN
+      ACTION_IF NOT ~%isource%~ STR_EQ ~%source%~ BEGIN
+        ACTION_IF VARIABLE_IS_SET $custom_regex(~%source%~) BEGIN
+          OUTER_SPRINT tmp $custom_regex(~%source%~)
+          OUTER_SPRINT $custom_regex(~%source%~) ~%tmp%\|%item%~
+        END ELSE BEGIN
+          OUTER_SPRINT $custom_regex(~%source%~) ~%item%~
+        END
+    END
+
+  END
+END
+
+PRINT ~all items: %regex_all_items%~
+ACTION_PHP_EACH custom_regex AS source => cregex BEGIN
+  PRINT ~custom: %source% => %cregex%~
+END

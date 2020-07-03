@@ -1,0 +1,6 @@
+//Sword Coast Stratagems
+ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) BEGIN
+  PRINT @13
+  SPRINT $source_item("gorlic01.cre") ~wa2robe~ // Robe of Vecna  |  Amekthran lich
+  SPRINT $item_source("wa2robe") ~gorlic01.cre~
+END

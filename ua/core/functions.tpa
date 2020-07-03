@@ -85,7 +85,7 @@ BEGIN
   END
   ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.cre$" = 0) BEGIN
     LAF IS_ITEM_ON_CREATURE
-      STR_VAR item = ~%item%~ cre = ~%file_res%~
+      STR_VAR item = ~%item%~ creature = ~%file_res%~
       RET present
     END
   END
@@ -136,7 +136,7 @@ END
 DEFINE_ACTION_FUNCTION IS_ITEM_ON_CREATURE
   STR_VAR
     item = ~~
-    cre = ~~
+    creature = ~~
   RET present
 BEGIN
   COPY_EXISTING ~%cre%.cre~ ~override~

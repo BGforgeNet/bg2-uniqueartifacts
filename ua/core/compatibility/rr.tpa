@@ -1,0 +1,6 @@
+//Rogue Rebalancing 3.8+
+ACTION_IF (FILE_EXISTS_IN_GAME ~rr#aran2.cre~) BEGIN
+  PRINT @12
+  SPRINT $source_item("rr#aran2.cre") ~sw1h10~ // Short Sword of Backstabbing - Aran
+  SPRINT $item_source("sw1h10") ~rr#aran2.cre~
+END

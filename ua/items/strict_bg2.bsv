@@ -58,13 +58,14 @@ ring39  hldemi.cre                     | Ring of Gaxx                   | Kangax
 ring42  bazdra03.cre                   | Ring of Improved Invisibility  | Fll'Yissetat Abazigal's dragon-guard
 // ring43 is RoP+3 from deck - skipping|                                | 
                                        |                                | 
-wa2robe wmart2.sto                     | Robe of Vecna                  | Deidre
 helm04  hlmafer.cre                    | Helm Of Defence                | Maferan (Guarded compound)
 dagg03  c6arkan.cre                    | Dagger +2: 'Heart of the Golem'| Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)
 dagg03  c6arkan3.cre                   | Dagger +2: 'Heart of the Golem'| Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)
 shld19  chak.cre                       | Large Shield +2                | Chak (Firkraag's dungeon, Samia's party)
 sw1h10  renal.cre                      | Short Sword of Backstabbing +3 | Renal Bloodscalp
 sw1h10  renal.dlg                      | Short Sword of Backstabbing +3 | Renal Bloodscalp
-halb03  bazliz04.cre                   | Suryris's Blade                | Lizard man captain, Sphere. Fixpack leaves one copy
+halb03  jarevia.cre                    | Suryris's Blade                | Reviane - Jaheira's quest
 sw1h03  lehtin.dlg                     | Kondar +1, +3 vs Shapeshifters | Lehtinan (Copper coronet)
 sw1h03  hendak.dlg                     | Kondar +1, +3 vs Shapeshifters | Hendak (Copper coronet)
+sw1h06  ribald.cre                     | Long Sword +2: 'Varscona'      | Ribald - both EE and fixpack ensure it's unique
+wa2robe wmart2.sto                     | Robe of Vecna                  | Deidre

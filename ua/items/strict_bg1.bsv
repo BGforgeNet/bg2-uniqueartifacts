@@ -16,7 +16,7 @@ boot05  mulahe.cre                       | Boots of Grounding             | Mula
                                          |                                | 
 brac03  davaeo.cre                       | Bracers of Defense AC 6        | Davaeorn - Cloakwood mines boss
 brac06  desret.cre                       | Gauntlets of Ogre Power        | Desreta, assasin in tavern-ship
-brac08  bassil.cre                       | Gauntlets of Fumbling          | Bassilus
+brac08  bassil.cre                       | Gauntlets of Fumbling          | Bassilus - BG1 only, not present in BG2
 brac09  %BaldursGateDocks%.are           | Gauntlets of Weapon Skill      | BG docks, chest near Umberlee temple (Noralee's quest)
                                          |                                | 
 clck04  %Lighthouse_BlackAlaricsCave%.are| Cloak of the Wolf              | Black Alarick's Cave

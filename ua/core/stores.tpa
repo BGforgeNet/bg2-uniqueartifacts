@@ -4,32 +4,16 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
   READ_STRREF 0xc "store_name"
   PATCH_IF NOT ("%store_name%" STRING_COMPARE_CASE "^bag of holding$" = 0) BEGIN //excluding starting ToB Bags
     PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
-      LPF DELETE_STORE_ITEM
-        STR_VAR
-          item_to_delete = ~%all_items%~
-      END
+      LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~%all_items%~ END
     END ELSE BEGIN
-      LPF define_items
-        STR_VAR
-          exclude_source = ~%SOURCE_FILE%~
-        RET
-          all_items = items
-      END
-      LPF DELETE_STORE_ITEM
-        STR_VAR
-          item_to_delete = ~%all_items%~
-      END
+      LPF define_items STR_VAR exclude_source = ~%SOURCE_FILE%~ RET all_items = items END
+      LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~%all_items%~ END
       SPRINT all_items ~%really_all_items%~
     END
   END
 BUT_ONLY
 
-//remove Ring of Invisibility from THIEF, FIGHTER_THIEF bag28.sto  - the only new TOB game duplicates
-ACTION_IF FILE_EXISTS_IN_GAME ~bag28.sto~ BEGIN
-  COPY_EXISTING ~bag28.sto~ ~override/bag28.sto~
-    LPF DELETE_STORE_ITEM
-      STR_VAR
-      item_to_delete = ~ring05~
-    END
-  BUT_ONLY
-END
+//remove Ring of Invisibility from THIEF, FIGHTER_THIEF bag28.sto - the only new TOB game duplicates
+COPY_EXISTING ~bag28.sto~ ~override/bag28.sto~
+  LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~ring05~ END
+BUT_ONLY IF_EXISTS

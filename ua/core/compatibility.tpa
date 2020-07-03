@@ -1,7 +1,7 @@
 PRINT @8
 
 //Previously installed components
-ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) THEN BEGIN
+ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) BEGIN
   PRINT @9
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     AR1201.ARE => DUMMY // was AMUL14
@@ -9,7 +9,7 @@ ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) THEN B
     NADIN.DLG  => AMUL01  // Awas MUL01\|AMUL14
   END
 END
-ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) THEN BEGIN
+ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) BEGIN
   PRINT @10
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     AR2300.ARE => DUMMY // was CLCK02
@@ -18,182 +18,12 @@ ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) THEN B
     RAMAZI.CRE  => DUMMY // was RING07
   END
 END
-ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~) THEN BEGIN
+ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~) BEGIN
   PRINT @11
   ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
     DRASUS.CRE => G_DUMMY // was BOOT01
     TOKCRE01.DLG => ~BOOT03\|BOOT05~ // was BOOT03\|BOOT01\|BOOT05
   END
 END
-
-
-//Rogue Rebalancing 3.8+
-ACTION_IF (FILE_EXISTS_IN_GAME ~rr#aran2.cre~) THEN BEGIN
-  PRINT @12
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    RR#ARAN2.CRE => SW1H10  // short sword of backstabbing  |  Aran
-    RENAL.CRE => G_DUMMY // Renal no longer has SSoB
-    RENAL.DLG => G_DUMMY // Renal no longer has SSoB
-  END
-END
-
-
-//Sword Coast Stratagems
-ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) THEN BEGIN
-  PRINT @13
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    GORLIC01.CRE => WA2ROBE  // Robe of Vecna  |  Amekthran lich
-  END
-END
-
-
-//Tortured Souls
-ACTION_IF (FILE_EXISTS_IN_GAME ~kachi01.wav~) BEGIN
-  PRINT @14
-  COPY_EXISTING ~wmart1.sto~ ~override/wmart1.sto~ //Kachiko' wakisashi - remove from Joluv
-    LPF DELETE_STORE_ITEM
-      STR_VAR item_to_delete = ~wawak~
-    END
-  BUT_ONLY
-END
-
-
-//BG2 Fixpack
-ACTION_IF MOD_IS_INSTALLED "setup-bg2fixpack.tp2" "0" BEGIN
-  PRINT @15
-  //Suryris's Blade - Fixpack deletes all but Ribald's copy. Removing Ribald's and restoring Lizard man captain's (Sphere)
-  COPY_EXISTING ~bazliz04.cre~ ~override~
-    LPF DELETE_CRE_ITEM
-      STR_VAR item_to_delete ~halb03~
-    END
-    REPLACE_CRE_ITEM ~halb07~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
-  BUT_ONLY
-  //Long Sword +2: 'Varscona' - Fixpack deletes all but Ribald's copy. Leaving at Ribald, because all other copies are in chapter 6
-END
-
-//Thalantyr item upgrade - forbid Ring +1 upgrade
-ACTION_IF ((FILE_EXISTS_IN_GAME ~thsw2h01.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
-  PRINT @16
-  OUTER_SET offending_state = STATE_WHICH_SAYS @101 FROM ~thalan.dlg~ //Show me what you have, and I'll tell you if it can be altered.
-  PRINT offending_state
-  PRINT ~%offending_state%~
-<<<<<<<< .../ua-inlined/thalan.d
-REPLACE_TRANS_TRIGGER thalan BEGIN 82 END BEGIN END
-  ~PartyHasItem("ring06")~
-  ~False()~
->>>>>>>>
-  COMPILE EVAL ~.../ua-inlined/thalan.d~ //Make ring +1 branch always false
-END
-ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-  THALAN.DLG => DUMMY //don't touch Thalantyr otherwise
-END
-
-
-//Daulmakan item pack: More work for Cromwell - Periart of Proof against Poison
-ACTION_IF (FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) BEGIN
-  PRINT @17
-  OUTER_SET offending_state = 13  //Hmmmn... I couldn't rightly say.  Let me have a look into yer goods, then.  A minute of rummagin' and I'll know fer sure, aye?
-<<<<<<<< .../ua-inlined/wsmith01.d
-REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
-  ~PartyHasItem("amul14")~
-  ~False()~
->>>>>>>>
-  COMPILE EVAL ~.../ua-inlined/wsmith01.d~ //make this branch always false
-END
-//Daulmakan item pack: More work for Cromwell - forbid Ring +1 > +2,  Cloak of protection +1 > +2
-ACTION_IF ((FILE_EXISTS_IN_GAME ~d1ilbrat.itm~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when +2 are uniques
-  OUTER_SET offending_state = 13  //Hmmmn... I couldn't rightly say.  Let me have a look into yer goods, then.  A minute of rummagin' and I'll know fer sure, aye?
-<<<<<<<< .../ua-inlined/wsmith02.d
-REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
-  ~PartyHasItem("ring06")~
-  ~False()~
-REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
-  ~PartyHasItem("clck01")~
-  ~False()~
->>>>>>>>
-  COMPILE EVAL ~.../ua-inlined/wsmith02.d~
-END
-
-//Tactics vs Daulmakan - Cloak of Balduran
-ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN  // lich in the docs
-  PRINT @18
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    GBLICH01.CRE => CLCK05  // Cloak of Balduran - lich in the Docs
-  END
-END ELSE ACTION_IF (FILE_EXISTS_IN_GAME ~d1potcas.itm~) BEGIN // Daulmakan - extra items
-  PRINT @19
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    AR0602.BCS => CLCK05  // Cloak of Balduran - Chateau Irenicus
-  END
-END
-
-
-//Ruad item upgrade - forbid Ring +1 upgrade
-ACTION_IF ((FILE_EXISTS_IN_GAME ~m#ruad.dlg~) AND NOT (FILE_EXISTS_IN_GAME ~g_ua_pr2.itm~)) BEGIN  //only when ring +2 is unique
-  PRINT @20
-  OUTER_SET offending_state = STATE_WHICH_SAYS @102 FROM ~m#ruad.dlg~ //Just tell me what you have, and I'll tell you if it can be made better.
-<<<<<<<< .../ua-inlined/ruad.d
-REPLACE_TRANS_TRIGGER m#ruad BEGIN 5 END BEGIN END
-  ~PartyHasItem("ring06")~
-  ~False()~
->>>>>>>>
-  COMPILE EVAL ~.../ua-inlined/ruad.d~ //Make ring +1 branch always false
-END
-ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-  M#RUAD.DLG => DUMMY  //don't touch Ruad otherwise
-END
-
-
-//Almateria's restoration pack
-ACTION_IF (MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~) BEGIN  //Restored items
-  PRINT @21
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    VIEKANG.CRE => BOOT08  // Boots of Phasing  |  Viekang SoA
-    SARVIE01.CRE => BOOT08  // Boots of Phasing  |  Viekang ToB
-    HABIB.CRE => BOOT10 // Boots of Lightning speed  |  Habib
-    HABIB2.CRE => BOOT10 // Boots of Lightning speed  |  Habib
-  END
-  OUTER_SPRINT ffbart_boot ~boot07~ // for custom.tph, Thunderburp's boots for Mazzy
-END
-
-
-//Cursed Items revision
-ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - moved a few items
-  PRINT @22
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    COKSMTH.CRE => BELT05  //Girdle of gender change
-    VAYYA.CRE => BELT05  //Girdle of gender change
-
-    KRUMM.CRE => BRAC08  //Gauntlets of Fumbling
-
-    AR9200.ARE => RING04 //Ring of Clumsiness
-
-    MELICA.DLG => RING23 //Ring of Folly 
-    MELICA.CRE => RING23 //Ring of Folly 
-
-    THIEF7.CRE => BOOT08 //Boots of Phasing
-  END
-END
-
-//Dungeon-be-gone
-ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
-  PRINT @23
-  ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-    FWJASSY.DLG => BELT03  //Girdle of Bluntness
-  END
-END
-
-
-ACTION_IF GAME_IS ~bg1 totsc~ BEGIN //missing triggers, scripts won't recompile without them
-  APPEND ~trigger.ids~ ~0x4076 OpenState(O:Object*,I:Open*BOOLEAN)~ UNLESS ~0x4076 OpenState(O:Object\*,I:Open\*BOOLEAN)~
-  APPEND ~trigger.ids~ ~0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4077 NumItems(S:ResRef\*,O:Object\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x4078 NumItemsGT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4078 NumItemsGT(S:ResRef\*,O:Object\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x4079 NumItemsLT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4079 NumItemsLT(S:ResRef\*,O:Object\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x407A NumItemsParty(S:ResRef*,I:Num*)~ UNLESS ~0x407A NumItemsParty(S:ResRef\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x407B NumItemsPartyGT(S:ResRef*,I:Num*)~ UNLESS ~0x407B NumItemsPartyGT(S:ResRef\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x407C NumItemsPartyLT(S:ResRef*,I:Num*)~ UNLESS ~0x407C NumItemsPartyLT(S:ResRef\*,I:Num\*)~
-  APPEND ~trigger.ids~ ~0x407D IsOverMe(O:Object*)~ UNLESS ~0x407D IsOverMe(O:Object\*)~
-END
-
 
 PRINT @24

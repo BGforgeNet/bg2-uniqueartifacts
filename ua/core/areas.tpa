@@ -4,11 +4,10 @@ PRINT @7
 DISABLE_FROM_KEY xr2400.are xr2600.are
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
-  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
-    LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~%all_items%~ END
+  PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
+    SPRINT regex $custom_regex(~%SOURCE_FILE%~)
   END ELSE BEGIN
-    LPF define_items STR_VAR exclude_source = ~%SOURCE_FILE%~ RET all_items = items END
-    LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~%all_items%~ END
-    SPRINT all_items ~%really_all_items%~
+    SPRINT regex ~%common_regex%~
   END
+  LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~%regex%~ END
 BUT_ONLY

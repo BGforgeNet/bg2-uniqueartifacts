@@ -72,6 +72,7 @@ ACTION_PHP_EACH items_in_source AS item counter => source BEGIN
         END ELSE BEGIN
           OUTER_SPRINT $custom_regex(~%source%~) ~%item%~
         END
+      END
     END
 
   END

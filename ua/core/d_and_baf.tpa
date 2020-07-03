@@ -3,6 +3,8 @@ PRINT @26
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
   PATCH_IF NOT (~%SOURCE_FILE%~ STR_EQ "wsmith01.dlg") // never touch Cromwell
     AND NOT (~%SOURCE_FILE%~ STR_EQ "botsmith.dlg") // and Cespenar
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "thalan.dlg") // and Thalantyr
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "m#ruad.dlg") // and Ruad
   BEGIN
     SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
     PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN

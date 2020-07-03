@@ -11,6 +11,3 @@ BEGIN
   OUTER_SET offending_state = STATE_WHICH_SAYS @102 FROM ~m#ruad.dlg~ //Just tell me what you have, and I'll tell you if it can be made better.
   COMPILE EVAL ~.../ua-inlined/ruad.d~ //Make ring +1 branch always false
 END
-// ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item_compat BEGIN
-//   M#RUAD.DLG => DUMMY  //don't touch Ruad otherwise
-// END

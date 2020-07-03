@@ -8,14 +8,12 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     INNER_PATCH_SAVE fixed_source ~%source%~ BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
     END
-    TO_UPPER fixed_source
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      SPRINT $sources(~%fixed_source%~) ~%counter%~ // list of all sources
+      SET $sources(~%fixed_source%~) = 1 // list of all sources
       SET $item_present(~%item%~) = "-1" // track if item is present in all sources
-      SPRINT $item_source(~%item%~ ~%fixed_source%~) ~%counter%~ // global list of items and sources
-      counter+=1 // initialized in main.tpa, compatibility has effect on this
+      SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
     END
   END
 END

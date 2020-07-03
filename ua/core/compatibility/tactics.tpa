@@ -1,6 +1,5 @@
 // Tactics - Cloak of Balduran on lich in the docs
 ACTION_IF (FILE_EXISTS_IN_GAME ~gblich01.cre~) BEGIN 
   PRINT @18
-  OUTER_SPRINT $source_item("gblich01.cre") ~clck05~
-  OUTER_SPRINT $item_source("clck05") ~gblich01.cre~
+  OUTER_SET $item_source(~clck05~ ~gblich01.cre~) = 1
 END

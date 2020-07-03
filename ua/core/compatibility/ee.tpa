@@ -1,3 +1,7 @@
-// ACTION_IF ENGINE_IS ~bg2ee~ BEGIN
-//   Global("OH_IMPORT02","GLOBAL",4)
-// END
+ACTION_IF ENGINE_IS ~bg2ee~ BEGIN
+  PRINT @33
+  COPY_EXISTING ~jarevia.cre~ ~override~
+    LPF DELETE_CRE_ITEM STR_VAR item_to_delete ~halb07~ END
+    REPLACE_CRE_ITEM ~halb03~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP TWOHANDED
+  BUT_ONLY
+END

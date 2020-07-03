@@ -46,7 +46,7 @@ ACTION_PHP_EACH items_in_source AS item_counter => source BEGIN
     RET present = present
   END
   ACTION_IF present == 1 BEGIN
-    SPRINT $item_present(~%item%~) present
+    OUTER_SPRINT $item_present(~%item%~) present
   END ELSE BEGIN
     WARN ~UA WARNING: %item% is missing from %source%, skipping!~
   END

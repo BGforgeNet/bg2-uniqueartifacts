@@ -2,10 +2,7 @@
 INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
 
 //compatibility
-OUTER_SET counter = 0 // used in items
-// INCLUDE ~%MOD_FOLDER%/core/compatibility.tpa~
 INCLUDE ~%MOD_FOLDER%/core/compatibility/main.tpa~
-
 PRINT @28
 
 //custom adjustments
@@ -16,8 +13,8 @@ INCLUDE ~%MOD_FOLDER%/core/items.tpa~
 
 // remove from areas
 INCLUDE ~%MOD_FOLDER%/core/areas.tpa~
-// //remove from dialogs and scripts
-// INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tpa~
+//remove from dialogs and scripts
+INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tpa~
 // remove from stores
 INCLUDE ~%MOD_FOLDER%/core/stores.tpa~
 //remove from creatures

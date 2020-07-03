@@ -3,13 +3,22 @@ ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
   WSMITH01.DLG => DUMMY //never touch Cromwell
   BOTSMITH.DLG => DUMMY //and Cespenar
 END
+
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
-  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)) BEGIN
+  PATCH_IF NOT VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "wsmith01.dlg") // never touch Cromwell
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "botsmith.dlg") // and Cespenar
+  BEGIN
+    PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
+      SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+    END ELSE BEGIN
+      SPRINT regex ~%common_regex%~
+    END
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
         STR_VAR
-         old_item = ~%all_items%~
-         new_item = ~amul10~ //gold necklace
+          old_item = ~%regex%~
+          new_item = ~amul10~ //gold necklace
       END
     END
   END
@@ -17,19 +26,22 @@ BUT_ONLY
 
 
 PRINT @27
-ACTION_DEFINE_ASSOCIATIVE_ARRAY source_item BEGIN
-  AR0334.BCS => DUMMY //never touch Cromwell
-  BOTSMITH.BCS => DUMMY //and Cespenar
-END
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
-  PATCH_IF NOT (VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
-    AND (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*")) //skip long ass SCS scripts
+  PATCH_IF NOT VARIABLE_IS_SET $source_item(~%SOURCE_FILE%~)
+    AND NOT (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*" == 0) //skip long ass SCS scripts
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "ar0334.bcs") // never touch Cromwell
+    AND NOT (~%SOURCE_FILE%~ STR_EQ "botsmith.bcs") // and Cespenar
   BEGIN
+    PATCH_IF VARIABLE_IS_SET $custom_regex(~%SOURCE_FILE%~) BEGIN
+      SPRINT regex $custom_regex(~%SOURCE_FILE%~)
+    END ELSE BEGIN
+      SPRINT regex ~%common_regex%~
+    END
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
         STR_VAR
-          old_item = ~%all_items%~
-          new_item = ~ring10~ //gold ring
+          old_item = ~%regex%~
+          new_item = ~amul10~ //gold necklace
       END
     END
   END

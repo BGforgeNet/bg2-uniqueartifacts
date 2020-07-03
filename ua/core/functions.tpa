@@ -76,7 +76,6 @@ BEGIN
   OUTER_PATCH_SAVE file_res ~%resource%~ BEGIN
     REPLACE_TEXTUALLY CASE_INSENSITIVE ~\.are$\|\.bcs$\|\.dlg$\|\.cre$\|\.sto$~ ~~
   END
-  PRINT ~resource = %resource%, file_res = %file_res%~
   ACTION_IF ("%resource%" STRING_MATCHES_REGEXP ".*\.are$" = 0) BEGIN
     LAF IS_ITEM_IN_AREA
       STR_VAR item = ~%item%~ area = ~%file_res%~
@@ -107,9 +106,6 @@ BEGIN
       RET present = present
     END
   END
-  ACTION_IF present == 1 BEGIN
-    PRINT ~item found: %item% in %resource%~
-  END
 END
 
 DEFINE_ACTION_FUNCTION IS_ITEM_IN_AREA
@@ -139,7 +135,7 @@ DEFINE_ACTION_FUNCTION IS_ITEM_ON_CREATURE
     creature = ~~
   RET present
 BEGIN
-  COPY_EXISTING ~%cre%.cre~ ~override~
+  COPY_EXISTING ~%creature%.cre~ ~override~
     present = 0
     GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
     PHP_EACH item_offs AS int => i_off BEGIN

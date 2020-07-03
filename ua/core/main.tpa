@@ -3,7 +3,8 @@ INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
 
 //compatibility
 OUTER_SET counter = 0 // used in items
-INCLUDE ~%MOD_FOLDER%/core/compatibility.tpa~
+// INCLUDE ~%MOD_FOLDER%/core/compatibility.tpa~
+INCLUDE ~%MOD_FOLDER%/core/compatibility/main.tpa~
 
 PRINT @28
 
@@ -22,5 +23,5 @@ INCLUDE ~%MOD_FOLDER%/core/items.tpa~
 // //remove from stores
 // INCLUDE ~%MOD_FOLDER%/core/stores.tpa~
 
-// //remove from creatures
-// INCLUDE ~%MOD_FOLDER%/core/creatures.tpa~
+//remove from creatures
+INCLUDE ~%MOD_FOLDER%/core/creatures.tpa~

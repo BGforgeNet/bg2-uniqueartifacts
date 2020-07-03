@@ -1,4 +1,4 @@
-OUTER_SPRINT compat ~%comp_dir%/compatibility~
+OUTER_SPRINT compat ~%MOD_FOLDER%/core/compatibility~
 
 INCLUDE ~%compat%/arp.tpa~
 INCLUDE ~%compat%/bg1.tpa~

@@ -44,7 +44,6 @@ ACTION_PHP_EACH item_source AS i_s => int BEGIN
   ACTION_IF $item_present(~%item%~) == 0 BEGIN
     PRINT ~%item% was checked already and is missing from another resource, skipping~
   END ELSE BEGIN
-    OUTER_SET present = 0
     LAF IS_ITEM_IN_RESOURCE STR_VAR item = ~%item%~ resource = ~%source%~ RET present END 
     OUTER_SET $item_present(~%item%~) = present
     ACTION_IF present == 0 BEGIN
@@ -62,6 +61,7 @@ END
 OUTER_SPRINT common_regex ~~
 ACTION_PHP_EACH item_present AS item => present BEGIN
   ACTION_IF present == 1 BEGIN
+
     // common regex
     ACTION_IF ~%common_regex%~ STR_EQ ~~ BEGIN //empty, initialize
       OUTER_SPRINT common_regex ~%item%~
@@ -70,7 +70,10 @@ ACTION_PHP_EACH item_present AS item => present BEGIN
     END
     // custom regex for each source
     ACTION_PHP_EACH sources AS csource => int BEGIN
-      ACTION_IF NOT VARIABLE_IS_SET $item_source(~%item%~ ~%csource%~) BEGIN
+      ACTION_IF
+        NOT VARIABLE_IS_SET $item_source(~%item%~ ~%csource%~)
+        OR $item_source(~%item%~ ~%csource%~) != 1 // may be changed in compat section
+      BEGIN
         OUTER_SPRINT tmp $custom_regex(~%csource%~)
         ACTION_IF ~%tmp%~ STR_EQ ~~ BEGIN
           OUTER_SPRINT $custom_regex(~%csource%~) ~%item%~

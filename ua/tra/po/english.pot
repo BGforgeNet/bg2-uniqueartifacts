@@ -174,7 +174,7 @@ msgid "Processing dialogs:"
 msgstr ""
 
 #: setup.tra:27
-msgid "Processing scripts (this will take a few minutes):"
+msgid "Processing scripts (this may take a few minutes):"
 msgstr ""
 
 #: setup.tra:28
@@ -195,4 +195,8 @@ msgstr ""
 
 #: setup.tra:32
 msgid "This component must be installed before Core"
+msgstr ""
+
+#: setup.tra:33
+msgid "BG2EE"
 msgstr ""

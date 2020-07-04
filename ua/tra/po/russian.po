@@ -210,7 +210,9 @@ msgid "Processing dialogs:"
 msgstr "Обрабатываем диалоги:"
 
 #: setup.tra:27
-msgid "Processing scripts (this will take a few minutes):"
+#, fuzzy
+#| msgid "Processing scripts (this will take a few minutes):"
+msgid "Processing scripts (this may take a few minutes):"
 msgstr "Обрабатываем скрипты (может занять несколько минут):"
 
 #: setup.tra:28
@@ -232,3 +234,7 @@ msgstr "ТуТу не поддерживается"
 #: setup.tra:32
 msgid "This component must be installed before Core"
 msgstr "Этот компонент должен быть установлен перед основным"
+
+#: setup.tra:33
+msgid "BG2EE"
+msgstr ""

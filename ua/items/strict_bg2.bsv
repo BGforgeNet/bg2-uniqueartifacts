@@ -1,5 +1,4 @@
 amul01  trcar04.sto                    | Necklace of Missiles           | merchant in Trademeet
-amul14  ar1201.are                     | Amulet of Protection +1        | near lake and mists in Firkraag's dungeon
 amul16  ar0602.are                     | Metaspell Influence Amulet     | Jon's dungeon (container 11)
 amul20  uddrow24.sto                   | Kaligun's Amulet of Magic Res. | Ust Natha store
 amul21  aran02.cre                     | Amulet of Power                | Aran Linvail (side with Bodhi)
@@ -14,7 +13,6 @@ belt04  kalah2.cre                     | Girdle of Piercing             | Kalah 
 belt07  suadsaan.cre                   | Girdle of Stone Giant Strength | Suldanessellar Adsaan
 belt09  gaal01.cre                     | Girdle of Fortitude            | Cult of Eyeless, Gaal
                                        |                                | 
-boot01  tokcre01.dlg                   | Boots of Speed                 | Token machine in Spellhold
 boot03  tokcre01.dlg                   | Boots of the North             | Token machine in Spellhold
 boot05  tokcre01.dlg                   | Boots of Grounding             | Token machine in Spellhold
 boot04  reti.cre                       | Boots of Avoidance             | Reti (Buried alive quest)
@@ -32,7 +30,6 @@ brac19  sahkng01.dlg                   | Gauntlets of Crushing          | Sahuag
 brac21  gorwom03.cre                   | Gauntlets of Extraordinary Spec| Watcher's Keep last level, Y'tossi
 brac26  bazdra02.cre                   | Tzu-Zan's Bracers              | Draconis
                                        |                                | 
-clck02  ar2300.are                     | Cloak of Protection +2         | Sahuagin city (chest 6)
 clck06  sevpat02.cre                   | Cloak of Non-Detection         | Sorcerous Amon (Seven Vales party)
 clck24  ar1511.are                     | Cloak of Reflection            | Spellhold (container 1)
 clck27  sewrak01.cre                   | Cloak of the Sewers            | Rakshasa in sewers
@@ -41,8 +38,6 @@ clck04  shabod01.cre                   | Cloak of the Wolf              | Wallag
 ring02  firrak01.cre                   | Ring of Fire Resistance        | rakshasa in Firkraag's lair
 ring04  ar2210.are                     | Ring of Clumsiness             | Ust Natha, lich tower
 ring05  grvlch01.cre                   | Ring of Invisibility           | lich at City Gates
-ring07  aran02.cre                     | Ring of Protection +2          | Aran Linvail (side with Bodhi)
-ring07  aran.dlg                       | Ring of Protection +2          | Aran Linvail (side with thieves)
 ring08  ar0411.bcs                     | Ring of Wizardry, BG2 version  | mage stronghold (if all apprentices die)
 ring08  mgappr02.dlg                   | Ring of Wizardry, BG2 version  | mage stronghold (if Morul lives)
 ring09  ppbook.bcs                     | Ring of Free Action            | book on the stand in spellhold

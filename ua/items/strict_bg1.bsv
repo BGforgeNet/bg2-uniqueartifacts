@@ -1,5 +1,3 @@
-amul01  nadine.cre                       | Amulet of Protection +1        | Nadine - steal
-amul01  nadin.dlg                        | Amulet of Protection +1        | Nadine - quest: pass to Eric
 amul14  nadine.cre                       | Necklace of Missiles           | Nadine - steal
 amul14  nadin.dlg                        | Necklace of Missiles           | Nadine - quest reward
 amul16  ramazi.cre                       | Metaspell Influence Amul.      | Ramazith
@@ -8,7 +6,6 @@ belt02  kirian.cre                       | Golden Girdle                  | Kiri
 belt03  krumm.cre                        | Girdle of Bluntness            | the guy who cuts nymph's tree
 belt04  ogreunsh.cre                     | Girdle of Piercing             | fetishist ogre
                                          |                                | 
-boot01  drasus.cre                       | Boots of Speed                 | Drasus (Cloakwood mines assassin)
 boot03  jared.cre                        | Boots of the North             | Jared the scared merchant (a bear and a bridge) - steal
 boot03  jared.dlg                        | Boots of the North             | Jared the scared merchant (a bear and a bridge) - talk
 boot04  nimbul.cre                       | Boots of Avoidance             | Nimbul, assassin in Nashkel
@@ -28,7 +25,6 @@ clck08  algern.cre                       | Algernon's Cloak               | Alge
 ring02  %Candlekeep_Catacombs_L1%.are    | Ring of Fire Resistance        | Candlekeep catacombs level 1
 ring04  niemai.cre                       | Ring of Clumsiness             | Niemain, Sorcerous Sundries 2nd floor
 ring05  ulgoth.sto                       | Ring of Invisibility           | store in Ulgoth's Beard
-ring07  ramazi.cre                       | Ring of Protection +2          | Ramazith
 ring09  alai.cre                         | Ring of Free Action            | Alai, party at the top of the Iron Throne
 ring20  denak.cre                        | Ring of Energy                 | Thaivian red wizard
 ring23  %ShipwrecksCoast%.are            | Ring of Folly                  | shipwreck on the coast (container 1)

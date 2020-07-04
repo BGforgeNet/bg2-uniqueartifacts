@@ -1,4 +1,5 @@
 OUTER_SPRINT compat ~%MOD_FOLDER%/core/compatibility~
+PRINT @8
 
 INCLUDE ~%compat%/arp.tpa~
 INCLUDE ~%compat%/bg1.tpa~
@@ -12,3 +13,4 @@ INCLUDE ~%compat%/scs.tpa~
 INCLUDE ~%compat%/rr.tpa~
 INCLUDE ~%compat%/thalantyr.tpa~
 INCLUDE ~%compat%/ts.tpa~
+INCLUDE ~%compat%/ua.tpa~

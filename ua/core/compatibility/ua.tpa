@@ -1,0 +1,53 @@
+// AoP +1
+ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) BEGIN
+  PRINT @9
+  OUTER_SET $item_present(~amul14~) = "-1"
+  ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+    OUTER_SET $item_source(~amul14~ ~nadine.cre~) = 1 // Nadine - steal
+    OUTER_SET $sources(~nadine.cre~) = 1
+    OUTER_SET $item_source(~amul14~ ~nadin.dlg~) = 1 // Nadine - quest reward
+    OUTER_SET $sources(~nadin.dlg~) = 1
+  END
+  ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
+    // AoP+1
+    OUTER_SET $item_source(~amul14~ ~ar1201.are~) = 1 // near lake and mists in Firkraag's dungeon
+    OUTER_SET $sources(~ar1201.are~) = 1
+  END
+END
+
+// CoP+2 and RoP+2
+ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) BEGIN
+  PRINT @9
+  OUTER_SET $item_present(~clck02~) = "-1" // CoP+2
+  OUTER_SET $item_present(~ring07~) = "-1" // RoP+2
+  ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+    OUTER_SET $item_source(~clck02~ ~%Candlekeep_Catacombs_L1%.are~) = 1 // a crypt
+    OUTER_SET $sources(~%Candlekeep_Catacombs_L1%.are~) = 1
+    OUTER_SET $item_source(~ring07~ ~ramazi.cre~) = 1
+    OUTER_SET $sources(~ramazi.cre~) = 1
+  END
+  ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
+    OUTER_SET $item_source(~clck02~ ~ar2300.are~) = 1 // Sahuagin city (chest 6)
+    OUTER_SET $sources(~ar2300.are~) = 1
+    OUTER_SET $item_source(~ring07~ ~aran02.cre~) = 1 // Aran Linvail (side with Bodhi)
+    OUTER_SET $sources(~aran02.cre~) = 1
+    OUTER_SET $item_source(~ring07~ ~aran.dlg~) = 1 // Aran Linvail (side with thieves)
+    OUTER_SET $sources(~aran.dlg~) = 1
+  END
+END
+
+// boots of speed
+ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~) BEGIN
+  PRINT @11
+  OUTER_SET $item_present(~boot01~) = "-1"
+  ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+    OUTER_SET $item_source(~boot01~ ~drasus.cre~) = 1 // Drasus (Cloakwood mines assassin)
+    OUTER_SET $sources(~drasus.cre~) = 1
+  END
+  ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
+    OUTER_SET $item_source(~boot01~ ~tokcre01.dlg~) = 1 // Token machine in Spellhold
+    OUTER_SET $sources(~tokcre01.dlg~) = 1
+  END
+END
+
+PRINT @24

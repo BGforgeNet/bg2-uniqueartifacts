@@ -69,6 +69,34 @@ msgid ""
 "Saving Throws:  +2 bonus"
 msgstr ""
 
+#: game.tra:107
+msgid "Boots"
+msgstr ""
+
+#: game.tra:108
+msgid "Boots of the West"
+msgstr ""
+
+#: game.tra:109
+msgid ""
+"Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual.\n"
+"\n"
+"STATISTICS:\n"
+"\n"
+"Weight:  4"
+msgstr ""
+
+#: game.tra:110
+msgid ""
+"Boots of the West\n"
+"These are the boots that were once owned by the famous woodsman, Randy of the West.\n"
+"\n"
+"STATISTICS:\n"
+"\n"
+"Increase Charisma by one point\n"
+"Protection from Disease"
+msgstr ""
+
 #: setup.tra:1
 msgid "Allow non-unique Amulet of Protection +1"
 msgstr ""

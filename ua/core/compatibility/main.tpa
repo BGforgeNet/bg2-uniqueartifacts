@@ -3,6 +3,7 @@ PRINT @8
 
 INCLUDE ~%compat%/arp.tpa~
 INCLUDE ~%compat%/bg1.tpa~
+INCLUDE ~%compat%/bg2ee.tpa~
 INCLUDE ~%compat%/bg2fixpack.tpa~
 INCLUDE ~%compat%/cursed_items.tpa~
 INCLUDE ~%compat%/daulmakan.tpa~ // must go before tactics to undupe Cloak of Balduran
@@ -11,6 +12,7 @@ INCLUDE ~%compat%/ee.tpa~
 INCLUDE ~%compat%/tactics.tpa~
 INCLUDE ~%compat%/scs.tpa~
 INCLUDE ~%compat%/rr.tpa~
+INCLUDE ~%compat%/ring08.tpa~
 INCLUDE ~%compat%/thalantyr.tpa~
 INCLUDE ~%compat%/ts.tpa~
 INCLUDE ~%compat%/ua.tpa~

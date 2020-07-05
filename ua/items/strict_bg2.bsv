@@ -38,8 +38,6 @@ clck04  shabod01.cre                   | Cloak of the Wolf              | Wallag
 ring02  firrak01.cre                   | Ring of Fire Resistance        | rakshasa in Firkraag's lair
 ring04  ar2210.are                     | Ring of Clumsiness             | Ust Natha, lich tower
 ring05  grvlch01.cre                   | Ring of Invisibility           | lich at City Gates
-ring08  ar0411.bcs                     | Ring of Wizardry, BG2 version  | mage stronghold (if all apprentices die)
-ring08  mgappr02.dlg                   | Ring of Wizardry, BG2 version  | mage stronghold (if Morul lives)
 ring09  ppbook.bcs                     | Ring of Free Action            | book on the stand in spellhold
 ring20  ribald.sto                     | Ring of Energy                 | Ribald
 ring23  ar2100.are                     | Ring of Folly                  | Underdark svirf village (container 6)

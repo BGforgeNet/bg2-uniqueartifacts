@@ -171,3 +171,15 @@ DEFINE_ACTION_FUNCTION IS_ITEM_GIVEN_OR_CREATED_IN_SCRIPT
 BEGIN
   LAF IS_ITEM_GIVEN_OR_CREATED_IN_DIALOG_OR_SCRIPT STR_VAR item = ~%item%~ filename = ~%script%.bcs~ RET present END
 END
+
+DEFINE_PATCH_FUNCTION REPLACE_CRE_ITEM_MATCH
+  STR_VAR old_item = ~~ new_item = ~~
+BEGIN
+  GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
+  PHP_EACH item_offs AS int => ioff BEGIN
+    READ_ASCII ioff name (8) NULL
+    PATCH_IF ~%name%~ STR_EQ ~%old_item%~ BEGIN
+      WRITE_ASCII ioff ~%new_item%~ #8
+    END
+  END
+END

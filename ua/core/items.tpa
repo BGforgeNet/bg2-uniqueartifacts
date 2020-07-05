@@ -1,3 +1,6 @@
+// custom replacement list, just so creatures still have some weapons and armor
+INCLUDE ~%MOD_FOLDER%/core/cre_replacement.tpa~
+
 // GAME_IS doesn't support variables
 DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
   READ_2DA_ENTRIES_NOW strict 2

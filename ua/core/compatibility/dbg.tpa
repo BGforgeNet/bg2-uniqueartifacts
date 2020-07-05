@@ -2,4 +2,5 @@
 ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.bcs~) BEGIN
   PRINT @23
   OUTER_SET $item_source(~belt03~ ~fwjassy.dlg~) = 1  // Girdle of Bluntness
+  OUTER_SET $sources(~fwjassy.dlg~) = 1
 END

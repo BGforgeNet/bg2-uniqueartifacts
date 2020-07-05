@@ -2,4 +2,5 @@
 ACTION_IF (FILE_EXISTS ~override/dw#vecna.mrk~) BEGIN
   PRINT @13
   OUTER_SET $item_source(~wa2robe~ ~gorlic01.cre~) = 1  // Robe of Vecna  |  Amekthran lich
+  OUTER_SET $sources(~gorlic01.cre~) = 1
 END

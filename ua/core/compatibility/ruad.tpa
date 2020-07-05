@@ -8,6 +8,6 @@ ACTION_IF ( FILE_EXISTS_IN_GAME ~m#ruad.dlg~
   AND NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) )
 BEGIN
   PRINT @20
-  OUTER_SET offending_state = STATE_WHICH_SAYS @102 FROM ~m#ruad.dlg~ //Just tell me what you have, and I'll tell you if it can be made better.
+  OUTER_SET offending_state = STATE_WHICH_SAYS 3007 IN ~ruad/lang/%s/ruad.tra~ FROM ~m#ruad.dlg~  //ust tell me what you have, and I'll tell you if it can be made better.
   COMPILE EVAL ~.../ua-inlined/ruad.d~ //Make ring +1 branch always false
 END

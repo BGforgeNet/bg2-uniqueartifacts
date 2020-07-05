@@ -3,6 +3,7 @@ PRINT @8
 
 INCLUDE ~%compat%/arp.tpa~
 INCLUDE ~%compat%/bg1.tpa~
+INCLUDE ~%compat%/bg2.tpa~ // must go after ARP
 INCLUDE ~%compat%/bg2ee.tpa~
 INCLUDE ~%compat%/bg2fixpack.tpa~
 INCLUDE ~%compat%/cursed_items.tpa~

@@ -9,5 +9,5 @@ ACTION_IF MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~ BEGIN // Restored items
   OUTER_SET $sources(~habib.cre~) = 1
   OUTER_SET $item_source("boot10" ~habib2.cre~) = 1   // Boots of Lightning speed  |  Habib
   OUTER_SET $sources(~habib2.cre~) = 1
-  // OUTER_SPRINT ffbart_boot ~boot07~ // for custom.tph, Thunderburp's boots for Mazzy
+  OUTER_SPRINT ffbart_boot ~boot07~ // ARP compatibility, Thunderburp's boots for Mazzy
 END

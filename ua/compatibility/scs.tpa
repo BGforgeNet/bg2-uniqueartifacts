@@ -3,6 +3,6 @@ OUTER_SET present = 0
 LAF IS_ITEM_ON_CREATURE STR_VAR creature = ~gorlic01~ item = ~wa2robe~ RET present END
 ACTION_IF present == 1 BEGIN
   PRINT @13
-  OUTER_SET $item_source(~wa2robe~ ~gorlic01.cre~) = 1  // Robe of Vecna  |  Azamantes, the lich guardian of the Seal of the Imprisoned One.
-  OUTER_SET $item_source(~wa2robe~ ~wmart2.sto~) = 0
+  OUTER_SET $item_source_compat(~wa2robe~ ~gorlic01.cre~) = 1  // Robe of Vecna  |  Azamantes, the lich guardian of the Seal of the Imprisoned One.
+  OUTER_SET $item_source_compat(~wa2robe~ ~wmart2.sto~) = 0
 END

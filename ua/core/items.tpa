@@ -1,9 +1,9 @@
 // GAME_IS doesn't support variables
 DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
-  READ_2DA_ENTRIES_NOW strict 2
-  FOR (i=1;i<strict;++i) BEGIN
-    READ_2DA_ENTRY_FORMER strict i 0 item
-    READ_2DA_ENTRY_FORMER strict i 1 isource
+  READ_2DA_ENTRIES_NOW ilist 2
+  FOR (i=1;i<ilist;++i) BEGIN
+    READ_2DA_ENTRY_FORMER ilist i 0 item
+    READ_2DA_ENTRY_FORMER ilist i 1 isource
     // auto formatting workaround
     INNER_PATCH_SAVE source ~%isource%~ BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
@@ -11,9 +11,12 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      PATCH_IF NOT VARIABLE_IS_SET $item_source(~%item%~ ~%source%~) // compat section may reset to 0
+      // global list of items and sources
+      PATCH_IF VARIABLE_IS_SET $item_source_compat(~%item%~ ~%source%~) // compat section may reset to 0
       BEGIN
-        SET $item_source(~%item%~ ~%source%~) = 1 // global list of items and sources
+        SET $item_source(~%item%~ ~%source%~) = $item_source_compat(~%item%~ ~%source%~)
+      END ELSE BEGIN
+        SET $item_source(~%item%~ ~%source%~) = 1
       END
     END
   END

@@ -1,6 +1,6 @@
 //Dungeon-Be-Gone
 ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.dlg~) BEGIN
   PRINT @23
-  OUTER_SET $item_source(~belt03~ ~fwjassy.dlg~) = 1  // Girdle of Bluntness
+  OUTER_SET $item_source_compat(~belt03~ ~fwjassy.dlg~) = 1  // Girdle of Bluntness
   // not unsetting old source, because DBG still allows to pass the dungeon normally... I think?
 END

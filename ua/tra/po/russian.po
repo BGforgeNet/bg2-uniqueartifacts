@@ -162,8 +162,8 @@ msgid "Processing areas:"
 msgstr "Обработка локаций:"
 
 #: setup.tra:8
-msgid "Compatibility:"
-msgstr "Совместимость:"
+msgid "Compatibility with mods that move or remove items:"
+msgstr ""
 
 #: setup.tra:9
 msgid "Non-unique Amulet of Protection +1"
@@ -178,12 +178,12 @@ msgid "Non-unique Boots of Speed"
 msgstr "Неуникальные Сапоги Скорости"
 
 #: setup.tra:12
-msgid "Rogue Rebalancing"
-msgstr "Rogue Rebalancing"
+msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
+msgstr ""
 
 #: setup.tra:13
-msgid "Sword Coast Stratagems"
-msgstr "Sword Coast Stratagems"
+msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
+msgstr ""
 
 #: setup.tra:14
 msgid "Tortured Souls"
@@ -198,15 +198,17 @@ msgid "Thalantyr item upgrade"
 msgstr "Thalantyr item upgrade"
 
 #: setup.tra:17
-msgid "Daulmakan item pack"
-msgstr "Daulmakan item pack"
+msgid "Daulmakan's Item Pack: More Work for Cromwell"
+msgstr ""
 
 #: setup.tra:18
-msgid "Tactics"
-msgstr "Tactics"
+msgid "Tactics: Gebhard Blucher's Lich in the Docks"
+msgstr ""
 
 #: setup.tra:19
-msgid "Daulmakan extra items"
+#, fuzzy
+#| msgid "Daulmakan extra items"
+msgid "Daulmakan's Item Pack: Extra Items"
 msgstr "Daulmakan extra items"
 
 #: setup.tra:20
@@ -214,11 +216,15 @@ msgid "Ruad Ro'fhessa"
 msgstr "Ruad Ro'fhessa"
 
 #: setup.tra:21
-msgid "Almateria's restoration pack"
+#, fuzzy
+#| msgid "Almateria's restoration pack"
+msgid "Almateria's Restoration pack: Restored Items"
 msgstr "Almateria's restoration pack"
 
 #: setup.tra:22
-msgid "Salk's cursed items revisions"
+#, fuzzy
+#| msgid "Salk's cursed items revisions"
+msgid "Cursed Items revision"
 msgstr "Salk's cursed items revisions"
 
 #: setup.tra:23
@@ -226,8 +232,10 @@ msgid "Dungeon-Be-Gone"
 msgstr "Dungeon-Be-Gone"
 
 #: setup.tra:24
-msgid "Resolved compatibility issues."
-msgstr "Проблемы совместимости разрешены."
+#, fuzzy
+#| msgid "Compatibility:"
+msgid "Compatibility addressed."
+msgstr "Совместимость:"
 
 #: setup.tra:25
 msgid "Processing creatures:"
@@ -244,7 +252,9 @@ msgid "Processing scripts (this may take a few minutes):"
 msgstr "Обрабатываем скрипты (может занять несколько минут):"
 
 #: setup.tra:28
-msgid "Start main process"
+#, fuzzy
+#| msgid "Start main process"
+msgid "Starting main process:"
 msgstr "Начинаем основной процесс"
 
 #: setup.tra:29
@@ -266,3 +276,22 @@ msgstr "Этот компонент должен быть установлен �
 #: setup.tra:33
 msgid "BG2EE"
 msgstr ""
+
+#: setup.tra:34
+msgid "Rogue Rebalancing: Shadow Thief improvements"
+msgstr ""
+
+#~ msgid "Rogue Rebalancing"
+#~ msgstr "Rogue Rebalancing"
+
+#~ msgid "Sword Coast Stratagems"
+#~ msgstr "Sword Coast Stratagems"
+
+#~ msgid "Daulmakan item pack"
+#~ msgstr "Daulmakan item pack"
+
+#~ msgid "Tactics"
+#~ msgstr "Tactics"
+
+#~ msgid "Resolved compatibility issues."
+#~ msgstr "Проблемы совместимости разрешены."

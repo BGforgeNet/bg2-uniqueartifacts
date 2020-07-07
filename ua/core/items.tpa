@@ -3,21 +3,18 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
   READ_2DA_ENTRIES_NOW strict 2
   FOR (i=1;i<strict;++i) BEGIN
     READ_2DA_ENTRY_FORMER strict i 0 item
-    READ_2DA_ENTRY_FORMER strict i 1 source
+    READ_2DA_ENTRY_FORMER strict i 1 isource
     // auto formatting workaround
-    INNER_PATCH_SAVE fixed_source ~%source%~ BEGIN
+    INNER_PATCH_SAVE source ~%isource%~ BEGIN
       REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
     END
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      PATCH_IF VARIABLE_IS_SET $item_source(~%item%~ ~%fixed_source%~)
-        AND $item_source(~%item%~ ~%fixed_source%~) != 0 // compat section may reset to 0
+      PATCH_IF VARIABLE_IS_SET $item_source(~%item%~ ~%source%~)
+        AND $item_source(~%item%~ ~%source%~) != 0 // compat section may reset to 0
       BEGIN
-        SET $sources(~%fixed_source%~) = 1 // list of all sources
-        SET $item_present(~%item%~) = "-1" // track if item is present in all sources
-        SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
-        SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
+        SET $item_source(~%item%~ ~%source%~) = 1 // global list of items and sources
       END
     END
   END
@@ -46,22 +43,26 @@ END
 INCLUDE ~%MOD_FOLDER%/core/cre_replacement.tpa~
 
 // check if item is present in all sources
-ACTION_PHP_EACH item_source AS i_s => int BEGIN
+ACTION_PHP_EACH item_source AS i_s => should_be_present BEGIN
   OUTER_SPRINT item $i_s(0)
   OUTER_SPRINT source $i_s(1)
   OUTER_SET skip = 0
-  ACTION_IF int == 0 BEGIN
-    PRINT ~%item% was moved from %source% by another mod, skipping~
+  ACTION_IF should_be_present == 0 BEGIN
+    PRINT ~%item% was moved from %source% by another mod, skipping this source~
     OUTER_SET skip = 1
   END
-  ACTION_IF $item_present(~%item%~) == 0 BEGIN
+  ACTION_IF VARIABLE_IS_SET $item_present(~%item%~)
+    AND $item_present(~%item%~) == 0
+  BEGIN
     PRINT ~%item% was checked already and is missing from another resource, skipping~
     OUTER_SET skip = 1
   END
   ACTION_IF skip == 0 BEGIN
     LAF IS_ITEM_IN_RESOURCE STR_VAR item = ~%item%~ resource = ~%source%~ RET present END 
     OUTER_SET $item_present(~%item%~) = present
-    ACTION_IF present == 0 BEGIN
+    ACTION_IF present == 1 BEGIN
+      OUTER_SET $sources(~%source%~) = 1 // list of all sources
+    END ELSE BEGIN
       WARN ~UA WARNING: %item% is missing from %source%, skipping!~
     END
   END

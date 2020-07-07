@@ -22,8 +22,6 @@ ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     ADD_CRE_ITEM ~misc8j~ #0 #0 #0 ~NONE~ ~INV10~
   BUT_ONLY
   OUTER_SET $item_source(~misc8j~ ~nadari.cre~) = 1
-  OUTER_SET $sources(~nadari.cre~) = 1
-  OUTER_SET $item_present(~misc8j~) = "-1"
 
 <<<<<<<< .../ua-inlined/nadari.d
 REPLACE_ACTION_TEXT ~nadari~

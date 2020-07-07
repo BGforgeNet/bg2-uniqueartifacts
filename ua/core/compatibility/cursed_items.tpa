@@ -5,31 +5,27 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - mov
     // belt05 - Girdle of gender change - probably won't be duped anyway
     // brac11 - Bracers of binding - same
 
-    OUTER_SET $item_source(~brac08~ ~bassil.cre~) = 0 // Gauntlets of Fumbling
+    // Gauntlets of Fumbling
+    OUTER_SET $item_source(~brac08~ ~bassil.cre~) = 0
     OUTER_SET $item_source(~brac08~ ~krumm.cre~) = 1
-    OUTER_SET $sources(~krumm.cre~) = 1
-    OUTER_SET $item_present(~brac08~) = "-1"
 
-    OUTER_SET $item_source(~ring04~ ~%are%~) = 1
-    OUTER_SET $sources(~%are%~) = 1
-    OUTER_SET $item_present(~ring04~) = "-1"
+    // Ring of Clumsiness
+    OUTER_SET $item_source(~ring04~ ~niemai.cre~) = 0
+    OUTER_SET $item_source(~ring04~ ~ar2100.are~) = 0
+    OUTER_SET $item_source(~ring04~ ~%ShipwrecksCoast%.are~) = 1
 
-    OUTER_SET $item_source(~ring23~ ~ar2100.are~) = 0 // Ring of Folly
-    OUTER_SET $item_source(~ring23~ ~melica.dlg~) = 1 // Ring of Folly
-    OUTER_SET $sources(~melica.dlg~) = 1
-    OUTER_SET $item_source(~ring23~ ~melica.cre~) = 1 // Ring of Folly
-    OUTER_SET $sources(~melica.cre~) = 1
-    OUTER_SET $item_present(~ring23~) = "-1"
+    // Ring of Folly
+    OUTER_SET $item_source(~ring23~ ~%CloakwoodNestSpiderNest%.are~) = 0
+    OUTER_SET $item_source(~ring23~ ~melica.dlg~) = 1
+    OUTER_SET $item_source(~ring23~ ~melica.cre~) = 1
   END
 
-  ACTION_IF GAME_INCLUDES ~bg2~
-    AND NOT MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~ // ARP gives Boots of Phasing fo Viekang
-  BEGIN
-    OUTER_SET $item_source(~boot08~ ~thief7.cre~) = 1 // Anishai
-    OUTER_SET $sources(~thief7.cre~) = 1
-    OUTER_SET $item_present(~boot08~) = "-1"
-
+  ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
     // should be bg1-only, but CI ALLOW_MISSINGs files instead of properly limiting
     OUTER_SET $item_source(~ring04~ ~ar2210.are~) = 0 // Ring of Clumsiness
+    ACTION_IF NOT MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~ BEGIN // ARP gives Boots of Phasing fo Viekang
+      OUTER_SET $item_source(~boot08~ ~thief7.cre~) = 1 // Anishai
+    END
   END
+
 END

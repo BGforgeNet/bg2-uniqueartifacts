@@ -1,8 +1,6 @@
 ACTION_IF (FILE_EXISTS_IN_GAME ~d1potcas.itm~) BEGIN // Daulmakan - extra items
   PRINT @19
   OUTER_SET $item_source(~clck05~ ~ar0602.bcs~) = 1  // Cloak of Balduran - Chateau Irenicus
-  OUTER_SET $sources(~ar0602.bcs~) = 1
-  OUTER_SET $item_present(~clck05~) = "-1"
 END
 
 //Daulmakan item pack: More work for Cromwell - Periart of Proof against Poison

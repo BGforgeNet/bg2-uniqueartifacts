@@ -1,6 +1,3 @@
-// custom replacement list, just so creatures still have some weapons and armor
-INCLUDE ~%MOD_FOLDER%/core/cre_replacement.tpa~
-
 // GAME_IS doesn't support variables
 DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
   READ_2DA_ENTRIES_NOW strict 2
@@ -14,9 +11,14 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      SET $sources(~%fixed_source%~) = 1 // list of all sources
-      SET $item_present(~%item%~) = "-1" // track if item is present in all sources
-      SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
+      PATCH_IF VARIABLE_IS_SET $item_source(~%item%~ ~%fixed_source%~)
+        AND $item_source(~%item%~ ~%fixed_source%~) != 0 // compat section may reset to 0
+      BEGIN
+        SET $sources(~%fixed_source%~) = 1 // list of all sources
+        SET $item_present(~%item%~) = "-1" // track if item is present in all sources
+        SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
+        SET $item_source(~%item%~ ~%fixed_source%~) = 1 // global list of items and sources
+      END
     END
   END
 END
@@ -40,13 +42,23 @@ ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
   LAM read_item_sources
 END
 
+// custom replacement list, just so creatures still have some weapons and armor
+INCLUDE ~%MOD_FOLDER%/core/cre_replacement.tpa~
+
 // check if item is present in all sources
 ACTION_PHP_EACH item_source AS i_s => int BEGIN
   OUTER_SPRINT item $i_s(0)
   OUTER_SPRINT source $i_s(1)
+  OUTER_SET skip = 0
+  ACTION_IF int == 0 BEGIN
+    PRINT ~%item% was moved from %source% by another mod, skipping~
+    OUTER_SET skip = 1
+  END
   ACTION_IF $item_present(~%item%~) == 0 BEGIN
     PRINT ~%item% was checked already and is missing from another resource, skipping~
-  END ELSE BEGIN
+    OUTER_SET skip = 1
+  END
+  ACTION_IF skip == 0 BEGIN
     LAF IS_ITEM_IN_RESOURCE STR_VAR item = ~%item%~ resource = ~%source%~ RET present END 
     OUTER_SET $item_present(~%item%~) = present
     ACTION_IF present == 0 BEGIN

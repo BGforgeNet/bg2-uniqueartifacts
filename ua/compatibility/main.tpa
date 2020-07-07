@@ -1,4 +1,4 @@
-OUTER_SPRINT compat ~%MOD_FOLDER%/core/compatibility~
+OUTER_SPRINT compat ~%MOD_FOLDER%/compatibility~
 PRINT @8
 
 INCLUDE ~%compat%/arp.tpa~

@@ -11,8 +11,7 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      PATCH_IF VARIABLE_IS_SET $item_source(~%item%~ ~%source%~)
-        AND $item_source(~%item%~ ~%source%~) != 0 // compat section may reset to 0
+      PATCH_IF NOT VARIABLE_IS_SET $item_source(~%item%~ ~%source%~) // compat section may reset to 0
       BEGIN
         SET $item_source(~%item%~ ~%source%~) = 1 // global list of items and sources
       END

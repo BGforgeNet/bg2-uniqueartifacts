@@ -23,6 +23,10 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - mov
   ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
     // should be bg1-only, but CI ALLOW_MISSINGs files instead of properly limiting
     OUTER_SET $item_source(~ring04~ ~ar2210.are~) = 0 // Ring of Clumsiness
+    OUTER_SET $item_source(~ring23~ ~ar2100.are~) = 0 // Ring of Folly
+    OUTER_SET $item_source(~ring23~ ~ar8800.are~) = 0 // bgt
+    OUTER_SET $item_source(~ring23~ ~fw2100.are~) = 0 // tutu
+    OUTER_SET $item_source(~ring23~ ~bg2100.are~) = 0 // eet
     ACTION_IF NOT MOD_IS_INSTALLED ~setup-arestorationp.tp2~ ~3~ BEGIN // ARP gives Boots of Phasing fo Viekang
       OUTER_SET $item_source(~boot08~ ~thief7.cre~) = 1 // Anishai
     END

@@ -1,6 +1,3 @@
-// initialize functions
-INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
-
 // compatibility
 INCLUDE ~%MOD_FOLDER%/compatibility/main.tpa~
 PRINT @28

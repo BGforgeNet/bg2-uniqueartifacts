@@ -9,3 +9,5 @@ INCLUDE ~%BGFORGE_LIB_DIR%/main.tpa~
 
 OUTER_SPRINT external ~%lib_dir%/external~
 INCLUDE ~%external%/main.tpa~
+
+INCLUDE ~%lib_dir%/functions.tpa~

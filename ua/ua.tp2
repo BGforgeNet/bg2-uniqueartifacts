@@ -22,7 +22,7 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/prot1.tpa~
+INCLUDE ~%MOD_FOLDER%/non-unique/prot1.tpa~
 
 BEGIN @2 //+2
 LABEL ~g_ua_allow+2~
@@ -31,7 +31,7 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/prot2.tpa~
+INCLUDE ~%MOD_FOLDER%/non-unique/prot2.tpa~
 
 BEGIN @3 //Speed
 LABEL ~g_ua_allow_speed~
@@ -40,7 +40,7 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/core/nu/boots.tpa~
+INCLUDE ~%MOD_FOLDER%/non-unique/boots.tpa~
 
 BEGIN @6 //Expanded
 LABEL ~g_ua_core_expanded~

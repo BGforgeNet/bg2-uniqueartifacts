@@ -1,8 +1,8 @@
-//initialize functions
+// initialize functions
 INCLUDE ~%MOD_FOLDER%/core/functions.tpa~
 
-//compatibility
-INCLUDE ~%MOD_FOLDER%/core/compatibility/main.tpa~
+// compatibility
+INCLUDE ~%MOD_FOLDER%/compatibility/main.tpa~
 PRINT @28
 
 // list items
@@ -14,5 +14,5 @@ INCLUDE ~%MOD_FOLDER%/core/areas.tpa~
 INCLUDE ~%MOD_FOLDER%/core/d_and_baf.tpa~
 // remove from stores
 INCLUDE ~%MOD_FOLDER%/core/stores.tpa~
-//remove from creatures
+// remove from creatures
 INCLUDE ~%MOD_FOLDER%/core/creatures.tpa~

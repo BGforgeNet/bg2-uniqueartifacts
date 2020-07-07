@@ -69,11 +69,11 @@ ACTION_PHP_EACH item_source AS i_s => should_be_present BEGIN
 END
 
 // init custom regex for each source
-ACTION_PHP_EACH sources AS csource => int BEGIN
+ACTION_PHP_EACH sources AS csource => int BEGIN // this is already filtered: only sources with present items
   OUTER_SPRINT $custom_regex(~%csource%~) ~~
 END
 
-// build a regex of all items, skip those that are not found in canon sources
+// build a regex of all items, skip those that are not found in ALL canon sources
 OUTER_SPRINT common_regex ~~
 ACTION_PHP_EACH item_present AS item => present BEGIN
   ACTION_IF present == 1 BEGIN

@@ -113,7 +113,11 @@ BEGIN
         present = 1
       END
     END
-  BUT_ONLY
+  BUT_ONLY IF_EXISTS
+  ACTION_IF NOT FILE_EXISTS_IN_GAME ~%creature%.cre~ BEGIN
+    PRINT ~IS_ITEM_ON_CREATURE: creature %creature% is not present in game~
+    OUTER_SET present = "-1"
+  END
 END
 
 DEFINE_ACTION_FUNCTION IS_ITEM_IN_STORE

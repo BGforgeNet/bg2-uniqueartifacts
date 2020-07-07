@@ -13,6 +13,9 @@ INCLUDE ~%compat%/tactics.tpa~
 INCLUDE ~%compat%/scs.tpa~
 INCLUDE ~%compat%/rr.tpa~
 INCLUDE ~%compat%/ring08.tpa~
+INCLUDE ~%compat%/ruad.tpa~
 INCLUDE ~%compat%/thalantyr.tpa~
 INCLUDE ~%compat%/ts.tpa~
 INCLUDE ~%compat%/ua.tpa~
+
+PRINT @24

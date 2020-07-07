@@ -11,13 +11,8 @@ DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
     PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
       AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
     BEGIN
-      // global list of items and sources
-      PATCH_IF VARIABLE_IS_SET $item_source_compat(~%item%~ ~%source%~) // compat section may reset to 0
-      BEGIN
-        SET $item_source(~%item%~ ~%source%~) = $item_source_compat(~%item%~ ~%source%~)
-      END ELSE BEGIN
-        SET $item_source(~%item%~ ~%source%~) = 1
-      END
+      SET $item_source(~%item%~ ~%source%~) = 1 // global list of items and sources
+      SET $items(~%item%~) = 1 // global list of items
     END
   END
 END
@@ -39,6 +34,15 @@ END
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
   OUTER_SPRINT game ~bg2~
   LAM read_item_sources
+END
+
+// filter compat, skip items and sources that aren't present in current selection
+ACTION_PHP_EACH item_source_compat AS i_s => should_be_present BEGIN
+  OUTER_SPRINT item $i_s(0)
+  OUTER_SPRINT source $i_s(1)
+  ACTION_IF VARIABLE_IS_SET $sources(~%source%~) BEGIN
+    OUTER_SET $item_source(~%item%~ ~%source%~) = $item_source_compat(~%item%~ ~%source%~)
+  END
 END
 
 // custom replacement list, just so creatures still have some weapons and armor
@@ -63,7 +67,7 @@ ACTION_PHP_EACH item_source AS i_s => should_be_present BEGIN
     LAF IS_ITEM_IN_RESOURCE STR_VAR item = ~%item%~ resource = ~%source%~ RET present END 
     OUTER_SET $item_present(~%item%~) = present
     ACTION_IF present == 1 BEGIN
-      OUTER_SET $sources(~%source%~) = 1 // list of all sources
+      OUTER_SET $csources(~%source%~) = 1 // list of all custom sources
     END ELSE BEGIN
       WARN ~UA WARNING: %item% is missing from %source%, skipping!~
     END
@@ -71,7 +75,7 @@ ACTION_PHP_EACH item_source AS i_s => should_be_present BEGIN
 END
 
 // init custom regex for each source
-ACTION_PHP_EACH sources AS csource => int BEGIN // this is already filtered: only sources with present items
+ACTION_PHP_EACH csources AS csource => int BEGIN // this is already filtered: only sources with present items
   OUTER_SPRINT $custom_regex(~%csource%~) ~~
 END
 
@@ -87,7 +91,7 @@ ACTION_PHP_EACH item_present AS item => present BEGIN
       OUTER_SPRINT common_regex ~%common_regex%\|%item%~ //append
     END
     // custom regex for each source
-    ACTION_PHP_EACH sources AS csource => int BEGIN
+    ACTION_PHP_EACH csources AS csource => int BEGIN
       ACTION_IF
         NOT VARIABLE_IS_SET $item_source(~%item%~ ~%csource%~)
         OR $item_source(~%item%~ ~%csource%~) != 1 // may be changed in compat section

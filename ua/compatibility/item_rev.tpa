@@ -1,0 +1,72 @@
+// Item Revisions move some items
+ACTION_IF MOD_IS_INSTALLED ~item_rev/item_rev.tp2~ 1030 BEGIN
+  OUTER_SET $item_source(~amul20~ ~uddrow24.sto~) = 0
+  OUTER_SET $item_source(~amul20~ ~uddrow25.sto~) = 1
+
+  OUTER_SET $item_source(~belt04~ ~kalah2.cre~) = 0
+  OUTER_SET $item_source(~belt04~ ~bernard2.sto~) = 1
+
+  OUTER_SET $item_source(~brac15~ ~ribald.sto~) = 0
+  OUTER_SET $item_source(~brac15~ ~ribald3.sto~) = 1
+
+  OUTER_SET $item_source(~brac26~ ~bazdra02.cre~) = 0
+  OUTER_SET $item_source(~brac26~ ~senken01.cre~) = 1
+
+  OUTER_SET $item_source(~clck04~ ~shabod01.cre~) = 0
+  OUTER_SET $item_source(~clck04~ ~rngwlf03.cre~) = 1
+  OUTER_SET $item_source(~clck04~ ~rngwlf04.cre~) = 1
+  OUTER_SET $item_source(~clck04~ ~rngwlf05.cre~) = 1
+
+  OUTER_SET $item_source(~ring05~ ~grvlch01.cre~) = 0
+  OUTER_SET $item_source(~ring05~ ~udsvir05.sto~) = 1
+
+  OUTER_SET $item_source(~sw1h03~ ~lehtin.dlg~) = 0
+  OUTER_SET $item_source(~sw1h03~ ~hendak.dlg~) = 0
+  OUTER_SET $item_source(~sw1h03~ ~temhelm.sto~) = 1
+
+  OUTER_SET $item_source(~wa2amu~ ~wa2mart.sto~) = 0
+  OUTER_SET $item_source(~wa2amu~ ~wmart1.sto~) = 1
+
+  OUTER_SET $item_source(~belt06~ ~ribald.sto~) = 0
+  OUTER_SET $item_source(~belt06~ ~kpchap01.sto~) = 1
+
+  OUTER_SET $item_source(~belt08~ ~uddeath2.cre~) = 0
+  OUTER_SET $item_source(~belt08~ ~shadra01.cre~) = 1
+
+  OUTER_SET $item_source(~belt11~ ~ar5201.are~) = 0
+  OUTER_SET $item_source(~belt11~ ~hgber01.cre~) = 1
+
+  OUTER_SET $item_source(~clck07~ ~gorch.sto~) = 0
+  OUTER_SET $item_source(~clck07~ ~uhmer01.sto~) = 1
+
+  OUTER_SET $item_source(~clck15~ ~trmer04.sto~) = 0
+  OUTER_SET $item_source(~clck15~ ~ribald.sto~) = 1
+
+  OUTER_SET $item_source(~clck17~ ~uddrow23.sto~) = 0
+  OUTER_SET $item_source(~clck17~ ~ribald.sto~) = 1
+
+  OUTER_SET $item_source(~clck25~ ~uhrang01.cre~) = 0
+  OUTER_SET $item_source(~clck25~ ~rngsha02.cre~) = 1
+
+  OUTER_SET $item_source(~clck25~ ~uhrang01.cre~) = 0
+  OUTER_SET $item_source(~clck25~ ~rngsha02.cre~) = 1
+
+  OUTER_SET $item_source(~ring03~ ~govwau01.sto~) = 0
+  OUTER_SET $item_source(~ring03~ ~uhmer03.sto~) = 1
+
+  OUTER_SET $item_source(~ring27~ ~uddwarf.cre~) = 0
+  OUTER_SET $item_source(~ring27~ ~ribald.sto~) = 1
+
+  OUTER_SET $item_source(~ring28~ ~ribald.sto~) = 0
+  ACTION_IF NOT FILE_EXISTS_IN_GAME ~d1amul01.itm~ BEGIN // Daulmakan's main component also replaces the reward from Adalon
+    OUTER_SET $item_source(~ring28~ ~udsilver.dlg~) = 1
+  END
+
+  OUTER_SET $item_source(~wa2ring~ ~wmart2.sto~) = 0
+  OUTER_SET $item_source(~wa2ring~ ~wmart1.sto~) = 1
+  OUTER_SET $item_source(~wa2amu~ ~wmart2.sto~) = 0
+  OUTER_SET $item_source(~wa2amu~ ~wmart1.sto~) = 1
+
+  OUTER_SET $item_source(~sw1h06~ ~ribald.cre~) = 0
+  OUTER_SET $item_source(~sw1h06~ ~ribald.sto~) = 1
+END

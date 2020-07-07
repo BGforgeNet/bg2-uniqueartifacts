@@ -281,6 +281,18 @@ msgstr ""
 msgid "Rogue Rebalancing: Shadow Thief improvements"
 msgstr ""
 
+#: setup.tra:100
+msgid "Remove bonus merchants"
+msgstr ""
+
+#: setup.tra:101
+msgid "Less magical items"
+msgstr ""
+
+#: setup.tra:200
+msgid "Requires BG2"
+msgstr ""
+
 #~ msgid "Rogue Rebalancing"
 #~ msgstr "Rogue Rebalancing"
 

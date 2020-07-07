@@ -19,7 +19,7 @@ blun07 none
 blun11 blun05
 blun13 blun03
 blun15 blun07
-blun31 g_club2
+blun31 none
 blun32 blun13
 blun33 blun21
 blun34 blun15
@@ -106,7 +106,7 @@ sw1h49 none
 sw1h55 sw1h44
 sw1h72 sw1h02
 sw1h73 sw1h41
-sw1h74 swh09
+sw1h74 sw1h09
 sw1h75 sw1h55
 sw1h76 sw1h22
 

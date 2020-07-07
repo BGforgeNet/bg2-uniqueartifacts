@@ -126,7 +126,7 @@ msgid "Processing areas:"
 msgstr ""
 
 #: setup.tra:8
-msgid "Compatibility:"
+msgid "Compatibility with mods that move or remove items:"
 msgstr ""
 
 #: setup.tra:9
@@ -142,11 +142,11 @@ msgid "Non-unique Boots of Speed"
 msgstr ""
 
 #: setup.tra:12
-msgid "Rogue Rebalancing"
+msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
 msgstr ""
 
 #: setup.tra:13
-msgid "Sword Coast Stratagems"
+msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
 msgstr ""
 
 #: setup.tra:14
@@ -162,15 +162,15 @@ msgid "Thalantyr item upgrade"
 msgstr ""
 
 #: setup.tra:17
-msgid "Daulmakan item pack"
+msgid "Daulmakan's Item Pack: More Work for Cromwell"
 msgstr ""
 
 #: setup.tra:18
-msgid "Tactics"
+msgid "Tactics: Gebhard Blucher's Lich in the Docks"
 msgstr ""
 
 #: setup.tra:19
-msgid "Daulmakan extra items"
+msgid "Daulmakan's Item Pack: Extra Items"
 msgstr ""
 
 #: setup.tra:20
@@ -178,11 +178,11 @@ msgid "Ruad Ro'fhessa"
 msgstr ""
 
 #: setup.tra:21
-msgid "Almateria's restoration pack"
+msgid "Almateria's Restoration pack: Restored Items"
 msgstr ""
 
 #: setup.tra:22
-msgid "Salk's cursed items revisions"
+msgid "Cursed Items revision"
 msgstr ""
 
 #: setup.tra:23
@@ -190,7 +190,7 @@ msgid "Dungeon-Be-Gone"
 msgstr ""
 
 #: setup.tra:24
-msgid "Resolved compatibility issues."
+msgid "Compatibility addressed."
 msgstr ""
 
 #: setup.tra:25
@@ -206,7 +206,7 @@ msgid "Processing scripts (this may take a few minutes):"
 msgstr ""
 
 #: setup.tra:28
-msgid "Start main process"
+msgid "Starting main process:"
 msgstr ""
 
 #: setup.tra:29
@@ -227,4 +227,8 @@ msgstr ""
 
 #: setup.tra:33
 msgid "BG2EE"
+msgstr ""
+
+#: setup.tra:34
+msgid "Rogue Rebalancing: Shadow Thief improvements"
 msgstr ""

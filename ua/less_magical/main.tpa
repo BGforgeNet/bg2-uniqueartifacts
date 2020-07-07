@@ -17,3 +17,15 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
     END
   END
 BUT_ONLY
+
+COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
+  PHP_EACH item_list AS item => replacement BEGIN
+    PATCH_IF ~%replacement%~ STR_EQ ~none~
+      OR NOT FILE_EXISTS_IN_GAME ~%replacement%.itm~ // if replacement doesn't exist, the original is probably a bogus entry
+    BEGIN
+      LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~^%item%$~ END
+    END ELSE BEGIN
+      LPF REPLACE_AREA_ITEM_MATCH STR_VAR old_item = ~%item%~ new_item = ~%replacement%~ END
+    END
+  END
+BUT_ONLY

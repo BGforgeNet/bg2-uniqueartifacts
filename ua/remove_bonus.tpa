@@ -1,9 +1,10 @@
 <<<<<<<< ua-inlined/joluv.baf
 IF
 	Global("wmSpawnJoluv","GLOBAL",0)
+	!Exists("walmart1")
 THEN
 	RESPONSE #100
-		CreateCreature("wmart1",[1337.1751],W)  // Joluv
+		CreateCreature("wmart1",[1337.1751],4)
 		SetGlobal("wmSpawnJoluv","GLOBAL",1)
 END
 >>>>>>>>
@@ -12,7 +13,7 @@ IF
 	Global("wmSpawnDeidre","GLOBAL",0)
 THEN
 	RESPONSE #100
-		CreateCreature("wmart2",[498.456],E)  // Deidre
+		CreateCreature("wmart2",[498.456],12)
 		SetGlobal("wmSpawnDeidre","GLOBAL",1)
 END
 >>>>>>>>
@@ -21,7 +22,9 @@ END
 
 COPY_EXISTING ~ar0406.bcs~ override
   R_B_B CASE_INSENSITIVE ~ua-inlined/joluv.baf~ ~ua-inlined/empty.baf~
+		ON_MISMATCH PATCH_PRINT ~Joluv not found~ END
 BUT_ONLY
 COPY_EXISTING ~ar0702.bcs~ override
   R_B_B CASE_INSENSITIVE ~ua-inlined/deidre.baf~ ~ua-inlined/empty.baf~
+		ON_MISMATCH PATCH_PRINT ~Deidre not found~ END
 BUT_ONLY

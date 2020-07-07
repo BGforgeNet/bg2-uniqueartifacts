@@ -1,0 +1,27 @@
+<<<<<<<< ua-inlined/joluv.baf
+IF
+	Global("wmSpawnJoluv","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("wmart1",[1337.1751],W)  // Joluv
+		SetGlobal("wmSpawnJoluv","GLOBAL",1)
+END
+>>>>>>>>
+<<<<<<<< ua-inlined/deidre.baf
+IF
+	Global("wmSpawnDeidre","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("wmart2",[498.456],E)  // Deidre
+		SetGlobal("wmSpawnDeidre","GLOBAL",1)
+END
+>>>>>>>>
+<<<<<<<< ua-inlined/empty.baf
+>>>>>>>>
+
+COPY_EXISTING ~ar0406.bcs~ override
+  R_B_B CASE_INSENSITIVE ~ua-inlined/joluv.baf~ ~ua-inlined/empty.baf~
+BUT_ONLY
+COPY_EXISTING ~ar0702.bcs~ override
+  R_B_B CASE_INSENSITIVE ~ua-inlined/deidre.baf~ ~ua-inlined/empty.baf~
+BUT_ONLY

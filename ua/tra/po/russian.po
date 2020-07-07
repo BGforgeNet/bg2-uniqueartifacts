@@ -14,19 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.1.1\n"
 
-#  test comment
-#: game.tra:101
-msgid "Show me what you have, and I'll tell you if it can be altered."
-msgstr ""
-"Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
-
-#: game.tra:102
-msgid ""
-"Just tell me what you have, and I'll tell you if it can be made better."
-msgstr ""
-"Просто скажите мне, что у Вас есть, и я отвечу, можно ли это "
-"усовершенствовать."
-
 #: game.tra:103
 msgid ""
 "Boots of Speed: \"The Paws of the Cheetah\"\n"
@@ -292,6 +279,17 @@ msgstr ""
 #: setup.tra:200
 msgid "Requires BG2"
 msgstr ""
+
+#  test comment
+#~ msgid "Show me what you have, and I'll tell you if it can be altered."
+#~ msgstr ""
+#~ "Ладно, давай посмотрим твои вещи, и увидим, есть ли что-нибудь подходящее."
+
+#~ msgid ""
+#~ "Just tell me what you have, and I'll tell you if it can be made better."
+#~ msgstr ""
+#~ "Просто скажите мне, что у Вас есть, и я отвечу, можно ли это "
+#~ "усовершенствовать."
 
 #~ msgid "Rogue Rebalancing"
 #~ msgstr "Rogue Rebalancing"

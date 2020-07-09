@@ -20,6 +20,8 @@ Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical 
   - [Core](#core)
     - [Strict](#strict)
     - [Expanded](#expanded)
+  - [Remove bonus merchants](#remove-bonus-merchants)
+  - [Less magical items](#less-magical-items)
 - [Installation](#installation)
 - [Compatibility](#compatibility)
 - [Which items are affected?](#which-items-are-affected)

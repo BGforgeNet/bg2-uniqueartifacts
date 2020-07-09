@@ -45,10 +45,10 @@ Notes:
 1. UA doesn't cover _all_ items. Just the ones that are already known to be duplicated, or are likely to be (rings, amulets, boots, etc).
 1. UA only takes care of items that are present in the original game. New, original items introduced by mods are not covered (but you are welcome to make suggestions and submissions).
 1. When choosing which copy is "canon", UA generally picks the least accessible one. It means that:
-  - You will have to work harder to get the items.
-  - You will get them later in game than usual.
-  - In some cases (BG1 in particular), you'll have to _choose_ between completing a quest or keeping an item, or between items that you want to keep.
-  Yes, adventurer life is hard. It's supposed to be.
+    - You will have to work harder to get the items.
+    - You will get them later in game than usual.
+    - In some cases (BG1 in particular), you'll have to _choose_ between completing a quest or keeping an item, or between items that you want to keep.
+    Yes, adventurer life is hard. It's supposed to be.
 
 ## Components
 

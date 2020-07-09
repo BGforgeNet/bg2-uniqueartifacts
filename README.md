@@ -7,7 +7,7 @@
 
 [__Download__](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest)
 | [__Support__](https://github.com/BGforgeNet/bg2-uniqueartifacts/issues)
-| [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
+| [__Discussion__](https://forums.bgforge.net/viewforum.php?f=30)
 | [__Help translating__](https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/)
 
 Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical items available to the player. It will work with BG2:ToB, BGT, or EE games. Starting a new game is required.

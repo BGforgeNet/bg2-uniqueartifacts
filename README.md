@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Discord chat](https://img.shields.io/discord/420268540700917760?logo=discord)](https://discord.gg/4Yqfggm)
 
-[__Download__](https://github.com/burner1024/bg2-uniqueartifacts/releases/latest)
-| [__Support__](https://github.com/burner1024/bg2-uniqueartifacts/issues)
+[__Download__](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest)
+| [__Support__](https://github.com/BGforgeNet/bg2-uniqueartifacts/issues)
 | [__Discussion__](https://forum.bgforge.net/viewtopic.php?f=4&t=18&p=37)
 | [__Help translating__](https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/)
 
@@ -23,12 +23,8 @@ Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical 
 - [Installation](#installation)
 - [Compatibility](#compatibility)
 - [Which items are affected?](#which-items-are-affected)
-
-- [Known issues](#known-issues)
-- [Changelog](#changelog)
-- [Used sotftware](#used-sotftware)
-- [Author](#author)
-- [License](#license)
+- [Credits and other details](docs/credits.md)
+- [Changelog](docs/changelog.md)
 
 ## Description
 
@@ -85,7 +81,7 @@ This component is a counterpart to the [Core](#core). It reduces the number of _
 - This _only_ affects shops and containers. The enemies are still packing their equipment.
 - This is _only_ applied to plain +1/+2/+3 magical items - weapons, armor, ammo, etc.
 
-The effect of this component is that you'll get less expensive loot, and consequently have less money.
+The main effect of this component is that you'll get less expensive loot, and consequently have less money.
 
 ## Installation
 - Download ua.zip from the [latest release page](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest).
@@ -93,7 +89,7 @@ The effect of this component is that you'll get less expensive loot, and consequ
 - Launch setup-ua.exe.
 
 ## Compatibility
-- Install Uniqie Artifacts _after_ any mods that add, change or move content (areas, creatures, quests, items, etc).
+- Install Uniqie Artifacts _after_ any mods that add, change or move content (areas, creatures, quests, items, etc). Basically, as late as possible.
 - Item Randomiser is an exception: install UA first, then IR.
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
 

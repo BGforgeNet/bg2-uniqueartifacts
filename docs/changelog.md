@@ -15,6 +15,7 @@
 ### Version 7
 - More robust process: now UA checks whether each item is present in all of its canon sources before removing dupes.
 - Added compatibility with IR.
+- Many minor fixes.
 
 ### Version 6
 - EE, BG1 compatible.

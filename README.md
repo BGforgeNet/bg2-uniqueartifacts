@@ -32,7 +32,7 @@ Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical 
 
 Ever felt that BG saga is overloaded with magical items? Then this is a mod for you. It will **reduce** the amount of magical gear in the game.
 
-In BG, descriptions of many magical items implied them being unique. However, the party often gets multiple copies of those. That includes items such as Kondar sword, Boots of Speed, Ring of Protection +2, etc. That breaks immersion and is somewhat annoying.
+In BG, descriptions of many magical items imply them being unique. However, the party often gets multiple copies of those. That includes items such as Kondar sword, Boots of Speed, Ring of Protection +2, etc. That breaks immersion and is somewhat annoying.
 
 While this issue manifests moderately in the original game, it is severely aggravated by many mods, which add more and more copies of various items, with no regard to whether it makes sense, lore wise.
 
@@ -86,8 +86,8 @@ This component is a counterpart to the [Core](#core). It reduces the number of _
 The main effect of this component is that you'll get less expensive loot, and consequently have less money.
 
 ## Installation
-- Download ua.zip from the [latest release page](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest).
-- Unzip it into main game directory.
+- Download zip from the [latest release page](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest).
+- Extract it into main game directory.
 - Launch setup-ua.exe.
 
 ## Compatibility

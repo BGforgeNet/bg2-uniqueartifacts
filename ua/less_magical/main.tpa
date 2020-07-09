@@ -13,7 +13,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
     BEGIN
       LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~%item%~ END
     END ELSE BEGIN
-      LPF REPLACE_STORE_ITEM_MATCH STR_VAR old_item = ~%item%~ new_item = ~%replacement%~ END
+      LPF REPLACE_STORE_ITEM_MATCH STR_VAR match_item = ~%item%~ new_item = ~%replacement%~ END
     END
   END
 BUT_ONLY
@@ -25,7 +25,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
     BEGIN
       LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~^%item%$~ END
     END ELSE BEGIN
-      LPF REPLACE_AREA_ITEM_MATCH STR_VAR old_item = ~%item%~ new_item = ~%replacement%~ END
+      LPF REPLACE_AREA_ITEM_MATCH STR_VAR match_item = ~%item%~ new_item = ~%replacement%~ END
     END
   END
 BUT_ONLY

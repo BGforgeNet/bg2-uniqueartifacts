@@ -9,7 +9,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
   END
   PATCH_PHP_EACH replacement AS old_item => new_item BEGIN
     PATCH_IF NOT VARIABLE_IS_SET $item_source(~%old_item%~ ~%SOURCE_FILE%~) BEGIN
-      LPF REPLACE_CRE_ITEM_MATCH STR_VAR old_item new_item END
+      LPF REPLACE_CRE_ITEM_MATCH STR_VAR match_item = ~%old_item%~ new_item END
     END
   END
   LPF DELETE_CRE_ITEM STR_VAR item_to_delete = ~%regex%~ END

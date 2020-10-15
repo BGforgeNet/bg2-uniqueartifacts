@@ -97,5 +97,5 @@ The main effect of this component is that you'll get less expensive loot, and co
 
 ## Which items are affected?
 - In vanilla game, all dupes are addressed.
-- In the mods, mostly magical jewelry and clothes. For the full lists, see the [tables](/tree/master/ua/items).
+- In the mods, mostly magical jewelry and clothes. For the full lists, see the [tables](https://github.com/BGforgeNet/bg2-uniqueartifacts/tree/master/ua/items).
 You're welcome to suggest more items if you find dupes during your playthrough.

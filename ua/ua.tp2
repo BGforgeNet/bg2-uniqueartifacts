@@ -1,9 +1,9 @@
 BACKUP ~ua/backup~
-AUTHOR ~burner1024 @ github~
+SUPPORT ~https://forums.bgforge.net/viewforum.php?f=30~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~v7~
+VERSION ~v7.1~
 
 ALWAYS
   CLEAR_EVERYTHING

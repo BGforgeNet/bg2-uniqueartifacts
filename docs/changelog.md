@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.2](#version-72)
 - [Version 7.1](#version-71)
 - [Version 7](#version-7)
 - [Version 6](#version-6)
@@ -14,8 +15,11 @@
 - [Version 1.0beta](#version-1-0beta)
 
 
+### Version 7.2
+Updated IElib for better PI compatibility.
+
 ### Version 7.1
-- Added mod installer directive ensuring UA is installed after IR.
+Added mod installer directive ensuring UA is installed after IR.
 
 ### Version 7
 - More robust process: now UA checks whether each item is present in all of its canon sources before removing dupes.

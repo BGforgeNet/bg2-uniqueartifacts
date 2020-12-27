@@ -1,5 +1,5 @@
-amul14  nadine.cre                       | Necklace of Missiles           | Nadine - steal
-amul14  nadin.dlg                        | Necklace of Missiles           | Nadine - quest reward
+amul01  nadine.cre                       | Necklace of Missiles           | Nadine - steal
+amul01  nadin.dlg                        | Necklace of Missiles           | Nadine - quest reward
 amul16  ramazi.cre                       | Metaspell Influence Amul.      | Ramazith
                                          |                                | 
 belt02  kirian.cre                       | Golden Girdle                  | Kirian - band in Mutamin's garden
@@ -33,7 +33,7 @@ misc72  highhedg.sto                     | Claw of Kazgaroth              | when
 dagg03  hentol.cre                       | Dagger +2: 'Heart of the Golem'| Hentold in Valley of Tombs (give dagger to revenant)
 dagg03  hentol.dlg                       | Dagger +2: 'Heart of the Golem'| Hentold in Valley of Tombs (give dagger to revenant)
 halb03  zhalim.cre                       | Suryris's Blade                | party on the last level of Iron throne
-helm04  droth.cre                        | Helmet of Defence                | Droth the ogre-mage who mates with a sirene
+helm04  droth.cre                        | Helmet of Defence              | Droth the ogre-mage who mates with a sirene
 leat03  maneir.cre                       | Protector of the second        | Maneira, bounty hunters party
 sw1h06  greywo.cre                       | Long Sword +2: 'Varscona'      | Greywolf (bounty hunter coming for Prism)
 sw1h03  aldeth.cre                       | Kondar +1, +3 vs Shapeshifters | Aldeth Sashenstar (Cloakwood or BG) - should be droppable but not stealable, handled in custom.tpa

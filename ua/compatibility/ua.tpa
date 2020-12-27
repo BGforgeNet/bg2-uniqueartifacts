@@ -3,7 +3,7 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) BE
   PRINT @9
   ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     OUTER_SET $item_source_compat(~amul14~ ~nadine.cre~) = 1 // Nadine - steal
-    OUTER_SET $item_source_compat(~amul14~ ~nadin.dlg~) = 1 // Nadine - quest reward
+    OUTER_SET $item_source_compat(~amul14~ ~nadin.dlg~) = 1 // Nadine - dialog, pass to Euric
   END
   ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
     // AoP+1

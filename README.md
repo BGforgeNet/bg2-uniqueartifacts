@@ -17,6 +17,7 @@ Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical 
   - [Allow non-unique Amulet of Protection +1](#allow-non-unique-amulet-of-protection-1)
   - [Allow non-unique Ring of Protection +2 and Cloak of Protection +2](#allow-non-unique-ring-of-protection-2-and-cloak-of-protection-2)
   - [Allow non-unique Boots of Speed](#allow-non-unique-boots-of-speed)
+  - [Reduce the number of wands](#reduce-the-number-of-wands)
   - [Core](#core)
     - [Strict](#strict)
     - [Expanded](#expanded)
@@ -60,6 +61,9 @@ Excludes RoP +2 and CoP +2 from core overhaul and fixes their descriptions so th
 
 ### Allow non-unique Boots of Speed
 Excludes Boots of Speed from core overhaul and fixes their description so that it no longer implies uniqueness.
+
+### Reduce the number of wands
+Limits how many wands of each type can drop as loot, and also removes most wands from shops. Disallows selling wands, effectively blocking the somewhat questionable recharging mechanism.
 
 ### Core
 

@@ -25,6 +25,11 @@ DEFINE_ACTION_MACRO read_item_sources BEGIN
       LPM read_item_sources_2da
     BUT_ONLY
   END
+  ACTION_IF reduce_wands == 1 BEGIN
+    COPY - ~%MOD_FOLDER%/items/wands_%game%.bsv~ ~%MOD_FOLDER%-inlined/wands_%game%.bsv~
+      LPM read_item_sources_2da
+    BUT_ONLY
+  END
 END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN

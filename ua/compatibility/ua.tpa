@@ -36,3 +36,10 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~
     OUTER_SET $item_source_compat(~boot01~ ~tokcre01.dlg~) = 1 // Token machine in Spellhold
   END
 END
+
+// reduce wands
+OUTER_SET reduce_wands = 0
+ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_reduce_wands~) BEGIN
+  PRINT @36
+  OUTER_SET reduce_wands = 1
+END

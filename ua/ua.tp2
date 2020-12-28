@@ -42,6 +42,14 @@ REQUIRE_PREDICATE NOT
   ) @32
 INCLUDE ~%MOD_FOLDER%/non-unique/boots.tpa~
 
+BEGIN @35 //Wands
+LABEL ~g_ua_reduce_wands~
+REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
+REQUIRE_PREDICATE NOT
+  ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
+    OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
+  ) @32
+
 BEGIN @6 //Expanded
 LABEL ~g_ua_core_expanded~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30

@@ -4,14 +4,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-02-09 14:03+0000\n"
+"Last-Translator: Felipe <felipefplzx@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://tra.bgforge.net/projects/"
+"infinity-engine/unique-artifacts/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: bgforge_po v.1.0.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.1.1\n"
 
 #: game.tra:103
 msgid ""
@@ -23,6 +25,20 @@ msgid ""
 "Equipped Ability: Movement rate doubled\n"
 "Weight: 4"
 msgstr ""
+"Botas da Velocidade: \"As Patas da Cheetah\"\n"
+"Originalmente, botas encantadas como estas eram a propriedade de assassinos "
+"mortais entusiastas em perseguir a presa deles. Eles se moviam com tal "
+"velocidade que os alvos deles frequentemente não tinham a oportunidade de "
+"reagir, mesmo nas costas de um cavalo. Com o tempo a infâmia da ordem se "
+"espalhou e embora o nome dela nunca foi conhecido todos conheciam as "
+"palavras que eram ouvidas pela última vez pelas vítimas deles: \"Você pode "
+"se esconder mas você não pode correr!\". Desde então, muitas cópias "
+"emergiram e esta é uma delas.\n"
+"\n"
+"ESTATÍSTICAS\n"
+"\n"
+"Habilidade Equipada: Tava de movimentação dobrada\n"
+"Peso: 4"
 
 #: game.tra:104
 msgid ""
@@ -35,6 +51,19 @@ msgid ""
 "Armor Class Bonus:  1\n"
 "Saving Throw Bonus:  1"
 msgstr ""
+"Amuleto de Proteção +1 : 'O Protetor'\n"
+"\n"
+"Originalmente foi dado a guarda real do Rei Pyronan, governante de Impiltur, "
+"'O Protetor' como uma mostra honorária de status.  Infelizmente membros da "
+"guarda tinham problema em chegar a um consenso entre eles mesmos sobre pra "
+"quem o amuleto deveria ir.  Após anos de hostilidade interna o the item foi "
+"perdido e os guardas foram substituídos por indivíduos menos gananciosos. "
+"Desde então muitas cópias emergiram e esta é uma delas.\n"
+"\n"
+"ESTATÍSTICAS:\n"
+"\n"
+"Bônus da Classe de Armadura:  1\n"
+"Bônus da Jogada de Salvamento:  1"
 
 #: game.tra:105
 msgid ""
@@ -48,6 +77,18 @@ msgid ""
 "Weight:  3\n"
 "Not usable by:"
 msgstr ""
+"Capa de Proteção +2:  'O Escudo do Espírito'\n"
+"É dito que as capas deste tipo focam as energias do espírito de alguém em "
+"uma força que protege ele ou ela.  Rumores de um vampiro escravizado no item "
+"mágico estão sempre presentes mas eles são impossíveis de provar sem "
+"destruir a capa.\n"
+"\n"
+"ESTATÍSTICAS:\n"
+"\n"
+"Classe de Armadura:  +2 bonus\n"
+"Jogada de Salvamento:  +2 bonus\n"
+"Peso:  3\n"
+"Não é utilizável por:"
 
 #: game.tra:106
 msgid ""
@@ -59,14 +100,27 @@ msgid ""
 "Armor Class:  +2 bonus\n"
 "Saving Throws:  +2 bonus"
 msgstr ""
+"Anel de Proteção +2:  'O Anel da Guarda'\n"
+"O Guarda era um sentinela imortal designado pra proteger um tumba que "
+"protegia o corpo de uma princesa do Akanal.  Com os milênios o respeito pelo "
+"túmulo desapareceu com a memória da família real e aventureiros começaram a "
+"tentar a sorte deles com o Guarda.  Era inevitável que ele eventualmente "
+"seria derrotado e quando ele foi o anel que ele usava era um dos muitos "
+"tesouros tirados da tumba. Desde então muitas cópias emergiram e esta é uma "
+"delas.\n"
+"\n"
+"ESTATÍSTICAS:\n"
+"\n"
+"Classe de Armadura:  +2 de bônus\n"
+"Jogada de Salvamento:  +2 de bônus"
 
 #: game.tra:107
 msgid "Boots"
-msgstr ""
+msgstr "Botas"
 
 #: game.tra:108
 msgid "Boots of the West"
-msgstr ""
+msgstr "Botas do Oeste"
 
 #: game.tra:109
 msgid ""
@@ -76,6 +130,13 @@ msgid ""
 "\n"
 "Weight:  4"
 msgstr ""
+"As botas são normalmente feitas a mão por sapateiros.  As botas comuns são "
+"feitas usando uma fôrma mas boas botas são desenhadas para o pé do indivíduo."
+"\n"
+"\n"
+"ESTATÍSTICAS:\n"
+"\n"
+"Peso:  4"
 
 #: game.tra:110
 msgid ""
@@ -87,151 +148,161 @@ msgid ""
 "Increase Charisma by one point\n"
 "Protection from Disease"
 msgstr ""
+"Botas do Oeste\n"
+"Estas são as botas que foram uma vez possuídas pelo famoso homem da "
+"floresta, Randy do Oeste.\n"
+"\n"
+"ESTATÍSTICAS:\n"
+"\n"
+"Aumentar o Carisma em um ponto\n"
+"Proteção contra Doença"
 
 #: setup.tra:1
 msgid "Allow non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Permitir Amuleto de Proteção +1 não-único"
 
 #: setup.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "Permitir Anel de Proteção +2 e Capa de Proteção +2 não-único"
 
 #: setup.tra:3
 msgid "Allow non-unique Boots of Speed"
-msgstr ""
+msgstr "Permitir Botas da Velocidade não-únicas"
 
 #: setup.tra:4
 msgid "Unique Artifacts - core"
-msgstr ""
+msgstr "Artefatos Únicos - núcleo"
 
 #: setup.tra:5
 msgid "Strict"
-msgstr ""
+msgstr "Restrito"
 
 #: setup.tra:6
 msgid "Expanded"
-msgstr ""
+msgstr "Expandido"
 
 #: setup.tra:7
 msgid "Processing areas:"
-msgstr ""
+msgstr "Processando áreas:"
 
 #: setup.tra:8
 msgid "Compatibility with mods that move or remove items:"
-msgstr ""
+msgstr "Compatibilidade com mods que movem ou removem itens:"
 
 #: setup.tra:9
 msgid "Non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Amuleto de Proteção +1 não-único"
 
 #: setup.tra:10
 msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "Anel de Proteção +2 e Capa de Proteção +2 não-únicas"
 
 #: setup.tra:11
 msgid "Non-unique Boots of Speed"
-msgstr ""
+msgstr "Botas de Velocidade não-únicas"
 
 #: setup.tra:12
 msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
-msgstr ""
+msgstr "Rebalanceamento do Rogue: Equipamento adicional pra Ladrões e Bardos"
 
 #: setup.tra:13
 msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
 msgstr ""
+"Estratagemas da Costa da Espada: Mover ou modificar alguns itens mágicos com "
+"poder exagerado"
 
 #: setup.tra:14
 msgid "Tortured Souls"
-msgstr ""
+msgstr "Almas Torturadas"
 
 #: setup.tra:15
 msgid "BG2 Fixpack"
-msgstr ""
+msgstr "Fixpack do BG2"
 
 #: setup.tra:16
 msgid "Thalantyr item upgrade"
-msgstr ""
+msgstr "Upgrade do item do Thalantyr"
 
 #: setup.tra:17
 msgid "Daulmakan's Item Pack: More Work for Cromwell"
-msgstr ""
+msgstr "Pacote de Itens do Daulmakan: Mais Trabalho pro Cromwell"
 
 #: setup.tra:18
 msgid "Tactics: Gebhard Blucher's Lich in the Docks"
-msgstr ""
+msgstr "Táticas: Lich do Gebhard Blucher nas Docas"
 
 #: setup.tra:19
 msgid "Daulmakan's Item Pack: Extra Items"
-msgstr ""
+msgstr "Pacote de Itens do Daulmakan: Itens Extras"
 
 #: setup.tra:20
 msgid "Ruad Ro'fhessa"
-msgstr ""
+msgstr "Ruad Ro'fhessa"
 
 #: setup.tra:21
 msgid "Almateria's Restoration pack: Restored Items"
-msgstr ""
+msgstr "Pacote de Restauração da Almateria: Itens Restaurados"
 
 #: setup.tra:22
 msgid "Cursed Items revision"
-msgstr ""
+msgstr "Revisão dos Itens Amaldiçoados"
 
 #: setup.tra:23
 msgid "Dungeon-Be-Gone"
-msgstr ""
+msgstr "Masmorra-Desapareça"
 
 #: setup.tra:24
 msgid "Compatibility addressed."
-msgstr ""
+msgstr "Compatibilidade endereçada."
 
 #: setup.tra:25
 msgid "Processing creatures:"
-msgstr ""
+msgstr "Processando criaturas:"
 
 #: setup.tra:26
 msgid "Processing dialogs:"
-msgstr ""
+msgstr "Processando diálogos:"
 
 #: setup.tra:27
 msgid "Processing scripts (this may take a few minutes):"
-msgstr ""
+msgstr "Processando scripts (isto pode levar alguns minutos):"
 
 #: setup.tra:28
 msgid "Starting main process:"
-msgstr ""
+msgstr "Iniciando processo principal:"
 
 #: setup.tra:29
 msgid "Processing stores:"
-msgstr ""
+msgstr "Processando lojas:"
 
 #: setup.tra:30
 msgid "Only BG saga is supported"
-msgstr ""
+msgstr "Só a saga do BG é suportada"
 
 #: setup.tra:31
 msgid "TuTu not supported"
-msgstr ""
+msgstr "TuTu não suportado"
 
 #: setup.tra:32
 msgid "This component must be installed before Core"
-msgstr ""
+msgstr "Este componente deve ser instalado antes do Núcleo"
 
 #: setup.tra:33
 msgid "BG2EE"
-msgstr ""
+msgstr "BG2-EE"
 
 #: setup.tra:34
 msgid "Rogue Rebalancing: Shadow Thief improvements"
-msgstr ""
+msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão da Sombra"
 
 #: setup.tra:100
 msgid "Remove bonus merchants"
-msgstr ""
+msgstr "Remover mercadores bônus"
 
 #: setup.tra:101
 msgid "Less magical items"
-msgstr ""
+msgstr "Menos itens mágicos"
 
 #: setup.tra:200
 msgid "Requires BG2"
-msgstr ""
+msgstr "Requer BG2"

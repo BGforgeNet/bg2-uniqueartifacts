@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: 2021-02-09 14:03+0000\n"
+"PO-Revision-Date: 2021-02-09 14:14+0000\n"
 "Last-Translator: Felipe <felipefplzx@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://tra.bgforge.net/projects/"
 "infinity-engine/unique-artifacts/pt_BR/>\n"
@@ -85,8 +85,8 @@ msgstr ""
 "\n"
 "ESTATÍSTICAS:\n"
 "\n"
-"Classe de Armadura:  +2 bonus\n"
-"Jogada de Salvamento:  +2 bonus\n"
+"Classe de Armadura:  +2 de bônus\n"
+"Jogada de Salvamento:  +2 de bônus\n"
 "Peso:  3\n"
 "Não é utilizável por:"
 
@@ -154,7 +154,7 @@ msgstr ""
 "\n"
 "ESTATÍSTICAS:\n"
 "\n"
-"Aumentar o Carisma em um ponto\n"
+"Aumenta o Carisma em um ponto\n"
 "Proteção contra Doença"
 
 #: setup.tra:1
@@ -167,7 +167,7 @@ msgstr "Permitir Anel de Proteção +2 e Capa de Proteção +2 não-único"
 
 #: setup.tra:3
 msgid "Allow non-unique Boots of Speed"
-msgstr "Permitir Botas da Velocidade não-únicas"
+msgstr "Permitir Botas de Velocidade não-únicas"
 
 #: setup.tra:4
 msgid "Unique Artifacts - core"
@@ -269,7 +269,7 @@ msgstr "Processando scripts (isto pode levar alguns minutos):"
 
 #: setup.tra:28
 msgid "Starting main process:"
-msgstr "Iniciando processo principal:"
+msgstr "Iniciando o processo principal:"
 
 #: setup.tra:29
 msgid "Processing stores:"
@@ -281,7 +281,7 @@ msgstr "Só a saga do BG é suportada"
 
 #: setup.tra:31
 msgid "TuTu not supported"
-msgstr "TuTu não suportado"
+msgstr "O TuTu não é suportado"
 
 #: setup.tra:32
 msgid "This component must be installed before Core"

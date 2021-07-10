@@ -3,7 +3,7 @@ SUPPORT ~https://forums.bgforge.net/viewforum.php?f=30~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~v7.2~
+VERSION ~v7.3~
 
 ALWAYS
   CLEAR_EVERYTHING
@@ -11,8 +11,9 @@ ALWAYS
   INCLUDE ~%lib_dir%/init.tpa~
 END
 
-LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~%MOD_FOLDER%/tra/english/setup.tra~
-LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~%MOD_FOLDER%/tra/russian/setup.tra~
+LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~us/tra/english/setup.tra~
+LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~ua/tra/russian/setup.tra~
+LANGUAGE ~Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
 
 
 BEGIN @1 //+1

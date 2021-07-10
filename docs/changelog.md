@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.3](#version-73)
 - [Version 7.2](#version-72)
 - [Version 7.1](#version-71)
 - [Version 7](#version-7)
@@ -14,6 +15,9 @@
 - [Version 1.0](#version-1-0)
 - [Version 1.0beta](#version-1-0beta)
 
+### Version 7.3
+- Added temporary workaround for PI component display.
+- Added Portuguese translation.
 
 ### Version 7.2
 Updated IElib for better PI compatibility.

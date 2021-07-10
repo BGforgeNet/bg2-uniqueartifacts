@@ -11,7 +11,7 @@ ALWAYS
   INCLUDE ~%lib_dir%/init.tpa~
 END
 
-LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~us/tra/english/setup.tra~
+LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~ua/tra/english/setup.tra~
 LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~ua/tra/russian/setup.tra~
 LANGUAGE ~Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
 

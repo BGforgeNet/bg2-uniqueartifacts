@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.4](#version-74)
 - [Version 7.3](#version-73)
 - [Version 7.2](#version-72)
 - [Version 7.1](#version-71)
@@ -9,11 +10,15 @@
 - [Version 4](#version-4)
 - [Version 3](#version-3)
 - [Version 2](#version-2)
-- [Version 1.12](#version-1-12)
-- [Version 1.11](#version-1-11)
-- [Version 1.1](#version-1-1)
-- [Version 1.0](#version-1-0)
-- [Version 1.0beta](#version-1-0beta)
+- [Version 1.12](#version-112)
+- [Version 1.11](#version-111)
+- [Version 1.1](#version-11)
+- [Version 1.0](#version-10)
+- [Version 1.0beta](#version-10beta)
+
+### Version 7.4
+- Fixed certain items from replacement table missing even from canon sources (`dagg03` in particular).
+- BGEE fix: reverted Zhurlong's boots to standard version, so that there's still just one copy in BG1 part of the game.
 
 ### Version 7.3
 - Added temporary workaround for PI component display.

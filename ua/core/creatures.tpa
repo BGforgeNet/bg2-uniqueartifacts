@@ -8,7 +8,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     SPRINT regex ~%common_regex%~
   END
   PATCH_PHP_EACH replacement AS old_item => new_item BEGIN
-    PATCH_IF NOT VARIABLE_IS_SET $item_source(~%old_item%~ ~%SOURCE_FILE%~) BEGIN
+    PATCH_IF
+      NOT (VARIABLE_IS_SET $item_source(~%old_item%~ ~%res%~) AND $item_source(~%old_item%~ ~%res%~) == 1)
+    BEGIN
       LPF REPLACE_CRE_ITEM_MATCH STR_VAR match_item = ~%old_item%~ new_item END
     END
   END

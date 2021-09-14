@@ -1,27 +1,21 @@
-// GAME_IS doesn't support variables
+// GAME_IS doesn't support variables, using macros
 DEFINE_PATCH_MACRO read_item_sources_2da BEGIN
-  READ_2DA_ENTRIES_NOW ilist 2
+  READ_2DA_ENTRIES_NOW ilist 4
   FOR (i=1;i<ilist;++i) BEGIN
-    READ_2DA_ENTRY_FORMER ilist i 0 item
-    READ_2DA_ENTRY_FORMER ilist i 1 isource
-    // auto formatting workaround
-    INNER_PATCH_SAVE source ~%isource%~ BEGIN
-      REPLACE_TEXTUALLY CASE_INSENSITIVE ~|$~ ~~
-    END
-    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~^//~ == 0) // skip comments
-      AND NOT (~%item%~ STR_EQ ~|~) // auto formatting workaround
-    BEGIN
+    READ_2DA_ENTRY_FORMER ilist i 1 item
+    READ_2DA_ENTRY_FORMER ilist i 3 source
+    PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~-+~ == 0) BEGIN // skip md header separator row
       SET $item_source(~%item%~ ~%source%~) = 1 // global list of items and sources
       SET $items(~%item%~) = 1 // global list of items
     END
   END
 END
 DEFINE_ACTION_MACRO read_item_sources BEGIN
-  COPY - ~%MOD_FOLDER%/items/strict_%game%.bsv~ ~%MOD_FOLDER%-inlined/strict_%game%.bsv~
+  COPY - ~%MOD_FOLDER%/items/strict_%game%.md~ ~%MOD_FOLDER%-inlined/strict_%game%.md~
     LPM read_item_sources_2da
   BUT_ONLY
   ACTION_IF expanded == 1 BEGIN
-    COPY - ~%MOD_FOLDER%/items/expanded_%game%.bsv~ ~%MOD_FOLDER%-inlined/expanded_%game%.bsv~
+    COPY - ~%MOD_FOLDER%/items/expanded_%game%.md~ ~%MOD_FOLDER%-inlined/expanded_%game%.md~
       LPM read_item_sources_2da
     BUT_ONLY
   END

@@ -270,6 +270,10 @@ msgstr "BG2-EE"
 msgid "Rogue Rebalancing: Shadow Thief improvements"
 msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão da Sombra"
 
+#: setup.tra:35
+msgid "BGEE"
+msgstr ""
+
 #: setup.tra:100
 msgid "Remove bonus merchants"
 msgstr "Remover mercadores bônus"

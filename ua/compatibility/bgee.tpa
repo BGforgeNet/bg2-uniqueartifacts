@@ -1,0 +1,7 @@
+ACTION_IF GAME_IS ~bgee eet~ BEGIN
+  PRINT @35
+  // BGEE replaces boot02 with a special version, we're reverting it back
+  COPY_EXISTING ~hobgzhur.cre~ ~override~
+    LPF REPLACE_CRE_ITEM_MATCH STR_VAR match_item ~boot02zh~ new_item ~boot02~ END
+  BUT_ONLY
+END

@@ -228,6 +228,10 @@ msgstr ""
 msgid "BGEE"
 msgstr ""
 
+#: setup.tra:36
+msgid "BG1NPC"
+msgstr ""
+
 #: setup.tra:100
 msgid "Remove bonus merchants"
 msgstr ""

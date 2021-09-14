@@ -274,6 +274,10 @@ msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão da Sombra"
 msgid "BGEE"
 msgstr ""
 
+#: setup.tra:36
+msgid "BG1NPC"
+msgstr ""
+
 #: setup.tra:100
 msgid "Remove bonus merchants"
 msgstr "Remover mercadores bônus"

@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.6](#version-76)
 - [Version 7.5](#version-75)
 - [Version 7.4](#version-74)
 - [Version 7.3](#version-73)
@@ -16,6 +17,9 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.6
+- Fixed several items missing from BG1 containers.
 
 ### Version 7.5
 - BG1NPC compatibility: Hentold's dagger won't be missing if Garrick is in party and interjects.

@@ -1,5 +1,5 @@
 // if installing expanded, use BGEE behaviour: hobgoblin will appear only once in either Ulcaster or Trade Way North
-<<<<<<<< ~.../ua-inlined/g_hgzhur.baf~
+<<<<<<<< .../ua-inlined/g_hgzhur.baf
   IF
     OnCreation()
     Global("g_hobgzhur_created", "GLOBAL", 0)

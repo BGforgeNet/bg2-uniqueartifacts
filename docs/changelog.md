@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.7](#version-77)
 - [Version 7.6](#version-76)
 - [Version 7.5](#version-75)
 - [Version 7.4](#version-74)
@@ -18,11 +19,14 @@
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
 
+### Version 7.7
+Fixed Boots of Stealth still being duped in BG1 part of BGEE/EET.
+
 ### Version 7.6
-- Fixed several items missing from BG1 containers.
+Fixed several items missing from BG1 containers.
 
 ### Version 7.5
-- BG1NPC compatibility: Hentold's dagger won't be missing if Garrick is in party and interjects.
+BG1NPC compatibility: Hentold's dagger won't be missing if Garrick is in party and interjects.
 
 ### Version 7.4
 - Fixed certain items from replacement table missing even from canon sources (`dagg03` in particular).

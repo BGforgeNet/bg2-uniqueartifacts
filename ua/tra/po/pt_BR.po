@@ -4,9 +4,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: 2021-02-09 14:14+0000\n"
+"PO-Revision-Date: 2022-01-02 15:05+0000\n"
 "Last-Translator: Felipe <felipefplzx@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/pt_BR/>\n"
+"Language-Team: Portuguese (Brazil) <https://tra.bgforge.net/projects/"
+"infinity-engine/unique-artifacts/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -272,11 +273,11 @@ msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão da Sombra"
 
 #: setup.tra:35
 msgid "BGEE"
-msgstr ""
+msgstr "BGEE"
 
 #: setup.tra:36
 msgid "BG1NPC"
-msgstr ""
+msgstr "BG1NPC"
 
 #: setup.tra:100
 msgid "Remove bonus merchants"

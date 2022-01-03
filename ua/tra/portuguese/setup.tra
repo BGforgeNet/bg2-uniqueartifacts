@@ -1,6 +1,6 @@
-@1 = ~Permitir Amuleto de Proteção +1 não-único~
-@2 = ~Permitir Anel de Proteção +2 e Capa de Proteção +2 não-único~
-@3 = ~Permitir Botas de Velocidade não-únicas~
+@1 = ~Permite Amuleto de Proteção +1 não-único~
+@2 = ~Permite Anel de Proteção +2 e Capa de Proteção +2 não-único~
+@3 = ~Permite Botas de Velocidade não-únicas~
 @4 = ~Artefatos Únicos - núcleo~
 @5 = ~Restrito~
 @6 = ~Expandido~
@@ -31,8 +31,8 @@
 @31 = ~O TuTu não é suportado~
 @32 = ~Este componente deve ser instalado antes do Núcleo~
 @33 = ~BG2-EE~
-@34 = ~Rebalanceamento do Rogue: Melhorias pro Ladrão da Sombra~
-@35 = ~BGEE~
+@34 = ~Rebalanceamento do Rogue: Melhorias pro Ladrão das Sombras~
+@35 = ~BG-EE~
 @36 = ~BG1NPC~
 @100 = ~Remover mercadores bônus~
 @101 = ~Menos itens mágicos~

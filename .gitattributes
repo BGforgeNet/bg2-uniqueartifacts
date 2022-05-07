@@ -1,0 +1,18 @@
+ua/tra/french/**.tra     working-tree-encoding=cp1252    git-encoding=cp1252
+ua/tra/german/**.tra     working-tree-encoding=cp1252    git-encoding=cp1252
+ua/tra/hungarian/**.tra  working-tree-encoding=cp1250    git-encoding=cp1250
+ua/tra/italian/**.tra    working-tree-encoding=cp1252    git-encoding=cp1252
+ua/tra/korean/**.tra     working-tree-encoding=cp949     git-encoding=cp949
+ua/tra/polish/**.tra     working-tree-encoding=cp1250    git-encoding=cp1250
+ua/tra/portuguese/**.tra working-tree-encoding=cp1252    git-encoding=cp1252
+ua/tra/russian/**.tra    working-tree-encoding=cp1251    git-encoding=cp1251
+ua/tra/spanish/**.tra    working-tree-encoding=cp1252    git-encoding=cp1252
+ua/tra/schinese/**.tra   working-tree-encoding=cp936     git-encoding=cp936
+ua/tra/tchinese/**.tra   working-tree-encoding=cp950     git-encoding=cp950
+ua/tra/ukrainian/**.tra  working-tree-encoding=cp1251    git-encoding=cp1251
+
+ua/tra/**/ee.tra         working-tree-encoding=utf8      git-encoding=utf8
+ua/tra/**/*_ee.tra       working-tree-encoding=utf8      git-encoding=utf8
+
+ua/tra/russian/**/setup.tra       working-tree-encoding=cp866    git-encoding=cp866
+ua/tra/ukrainian/**/install.tra   working-tree-encoding=cp866    git-encoding=cp866

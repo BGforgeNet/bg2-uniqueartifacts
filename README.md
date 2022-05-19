@@ -1,14 +1,18 @@
 ## Unique Artifacts mod for Baldur's Gate 2
 
-[![Translation status](https://tra.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg)](https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/)
+[![Translation status](https://hive.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg)](https://hive.bgforge.net/projects/infinity-engine/unique-artifacts/)
 [![Build Status](https://golem.bgforge.net/mods/unique-artifacts/status.svg)](https://golem.bgforge.net/mods/unique-artifacts)
+[![Patreon](https://img.shields.io/badge/Patreon-donate-FF424D?logo=Patreon&labelColor=141518)](https://www.patreon.com/BGforge)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Discord chat](https://img.shields.io/discord/420268540700917760?logo=discord)](https://discord.gg/4Yqfggm)
+
+[![Telegram](https://img.shields.io/badge/telegram-join%20%20%20%20%E2%9D%B1%E2%9D%B1%E2%9D%B1-darkorange?logo=telegram)](https://t.me/bgforge)
+[![Discord](https://img.shields.io/discord/420268540700917760?logo=discord&label=discord&color=blue&logoColor=FEE75C)](https://discord.gg/4Yqfggm)
+[![IRC](https://img.shields.io/badge/%23IRC-join%20%20%20%20%E2%9D%B1%E2%9D%B1%E2%9D%B1-darkorange)](https://bgforge.net/irc)
 
 [__Download__](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest)
 | [__Support__](https://github.com/BGforgeNet/bg2-uniqueartifacts/issues)
 | [__Discussion__](https://forums.bgforge.net/viewforum.php?f=30)
-| [__Help translating__](https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/)
+| [__Help translating__](https://hive.bgforge.net/projects/infinity-engine/unique-artifacts/)
 
 Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical items available to the player. It will work with BG2:ToB, BGT, or EE games. Starting a new game is required.
 

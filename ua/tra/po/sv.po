@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: 2022-09-07 11:30+0000\n"
+"PO-Revision-Date: 2022-09-07 14:30+0000\n"
 "Last-Translator: tygyh <jonis9898@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
@@ -104,39 +104,39 @@ msgstr ""
 
 #: setup.tra:1
 msgid "Allow non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Tillåt icke-unik Beskyddsamulett +1"
 
 #: setup.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "Tillåt icke-unik Beskyddsring +2 och Beskyddsmantel +2"
 
 #: setup.tra:3
 msgid "Allow non-unique Boots of Speed"
-msgstr ""
+msgstr "Tillåt icke-unika Hastighetsstövlar"
 
 #: setup.tra:4
 msgid "Unique Artifacts - core"
-msgstr ""
+msgstr "Unika artefakter - kärna"
 
 #: setup.tra:5
 msgid "Strict"
-msgstr ""
+msgstr "strikt"
 
 #: setup.tra:6
 msgid "Expanded"
-msgstr ""
+msgstr "Utökad"
 
 #: setup.tra:7
 msgid "Processing areas:"
-msgstr ""
+msgstr "Bearbetningsområden:"
 
 #: setup.tra:8
 msgid "Compatibility with mods that move or remove items:"
-msgstr ""
+msgstr "Kompatibilitet med modifikationer som flyttar eller tar bort föremål:"
 
 #: setup.tra:9
 msgid "Non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "Icke-unik Beskyddsamulett +1"
 
 #: setup.tra:10
 msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"

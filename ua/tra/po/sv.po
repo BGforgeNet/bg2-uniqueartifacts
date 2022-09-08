@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: 2022-09-07 14:30+0000\n"
+"PO-Revision-Date: 2022-09-08 15:30+0000\n"
 "Last-Translator: tygyh <jonis9898@hotmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
@@ -76,7 +76,7 @@ msgstr ""
 
 #: game.tra:107
 msgid "Boots"
-msgstr ""
+msgstr "Stövlar"
 
 #: game.tra:108
 msgid "Boots of the West"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: setup.tra:23
 msgid "Dungeon-Be-Gone"
-msgstr ""
+msgstr "Dungeon-Be-Gone"
 
 #: setup.tra:24
 msgid "Compatibility addressed."
@@ -232,7 +232,7 @@ msgstr ""
 
 #: setup.tra:33
 msgid "BG2EE"
-msgstr ""
+msgstr "BG2EE"
 
 #: setup.tra:34
 msgid "Rogue Rebalancing: Shadow Thief improvements"
@@ -240,11 +240,11 @@ msgstr ""
 
 #: setup.tra:35
 msgid "BGEE"
-msgstr ""
+msgstr "BGEE"
 
 #: setup.tra:36
 msgid "BG1NPC"
-msgstr ""
+msgstr "BG1NPC"
 
 #: setup.tra:100
 msgid "Remove bonus merchants"

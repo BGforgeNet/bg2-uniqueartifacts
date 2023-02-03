@@ -11,3 +11,7 @@ golem:
     - sod
     - eet
   happy: true
+
+mls:
+  translation:
+    directory: ua/tra/english

@@ -6,9 +6,6 @@
 @6 = ~Expandido~
 @7 = ~Processando áreas:~
 @8 = ~Compatibilidade com mods que movem ou removem itens:~
-@9 = ~Amuleto de Proteção +1 não-único~
-@10 = ~Anel de Proteção +2 e Capa de Proteção +2 não-únicas~
-@11 = ~Botas de Velocidade não-únicas~
 @12 = ~Rebalanceamento do Rogue: Equipamento adicional pra Ladrões e Bardos~
 @13 = ~Estratagemas da Costa da Espada: Mover ou modificar alguns itens mágicos com poder exagerado~
 @14 = ~Almas Torturadas~
@@ -34,6 +31,12 @@
 @34 = ~Rebalanceamento do Rogue: Melhorias pro Ladrão das Sombras~
 @35 = ~BG-EE~
 @36 = ~BG1NPC~
+@41 = ~Unique Amulet of Protection +1~
+@42 = ~Amuleto de Proteção +1 não-único~
+@43 = ~Unique Ring of Protection +2 and Cloak of Protection +2~
+@44 = ~Anel de Proteção +2 e Capa de Proteção +2 não-únicas~
+@45 = ~Unique Boots of Speed~
+@46 = ~Botas de Velocidade não-únicas~
 @100 = ~Remover mercadores bônus~
 @101 = ~Menos itens mágicos~
 @200 = ~Requer BG2~

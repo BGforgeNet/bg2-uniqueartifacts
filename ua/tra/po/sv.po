@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 1970-1-01 00:00+0000\n"
+"POT-Creation-Date: 2023-02-03-19:17+0000\n"
 "PO-Revision-Date: 2022-09-15 15:30+0000\n"
 "Last-Translator: tygyh <jonis9898@hotmail.com>\n"
 "Language-Team: none\n"
@@ -25,13 +25,7 @@ msgid ""
 "Weight: 4"
 msgstr ""
 "Stövlar av Snabbhet: \"Gepardens Tassar\"\n"
-"Från början, var förtrollade stövlar som dessa ägodelar till en dödlig "
-"lönnmördarordernsom tyckte om att jaga sina byten. De rörde sig så fort att "
-"deras mål oftast inte hade möjlighet att reagera, även när de red. Med tiden "
-"spreds orderns ökändhet, och även om dess namn aldig blek känt, visste alla "
-"att de skulle frukta de sista orden deras offer hörde: \"Du kan gömma dig, "
-"men du kan inte fly!\". Sedan dess, har många kopior dykt upp, och det här "
-"är ett av dem.\n"
+"Från början, var förtrollade stövlar som dessa ägodelar till en dödlig lönnmördarordernsom tyckte om att jaga sina byten. De rörde sig så fort att deras mål oftast inte hade möjlighet att reagera, även när de red. Med tiden spreds orderns ökändhet, och även om dess namn aldig blek känt, visste alla att de skulle frukta de sista orden deras offer hörde: \"Du kan gömma dig, men du kan inte fly!\". Sedan dess, har många kopior dykt upp, och det här är ett av dem.\n"
 "\n"
 "STATISTIK\n"
 "\n"
@@ -51,12 +45,7 @@ msgid ""
 msgstr ""
 "Skyddsamulett +1 : 'Skyddaren'\n"
 "\n"
-"Ursprungligen fick det kungliga garde åt kung Pyronans , härskare av "
-"Impiltur, 'Skyddaren' som en hedersbetygelse som ett bevis på status.  "
-"Tyvärr hade medlemmarna i gardet svårt att komma överens sinsemellan om vem "
-"amuletten skulle gå till.  Efter år av intern fientlighet förlorades "
-"föremålet och vakterna ersattes av mindre giriga individer. Sedan dess har "
-"många kopior dykt upp, och detta är en av dem.\n"
+"Ursprungligen fick det kungliga garde åt kung Pyronans , härskare av Impiltur, 'Skyddaren' som en hedersbetygelse som ett bevis på status.  Tyvärr hade medlemmarna i gardet svårt att komma överens sinsemellan om vem amuletten skulle gå till.  Efter år av intern fientlighet förlorades föremålet och vakterna ersattes av mindre giriga individer. Sedan dess har många kopior dykt upp, och detta är en av dem.\n"
 "\n"
 "STATISTIK:\n"
 "\n"
@@ -146,18 +135,6 @@ msgstr "Bearbetningsområden:"
 #: setup.tra:8
 msgid "Compatibility with mods that move or remove items:"
 msgstr "Kompatibilitet med modifikationer som flyttar eller tar bort föremål:"
-
-#: setup.tra:9
-msgid "Non-unique Amulet of Protection +1"
-msgstr "Icke-unik Beskyddsamulett +1"
-
-#: setup.tra:10
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
-
-#: setup.tra:11
-msgid "Non-unique Boots of Speed"
-msgstr ""
 
 #: setup.tra:12
 msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
@@ -258,6 +235,37 @@ msgstr "BGEE"
 #: setup.tra:36
 msgid "BG1NPC"
 msgstr "BG1NPC"
+
+#: setup.tra:41
+#, fuzzy
+#| msgid "Non-unique Amulet of Protection +1"
+msgid "Unique Amulet of Protection +1"
+msgstr "Icke-unik Beskyddsamulett +1"
+
+#: setup.tra:42
+msgid "Non-unique Amulet of Protection +1"
+msgstr "Icke-unik Beskyddsamulett +1"
+
+#: setup.tra:43
+#, fuzzy
+#| msgid ""
+#| "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr "Tillåt icke-unik Beskyddsring +2 och Beskyddsmantel +2"
+
+#: setup.tra:44
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: setup.tra:45
+#, fuzzy
+#| msgid "Allow non-unique Boots of Speed"
+msgid "Unique Boots of Speed"
+msgstr "Tillåt icke-unika Hastighetsstövlar"
+
+#: setup.tra:46
+msgid "Non-unique Boots of Speed"
+msgstr ""
 
 #: setup.tra:100
 msgid "Remove bonus merchants"

@@ -3,15 +3,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 1970-1-01 00:00+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2023-02-03-19:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: bgforge_po v.1.0.0\n"
+"X-Generator: BGforge/msg2po v.1.1.7\n"
 
 #: game.tra:103
 msgid ""
@@ -120,18 +119,6 @@ msgstr ""
 msgid "Compatibility with mods that move or remove items:"
 msgstr ""
 
-#: setup.tra:9
-msgid "Non-unique Amulet of Protection +1"
-msgstr ""
-
-#: setup.tra:10
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
-
-#: setup.tra:11
-msgid "Non-unique Boots of Speed"
-msgstr ""
-
 #: setup.tra:12
 msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
 msgstr ""
@@ -230,6 +217,30 @@ msgstr ""
 
 #: setup.tra:36
 msgid "BG1NPC"
+msgstr ""
+
+#: setup.tra:41
+msgid "Unique Amulet of Protection +1"
+msgstr ""
+
+#: setup.tra:42
+msgid "Non-unique Amulet of Protection +1"
+msgstr ""
+
+#: setup.tra:43
+msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: setup.tra:44
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr ""
+
+#: setup.tra:45
+msgid "Unique Boots of Speed"
+msgstr ""
+
+#: setup.tra:46
+msgid "Non-unique Boots of Speed"
 msgstr ""
 
 #: setup.tra:100

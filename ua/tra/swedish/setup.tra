@@ -6,9 +6,6 @@
 @6 = ~Utökad~
 @7 = ~Bearbetningsområden:~
 @8 = ~Kompatibilitet med modifikationer som flyttar eller tar bort föremål:~
-@9 = ~Icke-unik Beskyddsamulett +1~
-@10 = ~Non-unique Ring of Protection +2 and Cloak of Protection +2~
-@11 = ~Non-unique Boots of Speed~
 @12 = ~Rogue Rebalancing: Additional equipment for Thieves and Bards~
 @13 = ~Sword Coast Stratagems: Move or modify some overpowered magic items~
 @14 = ~Tortured Souls~
@@ -34,6 +31,12 @@
 @34 = ~Rogue Rebalancing: Shadow Thief improvements~
 @35 = ~BGEE~
 @36 = ~BG1NPC~
+@41 = ~Unique Amulet of Protection +1~
+@42 = ~Icke-unik Beskyddsamulett +1~
+@43 = ~Unique Ring of Protection +2 and Cloak of Protection +2~
+@44 = ~Non-unique Ring of Protection +2 and Cloak of Protection +2~
+@45 = ~Unique Boots of Speed~
+@46 = ~Non-unique Boots of Speed~
 @100 = ~Remove bonus merchants~
 @101 = ~Less magical items~
 @200 = ~Requires BG2~

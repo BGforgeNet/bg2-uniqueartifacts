@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 1970-1-01 00:00+0000\n"
+"POT-Creation-Date: 2023-02-03-19:17+0000\n"
 "PO-Revision-Date: 2018-08-19 06:11+0000\n"
 "Last-Translator: Magus <magus@bgforge.net>\n"
 "Language-Team: Russian <https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/ru/>\n"
@@ -152,18 +152,6 @@ msgstr "Обработка локаций:"
 msgid "Compatibility with mods that move or remove items:"
 msgstr ""
 
-#: setup.tra:9
-msgid "Non-unique Amulet of Protection +1"
-msgstr "Неуникальный Амулет Защиты +1"
-
-#: setup.tra:10
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
-
-#: setup.tra:11
-msgid "Non-unique Boots of Speed"
-msgstr "Неуникальные Сапоги Скорости"
-
 #: setup.tra:12
 msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
 msgstr ""
@@ -275,6 +263,36 @@ msgstr ""
 #: setup.tra:36
 msgid "BG1NPC"
 msgstr ""
+
+#: setup.tra:41
+#, fuzzy
+#| msgid "Non-unique Amulet of Protection +1"
+msgid "Unique Amulet of Protection +1"
+msgstr "Неуникальный Амулет Защиты +1"
+
+#: setup.tra:42
+msgid "Non-unique Amulet of Protection +1"
+msgstr "Неуникальный Амулет Защиты +1"
+
+#: setup.tra:43
+#, fuzzy
+#| msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#: setup.tra:44
+msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#: setup.tra:45
+#, fuzzy
+#| msgid "Non-unique Boots of Speed"
+msgid "Unique Boots of Speed"
+msgstr "Неуникальные Сапоги Скорости"
+
+#: setup.tra:46
+msgid "Non-unique Boots of Speed"
+msgstr "Неуникальные Сапоги Скорости"
 
 #: setup.tra:100
 msgid "Remove bonus merchants"

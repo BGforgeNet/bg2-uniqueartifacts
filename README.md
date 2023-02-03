@@ -96,7 +96,7 @@ The main effect of this component is that you'll get less expensive loot, and co
 
 ## Compatibility
 - Install Unique Artifacts _after_ any mods that add, change or move content (areas, creatures, quests, items, etc). Basically, as late as possible.
-- Item Randomiser and SCS are exceptions: install UA first, then IR or SCS. When using all three, install UA first, then IR, and then SCS.
+- Item Randomiser and SCS are exceptions. Correct order is UA first, then IR, and then SCS.
 - When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Which items are affected?

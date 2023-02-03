@@ -1,6 +1,8 @@
+/** @tra setup.tra */
+
 // AoP +1
 ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) BEGIN
-  PRINT @9
+  PRINT @41
   ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     OUTER_SET $item_source_compat(~amul14~ ~nadine.cre~) = 1 // Nadine - steal
     OUTER_SET $item_source_compat(~amul14~ ~nadin.dlg~) = 1 // Nadine - dialog, pass to Euric
@@ -9,11 +11,11 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+1~) BE
     // AoP+1
     OUTER_SET $item_source_compat(~amul14~ ~ar1201.are~) = 1 // near lake and mists in Firkraag's dungeon
   END
-END
+END ELSE BEGIN PRINT @42 END
 
 // CoP+2 and RoP+2
 ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) BEGIN
-  PRINT @9
+  PRINT @43
   ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     OUTER_SET $item_source_compat(~clck02~ ~%Candlekeep_Catacombs_L1%.are~) = 1 // a crypt
     OUTER_SET $item_source_compat(~ring07~ ~ramazi.cre~) = 1 // Ramazith
@@ -23,11 +25,11 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) BE
     OUTER_SET $item_source_compat(~ring07~ ~aran02.cre~) = 1 // Aran Linvail (side with Bodhi)
     OUTER_SET $item_source_compat(~ring07~ ~aran.dlg~) = 1 // Aran Linvail (side with thieves)
   END
-END
+END ELSE BEGIN PRINT @44 END
 
 // boots of speed
 ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~) BEGIN
-  PRINT @11
+  PRINT @45
   OUTER_SET $item_present(~boot01~) = "-1"
   ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     OUTER_SET $item_source_compat(~boot01~ ~drasus.cre~) = 1 // Drasus (Cloakwood mines assassin)
@@ -35,4 +37,4 @@ ACTION_IF NOT MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow_speed~
   ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
     OUTER_SET $item_source_compat(~boot01~ ~tokcre01.dlg~) = 1 // Token machine in Spellhold
   END
-END
+END ELSE BEGIN PRINT @46 END

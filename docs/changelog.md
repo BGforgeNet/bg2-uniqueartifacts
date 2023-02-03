@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.9](#version-79)
 - [Version 7.8](#version-78)
 - [Version 7.7](#version-77)
 - [Version 7.6](#version-76)
@@ -19,6 +20,9 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.9
+Fixed Ring of Wizardry deduplication in BG1 part of EET.
 
 ### Version 7.8
 Fixed Nadarin not giving out quest reward in trilogy.

@@ -3,7 +3,7 @@ SUPPORT ~https://forums.bgforge.net/viewforum.php?f=30~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~v7.8~
+VERSION ~v7.9~
 
 ALWAYS
   CLEAR_EVERYTHING

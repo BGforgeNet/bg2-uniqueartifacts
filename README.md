@@ -83,7 +83,7 @@ Examples:
 Bonus merchants were likely introduced into the game to urge people to buy Collector's Edition back in the day. Lore- and balance wise they aren't that great. This component removes them.
 
 ### Less magical items
-This component is a counterpart to the [Core](#core). It reduces the number of _unnamed_ magical items (+1, +2, etc) throughout the Sword Coast. Basically, it tones them one step down. Where you would previously find a long sword +3, you'll find a +2. A previous +2 turns into +1. And where there was +1, there is none.
+This component is a counterpart to the [Core](#core). It reduces the number of _unnamed_ magical items (+1, +2, etc) throughout the Sword Coast. Basically, it tones them one step down. Where you would previously find a long sword +3, you'll find a +2. A previous +2 turns into +1. And where there was a +1, there is none.
 - This _only_ affects shops and containers. The enemies are still packing their equipment.
 - This is _only_ applied to plain +1/+2/+3 magical items - weapons, armor, ammo, etc.
 

@@ -1,3 +1,4 @@
+/** @tra setup.tra */
 BACKUP ~ua/backup~
 SUPPORT ~https://forums.bgforge.net/viewforum.php?f=30~
 NO_IF_EVAL_BUG
@@ -16,7 +17,7 @@ LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~ua/tra/russian/setup.tra
 LANGUAGE ~Brazilian Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
 
 
-BEGIN @1 //+1
+BEGIN @1  // +1
 LABEL ~g_ua_allow+1~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT
@@ -25,7 +26,7 @@ REQUIRE_PREDICATE NOT
   ) @32
 INCLUDE ~%MOD_FOLDER%/non-unique/prot1.tpa~
 
-BEGIN @2 //+2
+BEGIN @2  // +2
 LABEL ~g_ua_allow+2~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT
@@ -34,7 +35,7 @@ REQUIRE_PREDICATE NOT
   ) @32
 INCLUDE ~%MOD_FOLDER%/non-unique/prot2.tpa~
 
-BEGIN @3 //Speed
+BEGIN @3  // Speed
 LABEL ~g_ua_allow_speed~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 REQUIRE_PREDICATE NOT
@@ -43,24 +44,24 @@ REQUIRE_PREDICATE NOT
   ) @32
 INCLUDE ~%MOD_FOLDER%/non-unique/boots.tpa~
 
-BEGIN @6 //Expanded
+BEGIN @6  // Expanded
 LABEL ~g_ua_core_expanded~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
 OUTER_SET expanded = 1
 INCLUDE ~%MOD_FOLDER%/core/main.tpa~
 
-BEGIN @5 //Strict
+BEGIN @5  // Strict
 LABEL ~g_ua_core_strict~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
 OUTER_SET expanded = 0
 INCLUDE ~%MOD_FOLDER%/core/main.tpa~
 
-BEGIN @100 /* Remove bonus merchants */
+BEGIN @100  /* Remove bonus merchants */
 REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ @200
 INCLUDE ~%MOD_FOLDER%/remove_bonus.tpa~
 
-BEGIN @101 /* Less magical items */
+BEGIN @101  /* Less magical items */
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 INCLUDE ~%MOD_FOLDER%/less_magical/main.tpa~

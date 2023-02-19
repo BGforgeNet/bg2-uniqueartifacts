@@ -1,4 +1,4 @@
-//Ruad item upgrade - forbid RoP+1 upgrade to +2 when RoP+2 is unique
+// Ruad item upgrade - forbid RoP+1 upgrade to +2 when RoP+2 is unique
 <<<<<<<< .../ua-inlined/ruad.d
 REPLACE_TRANS_TRIGGER m#ruad BEGIN 5 END BEGIN END
   ~PartyHasItem("ring06")~

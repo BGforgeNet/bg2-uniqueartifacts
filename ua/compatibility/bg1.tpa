@@ -1,4 +1,5 @@
-ACTION_IF GAME_IS ~bg1 totsc~ BEGIN //missing triggers, scripts won't recompile without them
+// missing triggers, scripts won't recompile without them
+ACTION_IF GAME_IS ~bg1 totsc~ BEGIN
   APPEND ~trigger.ids~ ~0x4076 OpenState(O:Object*,I:Open*BOOLEAN)~ UNLESS ~0x4076 OpenState(O:Object\*,I:Open\*BOOLEAN)~
   APPEND ~trigger.ids~ ~0x4077 NumItems(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4077 NumItems(S:ResRef\*,O:Object\*,I:Num\*)~
   APPEND ~trigger.ids~ ~0x4078 NumItemsGT(S:ResRef*,O:Object*,I:Num*)~ UNLESS ~0x4078 NumItemsGT(S:ResRef\*,O:Object\*,I:Num\*)~
@@ -10,7 +11,8 @@ ACTION_IF GAME_IS ~bg1 totsc~ BEGIN //missing triggers, scripts won't recompile 
 END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
-  //small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West to match his dialog
+
+  // small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West to match his dialog
   ACTION_IF NOT FILE_EXISTS_IN_GAME ~misc8j.itm~ BEGIN
     COPY ~%MOD_FOLDER%/core/items/misc8j.itm~ override
       SAY NAME1 @107
@@ -32,7 +34,7 @@ REPLACE_ACTION_TEXT ~nadari~
   COMPILE ~.../ua-inlined/nadari.d~
 
 
-  //Kondar: make unstealable from Aldeth
+  // Kondar: make unstealable from Aldeth
   COPY_EXISTING ~aldeth.cre~ ~override~
     LPF ADD_CRE_ITEM_FLAGS
       STR_VAR
@@ -42,9 +44,10 @@ REPLACE_ACTION_TEXT ~nadari~
   BUT_ONLY
 
 
-//Ordulinian reward for blood deeds switched from Cloak of Non-Detection to Cloak of Protection +1
+  // Ordulinian reward for blood deeds switched from Cloak of Non-Detection to Cloak of Protection +1
 <<<<<<<< .../ua-inlined/orduli.d
 REPLACE_ACTION_TEXT ~orduli~ ~clck06~ ~clck01~
 >>>>>>>>
   COMPILE ~.../ua-inlined/orduli.d~
+
 END

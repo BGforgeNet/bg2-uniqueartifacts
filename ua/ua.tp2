@@ -13,7 +13,7 @@ END
 
 LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~ua/tra/english/setup.tra~
 LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~ua/tra/russian/setup.tra~
-LANGUAGE ~Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
+LANGUAGE ~Brazilian Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
 
 
 BEGIN @1 //+1

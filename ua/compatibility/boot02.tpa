@@ -30,7 +30,7 @@ Only when installing Expanded option.
 >>>>>>>>
 
 
-ACTION_IF expanded == 1 BEGIN
+ACTION_IF GAME_INCLUDES ~bg1~ AND expanded == 1 BEGIN
 
     // Only the one at TWN gets destroyed
     EXTEND_TOP ~%SouthBeregostRoad_BCS%.bcs~ ~.../ua-inlined/SouthBeregostRoad.baf~

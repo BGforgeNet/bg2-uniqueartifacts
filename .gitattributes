@@ -1,20 +1,45 @@
-ua/tra/czech/**.tra      working-tree-encoding=cp1250
-ua/tra/french/**.tra     working-tree-encoding=cp1252
-ua/tra/german/**.tra     working-tree-encoding=cp1252
-ua/tra/hungarian/**.tra  working-tree-encoding=cp1250
-ua/tra/italian/**.tra    working-tree-encoding=cp1252
-ua/tra/korean/**.tra     working-tree-encoding=cp949
-ua/tra/polish/**.tra     working-tree-encoding=cp1250
-ua/tra/portuguese/**.tra working-tree-encoding=cp1252
-ua/tra/russian/**.tra    working-tree-encoding=cp1251
-ua/tra/spanish/**.tra    working-tree-encoding=cp1252
-ua/tra/swedish/**.tra    working-tree-encoding=cp1252
-ua/tra/schinese/**.tra   working-tree-encoding=cp936
-ua/tra/tchinese/**.tra   working-tree-encoding=cp950
-ua/tra/ukrainian/**.tra  working-tree-encoding=cp1251
+# Classic
+ua/tra/czech/**.tra                  working-tree-encoding=cp1250
+ua/tra/french/**.tra                 working-tree-encoding=cp1252
+ua/tra/german/**.tra                 working-tree-encoding=cp1252
+ua/tra/hungarian/**.tra              working-tree-encoding=cp1250
+ua/tra/italian/**.tra                working-tree-encoding=cp1252
+ua/tra/korean/**.tra                 working-tree-encoding=cp949
+ua/tra/polish/**.tra                 working-tree-encoding=cp1250
+ua/tra/portuguese/**.tra             working-tree-encoding=cp1252
+ua/tra/russian/**.tra                working-tree-encoding=cp1251
+ua/tra/spanish/**.tra                working-tree-encoding=cp1252
+ua/tra/swedish/**.tra                working-tree-encoding=cp1252
+ua/tra/schinese/**.tra               working-tree-encoding=cp936
+ua/tra/tchinese/**.tra               working-tree-encoding=cp950
+ua/tra/ukrainian/**.tra              working-tree-encoding=cp1251
 
-ua/tra/**/ee.tra         working-tree-encoding=utf8
-ua/tra/**/*_ee.tra       working-tree-encoding=utf8
+# Classic or EE console, RU/UA
+ua/**/russian/**/install.tra         working-tree-encoding=cp866
+ua/**/russian/**/setup.tra           working-tree-encoding=cp866
+ua/**/ukrainian/**/install.tra       working-tree-encoding=cp866
+ua/**/ukrainian/**/setup.tra         working-tree-encoding=cp866
 
-ua/tra/russian/**/setup.tra       working-tree-encoding=cp866
-ua/tra/ukrainian/**/install.tra   working-tree-encoding=cp866
+# EE only
+ua/tra/**/ee.tra                     working-tree-encoding=utf8
+ua/tra/**/*_ee.tra                   working-tree-encoding=utf8
+
+# Linux console
+ua/**/setup-unix.tra                 working-tree-encoding=utf8
+ua/**/setup-osx.tra                  working-tree-encoding=utf8
+
+# Windows console, other languages
+ua/tra_ee/czech/*-win32.tra          working-tree-encoding=cp1250
+ua/tra_ee/french/*-win32.tra         working-tree-encoding=cp1252
+ua/tra_ee/german/*-win32.tra         working-tree-encoding=cp1252
+ua/tra_ee/hungarian/*-win32.tra      working-tree-encoding=cp1250
+ua/tra_ee/italian/*-win32.tra        working-tree-encoding=cp1252
+ua/tra_ee/korean/*-win32.tra         working-tree-encoding=cp949
+ua/tra_ee/polish/*-win32.tra         working-tree-encoding=cp1250
+ua/tra_ee/portuguese/*-win32.tra     working-tree-encoding=cp1252
+ua/tra_ee/russian/*-win32.tra        working-tree-encoding=cp866
+ua/tra_ee/spanish/*-win32.tra        working-tree-encoding=cp1252
+ua/tra_ee/swedish/*-win32.tra        working-tree-encoding=cp1252
+ua/tra_ee/schinese/*-win32.tra       working-tree-encoding=cp936
+ua/tra_ee/tchinese/*-win32.tra       working-tree-encoding=cp950
+ua/tra_ee/ukrainian/*-win32.tra      working-tree-encoding=cp866

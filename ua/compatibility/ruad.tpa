@@ -5,7 +5,7 @@ REPLACE_TRANS_TRIGGER m#ruad BEGIN 5 END BEGIN END
   ~False()~
 >>>>>>>>
 ACTION_IF (FILE_EXISTS_IN_GAME ~m#ruad.dlg~) BEGIN
-  PRINT @20
+  PRINT ~Ruad Ro'fhessa~
   ACTION_IF MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_allow+2~) BEGIN
     COPY_EXISTING ~ring07.itm~ ~override~ // adjust RoP+2 desc
       SAY DESC @106

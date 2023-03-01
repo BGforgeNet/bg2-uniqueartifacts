@@ -1,4 +1,4 @@
-PRINT @26
+PRINT ~Processing dialogs~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
   PATCH_IF SOURCE_SIZE > 0x34
@@ -24,7 +24,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
 BUT_ONLY
 
 
-PRINT @27
+PRINT ~Processing scripts (this may take a few minutes)~
 COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
   PATCH_IF NOT (~%SOURCE_FILE%~ STRING_MATCHES_REGEXP "^dw#.*" == 0) //skip long ass SCS scripts
     AND NOT (~%SOURCE_FILE%~ STR_EQ "ar0334.bcs") // never touch Cromwell

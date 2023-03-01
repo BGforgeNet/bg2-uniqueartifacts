@@ -1,5 +1,7 @@
 // Item Revisions move some items
 ACTION_IF MOD_IS_INSTALLED ~item_rev/item_rev.tp2~ 1030 BEGIN
+  PRINT ~Item Revisions~
+
   OUTER_SET $item_source_compat(~amul20~ ~uddrow24.sto~) = 0
   OUTER_SET $item_source_compat(~amul20~ ~uddrow25.sto~) = 1
 

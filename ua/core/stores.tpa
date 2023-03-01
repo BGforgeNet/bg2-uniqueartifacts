@@ -1,4 +1,4 @@
-PRINT @29
+PRINT ~Processing stores~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
   PATCH_IF NOT ("%SOURCE_RES%" STRING_MATCHES_REGEXP "^BAG" = 0) BEGIN //excluding starting ToB Bags

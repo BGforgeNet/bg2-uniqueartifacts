@@ -1,4 +1,4 @@
-PRINT @25
+PRINT ~Processing creatures~
 
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
   SPRINT res ~%SOURCE_FILE%~ TO_LOWER res

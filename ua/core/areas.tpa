@@ -1,4 +1,4 @@
-PRINT @7
+PRINT ~Processing areas~
 
 //bad reference to progtest.bif
 DISABLE_FROM_KEY xr2400.are xr2600.are

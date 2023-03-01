@@ -1,6 +1,6 @@
 //Cursed Items revision
 ACTION_IF (FILE_EXISTS_IN_GAME ~#gglow.eff~) BEGIN //Cursed items revision - moved a few items
-  PRINT @22
+  PRINT ~Cursed Items revision~
   ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
     // belt05 - Girdle of gender change - probably won't be duped anyway
     // brac11 - Bracers of binding - same

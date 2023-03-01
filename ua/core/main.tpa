@@ -1,6 +1,6 @@
 // compatibility
 INCLUDE ~%MOD_FOLDER%/compatibility/main.tpa~
-PRINT @28
+PRINT ~Starting main process~
 
 // list items
 INCLUDE ~%MOD_FOLDER%/core/items.tpa~

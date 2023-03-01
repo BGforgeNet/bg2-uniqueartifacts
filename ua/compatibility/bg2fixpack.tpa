@@ -1,5 +1,5 @@
 ACTION_IF MOD_IS_INSTALLED "setup-bg2fixpack.tp2" "0" BEGIN
-  PRINT @15
+  PRINT ~BG2 Fixpack~
   //Suryris's Blade - Fixpack deletes all but Ribald's copy. Removing Ribald's and restoring Reviane's (Jaheira's quest)
   COPY_EXISTING ~jarevia.cre~ ~override~
     LPF DELETE_CRE_ITEM STR_VAR item_to_delete ~halb07~ END

@@ -1,6 +1,6 @@
 /** @tra setup.tra */
 OUTER_SPRINT compat ~%MOD_FOLDER%/compatibility~
-PRINT @8
+PRINT ~Compatibility with mods that move or remove items:~
 
 INCLUDE ~%compat%/arp.tpa~
 INCLUDE ~%compat%/bg1.tpa~
@@ -22,4 +22,4 @@ INCLUDE ~%compat%/thalantyr.tpa~
 INCLUDE ~%compat%/ts.tpa~
 INCLUDE ~%compat%/ua.tpa~
 
-PRINT @24
+PRINT ~Compatibility addressed.~

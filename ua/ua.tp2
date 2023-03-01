@@ -25,7 +25,7 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/non-unique/prot1.tpa~
+WITH_TRA ~%lang_dir%/game.tra~ BEGIN INCLUDE ~%MOD_FOLDER%/non-unique/prot1.tpa~ END
 
 BEGIN @2  // +2
 LABEL ~g_ua_allow+2~
@@ -34,7 +34,7 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/non-unique/prot2.tpa~
+WITH_TRA ~%lang_dir%/game.tra~ BEGIN INCLUDE ~%MOD_FOLDER%/non-unique/prot2.tpa~ END
 
 BEGIN @3  // Speed
 LABEL ~g_ua_allow_speed~
@@ -43,21 +43,21 @@ REQUIRE_PREDICATE NOT
   ( MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_strict~)
     OR MOD_IS_INSTALLED ~ua.tp2~ (ID_OF_LABEL ~ua.tp2~ ~g_ua_core_expanded~)
   ) @32
-INCLUDE ~%MOD_FOLDER%/non-unique/boots.tpa~
+WITH_TRA ~%lang_dir%/game.tra~ BEGIN INCLUDE ~%MOD_FOLDER%/non-unique/boots.tpa~ END
 
 BEGIN @6  // Expanded
 LABEL ~g_ua_core_expanded~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
 OUTER_SET expanded = 1
-INCLUDE ~%MOD_FOLDER%/core/main.tpa~
+WITH_TRA ~%lang_dir%/game.tra~ BEGIN INCLUDE ~%MOD_FOLDER%/core/main.tpa~ END
 
 BEGIN @5  // Strict
 LABEL ~g_ua_core_strict~
 REQUIRE_PREDICATE GAME_INCLUDES ~bg1~ OR GAME_INCLUDES ~bg2~ @30
 SUBCOMPONENT @4
 OUTER_SET expanded = 0
-INCLUDE ~%MOD_FOLDER%/core/main.tpa~
+WITH_TRA ~%lang_dir%/game.tra~ BEGIN INCLUDE ~%MOD_FOLDER%/core/main.tpa~ END
 
 BEGIN @100  /* Remove bonus merchants */
 REQUIRE_PREDICATE GAME_INCLUDES ~bg2~ @200

@@ -17,4 +17,10 @@ jobs:
           poify: true
           unpoify: true
           push: true
+          dir2msgstr: true
           single_commit: true
+          handle_charsets: true
+          handle_charsets_tra_path: ua/tra
+          handle_charsets_out_path: ua/tra_ee
+          handle_charsets_from_utf8: false
+          handle_charsets_split_console: true

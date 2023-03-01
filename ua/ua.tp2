@@ -12,9 +12,10 @@ ALWAYS
   INCLUDE ~%lib_dir%/init.tpa~
 END
 
-LANGUAGE ~English~ ~english~ ~ua/tra/english/game.tra~ ~ua/tra/english/setup.tra~
-LANGUAGE ~Russian~ ~russian~ ~ua/tra/russian/game.tra~ ~ua/tra/russian/setup.tra~
-LANGUAGE ~Brazilian Portuguese~ ~portuguese~ ~ua/tra/portuguese/game.tra~ ~ua/tra/portuguese/setup.tra~
+LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra_ee/english/setup-%WEIDU_OS%.tra~
+LANGUAGE ~Brazilian Portuguese~ ~portuguese~ ~%MOD_FOLDER%/tra_ee/portuguese/setup-%WEIDU_OS%.tra~
+LANGUAGE ~Russian~ ~russian~ ~%MOD_FOLDER%/tra_ee/russian/setup-%WEIDU_OS%.tra~
+LANGUAGE ~Swedish~ ~swedish~ ~%MOD_FOLDER%/tra_ee/swedish/setup-%WEIDU_OS%.tra~
 
 
 BEGIN @1  // +1

@@ -1,0 +1,17 @@
+// Do not edit manually. This file is generated automatically by handle-charsets. Your changes will be lost.
+
+@1 = ~Allow non-unique Amulet of Protection +1~
+@2 = ~Allow non-unique Ring of Protection +2 and Cloak of Protection +2~
+@3 = ~Allow non-unique Boots of Speed~
+@4 = ~Unique Artifacts - core~
+@5 = ~Strict~
+@6 = ~Expanded~
+
+
+@30 = ~Only BG saga is supported~
+@31 = ~TuTu not supported~
+@32 = ~This component must be installed before Core~
+
+@100 = ~Remove bonus merchants~
+@101 = ~Less magical items~
+@200 = ~Requires BG2~

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-03-19:17+0000\n"
+"POT-Creation-Date: 2023-03-01-10:21+0000\n"
 "PO-Revision-Date: 2018-08-19 06:11+0000\n"
 "Last-Translator: Magus <magus@bgforge.net>\n"
 "Language-Team: Russian <https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/ru/>\n"
@@ -144,98 +144,6 @@ msgstr "Строгий"
 msgid "Expanded"
 msgstr "Расширенный"
 
-#: setup.tra:7
-msgid "Processing areas:"
-msgstr "Обработка локаций:"
-
-#: setup.tra:8
-msgid "Compatibility with mods that move or remove items:"
-msgstr ""
-
-#: setup.tra:12
-msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
-msgstr ""
-
-#: setup.tra:13
-msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
-msgstr ""
-
-#: setup.tra:14
-msgid "Tortured Souls"
-msgstr "Tortured Souls"
-
-#: setup.tra:15
-msgid "BG2 Fixpack"
-msgstr "БГ2 Фикспак"
-
-#: setup.tra:16
-msgid "Thalantyr item upgrade"
-msgstr "Thalantyr item upgrade"
-
-#: setup.tra:17
-msgid "Daulmakan's Item Pack: More Work for Cromwell"
-msgstr ""
-
-#: setup.tra:18
-msgid "Tactics: Gebhard Blucher's Lich in the Docks"
-msgstr ""
-
-#: setup.tra:19
-#, fuzzy
-#| msgid "Daulmakan extra items"
-msgid "Daulmakan's Item Pack: Extra Items"
-msgstr "Daulmakan extra items"
-
-#: setup.tra:20
-msgid "Ruad Ro'fhessa"
-msgstr "Ruad Ro'fhessa"
-
-#: setup.tra:21
-#, fuzzy
-#| msgid "Almateria's restoration pack"
-msgid "Almateria's Restoration pack: Restored Items"
-msgstr "Almateria's restoration pack"
-
-#: setup.tra:22
-#, fuzzy
-#| msgid "Salk's cursed items revisions"
-msgid "Cursed Items revision"
-msgstr "Salk's cursed items revisions"
-
-#: setup.tra:23
-msgid "Dungeon-Be-Gone"
-msgstr "Dungeon-Be-Gone"
-
-#: setup.tra:24
-#, fuzzy
-#| msgid "Compatibility:"
-msgid "Compatibility addressed."
-msgstr "Совместимость:"
-
-#: setup.tra:25
-msgid "Processing creatures:"
-msgstr "Обрабатываем существ:"
-
-#: setup.tra:26
-msgid "Processing dialogs:"
-msgstr "Обрабатываем диалоги:"
-
-#: setup.tra:27
-#, fuzzy
-#| msgid "Processing scripts (this will take a few minutes):"
-msgid "Processing scripts (this may take a few minutes):"
-msgstr "Обрабатываем скрипты (может занять несколько минут):"
-
-#: setup.tra:28
-#, fuzzy
-#| msgid "Start main process"
-msgid "Starting main process:"
-msgstr "Начинаем основной процесс"
-
-#: setup.tra:29
-msgid "Processing stores:"
-msgstr "Обрабатываем магазины:"
-
 #: setup.tra:30
 msgid "Only BG saga is supported"
 msgstr "Поддерживается только серия игр BG"
@@ -248,52 +156,6 @@ msgstr "ТуТу не поддерживается"
 msgid "This component must be installed before Core"
 msgstr "Этот компонент должен быть установлен перед основным"
 
-#: setup.tra:33
-msgid "BG2EE"
-msgstr ""
-
-#: setup.tra:34
-msgid "Rogue Rebalancing: Shadow Thief improvements"
-msgstr ""
-
-#: setup.tra:35
-msgid "BGEE"
-msgstr ""
-
-#: setup.tra:36
-msgid "BG1NPC"
-msgstr ""
-
-#: setup.tra:41
-#, fuzzy
-#| msgid "Non-unique Amulet of Protection +1"
-msgid "Unique Amulet of Protection +1"
-msgstr "Неуникальный Амулет Защиты +1"
-
-#: setup.tra:42
-msgid "Non-unique Amulet of Protection +1"
-msgstr "Неуникальный Амулет Защиты +1"
-
-#: setup.tra:43
-#, fuzzy
-#| msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
-
-#: setup.tra:44
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
-
-#: setup.tra:45
-#, fuzzy
-#| msgid "Non-unique Boots of Speed"
-msgid "Unique Boots of Speed"
-msgstr "Неуникальные Сапоги Скорости"
-
-#: setup.tra:46
-msgid "Non-unique Boots of Speed"
-msgstr "Неуникальные Сапоги Скорости"
-
 #: setup.tra:100
 msgid "Remove bonus merchants"
 msgstr ""
@@ -305,6 +167,78 @@ msgstr ""
 #: setup.tra:200
 msgid "Requires BG2"
 msgstr ""
+
+#~ msgid "Processing areas:"
+#~ msgstr "Обработка локаций:"
+
+#~ msgid "Tortured Souls"
+#~ msgstr "Tortured Souls"
+
+#~ msgid "BG2 Fixpack"
+#~ msgstr "БГ2 Фикспак"
+
+#~ msgid "Thalantyr item upgrade"
+#~ msgstr "Thalantyr item upgrade"
+
+#, fuzzy
+#~ msgid "Daulmakan's Item Pack: Extra Items"
+#~ msgstr "Daulmakan extra items"
+
+#~ msgid "Ruad Ro'fhessa"
+#~ msgstr "Ruad Ro'fhessa"
+
+#, fuzzy
+#~ msgid "Almateria's Restoration pack: Restored Items"
+#~ msgstr "Almateria's restoration pack"
+
+#, fuzzy
+#~ msgid "Cursed Items revision"
+#~ msgstr "Salk's cursed items revisions"
+
+#~ msgid "Dungeon-Be-Gone"
+#~ msgstr "Dungeon-Be-Gone"
+
+#, fuzzy
+#~ msgid "Compatibility addressed."
+#~ msgstr "Совместимость:"
+
+#~ msgid "Processing creatures:"
+#~ msgstr "Обрабатываем существ:"
+
+#~ msgid "Processing dialogs:"
+#~ msgstr "Обрабатываем диалоги:"
+
+#, fuzzy
+#~ msgid "Processing scripts (this may take a few minutes):"
+#~ msgstr "Обрабатываем скрипты (может занять несколько минут):"
+
+#, fuzzy
+#~ msgid "Starting main process:"
+#~ msgstr "Начинаем основной процесс"
+
+#~ msgid "Processing stores:"
+#~ msgstr "Обрабатываем магазины:"
+
+#, fuzzy
+#~ msgid "Unique Amulet of Protection +1"
+#~ msgstr "Неуникальный Амулет Защиты +1"
+
+#~ msgid "Non-unique Amulet of Protection +1"
+#~ msgstr "Неуникальный Амулет Защиты +1"
+
+#, fuzzy
+#~ msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
+#~ msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#~ msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+#~ msgstr "Неуникальные Кольцо Защиты +2 и Плащ Защиты +2"
+
+#, fuzzy
+#~ msgid "Unique Boots of Speed"
+#~ msgstr "Неуникальные Сапоги Скорости"
+
+#~ msgid "Non-unique Boots of Speed"
+#~ msgstr "Неуникальные Сапоги Скорости"
 
 #  test comment
 #~ msgid "Show me what you have, and I'll tell you if it can be altered."

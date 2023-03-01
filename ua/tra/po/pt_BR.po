@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-03-19:17+0000\n"
+"POT-Creation-Date: 2023-03-01-10:21+0000\n"
 "PO-Revision-Date: 2022-01-03 12:42+0000\n"
 "Last-Translator: Felipe <felipefplzx@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://tra.bgforge.net/projects/infinity-engine/unique-artifacts/pt_BR/>\n"
@@ -156,88 +156,6 @@ msgstr "Restrito"
 msgid "Expanded"
 msgstr "Expandido"
 
-#: setup.tra:7
-msgid "Processing areas:"
-msgstr "Processando áreas:"
-
-#: setup.tra:8
-msgid "Compatibility with mods that move or remove items:"
-msgstr "Compatibilidade com mods que movem ou removem itens:"
-
-#: setup.tra:12
-msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
-msgstr "Rebalanceamento do Rogue: Equipamento adicional pra Ladrões e Bardos"
-
-#: setup.tra:13
-msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
-msgstr ""
-"Estratagemas da Costa da Espada: Mover ou modificar alguns itens mágicos com"
-" poder exagerado"
-
-#: setup.tra:14
-msgid "Tortured Souls"
-msgstr "Almas Torturadas"
-
-#: setup.tra:15
-msgid "BG2 Fixpack"
-msgstr "Fixpack do BG2"
-
-#: setup.tra:16
-msgid "Thalantyr item upgrade"
-msgstr "Upgrade do item do Thalantyr"
-
-#: setup.tra:17
-msgid "Daulmakan's Item Pack: More Work for Cromwell"
-msgstr "Pacote de Itens do Daulmakan: Mais Trabalho pro Cromwell"
-
-#: setup.tra:18
-msgid "Tactics: Gebhard Blucher's Lich in the Docks"
-msgstr "Táticas: Lich do Gebhard Blucher nas Docas"
-
-#: setup.tra:19
-msgid "Daulmakan's Item Pack: Extra Items"
-msgstr "Pacote de Itens do Daulmakan: Itens Extras"
-
-#: setup.tra:20
-msgid "Ruad Ro'fhessa"
-msgstr "Ruad Ro'fhessa"
-
-#: setup.tra:21
-msgid "Almateria's Restoration pack: Restored Items"
-msgstr "Pacote de Restauração da Almateria: Itens Restaurados"
-
-#: setup.tra:22
-msgid "Cursed Items revision"
-msgstr "Revisão dos Itens Amaldiçoados"
-
-#: setup.tra:23
-msgid "Dungeon-Be-Gone"
-msgstr "Masmorra-Desapareça"
-
-#: setup.tra:24
-msgid "Compatibility addressed."
-msgstr "Compatibilidade endereçada."
-
-#: setup.tra:25
-msgid "Processing creatures:"
-msgstr "Processando criaturas:"
-
-#: setup.tra:26
-msgid "Processing dialogs:"
-msgstr "Processando diálogos:"
-
-#: setup.tra:27
-msgid "Processing scripts (this may take a few minutes):"
-msgstr "Processando scripts (isto pode levar alguns minutos):"
-
-#: setup.tra:28
-msgid "Starting main process:"
-msgstr "Iniciando o processo principal:"
-
-#: setup.tra:29
-msgid "Processing stores:"
-msgstr "Processando lojas:"
-
 #: setup.tra:30
 msgid "Only BG saga is supported"
 msgstr "Só a saga do BG é suportada"
@@ -250,52 +168,6 @@ msgstr "O TuTu não é suportado"
 msgid "This component must be installed before Core"
 msgstr "Este componente deve ser instalado antes do Núcleo"
 
-#: setup.tra:33
-msgid "BG2EE"
-msgstr "BG2-EE"
-
-#: setup.tra:34
-msgid "Rogue Rebalancing: Shadow Thief improvements"
-msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão das Sombras"
-
-#: setup.tra:35
-msgid "BGEE"
-msgstr "BG-EE"
-
-#: setup.tra:36
-msgid "BG1NPC"
-msgstr "BG1NPC"
-
-#: setup.tra:41
-#, fuzzy
-#| msgid "Non-unique Amulet of Protection +1"
-msgid "Unique Amulet of Protection +1"
-msgstr "Amuleto de Proteção +1 não-único"
-
-#: setup.tra:42
-msgid "Non-unique Amulet of Protection +1"
-msgstr "Amuleto de Proteção +1 não-único"
-
-#: setup.tra:43
-#, fuzzy
-#| msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Anel de Proteção +2 e Capa de Proteção +2 não-únicas"
-
-#: setup.tra:44
-msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr "Anel de Proteção +2 e Capa de Proteção +2 não-únicas"
-
-#: setup.tra:45
-#, fuzzy
-#| msgid "Non-unique Boots of Speed"
-msgid "Unique Boots of Speed"
-msgstr "Botas de Velocidade não-únicas"
-
-#: setup.tra:46
-msgid "Non-unique Boots of Speed"
-msgstr "Botas de Velocidade não-únicas"
-
 #: setup.tra:100
 msgid "Remove bonus merchants"
 msgstr "Remover mercadores bônus"
@@ -307,3 +179,98 @@ msgstr "Menos itens mágicos"
 #: setup.tra:200
 msgid "Requires BG2"
 msgstr "Requer BG2"
+
+#~ msgid "Processing areas:"
+#~ msgstr "Processando áreas:"
+
+#~ msgid "Compatibility with mods that move or remove items:"
+#~ msgstr "Compatibilidade com mods que movem ou removem itens:"
+
+#~ msgid "Rogue Rebalancing: Additional equipment for Thieves and Bards"
+#~ msgstr "Rebalanceamento do Rogue: Equipamento adicional pra Ladrões e Bardos"
+
+#~ msgid "Sword Coast Stratagems: Move or modify some overpowered magic items"
+#~ msgstr ""
+#~ "Estratagemas da Costa da Espada: Mover ou modificar alguns itens mágicos com"
+#~ " poder exagerado"
+
+#~ msgid "Tortured Souls"
+#~ msgstr "Almas Torturadas"
+
+#~ msgid "BG2 Fixpack"
+#~ msgstr "Fixpack do BG2"
+
+#~ msgid "Thalantyr item upgrade"
+#~ msgstr "Upgrade do item do Thalantyr"
+
+#~ msgid "Daulmakan's Item Pack: More Work for Cromwell"
+#~ msgstr "Pacote de Itens do Daulmakan: Mais Trabalho pro Cromwell"
+
+#~ msgid "Tactics: Gebhard Blucher's Lich in the Docks"
+#~ msgstr "Táticas: Lich do Gebhard Blucher nas Docas"
+
+#~ msgid "Daulmakan's Item Pack: Extra Items"
+#~ msgstr "Pacote de Itens do Daulmakan: Itens Extras"
+
+#~ msgid "Ruad Ro'fhessa"
+#~ msgstr "Ruad Ro'fhessa"
+
+#~ msgid "Almateria's Restoration pack: Restored Items"
+#~ msgstr "Pacote de Restauração da Almateria: Itens Restaurados"
+
+#~ msgid "Cursed Items revision"
+#~ msgstr "Revisão dos Itens Amaldiçoados"
+
+#~ msgid "Dungeon-Be-Gone"
+#~ msgstr "Masmorra-Desapareça"
+
+#~ msgid "Compatibility addressed."
+#~ msgstr "Compatibilidade endereçada."
+
+#~ msgid "Processing creatures:"
+#~ msgstr "Processando criaturas:"
+
+#~ msgid "Processing dialogs:"
+#~ msgstr "Processando diálogos:"
+
+#~ msgid "Processing scripts (this may take a few minutes):"
+#~ msgstr "Processando scripts (isto pode levar alguns minutos):"
+
+#~ msgid "Starting main process:"
+#~ msgstr "Iniciando o processo principal:"
+
+#~ msgid "Processing stores:"
+#~ msgstr "Processando lojas:"
+
+#~ msgid "BG2EE"
+#~ msgstr "BG2-EE"
+
+#~ msgid "Rogue Rebalancing: Shadow Thief improvements"
+#~ msgstr "Rebalanceamento do Rogue: Melhorias pro Ladrão das Sombras"
+
+#~ msgid "BGEE"
+#~ msgstr "BG-EE"
+
+#~ msgid "BG1NPC"
+#~ msgstr "BG1NPC"
+
+#, fuzzy
+#~ msgid "Unique Amulet of Protection +1"
+#~ msgstr "Amuleto de Proteção +1 não-único"
+
+#~ msgid "Non-unique Amulet of Protection +1"
+#~ msgstr "Amuleto de Proteção +1 não-único"
+
+#, fuzzy
+#~ msgid "Unique Ring of Protection +2 and Cloak of Protection +2"
+#~ msgstr "Anel de Proteção +2 e Capa de Proteção +2 não-únicas"
+
+#~ msgid "Non-unique Ring of Protection +2 and Cloak of Protection +2"
+#~ msgstr "Anel de Proteção +2 e Capa de Proteção +2 não-únicas"
+
+#, fuzzy
+#~ msgid "Unique Boots of Speed"
+#~ msgstr "Botas de Velocidade não-únicas"
+
+#~ msgid "Non-unique Boots of Speed"
+#~ msgstr "Botas de Velocidade não-únicas"

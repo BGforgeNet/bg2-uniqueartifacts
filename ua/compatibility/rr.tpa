@@ -1,4 +1,4 @@
-//Rogue Rebalancing 3.8+
+// Rogue Rebalancing 3.8+
 ACTION_IF (FILE_EXISTS_IN_GAME ~rr#guara.itm~) BEGIN // "additional equipment" - Short Sword of Backstabbing
   PRINT ~Rogue Rebalancing: Additional equipment for Thieves and Bards~
   OUTER_SET $item_source_compat(~sw1h10~ ~aran02.cre~) = 1 // Aran, non-STI version

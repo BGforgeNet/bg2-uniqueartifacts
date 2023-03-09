@@ -3,13 +3,13 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~d1potcas.itm~) BEGIN // Daulmakan - extra items
   OUTER_SET $item_source_compat(~clck05~ ~ar0602.bcs~) = 1  // Cloak of Balduran - Chateau Irenicus
 END
 
-//Daulmakan item pack: More work for Cromwell - Periart of Proof against Poison
+// Daulmakan item pack: More work for Cromwell - Periart of Proof against Poison
 <<<<<<<< .../ua-inlined/wsmith01.d
 REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("amul14")~
   ~False()~
 >>>>>>>>
-//Daulmakan item pack: More work for Cromwell - forbid Ring +1 > +2,  Cloak of protection +1 > +2
+// Daulmakan item pack: More work for Cromwell - forbid Ring +1 > +2,  Cloak of protection +1 > +2
 <<<<<<<< .../ua-inlined/wsmith02.d
 REPLACE_TRANS_TRIGGER wsmith01 BEGIN %offending_state% END BEGIN END
   ~PartyHasItem("ring06")~

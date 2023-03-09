@@ -11,6 +11,7 @@ ACTION_IF GAME_IS ~bg1 totsc~ BEGIN
 END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+  PRINT ~BG1 custom UA adjustments~
 
   // small bonus: Boots of Stealth from Nadarin (quest to kill basilisk in Baldur's Gate) replaced with Boots of the West to match his dialog
   ACTION_IF NOT FILE_EXISTS_IN_GAME ~misc8j.itm~ BEGIN

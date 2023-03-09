@@ -1,4 +1,4 @@
-//Dungeon-Be-Gone
+// Dungeon-Be-Gone
 ACTION_IF (FILE_EXISTS_IN_GAME ~fwjassy.dlg~) BEGIN
   PRINT ~Dungeon-Be-Gone~
   OUTER_SET $item_source_compat(~belt03~ ~fwjassy.dlg~) = 1  // Girdle of Bluntness

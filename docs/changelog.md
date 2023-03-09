@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.12](#version-712)
 - [Version 7.11](#version-711)
 - [Version 7.10](#version-710)
 - [Version 7.9](#version-79)
@@ -22,6 +23,10 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.12
+
+Fixed Boots of Stealth _still_ being duped in BG1 part of BGT... For real.
 
 ### Version 7.11
 

@@ -13,5 +13,12 @@
 | clck16 | highhedg.sto | Robe of the Neutral Archmagi  | High Hedge mage shop                               |
 | clck17 | davaeo.cre   | Robe of the Evil Archmagi     | Davaeorn (BG1 mage who rules mines)                |
 |        |
+| helm06 | knight1.cre  | Helm of Charm Protection      | Undroppable from Ghost knights in Ulcaster         |
+| helm06 | knight2.cre  |                               | They are only killable with exploits anyway        |
+| helm06 | knight3.cre  |                               | Keeping the item for immunities                    |
+| helm06 | knight4.cre  |                               |                                                    |
+| helm06 | knight5.cre  |                               |                                                    |
+| helm06 | knight6.cre  |                               |                                                    |
+|        |
 | ring21 | nimbul.cre   | Ring of Infravision           | Nimbul (asassin in Nashkel)                        |
 | ring22 | mulahe.cre   | Ring of Holiness              | Mulahey                                            |

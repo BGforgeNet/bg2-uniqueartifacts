@@ -109,9 +109,10 @@ The main effect of this component is that you'll get less expensive loot, and co
 
 ## Compatibility
 
-- Install Unique Artifacts after any mods that add, change or move content (areas, creatures, quests, items, etc). Basically, as late as possible.
+- Generally, to take full effect, Unique Artifacts should be installed after any mods that add, remove or alter content. Usually that means as late as possible.
 - Item Randomiser is an exception. It should be installed after UA.
-- When both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
+- Nothing gamebreaking should happen if some content mods are installed after UA, but you might get some incovered dupes and/or miss some items.
+- If both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Which items are affected?
 

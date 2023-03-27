@@ -27,7 +27,8 @@
 
 ### Version 7.13
 
-Removed recommendation and directive on SCS installation order. Either way should work.
+- Added Helm of Charm Protection to Expanded component.
+- Removed recommendation and directive on SCS installation order. Either way should work.
 
 ### Version 7.12
 

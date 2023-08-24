@@ -3,6 +3,9 @@ on:
   push:
     paths:
       - "ua/tra/**"
+  pull_request:
+    paths:
+      - "ua/tra/**"
 
 jobs:
   build:

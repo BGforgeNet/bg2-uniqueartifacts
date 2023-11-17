@@ -8,6 +8,7 @@ INCLUDE ~%compat%/bg1npc.tpa~
 INCLUDE ~%compat%/bg2.tpa~  // must go after ARP
 INCLUDE ~%compat%/bg2ee.tpa~
 INCLUDE ~%compat%/bg2fixpack.tpa~
+INCLUDE ~%compat%/bgt.tpa~
 INCLUDE ~%compat%/boot02.tpa~  // Boots of Stealth, handled differently in BG1/BGT vs BGEE/EET
 INCLUDE ~%compat%/cursed_items.tpa~
 INCLUDE ~%compat%/daulmakan.tpa~  // must go before tactics to undupe Cloak of Balduran

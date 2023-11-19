@@ -10,7 +10,7 @@
 | regisamu | c6regis2.cre | Ruby Pendant                    | Regis (Drizzt's party)                                   |
 |          |
 | belt02   | mgkhol01.dlg | Golden Girdle                   | Sphere, Solamnic Knights, Khollynnus Paac                |
-| belt03   | ar0603.are   | Girdle of Bluntness             | Jon's dungeon lvl 2 (container 1)                        |
+| belt03   | ppumb01.sto  | Girdle of Bluntness             | Temple of Umberlee in Brynnlaw                           |
 | belt04   | kalah2.cre   | Girdle of Piercing              | Kalah - circus                                           |
 | belt07   | suadsaan.cre | Girdle of Stone Giant Strength  | Suldanessellar Adsaan                                    |
 | belt09   | gaal01.cre   | Girdle of Fortitude             | Cult of Eyeless, Gaal                                    |
@@ -52,14 +52,19 @@
 | ring39   | hldemi.cre   | Ring of Gaxx                    | Kangaxx                                                  |
 | ring42   | bazdra03.cre | Ring of Improved Invisibility   | Fll'Yissetat Abazigal's dragon-guard                     |
 |          |
+| halb03   | jarevia.cre  | Suryris's Blade                 | Reviane - Jaheira's quest                                |
+|          |
 | helm04   | hlmafer.cre  | Helm Of Defence                 | Maferan (Guarded compound)                               |
+|          |
 | dagg03   | c6arkan.cre  | Dagger +2: 'Heart of the Golem' | Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)   |
 | dagg03   | c6arkan3.cre | Dagger +2: 'Heart of the Golem' | Arcanis Gath in Bodhi's lair (1 and 2 stage, possibly)   |
+|          |
 | shld19   | chak.cre     | Large Shield +2                 | Chak (Firkraag's dungeon, Samia's party)                 |
-| sw1h10   | renal.cre    | Short Sword of Backstabbing +3  | Renal Bloodscalp                                         |
-| sw1h10   | renal.dlg    | Short Sword of Backstabbing +3  | Renal Bloodscalp                                         |
-| halb03   | jarevia.cre  | Suryris's Blade                 | Reviane - Jaheira's quest                                |
+|          |
 | sw1h03   | lehtin.dlg   | Kondar +1, +3 vs Shapeshifters  | Lehtinan (Copper coronet)                                |
 | sw1h03   | hendak.dlg   | Kondar +1, +3 vs Shapeshifters  | Hendak (Copper coronet)                                  |
 | sw1h06   | ribald.cre   | Long Sword +2: 'Varscona'       | Ribald - both EE and fixpack ensure it's unique          |
+| sw1h10   | renal.cre    | Short Sword of Backstabbing +3  | Renal Bloodscalp                                         |
+| sw1h10   | renal.dlg    | Short Sword of Backstabbing +3  | Renal Bloodscalp                                         |
+|          |
 | wa2robe  | wmart2.sto   | Robe of Vecna                   | Deidre                                                   |

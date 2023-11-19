@@ -49,5 +49,5 @@
 |         |
 | staf05  | temlath.sto  | Staff of Striking +3              | Dawnmaster Kreel                                                             |
 | staf06  | ppumb01.sto  | Staff Mace +2                     | Temple of Umberlee in Brynnlaw                                               |
-| staf07  | trcar02.sto  | Staff Spear +2                    | Trademeet merchant in the red tent                                           |
+| staf07  | trcar04.sto  | Staff Spear +2                    | Trademeet merchant in the red tent                                           |
 | staf19  | trrak02.cre  | Cleric's Staff + 3                | Saadat, rakshasa near Druid Grove                                            |

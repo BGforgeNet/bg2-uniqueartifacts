@@ -25,4 +25,4 @@
 |        |
 | staf05 | %DurlagsTower_D4%.are              | Staff of Striking +3          | Durlag's Tower, Labyrinth Level Four               |
 | staf06 | %IsleofBalduranNDradeelsHouse%.are | Staff Mace +2                 | Dradeel's Cabin                                    |
-| staf06 | kirinh.cre                         | Staff Spear +2                | Kirinhale                                          |
+| staf07 | kirinh.cre                         | Staff Spear +2                | Kirinhale                                          |

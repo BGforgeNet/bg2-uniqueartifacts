@@ -46,3 +46,7 @@
 | shld30  | hlmafer.cre  | Large Shield +2 - Calimport mercs | Maferan (Guarded compound)                                                   |
 | sw1h53  | bernard2.sto | Sword of Flame +1                 | Bernard, after freeing slaves                                                |
 | xbow06  | bernard2.sto | Light Crossbow of Speed           | Bernard, after freeing slaves                                                |
+|         |
+| staf05  | trmer02.cre  | Staff of Striking +3              | Trademeet merchant                                                           |
+| staf06  | ppumb01.sto  | Staff Mace +2                     | Temple of Umberlee in Brynnlaw                                               |
+| staf19  | trrak02.cre  | Cleric's Staff + 3                | Saadat, rakshasa near Druid Grove                                            |

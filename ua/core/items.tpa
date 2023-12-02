@@ -3,9 +3,10 @@ $item_source(~%item%~ ~%source%~) => should_be_present: item => source list. 1 m
 $item_source_compat(~%item%~ ~%source%~) => should_be_present: same as $item_source, but filled by custom compatibility code. Used to complement item_source.
 $items(~%item%~) = 1 list of items, strict or expanded
 $csources(~%source%~) = 1: filtered list of canon sources, with verified items present
-common_regex: a regex containing ALL deduped items
-$custom_regex0(~%csource%~): each canon source has its own special regex, which is the same as common regex, except items that are supposed to be in this canon source
-$custom_regex(~%csource%~): same as custom_regex0, but with with "^\(    \)$" around the csource.
+$common_regex_no_eol: a regex containing ALL deduped items
+$common_regex: same as common_regex_no_eol, but with with "^\(   \)$" around.
+$custom_regex_no_eol(~%csource%~): each canon source has its own special regex, which is the same as common regex, except items that are supposed to be in this canon source. It is used for D and BAF replacements.
+$custom_regex(~%csource%~): same as custom_regex_no_eol, but with with "^\(   \)$" around the csource.
 $item_present(~%item%~): set to 1 if item is present in each canon source, 0 otherwise
 $is_expanded(~%item%~): set to 1 in item is in expanded section. It is used because we don't want to track that in compatibility section. We want that to be inferred from the fact it's being read from expanded file.
 */
@@ -96,19 +97,19 @@ END
 
 // init custom regex for each source
 ACTION_PHP_EACH csources AS csource => int BEGIN // this is already filtered: only sources with present items
-  OUTER_SPRINT $custom_regex0(~%csource%~) ~~
+  OUTER_SPRINT $custom_regex_no_eol(~%csource%~) ~~
 END
 
 // build a regex of all items, skip those that are not found in ALL canon sources
-OUTER_SPRINT common_regex ~~
+OUTER_SPRINT common_regex_no_eol ~~
 ACTION_PHP_EACH item_present AS item => present BEGIN
   ACTION_IF present == 1 BEGIN
 
     // common regex
     ACTION_IF ~%common_regex%~ STR_EQ ~~ BEGIN //empty, initialize
-      OUTER_SPRINT common_regex ~%item%~
+      OUTER_SPRINT common_regex_no_eol ~%item%~
     END ELSE BEGIN
-      OUTER_SPRINT common_regex ~%common_regex%\|%item%~ //append
+      OUTER_SPRINT common_regex_no_eol ~%common_regex%\|%item%~ //append
     END
     // custom regex for each source
     ACTION_PHP_EACH csources AS csource => int BEGIN
@@ -116,11 +117,11 @@ ACTION_PHP_EACH item_present AS item => present BEGIN
         NOT VARIABLE_IS_SET $item_source(~%item%~ ~%csource%~)
         OR $item_source(~%item%~ ~%csource%~) != 1 // may be changed in compat section
       BEGIN
-        OUTER_SPRINT tmp $custom_regex0(~%csource%~)
+        OUTER_SPRINT tmp $custom_regex_no_eol(~%csource%~)
         ACTION_IF ~%tmp%~ STR_EQ ~~ BEGIN
-          OUTER_SPRINT $custom_regex0(~%csource%~) ~%item%~
+          OUTER_SPRINT $custom_regex_no_eol(~%csource%~) ~%item%~
         END ELSE BEGIN
-          OUTER_SPRINT $custom_regex0(~%csource%~) ~%tmp%\|%item%~
+          OUTER_SPRINT $custom_regex_no_eol(~%csource%~) ~%tmp%\|%item%~
         END
       END
     END
@@ -128,7 +129,7 @@ ACTION_PHP_EACH item_present AS item => present BEGIN
   END
 END
 
-OUTER_SPRINT common_regex ~^\(%common_regex%\)$~
-ACTION_PHP_EACH custom_regex0 AS csource => cregex BEGIN
+OUTER_SPRINT common_regex ~^\(%common_regex_no_eol%\)$~
+ACTION_PHP_EACH custom_regex_no_eol AS csource => cregex BEGIN
   OUTER_SPRINT $custom_regex(~%csource%~) ~^\(%cregex%\)$~
 END

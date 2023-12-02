@@ -8,10 +8,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.dlg$~ ~override~
     AND NOT (~%SOURCE_FILE%~ STR_EQ "m#ruad.dlg") // and Ruad
   BEGIN
     SPRINT res ~%SOURCE_FILE%~ TO_LOWER res
-    PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
-      SPRINT regex $custom_regex(~%res%~)
+    PATCH_IF VARIABLE_IS_SET $custom_regex_no_eol(~%res%~) BEGIN
+      SPRINT regex $custom_regex_no_eol(~%res%~)
     END ELSE BEGIN
-      SPRINT regex ~%common_regex%~
+      SPRINT regex ~%common_regex_no_eol%~
     END
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM
@@ -34,7 +34,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.bcs$~ ~override~
     PATCH_IF VARIABLE_IS_SET $custom_regex(~%res%~) BEGIN
       SPRINT regex $custom_regex(~%res%~)
     END ELSE BEGIN
-      SPRINT regex ~%common_regex%~
+      SPRINT regex ~%common_regex_no_eol%~
     END
     DECOMPILE_AND_PATCH BEGIN
       LPF REPLACE_D_AND_BAF_ITEM

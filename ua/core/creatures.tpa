@@ -11,6 +11,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     PATCH_IF
       NOT (VARIABLE_IS_SET $item_source(~%old_item%~ ~%res%~) AND $item_source(~%old_item%~ ~%res%~) == 1)
     BEGIN
+      PATCH_IF ~%res%~ STR_EQ ~BDANGATH~ BEGIN
+        PATCH_PRINT ~bdanganth: res=%res%, old_item=%old_item%, new_item=%new_item%~
+        PATCH_PRINT ~bdanganth: regex=%regex%~
+      END
       LPF REPLACE_CRE_ITEM_MATCH STR_VAR match_item = ~%old_item%~ new_item END
     END
   END

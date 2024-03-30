@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.14](#version-714)
 - [Version 7.13](#version-713)
 - [Version 7.12](#version-712)
 - [Version 7.11](#version-711)
@@ -24,6 +25,12 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.14
+
+- Protector of the Second and Claw of Kazgaroth can now be passed normally from BG1 to BG2 in a BGT game.
+- Expanded option now includes Staves of Striking, Cleric's, Martial, Staff-Mace, Staff-Spear.
+- Canonical BG2 location for Girdle of Bluntness in BG2 is now the Temple of Umberlee in Brynnlaw.
 
 ### Version 7.13
 

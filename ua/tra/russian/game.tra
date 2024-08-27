@@ -29,17 +29,17 @@
 
 Класс Защиты: +2
 Спасбросок (универсальный) +2~
-@107 = ~Boots~
-@108 = ~Boots of the West~
-@109 = ~Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual.
+@107 = ~Ботинки~
+@108 = ~Сапоги Запада~
+@109 = ~Сапоги обычно изготавливаются вручную сапожниками. Обычные сапоги делают с использованием формы, но хорошие сапоги проектируются для конкретной ноги. 
 
-STATISTICS:
+ХАРАКТЕРИСТИКИ: 
 
-Weight:  4~
-@110 = ~Boots of the West
-These are the boots that were once owned by the famous woodsman, Randy of the West.
+Вес: 4~
+@110 = ~Сапоги Запада
+Эти сапоги когда-то принадлежали известному лесорубу Рэнди с Запада.
 
-STATISTICS:
+ХАРАКТЕРИСТИКИ:
 
-Increase Charisma by one point
-Protection from Disease~
+Повышение Харизмы на один пункт
+Защита от заболеваний~

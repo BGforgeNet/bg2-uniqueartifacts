@@ -1,4 +1,4 @@
-// Do not edit manually. This file is generated automatically by handle-charsets. Your changes will be lost.
+// Do not edit. This file is generated automatically by handle-charsets. Your changes will be lost.
 
 @1 = ~Разрешить неуникальный Амулет Защиты +1~
 @2 = ~Разрешить неуникальные Кольцо Защиты +2 и Плащ Защиты +2~
@@ -11,4 +11,4 @@
 @32 = ~Этот компонент должен быть установлен перед основным~
 @100 = ~Remove bonus merchants~
 @101 = ~Less magical items~
-@200 = ~Requires BG2~
+@200 = ~Требуется BG2~

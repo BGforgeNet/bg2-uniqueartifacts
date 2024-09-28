@@ -1,6 +1,6 @@
 // Do not edit. This file is generated automatically by handle-charsets. Your changes will be lost.
 
-@103 = ~Stövlar av Snabbhet: "Gepardens Tassar"
+@103 = ~Snabbhetstövlar: "Gepardens Tassar"
 Från början, var förtrollade stövlar som dessa ägodelar till en dödlig lönnmördarordernsom tyckte om att jaga sina byten. De rörde sig så fort att deras mål oftast inte hade möjlighet att reagera, även när de red. Med tiden spreds orderns ökändhet, och även om dess namn aldig blek känt, visste alla att de skulle frukta de sista orden deras offer hörde: "Du kan gömma dig, men du kan inte fly!". Sedan dess, har många kopior dykt upp, och det här är ett av dem.
 
 STATISTIK
@@ -24,24 +24,24 @@ Rustningsklass:  +2 bonus
 Räddningskast:  +2 bonus
 Vikt: 3
 Ej användbar av:~
-@106 = ~Ring of Protection +2:  'The Guard's Ring'
-The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.
+@106 = ~Skyddsring +2: 'Vaktens ring'
+Vakten var en odödlig vaktpost som hade i uppdrag att skydda en grav där en prinsessa från Akanal låg begravd.  Under årtusenden försvann respekten för graven med minnet av den kungliga familjen, och äventyrare började pröva lyckan mot vakten.  Det var oundvikligt att han till slut skulle bli besegrad, och när han blev det var ringen han bar en av många skatter som togs från graven. Sedan dess har många kopior dykt upp, och detta är en av dem.
 
-STATISTICS:
+STATISTIK:
 
-Armor Class:  +2 bonus
-Saving Throws:  +2 bonus~
+Rustningsklass:  +2 bonus
+Räddningskast:  +2 bonus~
 @107 = ~Stövlar~
-@108 = ~Boots of the West~
-@109 = ~Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual.
+@108 = ~Stövlar från Västern~
+@109 = ~Stövlar tillverkas normalt för hand av skomakare.  Vanliga stövlar tillverkas utifrån en mall, men bra stövlar är designade för en individs fot.
 
-STATISTICS:
+STATISTIK:
 
-Weight:  4~
-@110 = ~Boots of the West
-These are the boots that were once owned by the famous woodsman, Randy of the West.
+Vikt: 4~
+@110 = ~Stövlar från Västern
+Det här är de stövlar som en gång ägdes av den berömda skogsmannen Randy från Västern.
 
-STATISTICS:
+STATISTIK:
 
-Increase Charisma by one point
-Protection from Disease~
+Ökar Karisma med en poäng
+Skydd mot Sjukdom~

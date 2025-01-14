@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.15](#version-715)
 - [Version 7.14](#version-714)
 - [Version 7.13](#version-713)
 - [Version 7.12](#version-712)
@@ -25,6 +26,10 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.15
+
+Completed Swedish translation.
 
 ### Version 7.14
 

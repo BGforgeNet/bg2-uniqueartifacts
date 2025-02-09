@@ -37,5 +37,6 @@ jobs:
           files: |
             ${{ steps.create_mod_package.outputs.PackageBaseName }}.iemod
             ${{ steps.create_mod_package.outputs.PackageBaseName }}.zip
+          fail_on_unmatched_files: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

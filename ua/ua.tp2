@@ -4,7 +4,7 @@ SUPPORT ~https://forums.bgforge.net/viewforum.php?f=30~
 NO_IF_EVAL_BUG
 AUTO_EVAL_STRINGS
 //MODDER
-VERSION ~v7.15~
+VERSION ~v7.16~
 
 ALWAYS
   CLEAR_EVERYTHING
@@ -12,10 +12,10 @@ ALWAYS
   INCLUDE ~%lib_dir%/init.tpa~
 END
 
-LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra_ee/english/setup-%WEIDU_OS%.tra~
-LANGUAGE ~Brazilian Portuguese~ ~portuguese~ ~%MOD_FOLDER%/tra_ee/portuguese/setup-%WEIDU_OS%.tra~
-LANGUAGE ~Russian~ ~russian~ ~%MOD_FOLDER%/tra_ee/russian/setup-%WEIDU_OS%.tra~
-LANGUAGE ~Swedish~ ~swedish~ ~%MOD_FOLDER%/tra_ee/swedish/setup-%WEIDU_OS%.tra~
+LANGUAGE ~English~                ~english~     ~ua/tra/english/setup.tra~
+LANGUAGE ~Brazilian Portuguese~   ~portuguese~  ~ua/tra/portuguese/setup.tra~
+LANGUAGE ~Russian~                ~russian~     ~ua/tra/russian/setup.tra~
+LANGUAGE ~Swedish~                ~swedish~     ~ua/tra/swedish/setup.tra~
 
 
 BEGIN @1  // +1

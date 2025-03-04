@@ -42,4 +42,3 @@ jobs:
           handle_charsets: true
           handle_charsets_tra_path: ua/tra
           handle_charsets_out_path: ua/tra_ee
-

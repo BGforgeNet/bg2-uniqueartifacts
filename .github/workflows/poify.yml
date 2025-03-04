@@ -2,9 +2,13 @@ name: Poify/Unpoify
 on:
   push:
     paths:
+      - .bgforge.yml
+      - .github/workflows/poify.yml
       - "ua/tra/**"
   pull_request:
     paths:
+      - .bgforge.yml
+      - .github/workflows/poify.yml
       - "ua/tra/**"
 
 jobs:

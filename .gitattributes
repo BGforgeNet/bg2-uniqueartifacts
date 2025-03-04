@@ -13,20 +13,16 @@ ua/tra/swedish/**.tra                working-tree-encoding=cp1252
 ua/tra/schinese/**.tra               working-tree-encoding=cp936
 ua/tra/tchinese/**.tra               working-tree-encoding=cp950
 ua/tra/ukrainian/**.tra              working-tree-encoding=cp1251
+ua/tra/vietnamese/**.tra             working-tree-encoding=cp1258
 
-# Classic or EE console, RU/UA
-ua/**/russian/**/install.tra         working-tree-encoding=cp866
-ua/**/russian/**/setup.tra           working-tree-encoding=cp866
-ua/**/ukrainian/**/install.tra       working-tree-encoding=cp866
-ua/**/ukrainian/**/setup.tra         working-tree-encoding=cp866
+
+# Console
+ua/**/setup.tra                      working-tree-encoding=utf8
 
 # EE only
 ua/tra/**/ee.tra                     working-tree-encoding=utf8
 ua/tra/**/*_ee.tra                   working-tree-encoding=utf8
 
-# Linux console
-ua/**/setup-unix.tra                 working-tree-encoding=utf8
-ua/**/setup-osx.tra                  working-tree-encoding=utf8
 
 # Windows console, other languages
 ua/tra_ee/czech/*-win32.tra          working-tree-encoding=cp1250
@@ -43,3 +39,4 @@ ua/tra_ee/swedish/*-win32.tra        working-tree-encoding=cp1252
 ua/tra_ee/schinese/*-win32.tra       working-tree-encoding=cp936
 ua/tra_ee/tchinese/*-win32.tra       working-tree-encoding=cp950
 ua/tra_ee/ukrainian/*-win32.tra      working-tree-encoding=cp866
+ua/tra_ee/vietnamese/*-win32.tra     working-tree-encoding=cp1258

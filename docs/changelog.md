@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.16](#version-716)
 - [Version 7.15](#version-715)
 - [Version 7.14](#version-714)
 - [Version 7.13](#version-713)
@@ -26,6 +27,10 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.16
+
+Switched console installation messages to UTF-8.
 
 ### Version 7.15
 

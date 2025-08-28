@@ -22,6 +22,14 @@ msgid ""
 "Equipped Ability: Movement rate doubled\n"
 "Weight: 4"
 msgstr ""
+"Ces bottes enchantées étaient autrefois la propriété d'un assassin sanguinaire qui aimait faire la chasse à ses victimes. Il se déplaçait à une telle vitesse que ses cibles avaient rarement la possibilité de réagir, même à cheval. Avec le temps, la réputation de l'assassin se répandit et, bien que son nom restât inconnu, tout le monde connaissait les derniers mots parvenus aux oreilles de ses victimes : « vous pouvez vous cacher, mais vous ne pouvez pas m'échapper ! ». Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Capacités d'équipement :\n"
+"- Double la vitesse de déplacement\n"
+"\n"
+"Poids : 4"
 
 #: game.tra:104
 msgid ""
@@ -34,6 +42,15 @@ msgid ""
 "Armor Class Bonus:  1\n"
 "Saving Throw Bonus:  1"
 msgstr ""
+"Les gardes du roi Pyronan, maître d'Impiltur, se virent remettre « le Protecteur » comme signe honorifique de leur fonction. Malheureusement, les membres de la garde ne parvinrent pas à tomber d'accord sur l'identité de celui qui recevrait l'amulette. Après des années de dissensions internes, l'objet fut perdu et les gardes remplacés par des soldats moins cupides. Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Capacités d'équipement :\n"
+"- Classe d'armure : +1\n"
+"- Jets de sauvegarde : +1\n"
+"\n"
+"Poids : 1"
 
 #: game.tra:105
 msgid ""
@@ -47,6 +64,15 @@ msgid ""
 "Weight:  3\n"
 "Not usable by:"
 msgstr ""
+"Cette cape est censée concentrer les énergies de l'esprit d'un individu dans une force protectrice qui l'entoure. Les rumeurs selon lesquelles un vampire serait emprisonné à l'intérieur de l'objet magique sont persistantes, mais malheureusement, il est impossible d'en prouver la véracité sans détruire la cape.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Capacités d'équipement :\n"
+"- Classe d'armure : +2\n"
+"- Jets de sauvegarde : +2\n"
+"\n"
+"Poids : 3"
 
 #: game.tra:106
 msgid ""
@@ -58,14 +84,23 @@ msgid ""
 "Armor Class:  +2 bonus\n"
 "Saving Throws:  +2 bonus"
 msgstr ""
+"Le Garde était une sentinelle chargée de protéger la tombe où reposait une princesse de l'Akanal. Après plusieurs millénaires, le respect inspiré par la tombe disparut avec le souvenir de la famille royale, et des aventuriers commencèrent à se mesurer au Garde. Comme cela devait inévitablement arriver, il finit par être battu. L'anneau qu'il portait fut dérobé de la tombe, à l'instar de nombreux autres objets magiques. Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Capacités d'équipement :\n"
+"- Classe d'armure : +2\n"
+"- Jets de sauvegarde : +2\n"
+"\n"
+"Poids : 0"
 
 #: game.tra:107
 msgid "Boots"
-msgstr ""
+msgstr "Bottes"
 
 #: game.tra:108
 msgid "Boots of the West"
-msgstr ""
+msgstr "Bottes de l'Ouest"
 
 #: game.tra:109
 msgid ""
@@ -75,6 +110,11 @@ msgid ""
 "\n"
 "Weight:  4"
 msgstr ""
+"Les bottes sont généralement fabriquées artisanalement par des cordonniers. Les bottes ordinaires sont fabriquées à l'aide d'un moule, mais les bottes de qualité supérieure sont faites sur mesure.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Poids : 4"
 
 #: game.tra:110
 msgid ""
@@ -86,51 +126,60 @@ msgid ""
 "Increase Charisma by one point\n"
 "Protection from Disease"
 msgstr ""
+"Bien que d'origines mystérieuses, on peut supposer que ces bottes furent portées par le fameux homme des bois, Randy de l'Ouest.\n"
+"\n"
+"PARAMÈTRES :\n"
+"\n"
+"Capacités d'équipement :\n"
+"- Charisme : +1\n"
+"- Immunité contre les maladies\n"
+"\n"
+"Poids : 4"
 
 #: setup.tra:1
 msgid "Allow non-unique Amulet of Protection +1"
-msgstr ""
+msgstr "L'amulette de protection +1 n'est pas uniqueL'amulette de protection +1 n'est pas unique"
 
 #: setup.tra:2
 msgid "Allow non-unique Ring of Protection +2 and Cloak of Protection +2"
-msgstr ""
+msgstr "L'anneau de protection +2 et la cape de protection +2 ne sont pas uniques"
 
 #: setup.tra:3
 msgid "Allow non-unique Boots of Speed"
-msgstr ""
+msgstr "Les Bottes de rapidité ne sont pas uniques"
 
 #: setup.tra:4
 msgid "Unique Artifacts - core"
-msgstr ""
+msgstr "Artefacts uniques : composant principal"
 
 #: setup.tra:5
 msgid "Strict"
-msgstr ""
+msgstr "Application stricte de la description des objets"
 
 #: setup.tra:6
 msgid "Expanded"
-msgstr ""
+msgstr "Application etendue (encore plus d'objets magiques non dupliques)"
 
 #: setup.tra:30
 msgid "Only BG saga is supported"
-msgstr ""
+msgstr "Ce composant est uniquement disponible pour un jeu de la saga BG"
 
 #: setup.tra:31
 msgid "TuTu not supported"
-msgstr ""
+msgstr "Ce composant n'est pas disponible pour TuTu"
 
 #: setup.tra:32
 msgid "This component must be installed before Core"
-msgstr ""
+msgstr "Ce composant doit etre installe avant le composant principal"
 
 #: setup.tra:100
 msgid "Remove bonus merchants"
-msgstr ""
+msgstr "Supprimer les marchands bonus"
 
 #: setup.tra:101
 msgid "Less magical items"
-msgstr ""
+msgstr "Moins d'objets magiques"
 
 #: setup.tra:200
 msgid "Requires BG2"
-msgstr ""
+msgstr "Ce composant est uniquement disponible pour BG2"

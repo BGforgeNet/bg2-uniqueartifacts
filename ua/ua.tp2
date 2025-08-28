@@ -16,6 +16,7 @@ LANGUAGE ~English~                ~english~     ~ua/tra/english/setup.tra~
 LANGUAGE ~Brazilian Portuguese~   ~portuguese~  ~ua/tra/portuguese/setup.tra~
 LANGUAGE ~Russian~                ~russian~     ~ua/tra/russian/setup.tra~
 LANGUAGE ~Swedish~                ~swedish~     ~ua/tra/swedish/setup.tra~
+LANGUAGE ~French~                 ~french~      ~ua/tra/french/setup.tra~
 
 
 BEGIN @1  // +1

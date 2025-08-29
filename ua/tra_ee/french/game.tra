@@ -1,47 +1,53 @@
 // Do not edit. This file is generated automatically by handle-charsets. Your changes will be lost.
 
-@103 = ~Boots of Speed: "The Paws of the Cheetah"
-Originaly, enchanted boots like these were the property of an order of deadly assassins fond of chasing down their prey. They moved with such speed that their targets often didn't have the opportunity to respond, even on horseback. Over time the order's infamy spread, and though its name was never known, all knew to fear the words last heard by their victims: "you can hide, but you cannot run!". Since then, many copies emerged, and this is one of them.
+@103 = ~Ces bottes enchantées étaient autrefois la propriété d'un assassin sanguinaire qui aimait faire la chasse à ses victimes. Il se déplaçait à une telle vitesse que ses cibles avaient rarement la possibilité de réagir, même à cheval. Avec le temps, la réputation de l'assassin se répandit et, bien que son nom restât inconnu, tout le monde connaissait les derniers mots parvenus aux oreilles de ses victimes : « vous pouvez vous cacher, mais vous ne pouvez pas m'échapper ! ». Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.
 
-STATISTICS
+PARAMÈTRES :
 
-Equipped Ability: Movement rate doubled
-Weight: 4~
-@104 = ~Amulet of Protection +1 : 'The Protector'
+Capacités d'équipement :
+- Double la vitesse de déplacement
 
-Originally, the royal guard of King Pyronan, ruler of Impiltur, were given 'The Protector' as an honorary show of status.  Unfortunately, members of the guard had trouble coming to a consensus amongst themselves as to whom the amulet should go to.  After years of internal hostility, the item was lost and the guards were replaced by less greedy individuals. Since then, many copies emerged, and this is one of them.
+Poids : 4~
+@104 = ~Les gardes du roi Pyronan, maître d'Impiltur, se virent remettre « le Protecteur » comme signe honorifique de leur fonction. Malheureusement, les membres de la garde ne parvinrent pas à tomber d'accord sur l'identité de celui qui recevrait l'amulette. Après des années de dissensions internes, l'objet fut perdu et les gardes remplacés par des soldats moins cupides. Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.
 
-STATISTICS:
+PARAMÈTRES :
 
-Armor Class Bonus:  1
-Saving Throw Bonus:  1~
-@105 = ~Cloak of Protection +2:  'The Spirit's Shield'
-Cloaks of this type are said to focus the energies of one's spirit into a force that protects him or her.  Rumors of a vampire enslaved in the magical item are ever-present, but they are impossible to prove without destroying the cloak.
+Capacités d'équipement :
+- Classe d'armure : +1
+- Jets de sauvegarde : +1
 
-STATISTICS:
+Poids : 1~
+@105 = ~Cette cape est censée concentrer les énergies de l'esprit d'un individu dans une force protectrice qui l'entoure. Les rumeurs selon lesquelles un vampire serait emprisonné à l'intérieur de l'objet magique sont persistantes, mais malheureusement, il est impossible d'en prouver la véracité sans détruire la cape.
 
-Armor Class:  +2 bonus
-Saving Throw:  +2 bonus
-Weight:  3
-Not usable by:~
-@106 = ~Ring of Protection +2:  'The Guard's Ring'
-The Guard was an immortal sentry assigned to protect a tomb that sheltered the body of a princess of the Akanal.  Over millennia respect for the grave disappeared with the memory of the royal family, and adventurers began to try their luck with the Guard.  It was inevitable that he would eventually be bested, and when he was, the ring he wore was one of many treasures taken from the tomb. Since then, many copies emerged, and this is one of them.
+PARAMÈTRES :
 
-STATISTICS:
+Capacités d'équipement :
+- Classe d'armure : +2
+- Jets de sauvegarde : +2
 
-Armor Class:  +2 bonus
-Saving Throws:  +2 bonus~
-@107 = ~Boots~
-@108 = ~Boots of the West~
-@109 = ~Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual.
+Poids : 3~
+@106 = ~Le Garde était une sentinelle chargée de protéger la tombe où reposait une princesse de l'Akanal. Après plusieurs millénaires, le respect inspiré par la tombe disparut avec le souvenir de la famille royale, et des aventuriers commencèrent à se mesurer au Garde. Comme cela devait inévitablement arriver, il finit par être battu. L'anneau qu'il portait fut dérobé de la tombe, à l'instar de nombreux autres objets magiques. Depuis lors, de nombreuses copies ont vu le jour, et celle-ci est l'une d'entre elles.
 
-STATISTICS:
+PARAMÈTRES :
 
-Weight:  4~
-@110 = ~Boots of the West
-These are the boots that were once owned by the famous woodsman, Randy of the West.
+Capacités d'équipement :
+- Classe d'armure : +2
+- Jets de sauvegarde : +2
 
-STATISTICS:
+Poids : 0~
+@107 = ~Bottes~
+@108 = ~Bottes de l'Ouest~
+@109 = ~Les bottes sont généralement fabriquées artisanalement par des cordonniers. Les bottes ordinaires sont fabriquées à l'aide d'un moule, mais les bottes de qualité supérieure sont faites sur mesure.
 
-Increase Charisma by one point
-Protection from Disease~
+PARAMÈTRES :
+
+Poids : 4~
+@110 = ~Bien que d'origines mystérieuses, on peut supposer que ces bottes furent portées par le fameux homme des bois, Randy de l'Ouest.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Charisme : +1
+- Immunité contre les maladies
+
+Poids : 4~

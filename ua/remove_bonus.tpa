@@ -21,10 +21,14 @@ END
 >>>>>>>>
 
 COPY_EXISTING ~ar0406.bcs~ override
-  R_B_B CASE_INSENSITIVE ~ua-inlined/joluv.baf~ ~ua-inlined/empty.baf~
-		ON_MISMATCH PATCH_PRINT ~Joluv not found~ END
+    R_B_B CASE_INSENSITIVE ~ua-inlined/joluv.baf~ ~ua-inlined/empty.baf~
+    ON_MISMATCH
+        PATCH_PRINT ~Joluv not found~
+    END
 BUT_ONLY
 COPY_EXISTING ~ar0702.bcs~ override
-  R_B_B CASE_INSENSITIVE ~ua-inlined/deidre.baf~ ~ua-inlined/empty.baf~
-		ON_MISMATCH PATCH_PRINT ~Deidre not found~ END
+    R_B_B CASE_INSENSITIVE ~ua-inlined/deidre.baf~ ~ua-inlined/empty.baf~
+    ON_MISMATCH
+        PATCH_PRINT ~Deidre not found~
+    END
 BUT_ONLY

@@ -4,13 +4,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01-10:21+0000\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-05-29 08:45+0000\n"
+"Last-Translator: Magus <magus@bgforge.net>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: BGforge/msg2po v.1.1.12\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: game.tra:103
 msgid ""
@@ -61,7 +63,7 @@ msgstr ""
 
 #: game.tra:107
 msgid "Boots"
-msgstr ""
+msgstr "Botas"
 
 #: game.tra:108
 msgid "Boots of the West"

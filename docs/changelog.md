@@ -32,6 +32,7 @@
 ### Version 7.17
 
 - Fixed some duplicates not being removed.
+- Creatures keep artifacts the party can never get from them (unstealable and undroppable).
 - Fixed Robe of the Good Archmagi not being replaced on creatures that lose it.
 - Less magical items: fixed Arrows +1 not being removed.
 - Fixed restoring Suryris's Blade to Reviane on BG2EE and with BG2 Fixpack.

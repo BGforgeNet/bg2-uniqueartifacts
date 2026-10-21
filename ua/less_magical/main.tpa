@@ -10,6 +10,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
     PHP_EACH item_list AS item => replacement  BEGIN
         PATCH_IF ~%replacement%~ STR_EQ ~none~ OR NOT FILE_EXISTS_IN_GAME ~%replacement%.itm~  // if replacement doesn't exist, the original is probably a bogus entry
         BEGIN
+            LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%item%~ END
             LPF DELETE_STORE_ITEM
                 STR_VAR
                     item_to_delete = ~%item%~
@@ -28,6 +29,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
     PHP_EACH item_list AS item => replacement  BEGIN
         PATCH_IF ~%replacement%~ STR_EQ ~none~ OR NOT FILE_EXISTS_IN_GAME ~%replacement%.itm~  // if replacement doesn't exist, the original is probably a bogus entry
         BEGIN
+            LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~^%item%$~ END
             LPF DELETE_AREA_ITEM
                 STR_VAR
                     item_to_delete = ~^%item%$~

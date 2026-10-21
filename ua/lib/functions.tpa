@@ -6,32 +6,63 @@ DEFINE_PATCH_FUNCTION REPLACE_D_AND_BAF_ITEM
 BEGIN
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~GiveItem("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: GiveItem %MATCH1% -> %new_item%~ END
     ~GiveItem("%new_item%"%MATCH2%)~
 
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~GiveItemCreate("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: GiveItemCreate %MATCH1% -> %new_item%~ END
     ~GiveItemCreate("%new_item%"%MATCH2%)~
 
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~CreateItem("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: CreateItem %MATCH1% -> %new_item%~ END
     ~CreateItem("%new_item%"%MATCH2%)~
 
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~CreateItemGlobal("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: CreateItemGlobal %MATCH1% -> %new_item%~ END
     ~CreateItemGlobal("%new_item%"%MATCH2%)~
 
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~CreateItemNumGlobal("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: CreateItemNumGlobal %MATCH1% -> %new_item%~ END
     ~CreateItemNumGlobal("%new_item%"%MATCH2%)~
 
   REPLACE_EVALUATE CASE_INSENSITIVE
     ~TakeItemReplace("\(%old_item%\)"\(.*\))~
-    BEGIN END
+    BEGIN PATCH_LOG ~UA: %SOURCE_FILE%: TakeItemReplace %MATCH1% -> %new_item%~ END
     ~TakeItemReplace("%new_item%"%MATCH2%)~
+END
+
+// Logs each item of the current CRE, STO or ARE that DELETE_CRE_ITEM, DELETE_STORE_ITEM or DELETE_AREA_ITEM would
+// remove with this regex. Offsets, sizes and the 8-byte match mirror those WeiDU functions; areas scan the whole item
+// list rather than walking containers.
+DEFINE_PATCH_FUNCTION LOG_ITEMS_TO_DELETE
+  STR_VAR
+    item_to_delete = ~~
+BEGIN
+  READ_ASCII 0 sig (8)
+  num = 0
+  PATCH_IF ~%sig%~ STRING_MATCHES_REGEXP ~^CRE ~ = 0 AND BUFFER_LENGTH > 0x2c4 BEGIN
+    READ_LONG 0x2bc off
+    READ_LONG 0x2c0 num
+    size = 0x14
+  END ELSE PATCH_IF ~%sig%~ STRING_MATCHES_REGEXP ~^STOR~ = 0 AND BUFFER_LENGTH > 0x9a BEGIN
+    READ_LONG 0x34 off
+    READ_LONG 0x38 num
+    size = (~%sig%~ STRING_EQUAL ~STORV1.1~) ? 0x58 : 0x1c
+  END ELSE PATCH_IF ~%sig%~ STRING_MATCHES_REGEXP ~^AREA~ = 0 AND BUFFER_LENGTH > 0x11b BEGIN
+    READ_LONG 0x78 off
+    READ_SHORT 0x76 num
+    size = 0x14
+  END
+  FOR (i = 0; i < num; ++i) BEGIN
+    READ_ASCII (off + i * size) item
+    PATCH_IF ~%item%~ STRING_MATCHES_REGEXP ~%item_to_delete%~ = 0 BEGIN
+      READ_ASCII (off + i * size) name (8) NULL
+      PATCH_LOG ~UA: %SOURCE_FILE%: removing %name%~
+    END
+  END
 END
 

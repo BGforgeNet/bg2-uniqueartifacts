@@ -1,5 +1,11 @@
 PRINT ~Processing creatures~
 
+// Creatures whose copy of an artifact makes them work: they keep their items, and that copy is made unstealable and
+// undroppable instead.
+ACTION_DEFINE_ASSOCIATIVE_ARRAY locked_items BEGIN
+    ~botsmith.cre~ => ~clck24~  // Cespenar: Cloak of Reflection makes him invulnerable
+END
+
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     SPRINT res ~%SOURCE_FILE%~
     TO_LOWER res
@@ -21,8 +27,19 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
             END
         END
     END
-    LPF DELETE_CRE_ITEM
-        STR_VAR
-            item_to_delete = ~%regex%~
+    PATCH_IF VARIABLE_IS_SET $locked_items(~%res%~) BEGIN
+        SPRINT locked $locked_items(~%res%~)
+        GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
+        PHP_EACH item_offs AS int => ioff BEGIN
+            READ_ASCII (ioff + CRE_ITEM_name) name (8) NULL
+            PATCH_IF ~%name%~ STRING_MATCHES_REGEXP ~^%locked%$~ = 0 BEGIN
+                WRITE_LONG (ioff + CRE_ITEM_flags) (THIS | FLAG_CRE_ITEM_unstealable | FLAG_CRE_ITEM_undroppable)
+            END
+        END
+    END ELSE BEGIN
+        LPF DELETE_CRE_ITEM
+            STR_VAR
+                item_to_delete = ~%regex%~
+        END
     END
 BUT_ONLY

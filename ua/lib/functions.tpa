@@ -61,7 +61,15 @@ BEGIN
     READ_ASCII (off + i * size) item
     PATCH_IF ~%item%~ STRING_MATCHES_REGEXP ~%item_to_delete%~ = 0 BEGIN
       READ_ASCII (off + i * size) name (8) NULL
-      PATCH_LOG ~UA: %SOURCE_FILE%: removing %name%~
+      READ_LONG (off + i * size + 0x10) flags
+      slot = 0 - 1
+      PATCH_IF ~%sig%~ STRING_MATCHES_REGEXP ~^CRE ~ = 0 BEGIN
+        READ_LONG 0x2b8 slots_off
+        FOR (s = 0; s < 37; ++s) BEGIN
+          PATCH_IF SHORT_AT (slots_off + s * 2) = i BEGIN slot = s END
+        END
+      END
+      PATCH_LOG ~UA: %SOURCE_FILE%: removing %name% flags=%flags% slot=%slot%~
     END
   END
 END

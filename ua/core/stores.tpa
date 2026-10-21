@@ -8,11 +8,13 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
     END ELSE BEGIN
       SPRINT regex ~%common_regex%~
     END
+    LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%regex%~ END
     LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~%regex%~ END
   END
 BUT_ONLY
 
 //remove Ring of Invisibility from THIEF, FIGHTER_THIEF bag28.sto - the only new TOB game duplicates
 COPY_EXISTING ~bag28.sto~ ~override/bag28.sto~
+  LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~ring05~ END
   LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~ring05~ END
 BUT_ONLY IF_EXISTS

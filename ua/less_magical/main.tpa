@@ -11,6 +11,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
     PATCH_IF ~%replacement%~ STR_EQ ~none~
       OR NOT FILE_EXISTS_IN_GAME ~%replacement%.itm~ // if replacement doesn't exist, the original is probably a bogus entry
     BEGIN
+      LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%item%~ END
       LPF DELETE_STORE_ITEM STR_VAR item_to_delete = ~%item%~ END
     END ELSE BEGIN
       LPF REPLACE_STORE_ITEM_MATCH STR_VAR match_item = ~%item%~ new_item = ~%replacement%~ END
@@ -23,6 +24,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
     PATCH_IF ~%replacement%~ STR_EQ ~none~
       OR NOT FILE_EXISTS_IN_GAME ~%replacement%.itm~ // if replacement doesn't exist, the original is probably a bogus entry
     BEGIN
+      LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~^%item%$~ END
       LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~^%item%$~ END
     END ELSE BEGIN
       LPF REPLACE_AREA_ITEM_MATCH STR_VAR match_item = ~%item%~ new_item = ~%replacement%~ END

@@ -18,5 +18,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
       LPF REPLACE_CRE_ITEM_MATCH STR_VAR match_item = ~%old_item%~ new_item END
     END
   END
+  LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%regex%~ END
   LPF DELETE_CRE_ITEM STR_VAR item_to_delete = ~%regex%~ END
 BUT_ONLY

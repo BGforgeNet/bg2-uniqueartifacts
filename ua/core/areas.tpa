@@ -10,5 +10,6 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
   END ELSE BEGIN
     SPRINT regex ~%common_regex%~
   END
+  LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%regex%~ END
   LPF DELETE_AREA_ITEM STR_VAR item_to_delete = ~%regex%~ END
 BUT_ONLY

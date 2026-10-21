@@ -1,11 +1,5 @@
 PRINT ~Processing creatures~
 
-// Creatures whose copy of an artifact makes them work: they keep their items, and that copy is made unstealable and
-// undroppable instead.
-ACTION_DEFINE_ASSOCIATIVE_ARRAY locked_items BEGIN
-    ~botsmith.cre~ => ~clck24~  // Cespenar: Cloak of Reflection makes him invulnerable
-END
-
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     SPRINT res ~%SOURCE_FILE%~
     TO_LOWER res
@@ -13,6 +7,23 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
         SPRINT regex $custom_regex(~%res%~)
     END ELSE BEGIN
         SPRINT regex ~%common_regex%~
+    END
+    // A copy both unstealable and undroppable never reaches the party, so it is no duplicate: it stays, as with
+    // Cespenar's Cloak of Reflection, his invulnerability. Replacement and deletion match by name only, so such copies
+    // are renamed to a non-matching placeholder until both are done.
+    kept = 0
+    GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
+    PHP_EACH item_offs AS int => ioff BEGIN
+        READ_LONG (ioff + CRE_ITEM_flags) flags
+        PATCH_IF (flags BAND FLAG_CRE_ITEM_unstealable) AND (flags BAND FLAG_CRE_ITEM_undroppable) BEGIN
+            READ_ASCII (ioff + CRE_ITEM_name) name (8) NULL
+            SPRINT $kept_name(~%kept%~) ~%name%~
+            PATCH_IF ~%name%~ STRING_MATCHES_REGEXP ~%regex%~ = 0 BEGIN
+                PATCH_LOG ~UA: %SOURCE_FILE%: keeping %name% flags=%flags%~
+            END
+            WRITE_ASCIIE (ioff + CRE_ITEM_name) ~#UAK%kept%~ #8
+            ++kept
+        END
     END
     PATCH_PHP_EACH replacement AS old_item => new_item  BEGIN
         PATCH_IF NOT (VARIABLE_IS_SET $item_source(~%old_item%~ ~%res%~) AND $item_source(~%old_item%~ ~%res%~) == 1) BEGIN
@@ -27,20 +38,20 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
             END
         END
     END
-    PATCH_IF VARIABLE_IS_SET $locked_items(~%res%~) BEGIN
-        SPRINT locked $locked_items(~%res%~)
+    LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%regex%~ END
+    LPF DELETE_CRE_ITEM
+        STR_VAR
+            item_to_delete = ~%regex%~
+    END
+    PATCH_IF kept > 0 BEGIN
         GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
         PHP_EACH item_offs AS int => ioff BEGIN
             READ_ASCII (ioff + CRE_ITEM_name) name (8) NULL
-            PATCH_IF ~%name%~ STRING_MATCHES_REGEXP ~^%locked%$~ = 0 BEGIN
-                WRITE_LONG (ioff + CRE_ITEM_flags) (THIS | FLAG_CRE_ITEM_unstealable | FLAG_CRE_ITEM_undroppable)
+            PATCH_IF ~%name%~ STRING_MATCHES_REGEXP ~^#UAK[0-9]+$~ = 0 BEGIN
+                INNER_PATCH_SAVE k ~%name%~ BEGIN DELETE_BYTES 0 4 END
+                SPRINT original $kept_name(~%k%~)
+                WRITE_ASCIIE (ioff + CRE_ITEM_name) ~%original%~ #8
             END
-        END
-    END ELSE BEGIN
-        LPF LOG_ITEMS_TO_DELETE STR_VAR item_to_delete = ~%regex%~ END
-        LPF DELETE_CRE_ITEM
-            STR_VAR
-                item_to_delete = ~%regex%~
         END
     END
 BUT_ONLY

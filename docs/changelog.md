@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.17](#version-717)
 - [Version 7.16](#version-716)
 - [Version 7.15](#version-715)
 - [Version 7.14](#version-714)
@@ -27,6 +28,14 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.17
+
+- Fixed some duplicates not being removed.
+- Fixed Robe of the Good Archmagi not being replaced on creatures that lose it.
+- Less magical items: fixed Arrows +1 not being removed.
+- Fixed restoring Suryris's Blade to Reviane on BG2EE and with BG2 Fixpack.
+- Added French translation.
 
 ### Version 7.16
 

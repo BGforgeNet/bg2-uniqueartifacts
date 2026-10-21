@@ -35,3 +35,49 @@ BEGIN
     ~TakeItemReplace("%new_item%"%MATCH2%)~
 END
 
+// DELETE_CRE_ITEM, except for items whose flags contain all of "locked_flags". Header offsets and slot indexes are
+// fixed up as WeiDU's DELETE_CRE_ITEM does, plus the effects offset, which may follow the items.
+DEFINE_PATCH_FUNCTION DELETE_UNLOCKED_CRE_ITEM
+  INT_VAR
+    locked_flags = 0
+  STR_VAR
+    item_to_delete = ~~
+BEGIN
+  LPF FJ_CRE_VALIDITY RET valid END
+  PATCH_IF valid BEGIN
+    READ_LONG CRE_items_offset items_off
+    READ_LONG CRE_items_count items_count
+    FOR (i = 0; i < items_count; ++i) BEGIN
+      item_off = items_off + i * 0x14  // item entry size
+      READ_ASCII (item_off + CRE_ITEM_name) item
+      READ_LONG (item_off + CRE_ITEM_flags) flags
+      PATCH_IF (~%item%~ STRING_MATCHES_REGEXP ~%item_to_delete%~ = 0)
+        AND (locked_flags = 0 OR (flags BAND locked_flags) != locked_flags)
+      BEGIN
+        DELETE_BYTES item_off 0x14
+        items_count -= 1
+        PATCH_FOR_EACH header IN
+          ~%CRE_known_spells_offset%~ ~%CRE_memorization_info_offset%~ ~%CRE_memorized_spells_offset%~
+          ~%CRE_item_slots_offset%~ ~%CRE_effects_offset%~
+        BEGIN
+          READ_LONG header off
+          PATCH_IF off > items_off BEGIN
+            WRITE_LONG header (off - 0x14)
+          END
+        END
+        READ_LONG CRE_item_slots_offset slots_off
+        FOR (s = 0; s < 37; ++s) BEGIN  // the slot count WeiDU's DELETE_CRE_ITEM fixes up
+          READ_SHORT (slots_off + s * 2) index
+          PATCH_IF index = i BEGIN
+            WRITE_SHORT (slots_off + s * 2) 0xffff
+          END ELSE PATCH_IF index > i AND index != 0xffff BEGIN
+            WRITE_SHORT (slots_off + s * 2) (index - 1)
+          END
+        END
+        i -= 1  // the next item moved into this index
+      END
+    END
+    WRITE_LONG CRE_items_count items_count
+  END
+END
+

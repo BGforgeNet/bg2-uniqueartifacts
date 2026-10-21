@@ -1,5 +1,9 @@
 PRINT ~Processing creatures~
 
+// A copy both unstealable and undroppable never reaches the party, so it is no duplicate and is neither replaced nor
+// deleted: Cespenar's Cloak of Reflection, for one, is his invulnerability.
+OUTER_SET locked_flags = FLAG_CRE_ITEM_unstealable BOR FLAG_CRE_ITEM_undroppable
+
 COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     SPRINT res ~%SOURCE_FILE%~
     TO_LOWER res
@@ -8,46 +12,23 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
     END ELSE BEGIN
         SPRINT regex ~%common_regex%~
     END
-    // A copy both unstealable and undroppable never reaches the party, so it is no duplicate: it stays, as with
-    // Cespenar's Cloak of Reflection, his invulnerability. Replacement and deletion match by name only, so such copies
-    // are renamed to a non-matching placeholder until both are done.
-    kept = 0
     GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
     PHP_EACH item_offs AS int => ioff BEGIN
+        READ_ASCII (ioff + CRE_ITEM_name) old_item (8) NULL
+        TO_LOWER old_item
         READ_LONG (ioff + CRE_ITEM_flags) flags
-        PATCH_IF (flags BAND FLAG_CRE_ITEM_unstealable) AND (flags BAND FLAG_CRE_ITEM_undroppable) BEGIN
-            READ_ASCII (ioff + CRE_ITEM_name) name (8) NULL
-            SPRINT $kept_name(~%kept%~) ~%name%~
-            WRITE_ASCIIE (ioff + CRE_ITEM_name) ~#UAK%kept%~ #8
-            ++kept
+        PATCH_IF VARIABLE_IS_SET $replacement(~%old_item%~)
+            AND (flags BAND locked_flags) != locked_flags
+            AND NOT (VARIABLE_IS_SET $item_source(~%old_item%~ ~%res%~) AND $item_source(~%old_item%~ ~%res%~) == 1)
+        BEGIN
+            SPRINT new_item $replacement(~%old_item%~)
+            WRITE_ASCIIE (ioff + CRE_ITEM_name) ~%new_item%~ #8
         END
     END
-    PATCH_PHP_EACH replacement AS old_item => new_item  BEGIN
-        PATCH_IF NOT (VARIABLE_IS_SET $item_source(~%old_item%~ ~%res%~) AND $item_source(~%old_item%~ ~%res%~) == 1) BEGIN
-            PATCH_IF ~%res%~ STR_EQ ~BDANGATH.cre~ BEGIN
-                PATCH_PRINT ~bdanganth: res=%res%, old_item=%old_item%, new_item=%new_item%~
-                PATCH_PRINT ~bdanganth: regex=%regex%~
-            END
-            LPF REPLACE_CRE_ITEM_MATCH
-                STR_VAR
-                    match_item = ~%old_item%~
-                    new_item
-            END
-        END
-    END
-    LPF DELETE_CRE_ITEM
+    LPF DELETE_UNLOCKED_CRE_ITEM
+        INT_VAR
+            locked_flags
         STR_VAR
             item_to_delete = ~%regex%~
-    END
-    PATCH_IF kept > 0 BEGIN
-        GET_OFFSET_ARRAY item_offs CRE_V10_ITEMS
-        PHP_EACH item_offs AS int => ioff BEGIN
-            READ_ASCII (ioff + CRE_ITEM_name) name (8) NULL
-            PATCH_IF ~%name%~ STRING_MATCHES_REGEXP ~^#UAK[0-9]+$~ = 0 BEGIN
-                INNER_PATCH_SAVE k ~%name%~ BEGIN DELETE_BYTES 0 4 END
-                SPRINT original $kept_name(~%k%~)
-                WRITE_ASCIIE (ioff + CRE_ITEM_name) ~%original%~ #8
-            END
-        END
     END
 BUT_ONLY

@@ -113,10 +113,10 @@ OUTER_SPRINT common_regex_no_eol ~~
 ACTION_PHP_EACH item_present AS item => present  BEGIN
     ACTION_IF present == 1 BEGIN
         // common regex
-        ACTION_IF ~%common_regex%~ STR_EQ ~~ BEGIN  // empty, initialize
+        ACTION_IF ~%common_regex_no_eol%~ STR_EQ ~~ BEGIN  // empty, initialize
             OUTER_SPRINT common_regex_no_eol ~%item%~
         END ELSE BEGIN
-            OUTER_SPRINT common_regex_no_eol ~%common_regex%\|%item%~  // append
+            OUTER_SPRINT common_regex_no_eol ~%common_regex_no_eol%\|%item%~  // append
         END
         // custom regex for each source
         ACTION_PHP_EACH csources AS csource => int  BEGIN

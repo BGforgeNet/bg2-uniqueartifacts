@@ -37,7 +37,10 @@
 - Strict: items of the expanded list are no longer made unique with Item Revisions or Sword Coast Stratagems.
 - An artifact with a source missing from the game is no longer made unique, whatever the order of its sources; a
   missing dialog or script no longer stops the installation.
-- Less magical items: store items are matched by their exact name.
+- BGEE, BGT, EET: fixed artifacts being removed from BG1 locations set by compatibility code, such as the Cloak of
+  Protection +2 in the Candlekeep catacombs.
+- Items removed from stores and creatures are matched by their exact name, no longer also removing items whose names
+  start with it.
 
 ### Version 7.17
 

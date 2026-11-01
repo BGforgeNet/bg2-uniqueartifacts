@@ -1,7 +1,7 @@
 /*
 $item_source(~%item%~ ~%source%~) => should_be_present: item => source list. 1 means item must be present in source, 0 - must be absent (usually from compatibility)
 $item_source_compat(~%item%~ ~%source%~) => should_be_present: same as $item_source, but filled by custom compatibility code. Used to complement item_source.
-$items(~%item%~) = 1 list of items, strict or expanded
+$items(~%item%~) = 1 list of items of the selected mode (strict, or strict and expanded)
 $csources(~%source%~) = 1: filtered list of canon sources, with verified items present
 $common_regex_no_eol: a regex containing ALL deduped items
 $common_regex: same as common_regex_no_eol, but with with "^\(   \)$" around.
@@ -61,13 +61,16 @@ END
 ACTION_PHP_EACH item_source_compat AS i_s => should_be_present  BEGIN
     OUTER_SPRINT item $i_s(0)
     OUTER_SPRINT source $i_s(1)
+    // lowered like the lists: sources built from area variables are upper case (AR2615), and array keys are case-sensitive
+    ACTION_TO_LOWER item
+    ACTION_TO_LOWER source
     // strict items
     ACTION_IF NOT VARIABLE_IS_SET $is_expanded(~%item%~) BEGIN
-        OUTER_SET $item_source(~%item%~ ~%source%~) = $item_source_compat(~%item%~ ~%source%~)
+        OUTER_SET $item_source(~%item%~ ~%source%~) = should_be_present
     END
     // expanded items
     ACTION_IF VARIABLE_IS_SET $is_expanded(~%item%~) AND expanded == 1 BEGIN
-        OUTER_SET $item_source(~%item%~ ~%source%~) = $item_source_compat(~%item%~ ~%source%~)
+        OUTER_SET $item_source(~%item%~ ~%source%~) = should_be_present
     END
 END
 

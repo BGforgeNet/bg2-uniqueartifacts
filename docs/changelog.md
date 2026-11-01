@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.18](#version-718)
 - [Version 7.17](#version-717)
 - [Version 7.16](#version-716)
 - [Version 7.15](#version-715)
@@ -28,6 +29,15 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.18
+
+- Fixed duplicates given in scripts that are also an artifact's source not being removed, such as Alphonse's Staff
+  Spear +2.
+- Strict: items of the expanded list are no longer made unique with Item Revisions or Sword Coast Stratagems.
+- An artifact with a source missing from the game is no longer made unique, whatever the order of its sources; a
+  missing dialog or script no longer stops the installation.
+- Less magical items: store items are matched by their exact name.
 
 ### Version 7.17
 

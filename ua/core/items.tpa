@@ -25,26 +25,27 @@ BEGIN
         END
         TO_LOWER source
         PATCH_IF NOT (~%item%~ STRING_MATCHES_REGEXP ~-+~ == 0) BEGIN  // skip md header separator row
-            SET $item_source(~%item%~ ~%source%~) = 1  // global list of items and sources
-            SET $items(~%item%~) = 1  // global list of items
-            PATCH_IF set_expanded == 1 BEGIN
+            PATCH_IF reading_expanded == 1 BEGIN
                 SET $is_expanded(~%item%~) = 1
+            END
+            PATCH_IF reading_expanded == 0 OR expanded == 1 BEGIN
+                SET $item_source(~%item%~ ~%source%~) = 1  // global list of items and sources
+                SET $items(~%item%~) = 1  // global list of items
             END
         END
     END
 END
 DEFINE_ACTION_MACRO read_item_sources
 BEGIN
-    OUTER_SET set_expanded = 0  // reset because we launch macro repeatedly
+    OUTER_SET reading_expanded = 0  // reset because we launch macro repeatedly
     COPY - ~%MOD_FOLDER%/items/strict_%game%.md~ ~%MOD_FOLDER%-inlined/strict_%game%.md~
         LPM read_item_sources_2da
     BUT_ONLY
-    ACTION_IF expanded == 1 BEGIN
-        OUTER_SET set_expanded = 1
-        COPY - ~%MOD_FOLDER%/items/expanded_%game%.md~ ~%MOD_FOLDER%-inlined/expanded_%game%.md~
-            LPM read_item_sources_2da
-        BUT_ONLY
-    END
+    // read in strict mode too, only to mark expanded items, so that the compat filter drops their entries
+    OUTER_SET reading_expanded = 1
+    COPY - ~%MOD_FOLDER%/items/expanded_%game%.md~ ~%MOD_FOLDER%-inlined/expanded_%game%.md~
+        LPM read_item_sources_2da
+    BUT_ONLY
 END
 
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
@@ -94,10 +95,12 @@ ACTION_PHP_EACH item_source AS i_s => should_be_present  BEGIN
             RET
                 present
         END
-        OUTER_SET $item_present(~%item%~) = present
         ACTION_IF present == 1 BEGIN
+            OUTER_SET $item_present(~%item%~) = 1
             OUTER_SET $csources(~%source%~) = 1  // list of all canon sources
         END ELSE BEGIN
+            // a missing resource (-1) counts as absent too, so the result doesn't depend on the order of sources
+            OUTER_SET $item_present(~%item%~) = 0
             WARN ~UA WARNING: %item% is missing from %source%, skipping!~
         END
     END

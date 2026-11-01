@@ -12,7 +12,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.sto$~ ~override~
         BEGIN
             LPF DELETE_STORE_ITEM
                 STR_VAR
-                    item_to_delete = ~%item%~
+                    item_to_delete = ~^%item%$~
             END
         END ELSE BEGIN
             LPF REPLACE_STORE_ITEM_MATCH

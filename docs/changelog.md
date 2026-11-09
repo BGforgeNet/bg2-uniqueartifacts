@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.20](#version-720)
 - [Version 7.19](#version-719)
 - [Version 7.18](#version-718)
 - [Version 7.17](#version-717)
@@ -30,6 +31,11 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.20
+
+- Unfinished Business: the Gloves of Missile Snaring are made unique where Unfinished Business gives them to a Shadow
+  Thief assassin in Irenicus' dungeon.
 
 ### Version 7.19
 

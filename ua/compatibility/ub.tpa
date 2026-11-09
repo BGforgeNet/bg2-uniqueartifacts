@@ -1,7 +1,9 @@
 // Unfinished Business
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
-    // Gloves of Missile Snaring is now worn by Shadow Thief assassin near the end of Irenicus' dungeon.
+    // Gloves of Missile Snaring is now worn by a Shadow Thief assassin near the end of Irenicus' dungeon.
     LAF IS_ITEM_ON_CREATURE
+        INT_VAR
+            log      = 1
         STR_VAR
             creature = ~ishadft1~
             item     = ~brac18~

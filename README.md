@@ -2,7 +2,7 @@
 
 [![Translation status](https://hive.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg)](https://hive.bgforge.net/projects/infinity-engine/unique-artifacts/)
 [![Build Status](https://golem.bgforge.net/mods/unique-artifacts/status.svg)](https://golem.bgforge.net/mods/unique-artifacts)
-[![Patreon](https://img.shields.io/badge/Patreon-donate-FF424D?logo=Patreon&labelColor=141518)](https://www.patreon.com/BGforge)
+[![Patreon](https://img.shields.io/badge/Patreon-support-FF424D?logo=Patreon&labelColor=141518)](https://www.patreon.com/BGforge)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 [![Telegram](https://img.shields.io/badge/telegram-join%20%20%20%20%E2%9D%B1%E2%9D%B1%E2%9D%B1-darkorange?logo=telegram)](https://t.me/bgforge)

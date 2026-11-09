@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.19](#version-719)
 - [Version 7.18](#version-718)
 - [Version 7.17](#version-717)
 - [Version 7.16](#version-716)
@@ -29,6 +30,10 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.19
+
+- Sword Coast Stratagems: fixed the Cloak of Mirroring not being made unique where Stratagems gives it to Vongoethe.
 
 ### Version 7.18
 

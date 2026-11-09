@@ -22,5 +22,6 @@ INCLUDE ~%compat%/tactics.tpa~
 INCLUDE ~%compat%/thalantyr.tpa~
 INCLUDE ~%compat%/ts.tpa~
 INCLUDE ~%compat%/ua.tpa~
+INCLUDE ~%compat%/ub.tpa~
 
 PRINT ~Compatibility addressed.~

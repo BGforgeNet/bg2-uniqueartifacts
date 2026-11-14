@@ -1,4 +1,4 @@
-## Unique Artifacts mod for Baldur's Gate 2
+## Unique Artifacts mod for Baldur's Gate saga
 
 [![Translation status](https://hive.bgforge.net/widgets/infinity-engine/-/unique-artifacts/svg-badge.svg)](https://hive.bgforge.net/projects/infinity-engine/unique-artifacts/)
 [![Build Status](https://golem.bgforge.net/mods/unique-artifacts/status.svg)](https://golem.bgforge.net/mods/unique-artifacts)
@@ -14,7 +14,8 @@
 | [**Discussion**](https://forums.bgforge.net/viewforum.php?f=30)
 | [**Help translating**](https://hive.bgforge.net/projects/infinity-engine/unique-artifacts/)
 
-Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical items available to the player. It will work with BG2:ToB, BGT, or EE games. Starting a new game is recommended.
+Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical items available to the player. It will
+work with BG2:ToB, BGT, or EE/EET games. Starting a new game is recommended.
 
 - [Description](#description)
 - [Components](#components)
@@ -34,11 +35,15 @@ Unique Artifacts is a mod for BG1/BG2, designed to reduce the number of magical 
 
 ## Description
 
-Ever felt that BG saga is overloaded with magical items? Then this is a mod for you. It will **reduce** the amount of magical gear in the game.
+Ever felt that the BG saga is overloaded with magical items? Then this is a mod for you. It will **reduce** the amount
+of magical gear in the game.
 
-In BG, descriptions of many magical items imply them being unique. However, the party often gets multiple copies of those. That includes items such as Kondar sword, Boots of Speed, Ring of Protection +2, etc. That breaks immersion and is somewhat annoying.
+In BG, descriptions of many magical items imply them being unique. However, the party often gets multiple copies of
+those. That includes items such as Kondar sword, Boots of Speed, Ring of Protection +2, etc. That breaks immersion and
+is somewhat annoying.
 
-While this issue manifests moderately in the original game, it is severely aggravated by many mods, which add more and more copies of various items, with no regard to whether it makes sense, lore wise.
+While this issue manifests moderately in the original game, it is severely aggravated by many mods, which add more and
+more copies of various items, with no regard to whether it makes sense, lore-wise.
 
 Unique Artifacts addresses the issue by:
 
@@ -47,14 +52,17 @@ Unique Artifacts addresses the issue by:
 
 Notes:
 
-1. Each part of BG saga has its own set of "canon" sources. So, for example, you'll be able to get Ring of Fire Resistance once in BG1, once in BG2, and once in ToB.
-1. UA doesn't cover all items. Just the ones that are already known to be duplicated, or are likely to be (rings, amulets, boots, etc).
-1. UA only takes care of items that are present in the original game. New, original items introduced by mods are not covered (but you are welcome to make suggestions and submissions).
+1. Each part of BG saga has its own set of "canon" sources. So, for example, you'll be able to get Ring of Fire
+   Resistance once in BG1, once in BG2, and once in ToB.
+1. UA doesn't cover all items. Just the ones that are already known to be duplicated, or are likely to be (rings,
+   amulets, boots, etc).
+1. UA only takes care of items that are present in the original game. New, original items introduced by mods are not
+   covered (but you are welcome to make suggestions and submissions).
 1. When choosing which copy is "canon", UA generally picks the least accessible one. It means that:
    - You will have to work harder to get the items.
    - You will get them later in game than usual.
-   - In some cases (BG1 in particular), you'll have to choose between completing a quest or keeping an item, or between items that you want to keep.
-     Yes, adventurer life is hard. It's supposed to be.
+   - In some cases (BG1 in particular), you'll have to choose between completing a quest or keeping an item, or
+     between items that you want to keep. Yes, adventurer life is hard. It's supposed to be.
 
 ## Components
 
@@ -82,19 +90,22 @@ This option un-duplicates items that are explicitly described as unique. Example
 
 #### Expanded
 
-This option in addition to the above covers a number of magical items that are not likely to be possessed by a single party of adventurers in multiple copies.
-Examples:
+In addition to the above, this option covers a number of magical items that are not likely to be possessed by a single
+party of adventurers in multiple copies. Examples:
 
 - Boots of Stealth
-- Ring of Fire control
+- Ring of Fire Control
 
 ### Remove bonus merchants
 
-Bonus merchants were likely introduced into the game to urge people to buy Collector's Edition back in the day. Lore- and balance wise they aren't that great. This component removes them.
+Bonus merchants were likely introduced into the game to urge people to buy Collector's Edition back in the day. Lore-
+and balance-wise they aren't that great. This component removes them.
 
 ### Less magical items
 
-This component is a counterpart to the [Core](#core). It reduces the number of unnamed magical items (+1, +2, etc) throughout the Sword Coast. Basically, it tones them one step down. Where you would previously find a long sword +3, you'll find a +2. A previous +2 turns into +1. And where there was a +1, there is none.
+This component is a counterpart to the [Core](#core). It reduces the number of unnamed magical items (+1, +2, etc)
+throughout the Sword Coast. Basically, it tones them one step down. Where you would previously find a long sword +3,
+you'll find a +2. A previous +2 turns into +1. And where there was a +1, there is none.
 
 - This only affects shops and containers. The enemies are still packing their equipment.
 - This is only applied to plain +1/+2/+3 magical items - weapons, armor, ammo, etc.
@@ -103,19 +114,23 @@ The main effect of this component is that you'll get less expensive loot, and co
 
 ## Installation
 
-- Download zip from the [latest release page](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest).
-- Extract it into main game directory.
+- Download the zip from the [latest release page](https://github.com/BGforgeNet/bg2-uniqueartifacts/releases/latest).
+- Extract it into the main game directory.
 - Launch setup-ua.exe.
 
 ## Compatibility
 
-- Generally, to take full effect, Unique Artifacts should be installed after any mods that add, remove or alter content. Usually that means as late as possible.
+- Generally, to take full effect, Unique Artifacts should be installed after any mods that add, remove or alter
+  content. Usually that means as late as possible.
 - Item Randomiser is an exception. It should be installed after UA.
-- Nothing gamebreaking should happen if some content mods are installed after UA, but you might get some uncovered dupes and/or miss some items.
-- If both Weimer's Item Upgrade and Daulmanakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
+- Nothing gamebreaking should happen if some content mods are installed after UA, but you might get some uncovered
+  dupes and/or miss some items.
+- If both Weimer's Item Upgrade and Daulmakan's More work for Cromwell are installed, and "Allow non-unique RoP+2" is
+  not, Cromwell won't offer to create Ring of Perseverance +1 (+2 is still fine).
 
 ## Which items are affected?
 
 - In vanilla game, all dupes are addressed.
-- In the mods, mostly magical jewelry and clothes. For the full lists, see the [tables](https://github.com/BGforgeNet/bg2-uniqueartifacts/tree/master/ua/items).
+- In mods, mostly magical jewelry and clothes. For the full lists, see the
+  [tables](https://github.com/BGforgeNet/bg2-uniqueartifacts/tree/master/ua/items).
   You're welcome to suggest more items if you find dupes during your playthrough.

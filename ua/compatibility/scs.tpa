@@ -1,7 +1,7 @@
 // Sword Coast Stratagems
 ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
-	// The Bracers to the Death is now worn by Hareishan.
-	LAF IS_ITEM_ON_CREATURE
+    // The Bracers to the Death is now worn by Hareishan.
+    LAF IS_ITEM_ON_CREATURE
         INT_VAR
             log      = 1
         STR_VAR

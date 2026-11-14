@@ -1,5 +1,6 @@
 ## Changelog
 
+- [Version 7.21](#version-721)
 - [Version 7.20](#version-720)
 - [Version 7.19](#version-719)
 - [Version 7.18](#version-718)
@@ -31,6 +32,11 @@
 - [Version 1.1](#version-11)
 - [Version 1.0](#version-10)
 - [Version 1.0beta](#version-10beta)
+
+### Version 7.21
+
+- Sword Coast Stratagems: the Bracers of Defense AC 6 are made unique where Smarter Mages gives them to Hareishan
+  instead of Davaeorn.
 
 ### Version 7.20
 

@@ -1,4 +1,21 @@
 // Sword Coast Stratagems
+ACTION_IF GAME_INCLUDES ~bg1~ BEGIN
+	// The Bracers to the Death is now worn by Hareishan.
+	LAF IS_ITEM_ON_CREATURE
+        INT_VAR
+            log      = 1
+        STR_VAR
+            creature = ~hareis~
+            item     = ~brac03~
+        RET
+            present
+    END
+    ACTION_IF present == 1 BEGIN
+        PRINT ~Sword Coast Stratagems: Smarter mages - Bracers to the Death~
+        OUTER_SET $item_source_compat(~brac03~ ~hareis.cre~) = 1
+        OUTER_SET $item_source_compat(~brac03~ ~davaeo.cre~) = 0
+    END
+END
 ACTION_IF GAME_INCLUDES ~bg2~ BEGIN
     // Robe of Vecna moved to Azamantes, the lich guardian of the Seal of the Imprisoned One.
     LAF IS_ITEM_ON_CREATURE
